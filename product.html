@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kodel Home</title>
+  <link rel="stylesheet" href="./assests/css/dev-style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+  <!-- Start top nav bar -->
+  <nav class="w-full bg-white shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="lg:hidden text-gray-700 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <div class="flex items-center space-x-2 py-3">
+        <img src="./assests/img/logo/kodel-logo.svg" alt="Logo" class="h-10">
+      </div>
+
+      <a href="#"
+        class="w-[44px] h-[44px] flex items-center justify-center md:hidden md:flex items-center bg-[#1A70B4] text-white rounded-full transition-all duration-300 hover:bg-transparent hover:text-[#1A70B4] border-2 border-[#1A70B4]">
+        <img src="./assests/img/icon/phone-white.svg" class="h-5 w-5" alt="phone icon">
+
+      </a>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden lg:flex items-center space-x-6 text-gray-700 font-medium">
+        <li><a href="#" class="text-[#1A70B4] font-semibold">Home</a></li>
+        <li><a href="#" class="hover:text-primary">About Us</a></li>
+        <li><a href="#" class="hover:text-primary">Products</a></li>
+        <li><a href="#" class="hover:text-primary">Manufacturing</a></li>
+        <li><a href="#" class="hover:text-primary">Dealer App</a></li>
+        <li><a href="#" class="hover:text-primary">Blog</a></li>
+        <li><a href="#" class="hover:text-primary">Contact</a></li>
+      </ul>
+
+      <!-- Get in Touch Button (Desktop) -->
+      <a href="#"
+        class="hidden md:flex items-center bg-[#1A70B4] text-white px-5 py-2 rounded-full transition-all duration-300 hover:bg-transparent hover:text-[#1A70B4] border-2 border-[#1A70B4]">
+        <img src="./assests/img/icon/phone-white.svg" class="h-5 w-5 mr-2" alt="phone icon">
+        Get in Touch
+      </a>
+
+    </div>
+
+    <!-- Backdrop -->
+    <div id="backdrop" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40 lg:hidden"></div>
+
+    <!-- Mobile Sidebar Menu -->
+    <div id="mobile-menu"
+      class="fixed top-0 left-0 h-screen w-[80%] bg-white shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out z-50 lg:hidden">
+
+      <div class="flex justify-between items-center p-4 border-b">
+        <img src="./assests/img/logo/kodel-logo.svg" alt="Logo" class="h-8">
+        <button id="close-btn" class="text-gray-700">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <ul class="flex flex-col items-start space-y-4 p-6 text-gray-700 font-medium">
+        <li><a href="index.html" class="text-primary">Home</a></li>
+        <li><a href="about.html" class="hover:text-primary">About Us</a></li>
+        <li><a href="#" class="hover:text-primary">Products</a></li>
+        <li><a href="#" class="hover:text-primary">Manufacturing</a></li>
+        <li><a href="#" class="hover:text-primary">Dealer App</a></li>
+        <li><a href="#" class="hover:text-primary">Blog</a></li>
+        <li><a href="#" class="hover:text-primary">Contact</a></li>
+        <li>
+          <a href="#" class="lg:hidden bg-primary text-white px-5 py-2 rounded-full hover:bg-blue-800 transition">
+            Get in Touch
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- End top nav bar -->
+
+  <!-- Start top hero banner -->
+  <section class="relative h-[676px] md:h-[600px] flex items-center justify-start text-white bg-cover bg-center"
+  style="background-image: url('./assests/img/Home/hero-banner.png');">
+  <!-- Gradient overlay shadow from right to left -->
+  <div class="absolute inset-0 bg-gradient-to-l from-[#0B314E00] via-[#1A70B480] to-[#0C3D62] "></div>
+  <div class="relative z-10 max-w-3xl w-full text-start px-8 md:ps-20 pr-0">
+    <h2 class="text-[40px] md:text-[64px] title-font font-bold mb-6 leading-tight">
+      Our Products
+    </h2>
+    <p class="text-[20px] md:text-2xl desc-font font-medium text-gray-200 mb-10">
+      Explore our wide range of premium leather collections
+    </p>
+  </div>
+  <img src="./assests/img/Home/hero-banner-wave.png" alt="Bottom Overlay"
+    class="absolute bottom-0 left-0 w-full pointer-events-none select-none">
+</section>
+  <!-- End top hero banner -->
+
+  <!-- Start our product -->
+  <section class="max-w-6xl mx-auto py-12 md:pb-28 px-4">
+    <!-- Header -->
+    <div class="text-center mb-8">
+      <h2 class="text-[32px] md:text-[56px] font-bold title-font  mb-3 ">Our Products</h2>
+      <p class="text-[20px] md:text-[24px] font-medium text-gray-500 mt-2 desc-font">Premium leather solutions crafted for every need</p>
+    </div>
+    <div class="max-w-xl mx-auto mb-8">
+<div class="relative">
+  <input id="searchInput" type="text"
+    placeholder="Search products"
+    class="font-medium w-full pl-12 pr-4 py-3 rounded-full border border-gray-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-300">
+  <svg class="absolute left-4 top-3.5 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round"
+      d="M21 21l-4.35-4.35m1.6-5.65a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+  </svg>
+</div>
+  </div>
+
+    <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+        <div class="flex flex-col items-start">
+          <div class="w-full aspect-[4/3] bg-gray-100 border border-gray-200 rounded-[16px] overflow-hidden flex items-center justify-center h-[310px]">
+            <img src="https://m.media-amazon.com/images/I/610NHFMkECL.jpg" alt="Full-Grain Leather" class="w-full h-full object-cover">
+          </div>
+          <div class="mt-3 mb-5">
+            <h3 class="text-lg font-semibold text-gray-700">Full-Grain Leather</h3>
+          </div>
+        </div>
+      
+        <div class="flex flex-col items-start">
+          <div class="w-full aspect-[4/3] bg-gray-100 border border-gray-200 rounded-[16px] overflow-hidden flex items-center justify-center h-[310px]">
+            <img src="https://img.freepik.com/free-photo/back-view-artisan-holding-tools_23-2150104789.jpg" alt="Garment Leather" class="w-full h-full object-cover">
+          </div>
+          <div class="mt-3 mb-5">
+            <h3 class="text-lg font-semibold text-gray-700">Garment Leather</h3>
+          </div>
+        </div>
+      
+        <div class="flex flex-col items-start">
+          <div class="w-full aspect-[4/3] bg-gray-100 border border-gray-200 rounded-[16px] overflow-hidden flex items-center justify-center h-[310px]">
+            <img src="https://img.freepik.com/free-photo/pair-brown-shoes-with-black-leather-sole-word-bottom_123827-23446.jpg?t=st=1762512885~exp=1762516485~hmac=3990137023d8527440ee9ce90dd4f9f51dd8f3115d7c8827b443382ebca33141&w=1480" alt="Footwear Leather" class="w-full h-full object-cover">
+          </div>
+          <div class="mt-3 mb-5">
+            <h3 class="text-lg font-semibold text-gray-700">Footwear Leather</h3>
+          </div>
+        </div>
+      
+        <div class="flex flex-col items-start">
+          <div class="w-full aspect-[4/3] bg-gray-100 border border-gray-200 rounded-[16px] overflow-hidden flex items-center justify-center h-[310px]">
+            <img src="https://img.freepik.com/free-photo/leather-briefcase_181624-15195.jpg?t=st=1762512932~exp=1762516532~hmac=928204fa49e3049b8d4e5ace19bf7f531eb6d4f168d7764e42d62e8f9c4a5b07&w=1480" alt="Bag &amp; Accessory Leather" class="w-full h-full object-cover">
+          </div>
+          <div class="mt-3 mb-5">
+            <h3 class="text-lg font-semibold text-gray-700">Bag &amp; Accessory Leather</h3>
+          </div>
+        </div>
+        <div class="flex flex-col items-start">
+          <div class="w-full aspect-[4/3] bg-gray-100 border border-gray-200 rounded-[16px] overflow-hidden flex items-center justify-center h-[310px]">
+            <img src="https://img.freepik.com/free-photo/light-brown-color-leather-textures-surface_74190-7961.jpg?uid=R200955547&ga=GA1.1.1422370319.1761377174&semt=ais_hybrid&w=740&q=80" alt="Upholstery Leather" class="w-full h-full object-cover">
+          </div>
+          <div class="mt-3 mb-5">
+            <h3 class="text-lg font-semibold text-gray-700">Upholstery Leather</h3>
+          </div>
+        </div>
+      
+        <div class="flex flex-col items-start">
+          <div class="w-full aspect-[4/3] bg-gray-100 border border-gray-200 rounded-[16px] overflow-hidden flex items-center justify-center h-[310px]">
+            <img src="https://img.freepik.com/free-photo/cushion-modern-car_1339-5502.jpg?uid=R200955547&ga=GA1.1.1422370319.1761377174&semt=ais_hybrid&w=740&q=80" alt="Automotive Leather" class="w-full h-full object-cover">
+          </div>
+          <div class="mt-3 mb-5">
+            <h3 class="text-lg font-semibold text-gray-700">Automotive Leather</h3>
+          </div>
+        </div>
+      
+        <div class="flex flex-col items-start">
+          <div class="w-full aspect-[4/3] bg-gray-100 border border-gray-200 rounded-[16px] overflow-hidden flex items-center justify-center h-[310px]">
+            <img src="https://img.freepik.com/free-photo/top-view-orange-leather-arrangement_23-2148897979.jpg?uid=R200955547&ga=GA1.1.1422370319.1761377174&semt=ais_hybrid&w=740&q=80" alt="Oil-Tanned Leather" class="w-full h-full object-cover">
+          </div>
+          <div class="mt-3 mb-5">
+            <h3 class="text-lg font-semibold text-gray-700">Oil-Tanned Leather</h3>
+          </div>
+        </div>
+      
+        <div class="flex flex-col items-start">
+          <div class="w-full aspect-[4/3] bg-gray-100 border border-gray-200 rounded-[16px] overflow-hidden flex items-center justify-center h-[310px]">
+            <img src="https://img.freepik.com/free-photo/close-up-brown-leather-texture_23-2152019114.jpg?uid=R200955547&ga=GA1.1.1422370319.1761377174&semt=ais_hybrid&w=740&q=80" alt="Metallic Leather" class="w-full h-full object-cover">
+          </div>
+          <div class="mt-3 mb-5">
+            <h3 class="text-lg font-semibold text-gray-700">Metallic Leather</h3>
+          </div>
+        </div>
+        <div class="flex flex-col items-start">
+          <div class="w-full aspect-[4/3] bg-gray-100 border border-gray-200 rounded-[16px] overflow-hidden flex items-center justify-center h-[310px]">
+            <img src="https://img.freepik.com/free-photo/leather-macro-shot_1385-1285.jpg?uid=R200955547&ga=GA1.1.1422370319.1761377174&semt=ais_hybrid&w=740&q=80" alt="Patent Leather" class="w-full h-full object-cover">
+          </div>
+          <div class="mt-3 mb-5">
+            <h3 class="text-lg font-semibold text-gray-700">Patent Leather</h3>
+          </div>
+        </div>
+      
+        <div class="flex flex-col items-start">
+          <div class="w-full aspect-[4/3] bg-gray-100 border border-gray-200 rounded-[16px] overflow-hidden flex items-center justify-center h-[310px]">
+            <img src="https://img.freepik.com/premium-photo/closeup-vintage-brown-leather-wallet-with-detailed-stitching-button-closure_868797-72141.jpg?uid=R200955547&ga=GA1.1.1422370319.1761377174&semt=ais_hybrid&w=740&q=80" alt="Exotic Leathers" class="w-full h-full object-cover">
+          </div>
+          <div class="mt-3 mb-5">
+            <h3 class="text-lg font-semibold text-gray-700">Exotic Leathers</h3>
+          </div>
+        </div>
+      
+        <div class="flex flex-col items-start">
+          <div class="w-full aspect-[4/3] bg-gray-100 border border-gray-200 rounded-[16px] overflow-hidden flex items-center justify-center h-[310px]">
+            <img src="https://img.freepik.com/free-photo/dark-pink-shiny-textured-paper-background_53876-92942.jpg?uid=R200955547&ga=GA1.1.1422370319.1761377174&semt=ais_hybrid&w=740&q=80" alt="Suede Leather" class="w-full h-full object-cover">
+          </div>
+          <div class="mt-3 mb-5">
+            <h3 class="text-lg font-semibold text-gray-700">Suede Leather</h3>
+          </div>
+        </div>
+      
+        <div class="flex flex-col items-start">
+          <div class="w-full aspect-[4/3] bg-gray-100 border border-gray-200 rounded-[16px] overflow-hidden flex items-center justify-center h-[310px]">
+            <img src="https://img.freepik.com/free-vector/abstract-pattern-design_1053-537.jpg?uid=R200955547&ga=GA1.1.1422370319.1761377174&semt=ais_hybrid&w=740&q=80" alt="Aniline Leather" class="w-full h-full object-cover">
+          </div>
+          <div class="mt-3 mb-5">
+            <h3 class="text-lg font-semibold text-gray-700">Aniline Leather</h3>
+          </div>
+        </div>
+        <div class="flex flex-col items-start">
+          <div class="w-full aspect-[4/3] bg-gray-100 border border-gray-200 rounded-[16px] overflow-hidden flex items-center justify-center h-[310px]">
+            <img src="https://img.freepik.com/premium-photo/close-up-white-leather-textured-fabric_719231-98.jpg?uid=R200955547&ga=GA1.1.1422370319.1761377174&semt=ais_hybrid&w=740&q=80" alt="Full-Grain Leather" class="w-full h-full object-cover">
+          </div>
+          <div class="mt-3 mb-5">
+            <h3 class="text-lg font-semibold text-gray-700">Full-Grain Leather</h3>
+          </div>
+        </div>
+      
+        <div class="flex flex-col items-start">
+          <div class="w-full aspect-[4/3] bg-gray-100 border border-gray-200 rounded-[16px] overflow-hidden flex items-center justify-center h-[310px]">
+            <img src="https://img.freepik.com/premium-photo/textured-background-from-purple-brown-leather_696657-2717.jpg?uid=R200955547&ga=GA1.1.1422370319.1761377174&semt=ais_hybrid&w=740&q=80" alt="Garment Leather" class="w-full h-full object-cover">
+          </div>
+          <div class="mt-3 mb-5">
+            <h3 class="text-lg font-semibold text-gray-700">Garment Leather</h3>
+          </div>
+        </div>
+      
+        <div class="flex flex-col items-start">
+          <div class="w-full aspect-[4/3] bg-gray-100 border border-gray-200 rounded-[16px] overflow-hidden flex items-center justify-center h-[310px]">
+            <img src="https://img.freepik.com/premium-photo/black-leather-texture-background_707519-12984.jpg?uid=R200955547&ga=GA1.1.1422370319.1761377174&semt=ais_hybrid&w=740&q=80" alt="Footwear Leather" class="w-full h-full object-cover">
+          </div>
+          <div class="mt-3 mb-5">
+            <h3 class="text-lg font-semibold text-gray-700">Footwear Leather</h3>
+          </div>
+        </div>
+      
+        <div class="flex flex-col items-start">
+          <div class="w-full aspect-[4/3] bg-gray-100 border border-gray-200 rounded-[16px] overflow-hidden flex items-center justify-center h-[310px]">
+            <img src="https://img.freepik.com/premium-photo/leather-texture-background-brown-leather-material-pattern-close-view-square-illustration_568886-4424.jpg?uid=R200955547&ga=GA1.1.1422370319.1761377174&semt=ais_hybrid&w=740&q=80" alt="Bag &amp; Accessory Leather" class="w-full h-full object-cover">
+          </div>
+          <div class="mt-3 mb-5">
+            <h3 class="text-lg font-semibold text-gray-700">Bag &amp; Accessory Leather</h3>
+          </div>
+        </div>
+      </div>
+
+    <!-- Pagination -->
+    <div class="flex items-center justify-center space-x-3">
+      <button class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100">‹</button>
+      <button class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100">1</button>
+      <button class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 text-white font-semibold">2</button>
+      <button class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100">3</button>
+      <button class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100">4</button>
+      <button class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100">5</button>
+      <button class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100">›</button>
+    </div>
+  </section>
+
+  <!-- End our product -->
+
+  <!-- Start Our Certifications section -->
+
+  <!-- End Our Certifications section -->
+
+  <!-- Start Our Mission & Vision -->
+
+  <!-- End Our Mission & Vision -->
+
+  <!-- Start Faq -->
+  <section class="py-16 md:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-start">
+
+      <!-- Left Side -->
+      <div>
+        <h2 class="text-[32px] md:text-[56px] title-font font-bold text-[#0B2239] mb-3 title-font">FAQ</h2>
+        <p class="text-[#9EB1C0] desc-font text-[20px] md:text-2xl font-medium mb-10">
+          Find quick answers to common questions<br>about our services.
+        </p>
+      </div>
+
+      <!-- Right Side (Accordion) -->
+      <div class="space-y-4" id="accordion">
+
+        <!-- Item -->
+
+        <div class="accordion-item active bg-[#F9FAFB] text-[#0B2239] rounded-xl transition overflow-hidden">
+          <button
+            class="accordion-header flex justify-between items-center w-full pt-[1.5rem] pr-5 pb-[1.5rem] pl-5 text-left">
+            <h3 class="font-semibold text-lg">What types of leather products do you manufacture?</h3>
+            <span
+              class="accordion-icon bg-[#F5F5F5] rounded-full w-[70px] md:w-10 h-[40px] md:h-[10] flex justify-center items-center text-[#9EB1C0] text-[20px] md:text-2xl transform transition-transform duration-300 leading-none">
+              <svg width="24" height="24" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M18 9C18 9.19891 17.921 9.38968 17.7803 9.53033C17.6397 9.67098 17.4489 9.75 17.25 9.75H9.75V17.25C9.75 17.4489 9.67098 17.6397 9.53033 17.7803C9.38968 17.921 9.19891 18 9 18C8.80109 18 8.61032 17.921 8.46967 17.7803C8.32902 17.6397 8.25 17.4489 8.25 17.25V9.75H0.75C0.551088 9.75 0.360322 9.67098 0.21967 9.53033C0.0790178 9.38968 0 9.19891 0 9C0 8.80109 0.0790178 8.61032 0.21967 8.46967C0.360322 8.32902 0.551088 8.25 0.75 8.25H8.25V0.75C8.25 0.551088 8.32902 0.360322 8.46967 0.21967C8.61032 0.0790178 8.80109 0 9 0C9.19891 0 9.38968 0.0790178 9.53033 0.21967C9.67098 0.360322 9.75 0.551088 9.75 0.75V8.25H17.25C17.4489 8.25 17.6397 8.32902 17.7803 8.46967C17.921 8.61032 18 8.80109 18 9Z"
+                  fill="#222222" />
+              </svg>
+            </span>
+          </button>
+          <div
+            class="accordion-content max-h-0 overflow-hidden px-5 text-sm text-[#0B2239]/80 transition-all duration-500 ease-in-out">
+            <p class="pb-4 text-[#d1e2f0]">
+              We manufacture a wide range of premium leather products including leather hides, finished leather,
+              upholstery, fashion accessories, automotive leather, and custom-made leather solutions.
+            </p>
+          </div>
+        </div>
+
+
+        <!-- Item 2 -->
+        <div class="accordion-item bg-[#F9FAFB] text-[#0B2239] rounded-xl transition overflow-hidden">
+          <button
+            class="accordion-header flex justify-between items-center w-full pt-[1.5rem] pr-5 pb-[1.5rem] pl-5 text-left">
+            <h3 class="font-semibold text-lg">Where are your manufacturing facilities located?</h3>
+            <span
+              class="accordion-icon bg-[#F5F5F5] rounded-full w-[70px] md:w-10 h-[40px] md:h-[10] flex justify-center items-center text-[#9EB1C0] text-[20px] md:text-2xl transform transition-transform duration-300 leading-none">
+              <svg width="24" height="24" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M18 9C18 9.19891 17.921 9.38968 17.7803 9.53033C17.6397 9.67098 17.4489 9.75 17.25 9.75H9.75V17.25C9.75 17.4489 9.67098 17.6397 9.53033 17.7803C9.38968 17.921 9.19891 18 9 18C8.80109 18 8.61032 17.921 8.46967 17.7803C8.32902 17.6397 8.25 17.4489 8.25 17.25V9.75H0.75C0.551088 9.75 0.360322 9.67098 0.21967 9.53033C0.0790178 9.38968 0 9.19891 0 9C0 8.80109 0.0790178 8.61032 0.21967 8.46967C0.360322 8.32902 0.551088 8.25 0.75 8.25H8.25V0.75C8.25 0.551088 8.32902 0.360322 8.46967 0.21967C8.61032 0.0790178 8.80109 0 9 0C9.19891 0 9.38968 0.0790178 9.53033 0.21967C9.67098 0.360322 9.75 0.551088 9.75 0.75V8.25H17.25C17.4489 8.25 17.6397 8.32902 17.7803 8.46967C17.921 8.61032 18 8.80109 18 9Z"
+                  fill="#222222" />
+              </svg>
+            </span>
+          </button>
+          <div
+            class="accordion-content max-h-0 overflow-hidden px-5 text-sm text-[#0B2239]/80 transition-all duration-500 ease-in-out">
+            <p class="pb-4 text-[#d1e2f0]">
+              Our manufacturing facilities are strategically located to serve both domestic and international clients
+              efficiently.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="accordion-item bg-[#F9FAFB] text-[#0B2239] rounded-xl transition overflow-hidden">
+          <button
+            class="accordion-header flex justify-between items-center w-full pt-[1.5rem] pr-5 pb-[1.5rem] pl-5 text-left">
+            <h3 class="font-semibold text-lg">How long has Kodel been in the leather industry?</h3>
+            <span
+              class="accordion-icon bg-[#F5F5F5] rounded-full w-[70px] md:w-10 h-[40px] md:h-[10] flex justify-center items-center text-[#9EB1C0] text-[20px] md:text-2xl transform transition-transform duration-300 leading-none">
+              <svg width="24" height="24" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M18 9C18 9.19891 17.921 9.38968 17.7803 9.53033C17.6397 9.67098 17.4489 9.75 17.25 9.75H9.75V17.25C9.75 17.4489 9.67098 17.6397 9.53033 17.7803C9.38968 17.921 9.19891 18 9 18C8.80109 18 8.61032 17.921 8.46967 17.7803C8.32902 17.6397 8.25 17.4489 8.25 17.25V9.75H0.75C0.551088 9.75 0.360322 9.67098 0.21967 9.53033C0.0790178 9.38968 0 9.19891 0 9C0 8.80109 0.0790178 8.61032 0.21967 8.46967C0.360322 8.32902 0.551088 8.25 0.75 8.25H8.25V0.75C8.25 0.551088 8.32902 0.360322 8.46967 0.21967C8.61032 0.0790178 8.80109 0 9 0C9.19891 0 9.38968 0.0790178 9.53033 0.21967C9.67098 0.360322 9.75 0.551088 9.75 0.75V8.25H17.25C17.4489 8.25 17.6397 8.32902 17.7803 8.46967C17.921 8.61032 18 8.80109 18 9Z"
+                  fill="#222222" />
+              </svg>
+            </span>
+          </button>
+          <div
+            class="accordion-content max-h-0 overflow-hidden px-5 text-sm text-[#0B2239]/80 transition-all duration-500 ease-in-out">
+            <p class="pb-4 text-[#d1e2f0]">
+              Kodel has been a trusted name in the leather industry for several decades, offering consistent quality and
+              innovation.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="accordion-item bg-[#F9FAFB] text-[#0B2239] rounded-xl transition overflow-hidden">
+          <button
+            class="accordion-header flex justify-between items-center w-full pt-[1.5rem] pr-5 pb-[1.5rem] pl-5 text-left">
+            <h3 class="font-semibold text-lg">How do you ensure the quality of your leather?</h3>
+
+            <span
+              class="accordion-icon bg-[#F5F5F5] rounded-full w-[70px] md:w-10 h-[40px] md:h-[10] flex justify-center items-center text-[#9EB1C0] text-[20px] md:text-2xl transform transition-transform duration-300 leading-none">
+              <svg width="24" height="24" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M18 9C18 9.19891 17.921 9.38968 17.7803 9.53033C17.6397 9.67098 17.4489 9.75 17.25 9.75H9.75V17.25C9.75 17.4489 9.67098 17.6397 9.53033 17.7803C9.38968 17.921 9.19891 18 9 18C8.80109 18 8.61032 17.921 8.46967 17.7803C8.32902 17.6397 8.25 17.4489 8.25 17.25V9.75H0.75C0.551088 9.75 0.360322 9.67098 0.21967 9.53033C0.0790178 9.38968 0 9.19891 0 9C0 8.80109 0.0790178 8.61032 0.21967 8.46967C0.360322 8.32902 0.551088 8.25 0.75 8.25H8.25V0.75C8.25 0.551088 8.32902 0.360322 8.46967 0.21967C8.61032 0.0790178 8.80109 0 9 0C9.19891 0 9.38968 0.0790178 9.53033 0.21967C9.67098 0.360322 9.75 0.551088 9.75 0.75V8.25H17.25C17.4489 8.25 17.6397 8.32902 17.7803 8.46967C17.921 8.61032 18 8.80109 18 9Z"
+                  fill="#222222" />
+              </svg>
+            </span>
+          </button>
+          <div
+            class="accordion-content max-h-0 overflow-hidden px-5 text-sm text-[#0B2239]/80 transition-all duration-500 ease-in-out">
+            <p class="pb-4 text-[#d1e2f0]">
+              We follow strict quality control processes and use only the finest raw materials, ensuring each product
+              meets international standards.
+            </p>
+          </div>
+        </div>
+
+      </div>
+      
+    </div>
+  </section>
+  <!-- End Faq -->
+
+  <!-- CTA SECTION -->
+  <section class="relative bg-white  hidden md:block ">
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
+      <div class="rounded-2xl overflow-hidden grid md:grid-cols-2 bg-[#0B2239] shadow-[0px_4px_20px_#1018280D]">
+
+        <div class="py-[59px] px-[30px] md:p-[59px] flex flex-col justify-center text-white ">
+          <h2 class="text-[32px] md:text-[56px] font-bold text-[#ffffff] leading-[1.36] title-font mb-4">Ready to Work
+            Together?</h2>
+          <p class="text-[#9EB1C0] text-[20px] md:text-2xl font-medium desc-font">
+            Looking for premium leather solutions? Let's create something exceptional together.
+          </p>
+          <a href="#contact"
+            class="mt-[40px] inline-flex items-center bg-[#1A70B4] w-[60%] md:w-[40%] hover:bg-[#1A70B4] text-white text-base font-bold rounded-full px-5 py-3 transition">
+            Get in Touch
+            <img src="./assests/img/icon/arrow-rigth.svg" class="ms-2" alt="">
+          </a>
+        </div>
+
+        <div class="relative">
+          <img src="assests/img/Home/cta-1.jpg" alt="Leather Tools"
+            class="w-full h-full object-cover rounded-bl-[50%] relative z-10">
+          <div
+            class="absolute inset-0 rounded-bl-[50%] z-20 bg-gradient-to-br from-[#1018281A] via-[#1018284D] to-[#00000080]">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="absolute bottom-0 left-0 w-full h-[66%] bg-[url('assests/img/Home/footer-top-wave.png')] bg-cover bg-center opacity-40">
+    </div>
+  </section>
+
+  <section class="relative bg-white  md:hidden">
+    <div class="max-w-md md:max-w-lg mx-auto px-6 relative z-10">
+      <div class="bg-[#0B2239] rounded-2xl relative overflow-hidden text-white p-8 pt-[99px] pb-[50px] shadow-lg">
+
+        <img src="assests/img/Home/cta-1.jpg" alt="Leather Tools"
+          class="absolute top-0 right-0 w-[140px] h-[140px] md:w-[180px] md:h-[180px] object-cover rounded-bl-[100%] opacity-90">
+        <div
+          class="absolute top-0 right-0 w-[140px] h-[140px] md:w-[180px] md:h-[180px] bg-gradient-to-tl from-black/60 to-transparent rounded-bl-[100%]">
+        </div>
+
+        <h2 class="text-[28px] md:text-[32px] font-bold leading-snug mb-3">
+          Ready to Work Together?
+        </h2>
+        <p class="text-[#9EB1C0] text-[16px] md:text-[18px] font-medium leading-relaxed">
+          Looking for premium leather solutions? Let's create something exceptional together.
+        </p>
+
+        <a href="#contact"
+          class="mt-6 inline-flex items-center bg-[#1A70B4] hover:bg-[#155f9c] text-white text-sm md:text-base font-bold rounded-full px-6 py-3 transition">
+          Get in Touch
+          <img src="./assests/img/icon/arrow-rigth.svg" class="ms-2 w-4 md:w-5" alt="">
+        </a>
+      </div>
+    </div>
+
+    <!-- Subtle background wave -->
+    <div
+      class="absolute bottom-0 left-0 w-full h-[66%] bg-[url('assests/img/Home/footer-top-wave.png')] bg-cover bg-center opacity-40">
+    </div>
+  </section>
+
+  <!-- FOOTER SECTION -->
+  <footer class="pt-16 md:pt-28 relative text-white pb-6 overflow-hidden bg-[#e8e8e8]">
+    <!-- Dark Overlay -->
+    <div class="absolute inset-0 bg-[#f4f4f4] to-transparent"></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-6 grid md:grid-cols-4 gap-10">
+      <div>
+        <img src="./assests/img/logo/kodel-logo.svg" alt="Logo" class="mb-4">
+        <p class="text-[#222222] text-base font-medium desc-font leading-relaxed">
+          Premium leather manufacturing with 30+ years of excellence, serving global brands with quality and trust.
+        </p>
+        <div class="flex space-x-4 mt-4">
+          <a href="#" class="text-[#222222] hover:text-[#1a70b4] desc-font transition"><img
+              src="./assests/img/icon/facebook.svg" alt=""></a>
+          <a href="#" class="text-[#222222] hover:text-[#1a70b4] desc-font transition"><img
+              src="./assests/img/icon/instaram.svg" alt=""></a>
+          <a href="#" class="text-[#222222] hover:text-[#1a70b4] desc-font transition"><img
+              src="./assests/img/icon/linkedin.svg" alt=""></a>
+          <a href="#" class="text-[#222222] hover:text-[#1a70b4] desc-font transition"><img
+              src="./assests/img/icon/x.svg" alt=""></a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-[20px] font-bold mb-4 title-font text-[#222222]">Quick Links</h3>
+        <ul class="space-y-2 text-[#222222] text-sm">
+          <li class="mt-4 font-medium text-base"><a href="#" class="hover:text-[#1a70b4] desc-font transition">About
+              Us</a></li>
+          <li class="mt-4 font-medium text-base"><a href="#"
+              class="hover:text-[#1a70b4] desc-font transition">Products</a></li>
+          <li class="mt-4 font-medium text-base"><a href="#"
+              class="hover:text-[#1a70b4] desc-font transition">Manufacturing</a></li>
+          <li class="mt-4 font-medium text-base"><a href="#" class="hover:text-[#1a70b4] desc-font transition">Blog</a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-[20px] font-bold mb-4 title-font text-[#222222]">Our Products</h3>
+        <ul class="space-y-2 text-[#222222] text-sm">
+          <li class="mt-4 font-medium text-base"><a href="#" class="hover:text-[#1a70b4] desc-font transition">Footwear
+              Leather</a></li>
+          <li class="mt-4 font-medium text-base"><a href="#" class="hover:text-[#1a70b4] desc-font transition">Bag
+              Leather</a></li>
+          <li class="mt-4 font-medium text-base"><a href="#" class="hover:text-[#1a70b4] desc-font transition">Wallets &
+              Belts</a></li>
+          <li class="mt-4 font-medium text-base"><a href="#" class="hover:text-[#1a70b4] desc-font transition">Sheet
+              Covers</a></li>
+          <li class="mt-4 font-medium text-base"><a href="#"
+              class="hover:text-[#1a70b4] desc-font transition">Upholstery</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-[20px] font-bold mb-4 title-font text-[#222222]">Contact Us</h3>
+        <ul class="text-[#222222] text-sm space-y-3">
+          <li class="flex items-center space-x-2">
+            <img src="./assests/img/icon/location.svg" alt="location">
+            <span class="desc-font font-medium text-base">Industrial Area, Leather District, India</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <img src="./assests/img/icon/phone.svg" alt="phone">
+            <span class="desc-font font-medium text-base">+91 123 456 7890</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <img src="./assests/img/icon/mail.svg" alt="mail">
+            <span class="desc-font font-medium text-base">info@kodelleather.com</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-[#dddddd] relative z-10 text-center mt-10 text-[#222222] text-base font-medium pt-6">
+      © 2025 Kodel Leather. All rights reserved. Crafted with excellence.
+    </div>
+  </footer>
+
+  <script src="./assests/js/dev-script.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Second Swiper for Certifications -->
+<script>
+(function() {
+  const input = document.getElementById('searchInput');
+  const texts = [
+    "Search products",
+    "Full-Grain Leather",
+    "Garment Leather",
+    "Footwear Leather",
+    "Bag & Accessory Leather",
+    "Upholstery Leather",
+    "Search all type Leather products"
+  ];
+  
+  const typingSpeed = 100;  // speed per character
+  const pauseTime = 2000;   // wait before deleting / next text
+  let textIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function typeLoop() {
+    const currentText = texts[textIndex];
+    if (!isDeleting && charIndex <= currentText.length) {
+      input.placeholder = currentText.slice(0, charIndex++);
+      setTimeout(typeLoop, typingSpeed);
+    } 
+    else if (isDeleting && charIndex >= 0) {
+      input.placeholder = currentText.slice(0, charIndex--);
+      setTimeout(typeLoop, typingSpeed / 2);
+    } 
+    else {
+      if (!isDeleting) {
+        isDeleting = true;
+        setTimeout(typeLoop, pauseTime);
+      } else {
+        isDeleting = false;
+        textIndex = (textIndex + 1) % texts.length;
+        setTimeout(typeLoop, typingSpeed);
+      }
+    }
+  }
+
+  typeLoop();
+})();
+</script>
+
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1A70B4',
+          }
+        }
+      }
+    }
+  </script>
+
+</body>
+
+</html>

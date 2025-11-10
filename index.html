@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kodel Home</title>
+  <link rel="stylesheet" href="./assests/css/dev-style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+  <!-- Start top nav bar -->
+  <nav class="w-full bg-white shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="lg:hidden text-gray-700 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <div class="flex items-center space-x-2 py-3">
+        <img src="./assests/img/logo/kodel-logo.svg" alt="Logo" class="h-10">
+      </div>
+
+      <a href="#"
+        class="w-[44px] h-[44px] flex items-center justify-center md:hidden md:flex items-center bg-[#1A70B4] text-white rounded-full transition-all duration-300 hover:bg-transparent hover:text-[#1A70B4] border-2 border-[#1A70B4]">
+        <img src="./assests/img/icon/phone-white.svg" class="h-5 w-5" alt="phone icon">
+
+      </a>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden lg:flex items-center space-x-6 text-gray-700 font-medium">
+        <li><a href="#" class="text-[#1A70B4] font-semibold">Home</a></li>
+        <li><a href="#" class="hover:text-primary">About Us</a></li>
+        <li><a href="#" class="hover:text-primary">Products</a></li>
+        <li><a href="#" class="hover:text-primary">Manufacturing</a></li>
+        <li><a href="#" class="hover:text-primary">Dealer App</a></li>
+        <li><a href="#" class="hover:text-primary">Blog</a></li>
+        <li><a href="#" class="hover:text-primary">Contact</a></li>
+      </ul>
+
+      <!-- Get in Touch Button (Desktop) -->
+      <a href="#"
+        class="hidden md:flex items-center bg-[#1A70B4] text-white px-5 py-2 rounded-full transition-all duration-300 hover:bg-transparent hover:text-[#1A70B4] border-2 border-[#1A70B4]">
+        <img src="./assests/img/icon/phone-white.svg" class="h-5 w-5 mr-2" alt="phone icon">
+        Get in Touch
+      </a>
+
+    </div>
+
+    <!-- Backdrop -->
+    <div id="backdrop" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40 lg:hidden"></div>
+
+    <!-- Mobile Sidebar Menu -->
+    <div id="mobile-menu"
+      class="fixed top-0 left-0 h-screen w-[80%] bg-white shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out z-50 lg:hidden">
+
+      <div class="flex justify-between items-center p-4 border-b">
+        <img src="./assests/img/logo/kodel-logo.svg" alt="Logo" class="h-8">
+        <button id="close-btn" class="text-gray-700">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <ul class="flex flex-col items-start space-y-4 p-6 text-gray-700 font-medium">
+        <li><a href="index.html" class="text-primary">Home</a></li>
+        <li><a href="about.html" class="hover:text-primary">About Us</a></li>
+        <li><a href="#" class="hover:text-primary">Products</a></li>
+        <li><a href="#" class="hover:text-primary">Manufacturing</a></li>
+        <li><a href="#" class="hover:text-primary">Dealer App</a></li>
+        <li><a href="#" class="hover:text-primary">Blog</a></li>
+        <li><a href="#" class="hover:text-primary">Contact</a></li>
+        <li>
+          <a href="#" class="lg:hidden bg-primary text-white px-5 py-2 rounded-full hover:bg-blue-800 transition">
+            Get in Touch
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- End top nav bar -->
+
+  <!-- Start top hero banner -->
+  <section class="relative h-[676px] md:h-[892px] flex items-center justify-start pb-28 text-white bg-cover bg-center"
+    style="background-image: url('./assests/img/Home/hero-banner.png');">
+
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#00000080] to-[#1A70B4] opacity-90 "></div>
+
+    <div class="relative z-10 max-w-3xl w-full text-start px-8 md:ps-20 pr-0">
+      <h2 class="text-[40px] md:text-[64px] title-font font-bold mb-6 leading-tight">
+        Crafting Leather That Stands the Test of Time
+      </h2>
+      <p class="text-[20px] md:text-2xl desc-font font-medium text-gray-200 mb-10">
+        From raw hide to premium finish — trusted by global brands for unmatched quality and craftsmanship.
+      </p>
+
+      <div class="flex justify-start flex-wrap gap-4">
+        <a href="#"
+          class="flex items-center font-semibold desc-font bg-[#1A70B4] text-white px-6 py-3 rounded-full border-2 border-transparent text-base transition-all duration-300 hover:bg-transparent hover:text-[#1A70B4] hover:border-[#1A70B4]">
+          Explore Products
+          <svg class="h-5 w-5 ms-2 transition-all duration-300" width="18" height="15" viewBox="0 0 18 15" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M17.7806 8.03104L11.0306 14.781C10.8899 14.9218 10.699 15.0008 10.5 15.0008C10.301 15.0008 10.1101 14.9218 9.96937 14.781C9.82864 14.6403 9.74958 14.4494 9.74958 14.2504C9.74958 14.0514 9.82864 13.8605 9.96937 13.7198L15.4397 8.25042H0.75C0.551088 8.25042 0.360322 8.1714 0.21967 8.03075C0.0790178 7.8901 0 7.69933 0 7.50042C0 7.3015 0.0790178 7.11074 0.21967 6.97009C0.360322 6.82943 0.551088 6.75042 0.75 6.75042H15.4397L9.96937 1.28104C9.82864 1.14031 9.74958 0.94944 9.74958 0.750417C9.74958 0.551394 9.82864 0.360523 9.96937 0.219792C10.1101 0.0790615 10.301 0 10.5 0C10.699 0 10.8899 0.0790615 11.0306 0.219792L17.7806 6.96979C17.8504 7.03945 17.9057 7.12216 17.9434 7.21321C17.9812 7.30426 18.0006 7.40186 18.0006 7.50042C18.0006 7.59898 17.9812 7.69657 17.9434 7.78762C17.9057 7.87867 17.8504 7.96139 17.7806 8.03104Z"
+              fill="white" />
+          </svg>
+        </a>
+
+        <a href="#"
+          class="flex bg-transparent font-semibold desc-font border-2 border-white text-white px-6 py-3 rounded-full text-base transition-all duration-300 hover:bg-white hover:text-black">
+          <svg class="h-5 w-5 mr-2 transition-all duration-300" width="18" height="18" viewBox="0 0 18 18" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M18 11.25V17.25C18 17.4489 17.921 17.6397 17.7803 17.7803C17.6397 17.921 17.4489 18 17.25 18H0.75C0.551088 18 0.360322 17.921 0.21967 17.7803C0.0790178 17.6397 0 17.4489 0 17.25V11.25C0 11.0511 0.0790178 10.8603 0.21967 10.7197C0.360322 10.579 0.551088 10.5 0.75 10.5C0.948912 10.5 1.13968 10.579 1.28033 10.7197C1.42098 10.8603 1.5 11.0511 1.5 11.25V16.5H16.5V11.25C16.5 11.0511 16.579 10.8603 16.7197 10.7197C16.8603 10.579 17.0511 10.5 17.25 10.5C17.4489 10.5 17.6397 10.579 17.7803 10.7197C17.921 10.8603 18 11.0511 18 11.25ZM8.46937 11.7806C8.53903 11.8504 8.62175 11.9057 8.7128 11.9434C8.80384 11.9812 8.90144 12.0006 9 12.0006C9.09856 12.0006 9.19616 11.9812 9.2872 11.9434C9.37825 11.9057 9.46097 11.8504 9.53063 11.7806L13.2806 8.03063C13.3503 7.96094 13.4056 7.87822 13.4433 7.78717C13.481 7.69613 13.5004 7.59855 13.5004 7.5C13.5004 7.40145 13.481 7.30387 13.4433 7.21283C13.4056 7.12178 13.3503 7.03906 13.2806 6.96937C13.2109 6.89969 13.1282 6.84442 13.0372 6.8067C12.9461 6.76899 12.8485 6.74958 12.75 6.74958C12.6515 6.74958 12.5539 6.76899 12.4628 6.8067C12.3718 6.84442 12.2891 6.89969 12.2194 6.96937L9.75 9.43969V0.75C9.75 0.551088 9.67098 0.360322 9.53033 0.21967C9.38968 0.0790176 9.19891 0 9 0C8.80109 0 8.61032 0.0790176 8.46967 0.21967C8.32902 0.360322 8.25 0.551088 8.25 0.75V9.43969L5.78063 6.96937C5.63989 6.82864 5.44902 6.74958 5.25 6.74958C5.05098 6.74958 4.86011 6.82864 4.71937 6.96937C4.57864 7.11011 4.49958 7.30098 4.49958 7.5C4.49958 7.69902 4.57864 7.88989 4.71937 8.03063L8.46937 11.7806Z"
+              fill="white" />
+          </svg>
+          Download Catalogue
+        </a>
+      </div>
+    </div>
+
+    <img src="./assests/img/Home/hero-banner-wave.png" alt="Bottom Overlay"
+      class="absolute bottom-0 left-0 w-full pointer-events-none select-none">
+  </section>
+  <!-- End top hero banner -->
+
+  <!-- Start Countr section -->
+  <section
+    class="py-16 md:pb-28 md:pt-12 flex flex-col sm:flex-row flex-wrap justify-center items-center gap-10 sm:gap-16 md:gap-20  bg-white text-center border-b">
+
+    <!-- Counter 1 -->
+    <div class="w-full sm:w-auto">
+      <h2
+        class="title-font text-[64px] sm:text-[70px] md:text-[80px] font-semibold bg-gradient-to-b from-[#1A70B4] to-[#1A70B400] text-transparent bg-clip-text">
+        30+
+      </h2>
+      <p class="text-[#9EB1C0]/90 leading-[0] text-lg sm:text-xl md:text-[20px] md:text-2xl font-semibold desc-font">
+        Years of Leather Excellence
+      </p>
+    </div>
+
+    <!-- Counter 2 -->
+    <div class="w-full sm:w-auto">
+      <h2
+        class="title-font text-[64px] sm:text-[70px] md:text-[80px] font-semibold bg-gradient-to-b from-[#1A70B4] to-[#1A70B400] text-transparent bg-clip-text">
+        10+
+      </h2>
+      <p class="text-[#9EB1C0]/90 leading-[0] text-lg sm:text-xl md:text-[20px] md:text-2xl font-semibold desc-font">
+        Countries Served
+      </p>
+    </div>
+
+    <!-- Counter 3 -->
+    <div class="w-full sm:w-auto">
+      <h2
+        class="title-font text-[64px] sm:text-[70px] md:text-[80px] font-semibold bg-gradient-to-b from-[#1A70B4] to-[#1A70B400] text-transparent bg-clip-text">
+        500,000+
+      </h2>
+      <p class="text-[#9EB1C0]/90 leading-[0] text-lg sm:text-xl md:text-[20px] md:text-2xl font-semibold desc-font">
+        Sq.ft./Month Capacity
+      </p>
+    </div>
+
+  </section>
+  <!-- End Countr section -->
+
+  <!-- Start our products section -->
+  <section class="pb-16 md:pb-28 hidden md:block bg-white text-center relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-[32px] md:text-[56px] text-[#222222] font-bold mb-3 title-font">Our Products</h2>
+      <p class="text-[#9EB1C0] mb-10 desc-font font-medium  text-[20px] md:text-2xl">Premium leather solutions crafted
+        for every
+        need</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-[118px] items-center">
+
+        <div id="productList" class="space-y-4 text-left">
+
+          <!-- Accessories -->
+          <div data-img="assests/img/Home/product.png" data-width="564" data-height="513"
+            data-desc="Finest quality leather for wallets, belts, and small goods"
+            class="product-card bg-[#1A70B4] text-white rounded-xl p-6 cursor-pointer transition-all duration-300 hover:shadow-lg active">
+            <div class="flex items-center justify-between">
+              <h3 class="text-[24px] md:text[32px] font-bold title-font">Accessories</h3>
+              <img src="assests/img/icon/arrow-up-right-round.svg" class="h-5 w-5 white-icon block" alt="arrow white">
+              <img src="assests/img/icon/arrow-up-right-round-gray.svg" class="h-5 w-5 gray-icon hidden"
+                alt="arrow gray">
+            </div>
+            <p class="text-[20px] md:text-2xl font-medium desc-font opacity-90 desc-text block">Finest quality leather
+              for wallets, belts,
+              and small goods</p>
+          </div>
+
+          <!-- Upholstery -->
+          <div data-img="assests/img/Home/product-1.png" data-width="564" data-height="513"
+            data-desc="Durable leather ideal for furniture and interiors"
+            class="product-card bg-gray-100 text-gray-800 rounded-xl p-6 cursor-pointer transition-all duration-300 hover:shadow-lg">
+            <div class="flex items-center justify-between">
+              <h3 class="text-[24px] md:text[32px] font-bold title-font">Upholstery</h3>
+              <img src="assests/img/icon/arrow-up-right-round.svg" class="h-5 w-5 white-icon hidden" alt="arrow white">
+              <img src="assests/img/icon/arrow-up-right-round-gray.svg" class="h-5 w-5 gray-icon block"
+                alt="arrow gray">
+            </div>
+            <p class="text-[20px] md:text-2xl font-medium desc-font opacity-90 desc-text hidden">Durable leather ideal
+              for furniture and
+              interiors</p>
+          </div>
+
+          <!-- Footwear -->
+          <div data-img="assests/img/Home/product-2.jpg" data-width="564" data-height="513"
+            data-desc="Crafted for comfort, style, and lasting wear"
+            class="product-card bg-gray-100 text-gray-800 rounded-xl p-6 cursor-pointer transition-all duration-300 hover:shadow-lg">
+            <div class="flex items-center justify-between">
+              <h3 class="text-[24px] md:text[32px] font-bold title-font">Footwear</h3>
+              <img src="assests/img/icon/arrow-up-right-round.svg" class="h-5 w-5 white-icon hidden" alt="arrow white">
+              <img src="assests/img/icon/arrow-up-right-round-gray.svg" class="h-5 w-5 gray-icon block"
+                alt="arrow gray">
+            </div>
+            <p class="text-[20px] md:text-2xl font-medium desc-font opacity-90 desc-text hidden">Crafted for comfort,
+              style, and lasting wear
+            </p>
+          </div>
+
+          <!-- Bags & Luggage -->
+          <div data-img="assests/img/Home/product-3.webp" data-width="564" data-height="513"
+            data-desc="Elegant leather crafted for durability and design"
+            class="product-card bg-gray-100 text-gray-800 rounded-xl p-6 cursor-pointer transition-all duration-300 hover:shadow-lg">
+            <div class="flex items-center justify-between">
+              <h3 class="text-[24px] md:text[32px] font-bold title-font">Bags & Luggage</h3>
+              <img src="assests/img/icon/arrow-up-right-round.svg" class="h-5 w-5 white-icon hidden" alt="arrow white">
+              <img src="assests/img/icon/arrow-up-right-round-gray.svg" class="h-5 w-5 gray-icon block"
+                alt="arrow gray">
+            </div>
+            <p class="text-[20px] md:text-2xl font-medium desc-font opacity-90 desc-text hidden">Elegant leather
+              crafted for durability and
+              design</p>
+          </div>
+        </div>
+
+        <div class="relative flex justify-center items-center">
+          <div class="relative w-[564px] h-[513px] rounded-2xl overflow-hidden shadow-lg relative z-10">
+            <img id="productImage" src="assests/img/Home/product.png" alt="Product"
+              class="w-full h-full object-cover transition-all duration-500 rounded-2xl relative z-10">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#000000cc] to-[#00000000]"></div>
+          </div>
+          <div
+            class="absolute w-[110px] h-[110px] rounded-full bg-gradient-to-b from-[#1A70B4] to-[#1A70B4] left-[-44px] bottom-[12px] z-0">
+          </div>
+          <div
+            class="absolute w-[62px] h-[62px] rounded-full bg-gradient-to-b from-[#FFC711] to-[#FFC711] right-[-28px] top-[12px] z-0">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- Mobile View Product Cards -->
+  <section class="py-16 md:py-28 block md:hidden px-4">
+    <h2 class="text-center text-[32px] md:text-[56px] text-[#222222] font-bold mb-3 title-font">Our Products</h2>
+    <p class="text-center text-[#9EB1C0] mb-10 desc-font font-medium  text-[20px] md:text-2xl">Premium leather solutions
+      crafted
+      for every
+      need</p>
+    <div class="space-y-4">
+
+      <!-- Active Card -->
+      <div
+        class="mobile-product-card bg-[#1A70B4] text-white rounded-xl overflow-hidden cursor-pointer transition-all duration-300">
+        <div class="p-5 flex justify-between items-center">
+          <div class="text-left">
+            <h3 class="text-lg font-bold title-font">Accessories</h3>
+            <p class="mobile-card-desc text-[18px] opacity-90">Finest quality leather for wallets, belts, and small
+              goods
+            </p>
+          </div>
+          <!-- <img src="assests/img/icon/arrow-up-right-round.svg" class="whiteicon h-5 w-5" alt="arrow"> -->
+          <img src="assests/img/icon/arrow-up-right-round-gray.svg" class="grayicon h-5 w-5" alt="arrow">
+        </div>
+        <img src="assests/img/Home/product.png" alt="Accessories"
+          class="mobile-card-image w-full h-[180px] object-cover">
+      </div>
+
+      <!-- Other cards -->
+      <div
+        class="mobile-product-card bg-gray-100 text-gray-800 rounded-xl  overflow-hidden cursor-pointer transition-all duration-300">
+        <div class="p-5 flex justify-between items-center">
+          <div class="text-left">
+            <h3 class="text-lg font-bold title-font">Upholstery</h3>
+            <p class="mobile-card-desc hidden text-[18px] opacity-90">Durable leather ideal for furniture and interiors
+            </p>
+          </div>
+          <img src="assests/img/icon/arrow-up-right-round-gray.svg" class="h-5 w-5" alt="arrow">
+        </div>
+        <img src="assests/img/Home/product-1.png" class="mobile-card-image hidden w-full h-[180px] object-cover mt-3">
+      </div>
+
+      <div class="mobile-product-card bg-gray-100 text-gray-800 rounded-xl overflow-hidden cursor-pointer transition-all duration-300">
+        <div class="p-5 flex justify-between items-center">
+          <div class="text-left">
+            <h3 class="text-lg font-bold title-font">Footwear</h3>
+            <p class="mobile-card-desc hidden text-[18px] opacity-90">Crafted for comfort, style, and lasting wear</p>
+          </div>
+          <img src="assests/img/icon/arrow-up-right-round-gray.svg" class="h-5 w-5" alt="arrow">
+        </div>
+        <img src="assests/img/Home/product-2.jpg" class="mobile-card-image hidden w-full h-[180px] object-cover mt-3">
+      </div>
+
+      <div class="mobile-product-card bg-gray-100 text-gray-800 rounded-xl overflow-hidden cursor-pointer transition-all duration-300">
+       <div class="p-5 flex justify-between items-center">
+          <div class="text-left">
+        <h3 class="text-lg font-bold title-font">Bags & Luggage</h3>
+        <p class="mobile-card-desc hidden text-[18px] opacity-90">Elegant leather crafted for durability and design</p>
+        </div>
+        <img src="assests/img/icon/arrow-up-right-round-gray.svg" class="h-5 w-5" alt="arrow">
+        </div>
+        <img src="assests/img/Home/product-3.webp" class="mobile-card-image hidden w-full h-[180px] object-cover mt-3">
+      </div>
+
+    </div>
+  </section>
+  <!-- End our products section -->
+
+  <!-- Start Quality Assurance Section -->
+  <section class="bg-[#0D446B] text-white py-16 px-6 md:px-10 rounded-3xl max-w-6xl mx-auto text-center">
+    <!-- Tag -->
+    <div
+      class="desc-font inline-block bg-white/10 text-white text-base font-semibold px-4 py-1 rounded-full mb-8 border border-[#FFFFFF66]">
+      Quality Assurance
+    </div>
+
+    <!-- Title -->
+    <h2 class="title-font text-3xl md:text-4xl lg:text-6xl font-bold mb-4">
+      Our Leather is More Than Material
+    </h2>
+
+    <!-- Description -->
+    <p class="text-[#9EB1C0] max-w-2xl mx-auto text-[20px] md:text-2xl font-medium title-font mb-12">
+      It’s a promise of durability, elegance, and timeless appeal — crafted with precision and passion
+    </p>
+
+    <!-- Features Grid with Divider -->
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-white/20 text-left md:text-center">
+
+      <!-- Durability -->
+      <div class="space-y-3 py-6 sm:py-0 px-6 text-center md:text-left">
+        <div class="flex justify-center md:justify-center">
+          <img src="./assests/img/icon/Durable.svg" alt="Durability" class="w-8 h-8">
+        </div>
+        <h3 class="text-[20px] md:text-2xl text-center font-bold">Durability</h3>
+        <p class="text-[#9EB1C0] text-[16px] text-center font-semibold">Rigorously tested to withstand years of use</p>
+      </div>
+
+      <!-- Elegance -->
+      <div class="space-y-3 py-6 sm:py-0 px-6 text-center md:text-left">
+        <div class="flex justify-center md:justify-center">
+          <img src="./assests/img/icon/Elegance.svg" alt="Elegance" class="w-8 h-8">
+        </div>
+        <h3 class="text-[20px] md:text-2xl text-center font-bold">Elegance</h3>
+        <p class="text-[#9EB1C0] text-[16px] text-center font-semibold">Timeless appeal with rich textures and finishes
+        </p>
+      </div>
+
+      <!-- Certified Quality -->
+      <div class="space-y-3 py-6 sm:py-0 px-6 text-center md:text-left">
+        <div class="flex justify-center md:justify-center">
+          <img src="./assests/img/icon/Certified-Quality.svg" alt="Certified Quality" class="w-8 h-8">
+        </div>
+        <h3 class="text-[20px] md:text-2xl text-center font-bold">Certified Quality</h3>
+        <p class="text-[#9EB1C0] text-[16px] text-center font-semibold">International standards and certifications</p>
+      </div>
+
+      <!-- Sustainability -->
+      <div class="space-y-3 py-6 sm:py-0 px-6 text-center md:text-left">
+        <div class="flex justify-center md:justify-center">
+          <img src="./assests/img/icon/Sustainability.svg" alt="Sustainability" class="w-8 h-8">
+        </div>
+        <h3 class="text-[20px] md:text-2xl text-center font-bold">Sustainability</h3>
+        <p class="text-[#9EB1C0] text-[16px] text-center font-semibold">Eco-friendly processes and responsible sourcing
+        </p>
+      </div>
+
+    </div>
+  </section>
+  <!-- End Quality Assurance Section -->
+
+  <!-- Start Our Clients -->
+  <section class="py-16 md:py-28 bg-white text-center">
+    <div class="max-w-6xl mx-auto px-6">
+      <!-- Title -->
+      <h2 class="text-[32px] md:text-[56px] title-font font-bold mb-4">
+        Our Clients
+      </h2>
+      <p class="text-[#9EB1C0] text-[20px] md:text-2xl font-medium desc-font mb-10">
+        Trusted by industry leaders worldwide
+      </p>
+
+      <!-- Swiper Slider -->
+      <div class="swiper clientSlider">
+        <div class="swiper-wrapper items-center">
+          <!-- Each logo -->
+          <div class="swiper-slide flex justify-center">
+            <img src="./assests/img/Home/client.png" alt="Suzuki"
+              class="w-[123px] h-[120px] object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition duration-300">
+          </div>
+          <div class="swiper-slide flex justify-center">
+            <img src="./assests/img/Home/client-1.png" alt="DFE Pharma"
+              class="w-[123px] h-[120px] object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition duration-300">
+          </div>
+          <div class="swiper-slide flex justify-center">
+            <img src="./assests/img/Home/client-2.png" alt="ORFFA"
+              class="w-[82px] h-[80px] object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition duration-300">
+          </div>
+          <div class="swiper-slide flex justify-center">
+            <img src="./assests/img/Home/client-3.png" alt="NutriScience"
+              class="w-[123px] h-[120px] object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition duration-300">
+          </div>
+          <div class="swiper-slide flex justify-center">
+            <img src="./assests/img/Home/client-4.png" alt="Gurit"
+              class="w-[123px] h-[120px] object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition duration-300">
+          </div>
+          <div class="swiper-slide flex justify-center">
+            <img src="./assests/img/Home/client-5.png" alt="Hexcel"
+              class="w-[123px] h-[120px] object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition duration-300">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Our Clients -->
+
+  <!-- Start What Our Customers Say Section -->
+  <!-- Start desktopp -->
+  <section class="relative bg-[#0B2239] h-screen  text-white  overflow-hidden relative  hidden md:block">
+    <div
+      class="absolute inset-0 z-[1] bg-left bg-fixed bg-no-repeat bg-auto bg-[url('assests/img/Home/customers.png')]">
+    </div>
+    <div class="relative  z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-[1fr_792px] gap-10 h-full">
+      <div class="flex flex-col justify-center h-full ">
+        <!-- <div class="absolute inset-0 bg-gradient-to-r from-[#0B2239] via-[#0B2239]/90 to-transparent z-0"></div> -->
+        <div class="flex flex-col h-full z-[1] mt-[30%]">
+          <h2
+            class="title-font title-font text-[32px] md:text-[56px] font-bold leading-tight mb-4 relative z-[30] md:text-left">
+            What our customers say
+          </h2>
+          <p
+            class="text-[#9EB1C0] desc-font text-[20px] md:text-2xl leading-relaxed max-w-md relative z-[30] desc-font">
+            Our customers are at the heart of everything we do. We listen to your needs and tailor our
+            services to meet them.
+          </p>
+        </div>
+      </div>
+
+      <!-- Right Side Scroll Columns -->
+      <div class="flex gap-6">
+        <!-- Column 1: Scrolls Down -->
+        <div class="relative  overflow-hidden w-1/2">
+          <div class="animate-scrollDown space-y-6">
+            <!-- Repeat testimonials to loop seamlessly -->
+            <div class="bg-white text-gray-800 rounded-2xl p-9 shadow-md">
+              <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
+              <p class="text-[#374151] font-medium desc-font text-[20px] mb-4">
+                Our customers are at the heart of everything we do. We listen to your needs and tailor
+                our services to meet them.
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-16 h-16 rounded-full bg-gray-200"></div>
+                <div>
+                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Floyd Miles</h4>
+                  <p class="text-[#9EB1C0] text-lg font-medium">Accountant</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white text-gray-800 rounded-2xl p-9 shadow-md">
+              <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
+              <p class="text-[#374151] font-medium desc-font text-[20px] mb-4">
+                Exceptional quality and customer support. They truly go above and beyond.
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-16 h-16 rounded-full bg-gray-200"></div>
+                <div>
+                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Dianne Russell</h4>
+                  <p class="text-[#9EB1C0] text-lg font-medium">Designer</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white text-gray-800 rounded-2xl p-9 shadow-md">
+              <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
+              <p class="text-[#374151] font-medium desc-font text-[20px] mb-4">
+                Loved their craftsmanship and professionalism. Highly recommend!
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-16 h-16 rounded-full bg-gray-200"></div>
+                <div>
+                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Leslie Alexander
+                  </h4>
+                  <p class="text-[#9EB1C0] text-lg font-medium">Entrepreneur</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Duplicate for seamless loop -->
+            <div class="bg-white text-gray-800 rounded-2xl p-9 shadow-md">
+              <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
+              <p class="text-[#374151] font-medium desc-font text-[20px] mb-4">
+                Our customers are at the heart of everything we do. We listen to your needs and tailor
+                our services to meet them.
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-16 h-16 rounded-full bg-gray-200"></div>
+                <div>
+                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Floyd Miles</h4>
+                  <p class="text-[#9EB1C0] text-lg font-medium">Accountant</p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white text-gray-800 rounded-2xl p-9 shadow-md">
+              <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
+              <p class="text-[#374151] font-medium desc-font text-[20px] mb-4">
+                Our customers are at the heart of everything we do. We listen to your needs and tailor
+                our services to meet them.
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-16 h-16 rounded-full bg-gray-200"></div>
+                <div>
+                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Floyd Miles</h4>
+                  <p class="text-[#9EB1C0] text-lg font-medium">Accountant</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white text-gray-800 rounded-2xl p-9 shadow-md">
+              <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
+              <p class="text-[#374151] font-medium desc-font text-[20px] mb-4">
+                Exceptional quality and customer support. They truly go above and beyond.
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-16 h-16 rounded-full bg-gray-200"></div>
+                <div>
+                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Dianne Russell</h4>
+                  <p class="text-[#9EB1C0] text-lg font-medium">Designer</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white text-gray-800 rounded-2xl p-9 shadow-md">
+              <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
+              <p class="text-[#374151] font-medium desc-font text-[20px] mb-4">
+                Loved their craftsmanship and professionalism. Highly recommend!
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-16 h-16 rounded-full bg-gray-200"></div>
+                <div>
+                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Leslie Alexander
+                  </h4>
+                  <p class="text-[#9EB1C0] text-lg font-medium">Entrepreneur</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: Scrolls Up -->
+        <div class="relative  overflow-hidden w-1/2">
+          <div class="animate-scrollUp space-y-6">
+            <div class="bg-white text-gray-800 rounded-2xl p-9 shadow-md">
+              <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
+              <p class="text-[#374151] font-medium desc-font text-[20px] mb-4">
+                Their products are stylish and durable. It’s exactly what I needed.
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-16 h-16 rounded-full bg-gray-200"></div>
+                <div>
+                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Arlene McCoy</h4>
+                  <p class="text-[#9EB1C0] text-lg font-medium">Manager</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white text-gray-800 rounded-2xl p-9 shadow-md">
+              <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
+              <p class="text-[#374151] font-medium desc-font text-[20px] mb-4">
+                A wonderful experience from start to finish. True professionals!
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-16 h-16 rounded-full bg-gray-200"></div>
+                <div>
+                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Jacob Jones</h4>
+                  <p class="text-[#9EB1C0] text-lg font-medium">Consultant</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white text-gray-800 rounded-2xl p-9 shadow-md">
+              <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
+              <p class="text-[#374151] font-medium desc-font text-[20px] mb-4">
+                Attention to detail and care in every product. Amazing team!
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-16 h-16 rounded-full bg-gray-200"></div>
+                <div>
+                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Jenny Wilson</h4>
+                  <p class="text-[#9EB1C0] text-lg font-medium">Architect</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Duplicate for seamless loop -->
+            <div class="bg-white text-gray-800 rounded-2xl p-9 shadow-md">
+              <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
+              <p class="text-[#374151] font-medium desc-font text-[20px] mb-4">
+                Their products are stylish and durable. It’s exactly what I needed.
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-16 h-16 rounded-full bg-gray-200"></div>
+                <div>
+                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Arlene McCoy</h4>
+                  <p class="text-[#9EB1C0] text-lg font-medium">Manager</p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white text-gray-800 rounded-2xl p-9 shadow-md">
+              <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
+              <p class="text-[#374151] font-medium desc-font text-[20px] mb-4">
+                Their products are stylish and durable. It’s exactly what I needed.
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-16 h-16 rounded-full bg-gray-200"></div>
+                <div>
+                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Arlene McCoy</h4>
+                  <p class="text-[#9EB1C0] text-lg font-medium">Manager</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white text-gray-800 rounded-2xl p-9 shadow-md">
+              <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
+              <p class="text-[#374151] font-medium desc-font text-[20px] mb-4">
+                A wonderful experience from start to finish. True professionals!
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-16 h-16 rounded-full bg-gray-200"></div>
+                <div>
+                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Jacob Jones</h4>
+                  <p class="text-[#9EB1C0] text-lg font-medium">Consultant</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white text-gray-800 rounded-2xl p-9 shadow-md">
+              <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
+              <p class="text-[#374151] font-medium desc-font text-[20px] mb-4">
+                Attention to detail and care in every product. Amazing team!
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-16 h-16 rounded-full bg-gray-200"></div>
+                <div>
+                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Jenny Wilson</h4>
+                  <p class="text-[#9EB1C0] text-lg font-medium">Architect</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End desktopp -->
+
+  <!-- Start mobile -->
+  <section class="py-16 bg-[#0B2239] h-[100%] md:h-screen text-white  overflow-hidden relative md:hidden">
+    <div
+      class="absolute inset-0 z-[1] bg-left bg-fixed bg-no-repeat bg-auto bg-[url('assests/img/Home/customers.png')]">
+    </div>
+    <div class="relative  z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_792px] gap-10 h-full">
+      <div class="flex flex-col justify-center h-full ">
+        <!-- <div class="absolute inset-0 bg-gradient-to-r from-[#0B2239] via-[#0B2239]/90 to-transparent z-0"></div> -->
+        <div
+          class="flex flex-col h-full z-[1] px-4 mt-[10%] md:mt-0 items-center text-center md:items-start md:text-left">
+          <h2
+            class="title-font title-font text-[32px] md:text-[56px] font-bold leading-tight mb-4 relative z-[30] md:text-left">
+            What our customers say
+          </h2>
+          <p
+            class="text-[#9EB1C0] desc-font text-[20px] md:text-2xl leading-relaxed max-w-md relative z-[30] desc-font">
+            Our customers are at the heart of everything we do. We listen to your needs and tailor our
+            services to meet them.
+          </p>
+        </div>
+      </div>
+
+      <!-- Right Side Scroll Columns -->
+      <div class="flex flex-col md:flex-row gap-6">
+        <!-- 🌟 MOBILE VIEW: Horizontal scroll -->
+        <div class="flex md:hidden gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scroll-smooth">
+          <div class="bg-white text-gray-800 rounded-2xl p-5 md:p-9 shadow-md min-w-[280px] snap-center">
+            <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
+            <p class="text-[#374151] font-medium desc-font text-[18px] mb-4">
+              Our customers are at the heart of everything we do. We listen to your needs and tailor our services to
+              meet them.
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-full bg-gray-200"></div>
+              <div>
+                <h4 class="font-semibold text-[#222222] text-[18px] title-font">Floyd Miles</h4>
+                <p class="text-[#9EB1C0] text-base font-medium">Accountant</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white text-gray-800 rounded-2xl p-5 md:p-9 shadow-md min-w-[280px] snap-center">
+            <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
+            <p class="text-[#374151] font-medium desc-font text-[18px] mb-4">
+              Exceptional quality and customer support. They truly go above and beyond.
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-full bg-gray-200"></div>
+              <div>
+                <h4 class="font-semibold text-[#222222] text-[18px] title-font">Dianne Russell</h4>
+                <p class="text-[#9EB1C0] text-base font-medium">Designer</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white text-gray-800 rounded-2xl p-5 md:p-9 shadow-md min-w-[280px] snap-center">
+            <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
+            <p class="text-[#374151] font-medium desc-font text-[18px] mb-4">
+              Loved their craftsmanship and professionalism. Highly recommend!
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-full bg-gray-200"></div>
+              <div>
+                <h4 class="font-semibold text-[#222222] text-[18px] title-font">Leslie Alexander</h4>
+                <p class="text-[#9EB1C0] text-base font-medium">Entrepreneur</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white text-gray-800 rounded-2xl p-5 md:p-9 shadow-md min-w-[280px] snap-center">
+            <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
+            <p class="text-[#374151] font-medium desc-font text-[18px] mb-4">
+              Our customers are at the heart of everything we do. We listen to your needs and tailor our services to
+              meet them.
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-full bg-gray-200"></div>
+              <div>
+                <h4 class="font-semibold text-[#222222] text-[18px] title-font">Floyd Miles</h4>
+                <p class="text-[#9EB1C0] text-base font-medium">Accountant</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white text-gray-800 rounded-2xl p-5 md:p-9 shadow-md min-w-[280px] snap-center">
+            <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
+            <p class="text-[#374151] font-medium desc-font text-[18px] mb-4">
+              Exceptional quality and customer support. They truly go above and beyond.
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-full bg-gray-200"></div>
+              <div>
+                <h4 class="font-semibold text-[#222222] text-[18px] title-font">Dianne Russell</h4>
+                <p class="text-[#9EB1C0] text-base font-medium">Designer</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white text-gray-800 rounded-2xl p-5 md:p-9 shadow-md min-w-[280px] snap-center">
+            <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
+            <p class="text-[#374151] font-medium desc-font text-[18px] mb-4">
+              Loved their craftsmanship and professionalism. Highly recommend!
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-full bg-gray-200"></div>
+              <div>
+                <h4 class="font-semibold text-[#222222] text-[18px] title-font">Leslie Alexander</h4>
+                <p class="text-[#9EB1C0] text-base font-medium">Entrepreneur</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- end mobile -->
+  <!-- End What Our Customers Say Section -->
+
+  <!-- Start Why Choose Our Leather -->
+  <section class="py-16 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-8 sm:px-6 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center">
+
+      <!-- Left Content -->
+      <div class="order-2 md:order-1 text-center md:text-left">
+        <h2
+          class="leading-[100%] text-[36px] sm:text-[44px] md:text-[32px] md:text-[56px] title-font font-bold text-[#0B2239] mb-3">
+          Why Choose Our Leather
+        </h2>
+        <p class="text-[#9EB1C0] desc-font text-lg sm:text-xl md:text-[20px] md:text-2xl font-medium mb-8 md:mb-10">
+          Because every detail matters
+        </p>
+
+        <ul class="space-y-6 md:space-y-8">
+          <!-- Feature Item -->
+          <li class="flex items-center sm:items-center gap-4">
+            <div class="w-10 sm:w-auto text-[#2563EB] text-[20px] md:text-2xl flex-shrink-0">
+              <img src="./assests/img/icon/Durable-color.svg" alt="Durable"
+                class="w-8 h-8 sm:w-10 sm:h-10 mx-auto md:mx-0">
+            </div>
+            <div class="text-left sm:text-left md:text-left">
+              <h4 class="font-bold title-font text-gray-900 text-xl sm:text-[20px] md:text-2xl">
+                Durable
+              </h4>
+              <p class="text-gray-500 text-base sm:text-lg font-medium desc-font">
+                Built to last with superior quality
+              </p>
+            </div>
+          </li>
+
+
+          <li class="flex items-center sm:items-centerr gap-4">
+            <div class="w-10 sm:w-auto text-[#2563EB] text-[20px] md:text-2xl flex-shrink-0">
+              <img src="./assests/img/icon/Stylish-color.svg" alt="Stylish"
+                class="w-8 h-8 sm:w-10 sm:h-10 mx-auto md:mx-0">
+            </div>
+            <div class="text-left sm:text-left md:text-left">
+              <h4 class="font-bold title-font text-gray-900 text-xl sm:text-[20px] md:text-2xl">Stylish</h4>
+              <p class="text-gray-500 text-base sm:text-lg font-medium desc-font">
+                Elegant finishes for premium appeal
+              </p>
+            </div>
+          </li>
+
+          <li class="flex items-center sm:items-centerr gap-4">
+            <div class="w-10 sm:w-auto text-[#2563EB] text-[20px] md:text-2xl flex-shrink-0">
+              <img src="./assests/img/icon/right-round.svg" alt="Sustainable"
+                class="w-8 h-8 sm:w-10 sm:h-10 mx-auto md:mx-0">
+            </div>
+            <div class="text-left sm:text-left md:text-left">
+              <h4 class="font-bold title-font text-gray-900 text-xl sm:text-[20px] md:text-2xl">Sustainable</h4>
+              <p class="text-gray-500 text-base sm:text-lg font-medium desc-font">
+                Eco-friendly manufacturing practices
+              </p>
+            </div>
+          </li>
+
+          <li class="flex items-center sm:items-centerr gap-4">
+            <div class="w-10 sm:w-auto text-[#2563EB] text-[20px] md:text-2xl flex-shrink-0">
+              <img src="./assests/img/icon/light.svg" alt="Tested" class="w-8 h-8 sm:w-10 sm:h-10 mx-auto md:mx-0">
+            </div>
+            <div class="text-left sm:text-left md:text-left">
+              <h4 class="font-bold title-font text-gray-900 text-xl sm:text-[20px] md:text-2xl">Tested</h4>
+              <p class="text-gray-500 text-base sm:text-lg font-medium desc-font">
+                Rigorous quality control standards
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right Image with Dots -->
+      <div class="order-1 md:order-2 relative flex justify-center items-center">
+        <div
+          class="relative w-[364px] sm:w-[480px] md:w-[668px] h-[340px] sm:h-[440px] md:h-[562px] rounded-2xl overflow-hidden shadow-lg z-10">
+          <img id="productImage" src="assests/img/Home/product.png" alt="Product"
+            class="w-full h-full object-cover transition-all duration-500 rounded-2xl relative z-10">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#000000cc] to-[#00000000]"></div>
+        </div>
+        <div
+          class="absolute w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-[110px] md:h-[110px] rounded-full bg-[#1A70B4] left-[-20px] sm:left-[-24px] md:left-[-42px] bottom-[8px] md:bottom-[12px] z-0">
+        </div>
+        <div
+          class="absolute w-[46px] h-[46px] sm:w-[54px] sm:h-[54px] md:w-[62px] md:h-[62px] rounded-full bg-[#FFC711] right-[-18px] sm:right-[-2px] md:right-[-24px] top-[8px] md:right-[-26px] md:top-[12px] z-0">
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- End Why Choose Our Leather -->
+
+  <!-- Start Core Values of Kodel -->
+  <section class="bg-white text-center">
+    <div class="max-w-7xl mx-auto  px-8">
+      <!-- Heading -->
+      <h2 class="text-[32px] md:text-[56px] title-font font-bold text-[#0B2239] mb-3 title-font">
+        Core Values of Kodel
+      </h2>
+      <p class="text-[#9EB1C0] desc-font text-[20px] md:text-2xl font-medium mb-10">
+        Our foundation rests on four pillars that guide everything we do
+      </p>
+
+      <!-- Values Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Card 1 -->
+        <div
+          class="bg-[#F5F5F5] shadow-[0_4px_20px_#1018280D] rounded-2xl p-8 shadow-sm hover:shadow-md transition text-left">
+          <div class="flex justify-start mb-4">
+            <img src="./assests/img/icon/settings.svg" alt="settings">
+          </div>
+          <h3 class="text-[20px] md:text-2xl font-bold text-[#0B2239] mb-[6px] title-font">Process</h3>
+          <p class="text-[#667085] text-base font-medium desc-font">
+            Streamlined workflows and cutting-edge technology for consistent excellence
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="bg-[#F5F5F5] shadow-[0_4px_20px_#1018280D] rounded-2xl p-8 shadow-sm hover:shadow-md transition text-left">
+          <div class="flex justify-start mb-4">
+            <img src="./assests/img/icon/Quality.svg" alt="Quality">
+          </div>
+          <h3 class="text-[20px] md:text-2xl font-bold text-[#0B2239] mb-[6px] title-font">Quality</h3>
+          <p class="text-[#667085] text-base font-medium desc-font">
+            Uncompromising standards at every stage of production
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="bg-[#F5F5F5] shadow-[0_4px_20px_#1018280D] rounded-2xl p-8 shadow-sm hover:shadow-md transition text-left">
+          <div class="flex justify-start mb-4">
+            <img src="./assests/img/icon/clock.svg" alt="Time">
+          </div>
+          <h3 class="text-[20px] md:text-2xl font-bold text-[#0B2239] mb-[6px] title-font">Time</h3>
+          <p class="text-[#667085] text-base font-medium desc-font">
+            Reliable delivery schedules and efficient project management
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          class="bg-[#F5F5F5] shadow-[0_4px_20px_#1018280D] rounded-2xl p-8 shadow-sm hover:shadow-md transition text-left">
+          <div class="flex justify-start mb-4">
+            <img src="./assests/img/icon/hand-shak.svg" alt="Trust">
+          </div>
+          <h3 class="text-[20px] md:text-2xl font-bold text-[#0B2239] mb-[6px] title-font">Trust</h3>
+          <p class="text-[#667085] text-base font-medium desc-font">
+            Built through 30+ years of transparency and customer satisfaction
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Core Values of Kodel -->
+
+  <!-- Start Faq -->
+  <section class="py-16 md:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-start">
+
+      <!-- Left Side -->
+      <div>
+        <h2 class="text-[32px] md:text-[56px] title-font font-bold text-[#0B2239] mb-3 title-font">FAQ</h2>
+        <p class="text-[#9EB1C0] desc-font text-[20px] md:text-2xl font-medium mb-10">
+          Find quick answers to common questions<br>about our services.
+        </p>
+      </div>
+
+      <!-- Right Side (Accordion) -->
+      <div class="space-y-4" id="accordion">
+
+        <!-- Item -->
+
+        <div class="accordion-item active bg-[#F9FAFB] text-[#0B2239] rounded-xl transition overflow-hidden">
+          <button
+            class="accordion-header flex justify-between items-center w-full pt-[1.5rem] pr-5 pb-[1.5rem] pl-5 text-left">
+            <h3 class="font-semibold text-lg">What types of leather products do you manufacture?</h3>
+            <span
+              class="accordion-icon bg-[#F5F5F5] rounded-full w-[70px] md:w-10 h-[40px] md:h-[10] flex justify-center items-center text-[#9EB1C0] text-[20px] md:text-2xl transform transition-transform duration-300 leading-none">
+              <svg width="24" height="24" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M18 9C18 9.19891 17.921 9.38968 17.7803 9.53033C17.6397 9.67098 17.4489 9.75 17.25 9.75H9.75V17.25C9.75 17.4489 9.67098 17.6397 9.53033 17.7803C9.38968 17.921 9.19891 18 9 18C8.80109 18 8.61032 17.921 8.46967 17.7803C8.32902 17.6397 8.25 17.4489 8.25 17.25V9.75H0.75C0.551088 9.75 0.360322 9.67098 0.21967 9.53033C0.0790178 9.38968 0 9.19891 0 9C0 8.80109 0.0790178 8.61032 0.21967 8.46967C0.360322 8.32902 0.551088 8.25 0.75 8.25H8.25V0.75C8.25 0.551088 8.32902 0.360322 8.46967 0.21967C8.61032 0.0790178 8.80109 0 9 0C9.19891 0 9.38968 0.0790178 9.53033 0.21967C9.67098 0.360322 9.75 0.551088 9.75 0.75V8.25H17.25C17.4489 8.25 17.6397 8.32902 17.7803 8.46967C17.921 8.61032 18 8.80109 18 9Z"
+                  fill="#222222" />
+              </svg>
+            </span>
+          </button>
+          <div
+            class="accordion-content max-h-0 overflow-hidden px-5 text-sm text-[#0B2239]/80 transition-all duration-500 ease-in-out">
+            <p class="pb-4 text-[#d1e2f0]">
+              We manufacture a wide range of premium leather products including leather hides, finished leather,
+              upholstery, fashion accessories, automotive leather, and custom-made leather solutions.
+            </p>
+          </div>
+        </div>
+
+
+        <!-- Item 2 -->
+        <div class="accordion-item bg-[#F9FAFB] text-[#0B2239] rounded-xl transition overflow-hidden">
+          <button
+            class="accordion-header flex justify-between items-center w-full pt-[1.5rem] pr-5 pb-[1.5rem] pl-5 text-left">
+            <h3 class="font-semibold text-lg">Where are your manufacturing facilities located?</h3>
+            <span
+              class="accordion-icon bg-[#F5F5F5] rounded-full w-[70px] md:w-10 h-[40px] md:h-[10] flex justify-center items-center text-[#9EB1C0] text-[20px] md:text-2xl transform transition-transform duration-300 leading-none">
+              <svg width="24" height="24" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M18 9C18 9.19891 17.921 9.38968 17.7803 9.53033C17.6397 9.67098 17.4489 9.75 17.25 9.75H9.75V17.25C9.75 17.4489 9.67098 17.6397 9.53033 17.7803C9.38968 17.921 9.19891 18 9 18C8.80109 18 8.61032 17.921 8.46967 17.7803C8.32902 17.6397 8.25 17.4489 8.25 17.25V9.75H0.75C0.551088 9.75 0.360322 9.67098 0.21967 9.53033C0.0790178 9.38968 0 9.19891 0 9C0 8.80109 0.0790178 8.61032 0.21967 8.46967C0.360322 8.32902 0.551088 8.25 0.75 8.25H8.25V0.75C8.25 0.551088 8.32902 0.360322 8.46967 0.21967C8.61032 0.0790178 8.80109 0 9 0C9.19891 0 9.38968 0.0790178 9.53033 0.21967C9.67098 0.360322 9.75 0.551088 9.75 0.75V8.25H17.25C17.4489 8.25 17.6397 8.32902 17.7803 8.46967C17.921 8.61032 18 8.80109 18 9Z"
+                  fill="#222222" />
+              </svg>
+            </span>
+          </button>
+          <div
+            class="accordion-content max-h-0 overflow-hidden px-5 text-sm text-[#0B2239]/80 transition-all duration-500 ease-in-out">
+            <p class="pb-4 text-[#d1e2f0]">
+              Our manufacturing facilities are strategically located to serve both domestic and international clients
+              efficiently.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="accordion-item bg-[#F9FAFB] text-[#0B2239] rounded-xl transition overflow-hidden">
+          <button
+            class="accordion-header flex justify-between items-center w-full pt-[1.5rem] pr-5 pb-[1.5rem] pl-5 text-left">
+            <h3 class="font-semibold text-lg">How long has Kodel been in the leather industry?</h3>
+            <span
+              class="accordion-icon bg-[#F5F5F5] rounded-full w-[70px] md:w-10 h-[40px] md:h-[10] flex justify-center items-center text-[#9EB1C0] text-[20px] md:text-2xl transform transition-transform duration-300 leading-none">
+              <svg width="24" height="24" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M18 9C18 9.19891 17.921 9.38968 17.7803 9.53033C17.6397 9.67098 17.4489 9.75 17.25 9.75H9.75V17.25C9.75 17.4489 9.67098 17.6397 9.53033 17.7803C9.38968 17.921 9.19891 18 9 18C8.80109 18 8.61032 17.921 8.46967 17.7803C8.32902 17.6397 8.25 17.4489 8.25 17.25V9.75H0.75C0.551088 9.75 0.360322 9.67098 0.21967 9.53033C0.0790178 9.38968 0 9.19891 0 9C0 8.80109 0.0790178 8.61032 0.21967 8.46967C0.360322 8.32902 0.551088 8.25 0.75 8.25H8.25V0.75C8.25 0.551088 8.32902 0.360322 8.46967 0.21967C8.61032 0.0790178 8.80109 0 9 0C9.19891 0 9.38968 0.0790178 9.53033 0.21967C9.67098 0.360322 9.75 0.551088 9.75 0.75V8.25H17.25C17.4489 8.25 17.6397 8.32902 17.7803 8.46967C17.921 8.61032 18 8.80109 18 9Z"
+                  fill="#222222" />
+              </svg>
+            </span>
+          </button>
+          <div
+            class="accordion-content max-h-0 overflow-hidden px-5 text-sm text-[#0B2239]/80 transition-all duration-500 ease-in-out">
+            <p class="pb-4 text-[#d1e2f0]">
+              Kodel has been a trusted name in the leather industry for several decades, offering consistent quality and
+              innovation.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="accordion-item bg-[#F9FAFB] text-[#0B2239] rounded-xl transition overflow-hidden">
+          <button
+            class="accordion-header flex justify-between items-center w-full pt-[1.5rem] pr-5 pb-[1.5rem] pl-5 text-left">
+            <h3 class="font-semibold text-lg">How do you ensure the quality of your leather?</h3>
+
+            <span
+              class="accordion-icon bg-[#F5F5F5] rounded-full w-[70px] md:w-10 h-[40px] md:h-[10] flex justify-center items-center text-[#9EB1C0] text-[20px] md:text-2xl transform transition-transform duration-300 leading-none">
+              <svg width="24" height="24" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M18 9C18 9.19891 17.921 9.38968 17.7803 9.53033C17.6397 9.67098 17.4489 9.75 17.25 9.75H9.75V17.25C9.75 17.4489 9.67098 17.6397 9.53033 17.7803C9.38968 17.921 9.19891 18 9 18C8.80109 18 8.61032 17.921 8.46967 17.7803C8.32902 17.6397 8.25 17.4489 8.25 17.25V9.75H0.75C0.551088 9.75 0.360322 9.67098 0.21967 9.53033C0.0790178 9.38968 0 9.19891 0 9C0 8.80109 0.0790178 8.61032 0.21967 8.46967C0.360322 8.32902 0.551088 8.25 0.75 8.25H8.25V0.75C8.25 0.551088 8.32902 0.360322 8.46967 0.21967C8.61032 0.0790178 8.80109 0 9 0C9.19891 0 9.38968 0.0790178 9.53033 0.21967C9.67098 0.360322 9.75 0.551088 9.75 0.75V8.25H17.25C17.4489 8.25 17.6397 8.32902 17.7803 8.46967C17.921 8.61032 18 8.80109 18 9Z"
+                  fill="#222222" />
+              </svg>
+            </span>
+          </button>
+          <div
+            class="accordion-content max-h-0 overflow-hidden px-5 text-sm text-[#0B2239]/80 transition-all duration-500 ease-in-out">
+            <p class="pb-4 text-[#d1e2f0]">
+              We follow strict quality control processes and use only the finest raw materials, ensuring each product
+              meets international standards.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- End Faq -->
+
+  <!-- CTA SECTION -->
+  <section class="relative bg-white  hidden md:block ">
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
+      <div class="rounded-2xl overflow-hidden grid md:grid-cols-2 bg-[#0B2239] shadow-[0px_4px_20px_#1018280D]">
+
+        <div class="py-[59px] px-[30px] md:p-[59px] flex flex-col justify-center text-white ">
+          <h2 class="text-[32px] md:text-[56px] font-bold text-[#ffffff] leading-[1.36] title-font mb-4">Ready to Work
+            Together?</h2>
+          <p class="text-[#9EB1C0] text-[20px] md:text-2xl font-medium desc-font">
+            Looking for premium leather solutions? Let's create something exceptional together.
+          </p>
+          <a href="#contact"
+            class="mt-[40px] inline-flex items-center bg-[#1A70B4] w-[60%] md:w-[40%] hover:bg-[#1A70B4] text-white text-base font-bold rounded-full px-5 py-3 transition">
+            Get in Touch
+            <img src="./assests/img/icon/arrow-rigth.svg" class="ms-2" alt="">
+          </a>
+        </div>
+
+        <div class="relative">
+          <img src="assests/img/Home/cta-1.jpg" alt="Leather Tools"
+            class="w-full h-full object-cover rounded-bl-[50%] relative z-10">
+          <div
+            class="absolute inset-0 rounded-bl-[50%] z-20 bg-gradient-to-br from-[#1018281A] via-[#1018284D] to-[#00000080]">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="absolute bottom-0 left-0 w-full h-[66%] bg-[url('assests/img/Home/footer-top-wave.png')] bg-cover bg-center opacity-40">
+    </div>
+  </section>
+
+  <section class="relative bg-white  md:hidden">
+    <div class="max-w-md md:max-w-lg mx-auto px-6 relative z-10">
+      <div class="bg-[#0B2239] rounded-2xl relative overflow-hidden text-white p-8 pt-[99px] pb-[50px] shadow-lg">
+
+        <img src="assests/img/Home/cta-1.jpg" alt="Leather Tools"
+          class="absolute top-0 right-0 w-[140px] h-[140px] md:w-[180px] md:h-[180px] object-cover rounded-bl-[100%] opacity-90">
+        <div
+          class="absolute top-0 right-0 w-[140px] h-[140px] md:w-[180px] md:h-[180px] bg-gradient-to-tl from-black/60 to-transparent rounded-bl-[100%]">
+        </div>
+
+        <h2 class="text-[28px] md:text-[32px] font-bold leading-snug mb-3">
+          Ready to Work Together?
+        </h2>
+        <p class="text-[#9EB1C0] text-[16px] md:text-[18px] font-medium leading-relaxed">
+          Looking for premium leather solutions? Let's create something exceptional together.
+        </p>
+
+        <a href="#contact"
+          class="mt-6 inline-flex items-center bg-[#1A70B4] hover:bg-[#155f9c] text-white text-sm md:text-base font-bold rounded-full px-6 py-3 transition">
+          Get in Touch
+          <img src="./assests/img/icon/arrow-rigth.svg" class="ms-2 w-4 md:w-5" alt="">
+        </a>
+      </div>
+    </div>
+
+    <!-- Subtle background wave -->
+    <div
+      class="absolute bottom-0 left-0 w-full h-[66%] bg-[url('assests/img/Home/footer-top-wave.png')] bg-cover bg-center opacity-40">
+    </div>
+  </section>
+
+  <!-- FOOTER SECTION -->
+  <footer class="pt-16 md:pt-28 relative text-white pb-6 overflow-hidden bg-[#e8e8e8]">
+    <!-- Dark Overlay -->
+    <div class="absolute inset-0 bg-[#f4f4f4] to-transparent"></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-6 grid md:grid-cols-4 gap-10">
+      <div>
+        <img src="./assests/img/logo/kodel-logo.svg" alt="Logo" class="mb-4">
+        <p class="text-[#222222] text-base font-medium desc-font leading-relaxed">
+          Premium leather manufacturing with 30+ years of excellence, serving global brands with quality and trust.
+        </p>
+        <div class="flex space-x-4 mt-4">
+          <a href="#" class="text-[#222222] hover:text-[#1a70b4] desc-font transition"><img
+              src="./assests/img/icon/facebook.svg" alt=""></a>
+          <a href="#" class="text-[#222222] hover:text-[#1a70b4] desc-font transition"><img
+              src="./assests/img/icon/instaram.svg" alt=""></a>
+          <a href="#" class="text-[#222222] hover:text-[#1a70b4] desc-font transition"><img
+              src="./assests/img/icon/linkedin.svg" alt=""></a>
+          <a href="#" class="text-[#222222] hover:text-[#1a70b4] desc-font transition"><img
+              src="./assests/img/icon/x.svg" alt=""></a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-[20px] font-bold mb-4 title-font text-[#222222]">Quick Links</h3>
+        <ul class="space-y-2 text-[#222222] text-sm">
+          <li class="mt-4 font-medium text-base"><a href="#" class="hover:text-[#1a70b4] desc-font transition">About
+              Us</a></li>
+          <li class="mt-4 font-medium text-base"><a href="#"
+              class="hover:text-[#1a70b4] desc-font transition">Products</a></li>
+          <li class="mt-4 font-medium text-base"><a href="#"
+              class="hover:text-[#1a70b4] desc-font transition">Manufacturing</a></li>
+          <li class="mt-4 font-medium text-base"><a href="#" class="hover:text-[#1a70b4] desc-font transition">Blog</a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-[20px] font-bold mb-4 title-font text-[#222222]">Our Products</h3>
+        <ul class="space-y-2 text-[#222222] text-sm">
+          <li class="mt-4 font-medium text-base"><a href="#" class="hover:text-[#1a70b4] desc-font transition">Footwear
+              Leather</a></li>
+          <li class="mt-4 font-medium text-base"><a href="#" class="hover:text-[#1a70b4] desc-font transition">Bag
+              Leather</a></li>
+          <li class="mt-4 font-medium text-base"><a href="#" class="hover:text-[#1a70b4] desc-font transition">Wallets &
+              Belts</a></li>
+          <li class="mt-4 font-medium text-base"><a href="#" class="hover:text-[#1a70b4] desc-font transition">Sheet
+              Covers</a></li>
+          <li class="mt-4 font-medium text-base"><a href="#"
+              class="hover:text-[#1a70b4] desc-font transition">Upholstery</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-[20px] font-bold mb-4 title-font text-[#222222]">Contact Us</h3>
+        <ul class="text-[#222222] text-sm space-y-3">
+          <li class="flex items-center space-x-2">
+            <img src="./assests/img/icon/location.svg" alt="location">
+            <span class="desc-font font-medium text-base">Industrial Area, Leather District, India</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <img src="./assests/img/icon/phone.svg" alt="phone">
+            <span class="desc-font font-medium text-base">+91 123 456 7890</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <img src="./assests/img/icon/mail.svg" alt="mail">
+            <span class="desc-font font-medium text-base">info@kodelleather.com</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-[#dddddd] relative z-10 text-center mt-10 text-[#222222] text-base font-medium pt-6">
+      © 2025 Kodel Leather. All rights reserved. Crafted with excellence.
+    </div>
+  </footer>
+
+  <script src="./assests/js/dev-script.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    // satrt Our Clients slider
+    var swiper = new Swiper(".clientSlider", {
+      slidesPerView: 4,
+      spaceBetween: 40,
+      loop: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        0: { // Mobile view
+          slidesPerView: 3.5,
+          spaceBetween: 40,
+        },
+        640: {
+          slidesPerView: 3,
+          spaceBetween: 50,
+        },
+        1024: {
+          slidesPerView: 5,
+          spaceBetween: 80,
+        },
+      },
+    });
+
+    // End Our Clients slider
+  </script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1A70B4',
+          }
+        }
+      }
+    }
+  </script>
+
+</body>
+
+</html>
