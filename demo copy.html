@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Modal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- Product Card -->
+  <div class="cursor-pointer transition-transform w-50"  id="openBtn">
+    <div class="w-full aspect-[4/3] bg-gray-100 border border-gray-200 rounded-2xl overflow-hidden">
+      <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=500"
+        alt="Bag & Accessory Leather" class="w-full h-full object-cover" />
+    </div>
+    <h3 class="mt-3 text-lg font-semibold text-gray-700">
+      Bag & Accessory Leather
+    </h3>
+  </div>
+
+  <!-- Modal -->
+  <div id="modalOverlay" aria-hidden="true"
+    class="fixed inset-0 bg-black bg-opacity-50 z-50 p-5 hidden items-center justify-center overflow-y-auto">
+    
+    <!-- Backdrop -->
+    <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" data-modal-backdrop></div>
+    
+    <div role="dialog" aria-modal="true" aria-labelledby="modal-title"
+      class="w-full max-w-md bg-white rounded-2xl shadow-xl transform transition-all scale-95 opacity-0"
+      id="modalPanel">
+      
+      <div class="bg-white rounded-3xl w-full max-w-5xl relative max-h-[90vh] overflow-y-auto">
+        <button id="closeBtnTop"
+          class="absolute top-4 right-4 bg-blue-500 hover:bg-blue-600 text-white rounded-full w-9 h-9 flex items-center justify-center text-xl z-10">
+          ×
+        </button>
+
+        <!-- Desktop View -->
+        <div class="hidden md:block p-6">
+          <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="relative bg-gray-100 rounded-2xl overflow-hidden h-[456px]">
+              <img id="desktopMainImg" src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=500"
+                alt="" class="w-full object-cover" />
+            </div>
+
+            <div class="flex flex-col gap-4">
+              <div class="relative bg-gray-100 rounded-2xl overflow-hidden h-[220px]">
+                <img id="desktopSmallImg1" src="https://images.unsplash.com/photo-1587574293340-ea3c5cba9e1b?w=500"
+                  alt="" class="w-full h-full object-cover" />
+              </div>
+              <div class="relative bg-gray-100 rounded-2xl overflow-hidden h-[220px]">
+                <img id="desktopSmallImg2" src="https://images.unsplash.com/photo-1606813902914-66c39b9b8d8a?w=500"
+                  alt="" class="w-full h-full object-cover" />
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between items-center">
+              <div>
+                <h2 id="desktopProductName" class="text-xl font-semibold text-gray-800 mb-2">Bag & Accessory Leather</h2>
+                <p id="desktopProductDesc" class="text-sm text-gray-500 mb-4">High-quality leather for accessories and handbags.</p>
+              </div>
+              <div>
+                <button
+                  class="w-full bg-[#1A70B4] text-white py-3 px-5 rounded-full text-sm font-medium flex items-center justify-center gap-2">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                  </svg>
+                  Download Catalogue
+                </button>
+              </div>
+            </div>
+            <div class="text-sm font-medium text-gray-700 mb-3 mt-3">
+              Available Color Options
+            </div>
+            <div id="desktopColors" class="flex flex-wrap gap-2 mb-5">
+              <div class="w-8 h-8 rounded-full shadow-md border-2 border-white bg-[#D4A574]" title="#D4A574"></div>
+              <div class="w-8 h-8 rounded-full shadow-md border-2 border-white bg-[#7CB342]" title="#7CB342"></div>
+              <div class="w-8 h-8 rounded-full shadow-md border-2 border-white bg-[#66BB6A]" title="#66BB6A"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile View -->
+        <div class="block md:hidden p-6">
+          <div class="relative bg-gray-100 rounded-2xl aspect-square mb-4 overflow-hidden">
+            <img id="mobileMainImg" src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=500"
+              alt="" class="w-full h-full object-cover" />
+          </div>
+
+          <div class="grid grid-cols-2 gap-3 mb-4">
+            <div class="relative bg-gray-100 rounded-2xl aspect-video overflow-hidden">
+              <img id="mobileSmallImg1" src="https://images.unsplash.com/photo-1587574293340-ea3c5cba9e1b?w=500"
+                alt="" class="w-full h-full object-cover" />
+            </div>
+            <div class="relative bg-gray-100 rounded-2xl aspect-video overflow-hidden">
+              <img id="mobileSmallImg2" src="https://images.unsplash.com/photo-1606813902914-66c39b9b8d8a?w=500"
+                alt="" class="w-full h-full object-cover" />
+            </div>
+          </div>
+
+          <div>
+            <h2 id="mobileProductName" class="text-xl font-semibold text-gray-800 mb-2">Bag & Accessory Leather</h2>
+            <p id="mobileProductDesc" class="text-sm text-gray-500 mb-4">High-quality leather for accessories and handbags.</p>
+
+            <div class="text-sm font-medium text-gray-700 mb-3">
+              Available Color Options
+            </div>
+
+            <div class="relative mb-5">
+              <button id="scrollLeft"
+                class="absolute left-0 top-1/2 -translate-y-1/2 bg-white rounded-full w-8 h-8 flex items-center justify-center shadow-lg z-10 hover:bg-gray-50 transition">
+                <svg class="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+
+              <!-- Color slider -->
+              <div id="mobileColors"
+                class="flex gap-3 overflow-x-auto no-scrollbar px-10 py-2 scroll-smooth">
+                <div class="w-8 h-8 rounded-full shadow-md border-2 border-white bg-[#D4A574] flex-shrink-0"></div>
+                <div class="w-8 h-8 rounded-full shadow-md border-2 border-white bg-[#7CB342] flex-shrink-0"></div>
+                <div class="w-8 h-8 rounded-full shadow-md border-2 border-white bg-[#66BB6A] flex-shrink-0"></div>
+                <div class="w-8 h-8 rounded-full shadow-md border-2 border-white bg-[#4CAF50] flex-shrink-0"></div>
+                <div class="w-8 h-8 rounded-full shadow-md border-2 border-white bg-[#F44336] flex-shrink-0"></div>
+                <div class="w-8 h-8 rounded-full shadow-md border-2 border-white bg-[#9C27B0] flex-shrink-0"></div>
+                <div class="w-8 h-8 rounded-full shadow-md border-2 border-white bg-[#2196F3] flex-shrink-0"></div>
+              </div>
+
+              <button id="scrollRight"
+                class="absolute right-0 top-1/2 -translate-y-1/2 bg-white rounded-full w-8 h-8 flex items-center justify-center shadow-lg z-10 hover:bg-gray-50 transition">
+                <svg class="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+
+            <button
+              class="w-full bg-[#1A70B4] text-white py-3 rounded-full text-sm font-medium flex items-center justify-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              Download Catalogue
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS Section -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const openBtn = document.getElementById("openBtn");
+    const modalOverlay = document.getElementById("modalOverlay");
+    const closeBtnTop = document.getElementById("closeBtnTop");
+    const modalPanel = document.getElementById("modalPanel");
+    const scrollLeft = document.getElementById("scrollLeft");
+    const scrollRight = document.getElementById("scrollRight");
+    const mobileColors = document.getElementById("mobileColors");
+
+    // Open modal
+    openBtn.addEventListener("click", () => {
+      modalOverlay.classList.remove("hidden");
+      setTimeout(() => {
+        modalPanel.classList.remove("scale-95", "opacity-0");
+        modalPanel.classList.add("scale-100", "opacity-100");
+      }, 50);
+    });
+
+    // Close modal
+    function closeModal() {
+      modalPanel.classList.remove("scale-100", "opacity-100");
+      modalPanel.classList.add("scale-95", "opacity-0");
+      setTimeout(() => {
+        modalOverlay.classList.add("hidden");
+      }, 200);
+    }
+
+    closeBtnTop.addEventListener("click", closeModal);
+    modalOverlay.addEventListener("click", function (e) {
+      if (e.target === modalOverlay) {
+        closeModal();
+      }
+    });
+
+    // Mobile color slider
+    scrollLeft.addEventListener("click", () => {
+      mobileColors.scrollBy({ left: -100, behavior: "smooth" });
+    });
+    scrollRight.addEventListener("click", () => {
+      mobileColors.scrollBy({ left: 100, behavior: "smooth" });
+    });
+  });
+  </script>
+
+  <style>
+    /* Hide scrollbar for smoother look */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Modal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- Product Card -->
+  <div class="cursor-pointer transition-transform duration-300 hover:scale-105" id="openBtn">
+    <div class="w-full aspect-[4/3] bg-gray-100 border border-gray-200 rounded-2xl overflow-hidden">
+      <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=500"
+        alt="Bag & Accessory Leather" class="w-full h-full object-cover" />
+    </div>
+    <h3 class="mt-3 text-lg font-semibold text-gray-700">
+      Bag & Accessory Leather
+    </h3>
+  </div>
+
+  <!-- Modal -->
+  <div id="modalOverlay" aria-hidden="true"
+    class="fixed inset-0 bg-black bg-opacity-50 z-50 p-5 hidden items-center justify-center overflow-y-auto">
+    
+    <!-- Backdrop -->
+    <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" data-modal-backdrop></div>
+    
+    <div role="dialog" aria-modal="true" aria-labelledby="modal-title"
+      class="w-full max-w-md bg-white rounded-2xl shadow-xl transform transition-all scale-95 opacity-0"
+      id="modalPanel">
+      
+      <div class="bg-white rounded-3xl w-full max-w-5xl relative max-h-[90vh] overflow-y-auto">
+        <button id="closeBtnTop"
+          class="absolute top-4 right-4 bg-blue-500 hover:bg-blue-600 text-white rounded-full w-9 h-9 flex items-center justify-center text-xl z-10">
+          ×
+        </button>
+
+        <!-- Desktop View -->
+        <div class="hidden md:block p-6">
+          <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="relative bg-gray-100 rounded-2xl overflow-hidden h-[456px]">
+              <img id="desktopMainImg" src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=500"
+                alt="" class="w-full object-cover" />
+            </div>
+
+            <div class="flex flex-col gap-4">
+              <div class="relative bg-gray-100 rounded-2xl overflow-hidden h-[220px]">
+                <img id="desktopSmallImg1" src="https://images.unsplash.com/photo-1587574293340-ea3c5cba9e1b?w=500"
+                  alt="" class="w-full h-full object-cover" />
+              </div>
+              <div class="relative bg-gray-100 rounded-2xl overflow-hidden h-[220px]">
+                <img id="desktopSmallImg2" src="https://images.unsplash.com/photo-1606813902914-66c39b9b8d8a?w=500"
+                  alt="" class="w-full h-full object-cover" />
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between items-center">
+              <div>
+                <h2 id="desktopProductName" class="text-xl font-semibold text-gray-800 mb-2">Bag & Accessory Leather</h2>
+                <p id="desktopProductDesc" class="text-sm text-gray-500 mb-4">High-quality leather for accessories and handbags.</p>
+              </div>
+              <div>
+                <button
+                  class="w-full bg-[#1A70B4] text-white py-3 px-5 rounded-full text-sm font-medium flex items-center justify-center gap-2">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                  </svg>
+                  Download Catalogue
+                </button>
+              </div>
+            </div>
+            <div class="text-sm font-medium text-gray-700 mb-3 mt-3">
+              Available Color Options
+            </div>
+            <div id="desktopColors" class="flex flex-wrap gap-2 mb-5">
+              <div class="w-8 h-8 rounded-full shadow-md border-2 border-white bg-[#D4A574]" title="#D4A574"></div>
+              <div class="w-8 h-8 rounded-full shadow-md border-2 border-white bg-[#7CB342]" title="#7CB342"></div>
+              <div class="w-8 h-8 rounded-full shadow-md border-2 border-white bg-[#66BB6A]" title="#66BB6A"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile View -->
+        <div class="block md:hidden p-6">
+          <div class="relative bg-gray-100 rounded-2xl aspect-square mb-4 overflow-hidden">
+            <img id="mobileMainImg" src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=500"
+              alt="" class="w-full h-full object-cover" />
+          </div>
+
+          <div class="grid grid-cols-2 gap-3 mb-4">
+            <div class="relative bg-gray-100 rounded-2xl aspect-video overflow-hidden">
+              <img id="mobileSmallImg1" src="https://images.unsplash.com/photo-1587574293340-ea3c5cba9e1b?w=500"
+                alt="" class="w-full h-full object-cover" />
+            </div>
+            <div class="relative bg-gray-100 rounded-2xl aspect-video overflow-hidden">
+              <img id="mobileSmallImg2" src="https://images.unsplash.com/photo-1606813902914-66c39b9b8d8a?w=500"
+                alt="" class="w-full h-full object-cover" />
+            </div>
+          </div>
+
+          <div>
+            <h2 id="mobileProductName" class="text-xl font-semibold text-gray-800 mb-2">Bag & Accessory Leather</h2>
+            <p id="mobileProductDesc" class="text-sm text-gray-500 mb-4">High-quality leather for accessories and handbags.</p>
+
+            <div class="text-sm font-medium text-gray-700 mb-3">
+              Available Color Options
+            </div>
+
+            <div class="relative mb-5">
+              <button id="scrollLeft"
+                class="absolute left-0 top-1/2 -translate-y-1/2 bg-white rounded-full w-8 h-8 flex items-center justify-center shadow-lg z-10 hover:bg-gray-50 transition">
+                <svg class="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+
+              <!-- Color slider -->
+              <div id="mobileColors"
+                class="flex gap-3 overflow-x-auto no-scrollbar px-10 py-2 scroll-smooth">
+                <div class="w-8 h-8 rounded-full shadow-md border-2 border-white bg-[#D4A574] flex-shrink-0"></div>
+                <div class="w-8 h-8 rounded-full shadow-md border-2 border-white bg-[#7CB342] flex-shrink-0"></div>
+                <div class="w-8 h-8 rounded-full shadow-md border-2 border-white bg-[#66BB6A] flex-shrink-0"></div>
+                <div class="w-8 h-8 rounded-full shadow-md border-2 border-white bg-[#4CAF50] flex-shrink-0"></div>
+                <div class="w-8 h-8 rounded-full shadow-md border-2 border-white bg-[#F44336] flex-shrink-0"></div>
+                <div class="w-8 h-8 rounded-full shadow-md border-2 border-white bg-[#9C27B0] flex-shrink-0"></div>
+                <div class="w-8 h-8 rounded-full shadow-md border-2 border-white bg-[#2196F3] flex-shrink-0"></div>
+              </div>
+
+              <button id="scrollRight"
+                class="absolute right-0 top-1/2 -translate-y-1/2 bg-white rounded-full w-8 h-8 flex items-center justify-center shadow-lg z-10 hover:bg-gray-50 transition">
+                <svg class="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+
+            <button
+              class="w-full bg-[#1A70B4] text-white py-3 rounded-full text-sm font-medium flex items-center justify-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              Download Catalogue
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS Section -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const openBtn = document.getElementById("openBtn");
+    const modalOverlay = document.getElementById("modalOverlay");
+    const closeBtnTop = document.getElementById("closeBtnTop");
+    const modalPanel = document.getElementById("modalPanel");
+    const scrollLeft = document.getElementById("scrollLeft");
+    const scrollRight = document.getElementById("scrollRight");
+    const mobileColors = document.getElementById("mobileColors");
+
+    // Open modal
+    openBtn.addEventListener("click", () => {
+      modalOverlay.classList.remove("hidden");
+      setTimeout(() => {
+        modalPanel.classList.remove("scale-95", "opacity-0");
+        modalPanel.classList.add("scale-100", "opacity-100");
+      }, 50);
+    });
+
+    // Close modal
+    function closeModal() {
+      modalPanel.classList.remove("scale-100", "opacity-100");
+      modalPanel.classList.add("scale-95", "opacity-0");
+      setTimeout(() => {
+        modalOverlay.classList.add("hidden");
+      }, 200);
+    }
+
+    closeBtnTop.addEventListener("click", closeModal);
+    modalOverlay.addEventListener("click", function (e) {
+      if (e.target === modalOverlay) {
+        closeModal();
+      }
+    });
+
+    // Mobile color slider
+    scrollLeft.addEventListener("click", () => {
+      mobileColors.scrollBy({ left: -100, behavior: "smooth" });
+    });
+    scrollRight.addEventListener("click", () => {
+      mobileColors.scrollBy({ left: 100, behavior: "smooth" });
+    });
+  });
+  </script>
+
+  <style>
+    /* Hide scrollbar for smoother look */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+
+</body>
+</html>
