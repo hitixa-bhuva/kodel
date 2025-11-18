@@ -1,3 +1,4 @@
+//  top nave bar script
  document.addEventListener("DOMContentLoaded", function () {
     const menuBtn = document.getElementById('menu-btn');
     const closeBtn = document.getElementById('close-btn');
@@ -104,7 +105,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const icon = first.querySelector('.accordion-icon');
     first.classList.add('active', 'bg-[#1A70B4]', 'text-white');
     content.style.maxHeight = content.scrollHeight + 'px';
-    icon.style.transform = 'rotate(45deg)';
+    icon.style.transform = 'rotate(90deg)';
   }
 });
 
@@ -139,7 +140,7 @@ accordions.forEach((item) => {
 });
     // End faq section
 
-    // satrt Our Clients slider
+    
   var swiper = new Swiper(".clientSlider", {
     slidesPerView: 4,
     spaceBetween: 40,
@@ -165,3 +166,26 @@ accordions.forEach((item) => {
   });
 
     // End Our Clients slider
+  var swiper = new Swiper(".clientSlider", {
+      slidesPerView: 4,
+      spaceBetween: 40,
+      loop: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        0: { 
+          slidesPerView: 3.5,
+          spaceBetween: 40,
+        },
+        640: {
+          slidesPerView: 3,
+          spaceBetween: 50,
+        },
+        1024: {
+          slidesPerView: 5,
+          spaceBetween: 80,
+        },
+      },
+    });

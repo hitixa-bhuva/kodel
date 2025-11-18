@@ -9,19 +9,15 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
-  <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-
   <!-- Start top nav bar -->
   <nav class="w-full bg-white shadow-sm sticky top-0 z-50">
     <div class="container mx-auto px-6 flex justify-between items-center">
 
-      <!-- Mobile Menu Button -->
       <button id="menu-btn" class="lg:hidden text-gray-700 focus:outline-none">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -29,44 +25,70 @@
       </button>
 
       <div class="flex items-center space-x-2 py-3">
-        <img src="./assests/img/logo/kodel-logo.svg" alt="Logo" class="h-10">
+        <a href="index.html"><img src="./assests/img/logo/kodel-logo.svg" alt="Logo" class="h-10"></a>
       </div>
 
       <a href="#"
-        class="w-[44px] h-[44px] flex items-center justify-center md:hidden md:flex items-center bg-[#1A70B4] text-white rounded-full transition-all duration-300 hover:bg-transparent hover:text-[#1A70B4] border-2 border-[#1A70B4]">
+        class="w-[44px] h-[44px] flex items-center justify-center md:hidden bg-primary text-white rounded-full transition-all duration-300 hover:bg-transparent hover:text-primary border-2 border-primary">
         <img src="./assests/img/icon/phone-white.svg" class="h-5 w-5" alt="phone icon">
-
       </a>
 
-      <!-- Desktop Menu -->
-      <ul class="hidden lg:flex items-center space-x-6 text-gray-700 font-medium">
-        <li><a href="index.html" class="text-[#1A70B4] font-semibold">Home</a></li>
-        <li><a href="about.html" class="hover:text-primary">About Us</a></li>
-        <li><a href="#" class="hover:text-primary">Products</a></li>
-        <li><a href="#" class="hover:text-primary">Manufacturing</a></li>
-        <li><a href="#" class="hover:text-primary">Dealer App</a></li>
-        <li><a href="#" class="hover:text-primary">Blog</a></li>
-        <li><a href="#" class="hover:text-primary">Contact</a></li>
+      <ul class="hidden lg:flex items-center space-x-6 text-gray-700 font-medium gap-3">
+
+        <li class="group relative nav-item active">
+          <a href="index.html" class="text-primary font-semibold text-base">Home</a>
+        </li>
+
+        <li class="group relative nav-item">
+          <a href="about.html" class="transition duration-300 group-hover:text-primary font-semibold text-base">About
+            Us</a>
+        </li>
+
+        <li class="group relative nav-item">
+          <a href="product.html"
+            class="transition duration-300 group-hover:text-primary font-semibold text-base">Products</a>
+        </li>
+
+        <li class="group relative nav-item">
+          <a href="Manufacturing.html"
+            class="transition duration-300 group-hover:text-primary font-semibold text-base">Manufacturing</a>
+        </li>
+
+        <li class="group relative nav-item">
+          <a href="DealerDistributorApp.html"
+            class="transition duration-300 group-hover:text-primary font-semibold text-base">Dealer App</a>
+        </li>
+
+        <li class="group relative nav-item">
+          <a href="ourBlog.html"
+            class="transition duration-300 group-hover:text-primary font-semibold text-base">Blog</a>
+        </li>
+
+        <li class="group relative nav-item">
+          <a href="contact.html"
+            class="transition duration-300 group-hover:text-primary font-semibold text-base">Contact</a>
+        </li>
       </ul>
 
-      <!-- Get in Touch Button (Desktop) -->
-      <a href="#"
-        class="hidden md:flex items-center bg-[#1A70B4] text-white px-5 py-2 rounded-full transition-all duration-300 hover:bg-transparent hover:text-[#1A70B4] border-2 border-[#1A70B4]">
-        <img src="./assests/img/icon/phone-white.svg" class="h-5 w-5 mr-2" alt="phone icon">
+      <a href="#" class="font-semibold text-base hidden md:flex items-center bg-primary text-white px-5 py-2 rounded-full border-2 border-primary
+         transition-all duration-300 hover:bg-[#E2F0FB] hover:text-primary group">
+        <svg class="mr-2 fill-white group-hover:fill-primary" width="19" height="19" viewBox="0 0 19 19">
+          <path
+            d="M17.8472 12.6054L13.4306 10.6264L13.4184 10.6207C13.1892 10.5227 12.939 10.4833 12.6907 10.5062C12.4424 10.5292 12.2037 10.6136 11.9963 10.752C11.9718 10.7681 11.9484 10.7857 11.9259 10.8045L9.64407 12.7498C8.19845 12.0476 6.70595 10.5664 6.00376 9.1395L7.95188 6.82294C7.97063 6.7995 7.98845 6.77606 8.00532 6.75075C8.14072 6.54384 8.22287 6.30667 8.24446 6.06035C8.26605 5.81402 8.22641 5.56618 8.12907 5.33887V5.32762L6.14438 0.90356C6.0157 0.606621 5.79444 0.359262 5.51362 0.198409C5.2328 0.0375558 4.9075 -0.0281638 4.58626 0.0110603C3.31592 0.178223 2.14986 0.802093 1.30588 1.76615C0.461903 2.73021 -0.00228837 3.96852 8.4831e-06 5.24981C8.4831e-06 12.6936 6.05626 18.7498 13.5 18.7498C14.7813 18.7521 16.0196 18.2879 16.9837 17.4439C17.9477 16.6 18.5716 15.4339 18.7388 14.1636C18.7781 13.8424 18.7125 13.5172 18.5518 13.2364C18.3911 12.9556 18.144 12.7343 17.8472 12.6054ZM13.5 17.2498C10.3185 17.2463 7.26825 15.9809 5.01856 13.7313C2.76888 11.4816 1.50348 8.43134 1.50001 5.24981C1.49648 4.33433 1.82631 3.44887 2.42789 2.75879C3.02947 2.0687 3.86167 1.62118 4.76907 1.49981C4.7687 1.50355 4.7687 1.50732 4.76907 1.51106L6.73782 5.91731L4.80001 8.23669C4.78034 8.25932 4.76247 8.28345 4.74657 8.30887C4.60549 8.52536 4.52273 8.77462 4.5063 9.03249C4.48988 9.29037 4.54035 9.54811 4.65282 9.78075C5.5022 11.5179 7.25251 13.2551 9.00845 14.1036C9.24279 14.215 9.50203 14.2637 9.76083 14.245C10.0196 14.2262 10.2692 14.1407 10.485 13.9967C10.5091 13.9805 10.5322 13.9629 10.5544 13.9442L12.8334 11.9998L17.2397 13.9732C17.2397 13.9732 17.2472 13.9732 17.25 13.9732C17.1301 14.8819 16.6833 15.7158 15.9931 16.3189C15.3028 16.922 14.4166 17.2529 13.5 17.2498Z" />
+        </svg>
         Get in Touch
       </a>
 
     </div>
 
-    <!-- Backdrop -->
     <div id="backdrop" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40 lg:hidden"></div>
 
-    <!-- Mobile Sidebar Menu -->
     <div id="mobile-menu"
-      class="fixed top-0 left-0 h-screen w-[80%] bg-white shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out z-50 lg:hidden">
+      class="fixed top-0 left-0 h-screen w-[80%] bg-white shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out z-50 lg:hidden flex flex-col">
 
       <div class="flex justify-between items-center p-4 border-b">
         <img src="./assests/img/logo/kodel-logo.svg" alt="Logo" class="h-8">
+
         <button id="close-btn" class="text-gray-700">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -77,26 +99,78 @@
       <ul class="flex flex-col items-start space-y-4 p-6 text-gray-700 font-medium">
         <li><a href="index.html" class="text-primary">Home</a></li>
         <li><a href="about.html" class="hover:text-primary">About Us</a></li>
-        <li><a href="#" class="hover:text-primary">Products</a></li>
-        <li><a href="#" class="hover:text-primary">Manufacturing</a></li>
-        <li><a href="#" class="hover:text-primary">Dealer App</a></li>
-        <li><a href="#" class="hover:text-primary">Blog</a></li>
-        <li><a href="#" class="hover:text-primary">Contact</a></li>
-        <li>
-          <a href="#" class="lg:hidden bg-primary text-white px-5 py-2 rounded-full hover:bg-blue-800 transition">
-            Get in Touch
-          </a>
-        </li>
+        <li><a href="product.html" class="hover:text-primary">Products</a></li>
+        <li><a href="Manufacturing.html" class="hover:text-primary">Manufacturing</a></li>
+        <li><a href="DealerDistributorApp.html" class="hover:text-primary">Dealer App</a></li>
+        <li><a href="ourBlog.html" class="hover:text-primary">Blog</a></li>
+        <li><a href="contact.html" class="hover:text-primary">Contact</a></li>
       </ul>
+
+      <div class="mt-auto px-6 pb-6 border-t pt-4 space-y-3">
+
+        <div class="flex items-center space-x-3">
+          <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M17.8472 12.6054L13.4306 10.6264L13.4184 10.6207C13.1892 10.5227 12.939 10.4833 12.6907 10.5062C12.4424 10.5292 12.2037 10.6136 11.9963 10.752C11.9718 10.7681 11.9484 10.7857 11.9259 10.8045L9.64407 12.7498C8.19845 12.0476 6.70595 10.5664 6.00376 9.1395L7.95188 6.82294C7.97063 6.7995 7.98845 6.77606 8.00532 6.75075C8.14072 6.54384 8.22287 6.30667 8.24446 6.06035C8.26605 5.81402 8.22641 5.56618 8.12907 5.33887V5.32762L6.14438 0.90356C6.0157 0.606621 5.79444 0.359262 5.51362 0.198409C5.2328 0.0375558 4.9075 -0.0281638 4.58626 0.0110603C3.31592 0.178223 2.14986 0.802093 1.30588 1.76615C0.461903 2.73021 -0.00228837 3.96852 8.4831e-06 5.24981C8.4831e-06 12.6936 6.05626 18.7498 13.5 18.7498C14.7813 18.7521 16.0196 18.2879 16.9837 17.4439C17.9477 16.6 18.5716 15.4339 18.7388 14.1636C18.7781 13.8424 18.7125 13.5172 18.5518 13.2364C18.3911 12.9556 18.144 12.7343 17.8472 12.6054ZM13.5 17.2498C10.3185 17.2463 7.26825 15.9809 5.01856 13.7313C2.76888 11.4816 1.50348 8.43134 1.50001 5.24981C1.49648 4.33433 1.82631 3.44887 2.42789 2.75879C3.02947 2.0687 3.86167 1.62118 4.76907 1.49981C4.7687 1.50355 4.7687 1.50732 4.76907 1.51106L6.73782 5.91731L4.80001 8.23669C4.78034 8.25932 4.76247 8.28345 4.74657 8.30887C4.60549 8.52536 4.52273 8.77462 4.5063 9.03249C4.48988 9.29037 4.54035 9.54811 4.65282 9.78075C5.5022 11.5179 7.25251 13.2551 9.00845 14.1036C9.24279 14.215 9.50203 14.2637 9.76083 14.245C10.0196 14.2262 10.2692 14.1407 10.485 13.9967C10.5091 13.9805 10.5322 13.9629 10.5544 13.9442L12.8334 11.9998L17.2397 13.9732C17.2397 13.9732 17.2472 13.9732 17.25 13.9732C17.1301 14.8819 16.6833 15.7158 15.9931 16.3189C15.3028 16.922 14.4166 17.2529 13.5 17.2498Z"
+              fill="#1A70B4" />
+          </svg>
+          <a href="tel:+919999999999" class="text-gray-700 font-medium hover:text-primary">
+            +91 99999 99999
+          </a>
+        </div>
+
+        <div class="flex items-center space-x-3">
+          <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M18.75 0H0.75C0.551088 0 0.360322 0.0790178 0.21967 0.21967C0.0790176 0.360322 0 0.551088 0 0.75V13.5C0 13.8978 0.158035 14.2794 0.43934 14.5607C0.720644 14.842 1.10218 15 1.5 15H18C18.3978 15 18.7794 14.842 19.0607 14.5607C19.342 14.2794 19.5 13.8978 19.5 13.5V0.75C19.5 0.551088 19.421 0.360322 19.2803 0.21967C19.1397 0.0790178 18.9489 0 18.75 0ZM16.8216 1.5L9.75 7.98281L2.67844 1.5H16.8216ZM18 13.5H1.5V2.45531L9.24281 9.55312C9.38118 9.68014 9.56217 9.75062 9.75 9.75062C9.93783 9.75062 10.1188 9.68014 10.2572 9.55312L18 2.45531V13.5Z"
+              fill="#1A70B4" />
+          </svg>
+          <a href="mailto:info@kodel.com" class="text-gray-700 font-medium hover:text-primary">
+            info@kodel.com
+          </a>
+        </div>
+
+        <div class="text-center space-x-4 pt-3">
+          <div>
+            <h3 class="text-lg font-bold title-font">Connect with us</h3>
+          </div>
+          <div class="flex gap-3 mt-3 justify-center">
+            <a href="#" class="text-gray-700 hover:text-primary bg-[#dbefff] p-[6px] rounded-[10px] border">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.75 0C7.82164 0 5.93657 0.571828 4.33319 1.64317C2.72982 2.71451 1.48013 4.23726 0.742179 6.01884C0.00422452 7.80042 -0.188858 9.76082 0.187348 11.6521C0.563554 13.5434 1.49215 15.2807 2.85571 16.6443C4.21928 18.0079 5.95656 18.9365 7.84787 19.3127C9.73919 19.6889 11.6996 19.4958 13.4812 18.7578C15.2627 18.0199 16.7855 16.7702 17.8568 15.1668C18.9282 13.5634 19.5 11.6784 19.5 9.75C19.4973 7.16498 18.4692 4.68661 16.6413 2.85872C14.8134 1.03084 12.335 0.00272983 9.75 0ZM10.5 17.9653V12H12.75C12.9489 12 13.1397 11.921 13.2803 11.7803C13.421 11.6397 13.5 11.4489 13.5 11.25C13.5 11.0511 13.421 10.8603 13.2803 10.7197C13.1397 10.579 12.9489 10.5 12.75 10.5H10.5V8.25C10.5 7.85218 10.658 7.47064 10.9393 7.18934C11.2206 6.90804 11.6022 6.75 12 6.75H13.5C13.6989 6.75 13.8897 6.67098 14.0303 6.53033C14.171 6.38968 14.25 6.19891 14.25 6C14.25 5.80109 14.171 5.61032 14.0303 5.46967C13.8897 5.32902 13.6989 5.25 13.5 5.25H12C11.2044 5.25 10.4413 5.56607 9.87868 6.12868C9.31608 6.69129 9 7.45435 9 8.25V10.5H6.75C6.55109 10.5 6.36033 10.579 6.21967 10.7197C6.07902 10.8603 6 11.0511 6 11.25C6 11.4489 6.07902 11.6397 6.21967 11.7803C6.36033 11.921 6.55109 12 6.75 12H9V17.9653C6.88575 17.7723 4.92728 16.7717 3.53198 15.1715C2.13667 13.5714 1.41195 11.4949 1.50855 9.37409C1.60515 7.25324 2.51564 5.25127 4.05064 3.7846C5.58563 2.31793 7.62696 1.49947 9.75 1.49947C11.8731 1.49947 13.9144 2.31793 15.4494 3.7846C16.9844 5.25127 17.8949 7.25324 17.9915 9.37409C18.0881 11.4949 17.3633 13.5714 15.968 15.1715C14.5727 16.7717 12.6143 17.7723 10.5 17.9653Z"
+                  fill="#1a70b4" />
+              </svg>
+            </a>
+
+            <a href="#" class="text-gray-700 hover:text-primary bg-[#dbefff] p-[6px] rounded-[10px] border">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.75 5.25C8.85998 5.25 7.98995 5.51392 7.24993 6.00839C6.50991 6.50285 5.93314 7.20566 5.59254 8.02792C5.25195 8.85019 5.16283 9.75499 5.33647 10.6279C5.5101 11.5008 5.93868 12.3026 6.56802 12.932C7.19736 13.5613 7.99918 13.9899 8.87209 14.1635C9.74501 14.3372 10.6498 14.2481 11.4721 13.9075C12.2943 13.5669 12.9971 12.9901 13.4916 12.2501C13.9861 11.51 14.25 10.64 14.25 9.75C14.2488 8.55691 13.7743 7.41303 12.9306 6.56939C12.087 5.72575 10.9431 5.25124 9.75 5.25ZM9.75 12.75C9.15666 12.75 8.57664 12.5741 8.08329 12.2444C7.58994 11.9148 7.20542 11.4462 6.97836 10.8981C6.7513 10.3499 6.69189 9.74667 6.80764 9.16473C6.9234 8.58279 7.20912 8.04824 7.62868 7.62868C8.04824 7.20912 8.58279 6.9234 9.16473 6.80764C9.74667 6.69189 10.3499 6.7513 10.8981 6.97836C11.4462 7.20542 11.9148 7.58994 12.2444 8.08329C12.5741 8.57664 12.75 9.15666 12.75 9.75C12.75 10.5456 12.4339 11.3087 11.8713 11.8713C11.3087 12.4339 10.5456 12.75 9.75 12.75ZM14.25 0H5.25C3.85807 0.00148896 2.52358 0.555091 1.53933 1.53933C0.555091 2.52358 0.00148896 3.85807 0 5.25V14.25C0.00148896 15.6419 0.555091 16.9764 1.53933 17.9607C2.52358 18.9449 3.85807 19.4985 5.25 19.5H14.25C15.6419 19.4985 16.9764 18.9449 17.9607 17.9607C18.9449 16.9764 19.4985 15.6419 19.5 14.25V5.25C19.4985 3.85807 18.9449 2.52358 17.9607 1.53933C16.9764 0.555091 15.6419 0.00148896 14.25 0ZM18 14.25C18 15.2446 17.6049 16.1984 16.9016 16.9016C16.1984 17.6049 15.2446 18 14.25 18H5.25C4.25544 18 3.30161 17.6049 2.59835 16.9016C1.89509 16.1984 1.5 15.2446 1.5 14.25V5.25C1.5 4.25544 1.89509 3.30161 2.59835 2.59835C3.30161 1.89509 4.25544 1.5 5.25 1.5H14.25C15.2446 1.5 16.1984 1.89509 16.9016 2.59835C17.6049 3.30161 18 4.25544 18 5.25V14.25ZM15.75 4.875C15.75 5.0975 15.684 5.31501 15.5604 5.50002C15.4368 5.68502 15.2611 5.82922 15.0555 5.91436C14.85 5.99951 14.6238 6.02179 14.4055 5.97838C14.1873 5.93498 13.9868 5.82783 13.8295 5.6705C13.6722 5.51316 13.565 5.31271 13.5216 5.09448C13.4782 4.87625 13.5005 4.65005 13.5856 4.44448C13.6708 4.23891 13.815 4.06321 14 3.9396C14.185 3.81598 14.4025 3.75 14.625 3.75C14.9234 3.75 15.2095 3.86853 15.4205 4.0795C15.6315 4.29048 15.75 4.57663 15.75 4.875Z"
+                  fill="#1a70b4" />
+              </svg>
+            </a>
+
+            <a href="#" class="text-gray-700 hover:text-primary bg-[#dbefff] p-[6px] rounded-[10px] border">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M18 0H1.5C1.10218 0 0.720644 0.158035 0.43934 0.43934C0.158035 0.720644 0 1.10218 0 1.5V18C0 18.3978 0.158035 18.7794 0.43934 19.0607C0.720644 19.342 1.10218 19.5 1.5 19.5H18C18.3978 19.5 18.7794 19.342 19.0607 19.0607C19.342 18.7794 19.5 18.3978 19.5 18V1.5C19.5 1.10218 19.342 0.720644 19.0607 0.43934C18.7794 0.158035 18.3978 0 18 0ZM18 18H1.5V1.5H18V18ZM6.75 8.25V14.25C6.75 14.4489 6.67098 14.6397 6.53033 14.7803C6.38968 14.921 6.19891 15 6 15C5.80109 15 5.61032 14.921 5.46967 14.7803C5.32902 14.6397 5.25 14.4489 5.25 14.25V8.25C5.25 8.05109 5.32902 7.86032 5.46967 7.71967C5.61032 7.57902 5.80109 7.5 6 7.5C6.19891 7.5 6.38968 7.57902 6.53033 7.71967C6.67098 7.86032 6.75 8.05109 6.75 8.25ZM15 10.875V14.25C15 14.4489 14.921 14.6397 14.7803 14.7803C14.6397 14.921 14.4489 15 14.25 15C14.0511 15 13.8603 14.921 13.7197 14.7803C13.579 14.6397 13.5 14.4489 13.5 14.25V10.875C13.5 10.3777 13.3025 9.90081 12.9508 9.54918C12.5992 9.19754 12.1223 9 11.625 9C11.1277 9 10.6508 9.19754 10.2992 9.54918C9.94754 9.90081 9.75 10.3777 9.75 10.875V14.25C9.75 14.4489 9.67098 14.6397 9.53033 14.7803C9.38968 14.921 9.19891 15 9 15C8.80109 15 8.61032 14.921 8.46967 14.7803C8.32902 14.6397 8.25 14.4489 8.25 14.25V8.25C8.25093 8.06629 8.31925 7.88931 8.44201 7.75264C8.56477 7.61596 8.73342 7.5291 8.91598 7.50852C9.09853 7.48794 9.28229 7.53508 9.43239 7.641C9.5825 7.74691 9.68851 7.90423 9.73031 8.08313C10.2377 7.73894 10.8292 7.53947 11.4414 7.50611C12.0536 7.47276 12.6633 7.60679 13.205 7.89381C13.7468 8.18083 14.2001 8.61 14.5164 9.13523C14.8326 9.66046 14.9998 10.2619 15 10.875ZM7.125 5.625C7.125 5.8475 7.05902 6.06501 6.9354 6.25002C6.81179 6.43502 6.63609 6.57922 6.43052 6.66436C6.22495 6.74951 5.99875 6.77179 5.78052 6.72838C5.56229 6.68498 5.36184 6.57783 5.2045 6.4205C5.04717 6.26316 4.94002 6.06271 4.89662 5.84448C4.85321 5.62625 4.87549 5.40005 4.96064 5.19448C5.04578 4.98891 5.18998 4.81321 5.37498 4.6896C5.55999 4.56598 5.7775 4.5 6 4.5C6.29837 4.5 6.58452 4.61853 6.7955 4.8295C7.00647 5.04048 7.125 5.32663 7.125 5.625Z"
+                  fill="#1a70b4" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </nav>
   <!-- End top nav bar -->
+
 
   <!-- Start top hero banner -->
   <section class="relative h-[676px] md:h-[892px] flex items-center justify-start pb-28 text-white bg-cover bg-center"
     style="background-image: url('./assests/img/Home/hero-banner.png');">
 
-    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#00000080] to-[#1A70B4] opacity-90 "></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#00000080] to-primary opacity-90 "></div>
 
     <div class="relative z-10 max-w-3xl w-full text-start px-8 md:ps-20 pr-0">
       <h2 class="text-[40px] md:text-[64px] title-font font-bold mb-6 leading-tight">
@@ -108,7 +182,7 @@
 
       <div class="flex justify-start flex-wrap gap-4">
         <a href="#"
-          class="flex items-center font-semibold desc-font bg-[#1A70B4] text-white px-6 py-3 rounded-full border-2 border-transparent text-base transition-all duration-300 hover:bg-transparent hover:text-[#1A70B4] hover:border-[#1A70B4]">
+          class="flex items-center font-semibold desc-font bg-primary text-white px-6 py-3 rounded-full border-2 border-transparent text-base transition-all duration-300 hover:bg-transparent hover:text-primary hover:border-primary">
           Explore Products
           <svg class="h-5 w-5 ms-2 transition-all duration-300" width="18" height="15" viewBox="0 0 18 15" fill="none"
             xmlns="http://www.w3.org/2000/svg">
@@ -143,7 +217,7 @@
     <!-- Counter 1 -->
     <div class="w-full sm:w-auto">
       <h2
-        class="title-font text-[64px] sm:text-[70px] md:text-[80px] font-semibold bg-gradient-to-b from-[#1A70B4] to-[#1A70B400] text-transparent bg-clip-text">
+        class="title-font text-[64px] sm:text-[70px] md:text-[80px] font-semibold bg-gradient-to-b from-primary to-[#1A70B400] text-transparent bg-clip-text">
         30+
       </h2>
       <p class="text-[#9EB1C0]/90 leading-[0] text-lg sm:text-xl md:text-[20px] md:text-2xl font-semibold desc-font">
@@ -154,7 +228,7 @@
     <!-- Counter 2 -->
     <div class="w-full sm:w-auto">
       <h2
-        class="title-font text-[64px] sm:text-[70px] md:text-[80px] font-semibold bg-gradient-to-b from-[#1A70B4] to-[#1A70B400] text-transparent bg-clip-text">
+        class="title-font text-[64px] sm:text-[70px] md:text-[80px] font-semibold bg-gradient-to-b from-primary to-[#1A70B400] text-transparent bg-clip-text">
         10+
       </h2>
       <p class="text-[#9EB1C0]/90 leading-[0] text-lg sm:text-xl md:text-[20px] md:text-2xl font-semibold desc-font">
@@ -165,7 +239,7 @@
     <!-- Counter 3 -->
     <div class="w-full sm:w-auto">
       <h2
-        class="title-font text-[64px] sm:text-[70px] md:text-[80px] font-semibold bg-gradient-to-b from-[#1A70B4] to-[#1A70B400] text-transparent bg-clip-text">
+        class="title-font text-[64px] sm:text-[70px] md:text-[80px] font-semibold bg-gradient-to-b from-primary to-[#1A70B400] text-transparent bg-clip-text">
         500,000+
       </h2>
       <p class="text-[#9EB1C0]/90 leading-[0] text-lg sm:text-xl md:text-[20px] md:text-2xl font-semibold desc-font">
@@ -191,7 +265,7 @@
           <!-- Accessories -->
           <div data-img="assests/img/Home/product.png" data-width="564" data-height="513"
             data-desc="Finest quality leather for wallets, belts, and small goods"
-            class="product-card bg-[#1A70B4] text-white rounded-xl p-6 cursor-pointer transition-all duration-300 hover:shadow-lg active">
+            class="product-card bg-primary text-white rounded-xl p-6 cursor-pointer transition-all duration-300 hover:shadow-lg active">
             <div class="flex items-center justify-between">
               <h3 class="text-[24px] md:text[32px] font-bold title-font">Accessories</h3>
               <img src="assests/img/icon/arrow-up-right-round.svg" class="h-5 w-5 white-icon block" alt="arrow white">
@@ -256,7 +330,7 @@
             <div class="absolute inset-0 bg-gradient-to-t from-[#000000cc] to-[#00000000]"></div>
           </div>
           <div
-            class="absolute w-[110px] h-[110px] rounded-full bg-gradient-to-b from-[#1A70B4] to-[#1A70B4] left-[-44px] bottom-[12px] z-0">
+            class="absolute w-[110px] h-[110px] rounded-full bg-gradient-to-b from-primary to-primary left-[-44px] bottom-[12px] z-0">
           </div>
           <div
             class="absolute w-[62px] h-[62px] rounded-full bg-gradient-to-b from-[#FFC711] to-[#FFC711] right-[-28px] top-[12px] z-0">
@@ -277,7 +351,7 @@
 
       <!-- Active Card -->
       <div
-        class="mobile-product-card bg-[#1A70B4] text-white rounded-xl overflow-hidden cursor-pointer transition-all duration-300">
+        class="mobile-product-card bg-primary text-white rounded-xl overflow-hidden cursor-pointer transition-all duration-300">
         <div class="p-5 flex justify-between items-center">
           <div class="text-left">
             <h3 class="text-lg font-bold title-font">Accessories</h3>
@@ -306,7 +380,8 @@
         <img src="assests/img/Home/product-1.png" class="mobile-card-image hidden w-full h-[180px] object-cover mt-3">
       </div>
 
-      <div class="mobile-product-card bg-gray-100 text-gray-800 rounded-xl overflow-hidden cursor-pointer transition-all duration-300">
+      <div
+        class="mobile-product-card bg-gray-100 text-gray-800 rounded-xl overflow-hidden cursor-pointer transition-all duration-300">
         <div class="p-5 flex justify-between items-center">
           <div class="text-left">
             <h3 class="text-lg font-bold title-font">Footwear</h3>
@@ -317,13 +392,15 @@
         <img src="assests/img/Home/product-2.jpg" class="mobile-card-image hidden w-full h-[180px] object-cover mt-3">
       </div>
 
-      <div class="mobile-product-card bg-gray-100 text-gray-800 rounded-xl overflow-hidden cursor-pointer transition-all duration-300">
-       <div class="p-5 flex justify-between items-center">
+      <div
+        class="mobile-product-card bg-gray-100 text-gray-800 rounded-xl overflow-hidden cursor-pointer transition-all duration-300">
+        <div class="p-5 flex justify-between items-center">
           <div class="text-left">
-        <h3 class="text-lg font-bold title-font">Bags & Luggage</h3>
-        <p class="mobile-card-desc hidden text-[18px] opacity-90">Elegant leather crafted for durability and design</p>
-        </div>
-        <img src="assests/img/icon/arrow-up-right-round-gray.svg" class="h-5 w-5" alt="arrow">
+            <h3 class="text-lg font-bold title-font">Bags & Luggage</h3>
+            <p class="mobile-card-desc hidden text-[18px] opacity-90">Elegant leather crafted for durability and design
+            </p>
+          </div>
+          <img src="assests/img/icon/arrow-up-right-round-gray.svg" class="h-5 w-5" alt="arrow">
         </div>
         <img src="assests/img/Home/product-3.webp" class="mobile-card-image hidden w-full h-[180px] object-cover mt-3">
       </div>
@@ -881,7 +958,7 @@
           <div class="absolute inset-0 bg-gradient-to-t from-[#000000cc] to-[#00000000]"></div>
         </div>
         <div
-          class="absolute w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-[110px] md:h-[110px] rounded-full bg-[#1A70B4] left-[-20px] sm:left-[-24px] md:left-[-42px] bottom-[8px] md:bottom-[12px] z-0">
+          class="absolute w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-[110px] md:h-[110px] rounded-full bg-primary left-[-20px] sm:left-[-24px] md:left-[-42px] bottom-[8px] md:bottom-[12px] z-0">
         </div>
         <div
           class="absolute w-[46px] h-[46px] sm:w-[54px] sm:h-[54px] md:w-[62px] md:h-[62px] rounded-full bg-[#FFC711] right-[-18px] sm:right-[-2px] md:right-[-24px] top-[8px] md:right-[-26px] md:top-[12px] z-0">
@@ -960,214 +1037,204 @@
   <!-- Start Faq -->
   <section class="py-16 md:py-28 bg-white">
     <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-start">
-
-      <!-- Left Side -->
       <div>
-        <h2 class="text-[32px] md:text-[56px] title-font font-bold text-[#0B2239] mb-3 title-font">FAQ</h2>
-        <p class="text-[#9EB1C0] desc-font text-[20px] md:text-2xl font-medium mb-10">
-          Find quick answers to common questions<br>about our services.
+        <h2 class="text-center md:text-start text-[32px] md:text-[56px] title-font font-bold text-[#0B2239] mb-3 title-font">FAQ</h2>
+        <p class="text-center md:text-start text-[#9EB1C0] desc-font text-[20px] md:text-2xl font-medium ">
+          Find quick answers to common questions about our services.
         </p>
       </div>
 
-      <!-- Right Side (Accordion) -->
+
       <div class="space-y-4" id="accordion">
-
-        <!-- Item -->
-
         <div class="accordion-item active bg-[#F9FAFB] text-[#0B2239] rounded-xl transition overflow-hidden">
           <button
             class="accordion-header flex justify-between items-center w-full pt-[1.5rem] pr-5 pb-[1.5rem] pl-5 text-left">
-            <h3 class="font-semibold text-lg">What types of leather products do you manufacture?</h3>
+            <h3 class="font-semibold text-[20px] md:text-2xl desc-font">What types of leather products do you manufacture?</h3>
             <span
-              class="accordion-icon bg-[#F5F5F5] rounded-full w-[70px] md:w-10 h-[40px] md:h-[10] flex justify-center items-center text-[#9EB1C0] text-[20px] md:text-2xl transform transition-transform duration-300 leading-none">
-              <svg width="24" height="24" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M18 9C18 9.19891 17.921 9.38968 17.7803 9.53033C17.6397 9.67098 17.4489 9.75 17.25 9.75H9.75V17.25C9.75 17.4489 9.67098 17.6397 9.53033 17.7803C9.38968 17.921 9.19891 18 9 18C8.80109 18 8.61032 17.921 8.46967 17.7803C8.32902 17.6397 8.25 17.4489 8.25 17.25V9.75H0.75C0.551088 9.75 0.360322 9.67098 0.21967 9.53033C0.0790178 9.38968 0 9.19891 0 9C0 8.80109 0.0790178 8.61032 0.21967 8.46967C0.360322 8.32902 0.551088 8.25 0.75 8.25H8.25V0.75C8.25 0.551088 8.32902 0.360322 8.46967 0.21967C8.61032 0.0790178 8.80109 0 9 0C9.19891 0 9.38968 0.0790178 9.53033 0.21967C9.67098 0.360322 9.75 0.551088 9.75 0.75V8.25H17.25C17.4489 8.25 17.6397 8.32902 17.7803 8.46967C17.921 8.61032 18 8.80109 18 9Z"
-                  fill="#222222" />
-              </svg>
+              class="accordion-icon bg-[#F5F5F5] rounded-full p-4 flex justify-center items-center text-[#9EB1C0] text-[20px] md:text-2xl transform transition-transform duration-300 leading-none">
+             <img src="./assests/img/icon/cross.svg" alt="">
             </span>
           </button>
           <div
             class="accordion-content max-h-0 overflow-hidden px-5 text-sm text-[#0B2239]/80 transition-all duration-500 ease-in-out">
-            <p class="pb-4 text-[#d1e2f0]">
+            <p class="pb-4 text-[#d1e2f0] text-base desc-font font-medium">
               We manufacture a wide range of premium leather products including leather hides, finished leather,
               upholstery, fashion accessories, automotive leather, and custom-made leather solutions.
             </p>
           </div>
         </div>
-
-
-        <!-- Item 2 -->
         <div class="accordion-item bg-[#F9FAFB] text-[#0B2239] rounded-xl transition overflow-hidden">
           <button
             class="accordion-header flex justify-between items-center w-full pt-[1.5rem] pr-5 pb-[1.5rem] pl-5 text-left">
-            <h3 class="font-semibold text-lg">Where are your manufacturing facilities located?</h3>
+            <h3 class="font-semibold text-[20px] md:text-2xl desc-font">Where are your manufacturing facilities located?</h3>
             <span
-              class="accordion-icon bg-[#F5F5F5] rounded-full w-[70px] md:w-10 h-[40px] md:h-[10] flex justify-center items-center text-[#9EB1C0] text-[20px] md:text-2xl transform transition-transform duration-300 leading-none">
-              <svg width="24" height="24" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M18 9C18 9.19891 17.921 9.38968 17.7803 9.53033C17.6397 9.67098 17.4489 9.75 17.25 9.75H9.75V17.25C9.75 17.4489 9.67098 17.6397 9.53033 17.7803C9.38968 17.921 9.19891 18 9 18C8.80109 18 8.61032 17.921 8.46967 17.7803C8.32902 17.6397 8.25 17.4489 8.25 17.25V9.75H0.75C0.551088 9.75 0.360322 9.67098 0.21967 9.53033C0.0790178 9.38968 0 9.19891 0 9C0 8.80109 0.0790178 8.61032 0.21967 8.46967C0.360322 8.32902 0.551088 8.25 0.75 8.25H8.25V0.75C8.25 0.551088 8.32902 0.360322 8.46967 0.21967C8.61032 0.0790178 8.80109 0 9 0C9.19891 0 9.38968 0.0790178 9.53033 0.21967C9.67098 0.360322 9.75 0.551088 9.75 0.75V8.25H17.25C17.4489 8.25 17.6397 8.32902 17.7803 8.46967C17.921 8.61032 18 8.80109 18 9Z"
-                  fill="#222222" />
-              </svg>
+              class="accordion-icon bg-[#F5F5F5] rounded-full p-4 flex justify-center items-center text-[#9EB1C0] text-[20px] md:text-2xl transform transition-transform duration-300 leading-none">
+             <img src="./assests/img/icon/cross.svg" alt="">
             </span>
           </button>
           <div
             class="accordion-content max-h-0 overflow-hidden px-5 text-sm text-[#0B2239]/80 transition-all duration-500 ease-in-out">
-            <p class="pb-4 text-[#d1e2f0]">
+            <p class="pb-4 text-[#d1e2f0] text-base desc-font font-medium">
               Our manufacturing facilities are strategically located to serve both domestic and international clients
               efficiently.
             </p>
           </div>
         </div>
-
-        <!-- Item 3 -->
         <div class="accordion-item bg-[#F9FAFB] text-[#0B2239] rounded-xl transition overflow-hidden">
           <button
             class="accordion-header flex justify-between items-center w-full pt-[1.5rem] pr-5 pb-[1.5rem] pl-5 text-left">
-            <h3 class="font-semibold text-lg">How long has Kodel been in the leather industry?</h3>
+            <h3 class="font-semibold text-[20px] md:text-2xl desc-font">How long has Kodel been in the leather industry?</h3>
             <span
-              class="accordion-icon bg-[#F5F5F5] rounded-full w-[70px] md:w-10 h-[40px] md:h-[10] flex justify-center items-center text-[#9EB1C0] text-[20px] md:text-2xl transform transition-transform duration-300 leading-none">
-              <svg width="24" height="24" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M18 9C18 9.19891 17.921 9.38968 17.7803 9.53033C17.6397 9.67098 17.4489 9.75 17.25 9.75H9.75V17.25C9.75 17.4489 9.67098 17.6397 9.53033 17.7803C9.38968 17.921 9.19891 18 9 18C8.80109 18 8.61032 17.921 8.46967 17.7803C8.32902 17.6397 8.25 17.4489 8.25 17.25V9.75H0.75C0.551088 9.75 0.360322 9.67098 0.21967 9.53033C0.0790178 9.38968 0 9.19891 0 9C0 8.80109 0.0790178 8.61032 0.21967 8.46967C0.360322 8.32902 0.551088 8.25 0.75 8.25H8.25V0.75C8.25 0.551088 8.32902 0.360322 8.46967 0.21967C8.61032 0.0790178 8.80109 0 9 0C9.19891 0 9.38968 0.0790178 9.53033 0.21967C9.67098 0.360322 9.75 0.551088 9.75 0.75V8.25H17.25C17.4489 8.25 17.6397 8.32902 17.7803 8.46967C17.921 8.61032 18 8.80109 18 9Z"
-                  fill="#222222" />
-              </svg>
+              class="accordion-icon bg-[#F5F5F5] rounded-full p-4 flex justify-center items-center text-[#9EB1C0] text-[20px] md:text-2xl transform transition-transform duration-300 leading-none">
+             <img src="./assests/img/icon/cross.svg" alt="">
             </span>
           </button>
           <div
             class="accordion-content max-h-0 overflow-hidden px-5 text-sm text-[#0B2239]/80 transition-all duration-500 ease-in-out">
-            <p class="pb-4 text-[#d1e2f0]">
+            <p class="pb-4 text-[#d1e2f0] text-base desc-font font-medium">
               Kodel has been a trusted name in the leather industry for several decades, offering consistent quality and
               innovation.
             </p>
           </div>
         </div>
-
-        <!-- Item 4 -->
         <div class="accordion-item bg-[#F9FAFB] text-[#0B2239] rounded-xl transition overflow-hidden">
           <button
             class="accordion-header flex justify-between items-center w-full pt-[1.5rem] pr-5 pb-[1.5rem] pl-5 text-left">
-            <h3 class="font-semibold text-lg">How do you ensure the quality of your leather?</h3>
+            <h3 class="font-semibold text-[20px] md:text-2xl desc-font">How do you ensure the quality of your leather?</h3>
 
             <span
-              class="accordion-icon bg-[#F5F5F5] rounded-full w-[70px] md:w-10 h-[40px] md:h-[10] flex justify-center items-center text-[#9EB1C0] text-[20px] md:text-2xl transform transition-transform duration-300 leading-none">
-              <svg width="24" height="24" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M18 9C18 9.19891 17.921 9.38968 17.7803 9.53033C17.6397 9.67098 17.4489 9.75 17.25 9.75H9.75V17.25C9.75 17.4489 9.67098 17.6397 9.53033 17.7803C9.38968 17.921 9.19891 18 9 18C8.80109 18 8.61032 17.921 8.46967 17.7803C8.32902 17.6397 8.25 17.4489 8.25 17.25V9.75H0.75C0.551088 9.75 0.360322 9.67098 0.21967 9.53033C0.0790178 9.38968 0 9.19891 0 9C0 8.80109 0.0790178 8.61032 0.21967 8.46967C0.360322 8.32902 0.551088 8.25 0.75 8.25H8.25V0.75C8.25 0.551088 8.32902 0.360322 8.46967 0.21967C8.61032 0.0790178 8.80109 0 9 0C9.19891 0 9.38968 0.0790178 9.53033 0.21967C9.67098 0.360322 9.75 0.551088 9.75 0.75V8.25H17.25C17.4489 8.25 17.6397 8.32902 17.7803 8.46967C17.921 8.61032 18 8.80109 18 9Z"
-                  fill="#222222" />
-              </svg>
+              class="accordion-icon bg-[#F5F5F5] rounded-full p-4 flex justify-center items-center text-[#9EB1C0] text-[20px] md:text-2xl transform transition-transform duration-300 leading-none">
+             <img src="./assests/img/icon/cross.svg" alt="">
             </span>
           </button>
           <div
             class="accordion-content max-h-0 overflow-hidden px-5 text-sm text-[#0B2239]/80 transition-all duration-500 ease-in-out">
-            <p class="pb-4 text-[#d1e2f0]">
+            <p class="pb-4 text-[#d1e2f0] text-base desc-font font-medium">
               We follow strict quality control processes and use only the finest raw materials, ensuring each product
               meets international standards.
             </p>
           </div>
         </div>
-
       </div>
     </div>
   </section>
   <!-- End Faq -->
 
-  <!-- CTA SECTION -->
+
+  <!--Start Desktop CTA SECTION -->
   <section class="relative bg-white  hidden md:block ">
-    <div class="max-w-6xl mx-auto px-6 relative z-10">
+    <div class="max-w-7xl mx-auto relative z-10">
       <div class="rounded-2xl overflow-hidden grid md:grid-cols-2 bg-[#0B2239] shadow-[0px_4px_20px_#1018280D]">
 
         <div class="py-[59px] px-[30px] md:p-[59px] flex flex-col justify-center text-white ">
           <h2 class="text-[32px] md:text-[56px] font-bold text-[#ffffff] leading-[1.36] title-font mb-4">Ready to Work
             Together?</h2>
-          <p class="text-[#9EB1C0] text-[20px] md:text-2xl font-medium desc-font">
+          <p class="text-[#9EB1C0] max-w-sm text-[20px] md:text-2xl font-medium desc-font">
             Looking for premium leather solutions? Let's create something exceptional together.
           </p>
-          <a href="#contact"
-            class="mt-[40px] inline-flex items-center bg-[#1A70B4] w-[60%] md:w-[40%] hover:bg-[#1A70B4] text-white text-base font-bold rounded-full px-5 py-3 transition">
-            Get in Touch
-            <img src="./assests/img/icon/arrow-rigth.svg" class="ms-2" alt="">
-          </a>
+          <div>
+            <a href="#contact"
+              class="mt-[40px] inline-flex items-center bg-primary hover:bg-[#E2F0FB] hover:text-primary group text-white text-base font-bold rounded-full px-5 py-3 transition">
+              Get in Touch
+              <svg class="ms-2 fill-white group-hover:fill-primary" width="18" height="15" viewBox="0 0 18 15"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M17.7806 8.03104L11.0306 14.781C10.8899 14.9218 10.699 15.0008 10.5 15.0008C10.301 15.0008 10.1101 14.9218 9.96937 14.781C9.82864 14.6403 9.74958 14.4494 9.74958 14.2504C9.74958 14.0514 9.82864 13.8605 9.96937 13.7198L15.4397 8.25042H0.75C0.551088 8.25042 0.360322 8.1714 0.21967 8.03075C0.0790178 7.8901 0 7.69933 0 7.50042C0 7.3015 0.0790178 7.11074 0.21967 6.97009C0.360322 6.82943 0.551088 6.75042 0.75 6.75042H15.4397L9.96937 1.28104C9.82864 1.14031 9.74958 0.94944 9.74958 0.750417C9.74958 0.551394 9.82864 0.360523 9.96937 0.219792C10.1101 0.0790615 10.301 0 10.5 0C10.699 0 10.8899 0.0790615 11.0306 0.219792L17.7806 6.96979C17.8504 7.03945 17.9057 7.12216 17.9434 7.21321C17.9812 7.30426 18.0006 7.40186 18.0006 7.50042C18.0006 7.59898 17.9812 7.69657 17.9434 7.78762C17.9057 7.87867 17.8504 7.96139 17.7806 8.03104Z" />
+              </svg>
+            </a>
+          </div>
         </div>
 
         <div class="relative">
           <img src="assests/img/Home/cta-1.jpg" alt="Leather Tools"
-            class="w-full h-full object-cover rounded-bl-[50%] relative z-10">
-          <div
-            class="absolute inset-0 rounded-bl-[50%] z-20 bg-gradient-to-br from-[#1018281A] via-[#1018284D] to-[#00000080]">
+            class="w-full h-full object-cover rounded-bl-[57%] relative z-10">
+          <div class="absolute inset-0 rounded-bl-[57%] z-20 
+              bg-gradient-to-l from-[#00000080] via-[#1018284D] to-[#101828de]">
           </div>
         </div>
+
       </div>
     </div>
     <div
       class="absolute bottom-0 left-0 w-full h-[66%] bg-[url('assests/img/Home/footer-top-wave.png')] bg-cover bg-center opacity-40">
     </div>
   </section>
+  <!--End Desktop CTA SECTION -->
 
+  <!--Start mobile CTA SECTION -->
   <section class="relative bg-white  md:hidden">
     <div class="max-w-md md:max-w-lg mx-auto px-6 relative z-10">
       <div class="bg-[#0B2239] rounded-2xl relative overflow-hidden text-white p-8 pt-[99px] pb-[50px] shadow-lg">
 
         <img src="assests/img/Home/cta-1.jpg" alt="Leather Tools"
-          class="absolute top-0 right-0 w-[140px] h-[140px] md:w-[180px] md:h-[180px] object-cover rounded-bl-[100%] opacity-90">
+          class="absolute top-0 right-0 w-[160px] h-[160px] md:w-[180px] md:h-[180px] object-cover rounded-bl-[100%] opacity-90">
         <div
-          class="absolute top-0 right-0 w-[140px] h-[140px] md:w-[180px] md:h-[180px] bg-gradient-to-tl from-black/60 to-transparent rounded-bl-[100%]">
+          class="absolute top-0 right-0 w-[160px] h-[160px] md:w-[180px] md:h-[180px] bg-gradient-to-tl from-black/60 to-transparent rounded-bl-[100%]">
         </div>
 
-        <h2 class="text-[28px] md:text-[32px] font-bold leading-snug mb-3">
+        <h2 class="text-[32px] font-bold leading-snug mb-3 title-font">
           Ready to Work Together?
         </h2>
-        <p class="text-[#9EB1C0] text-[16px] md:text-[18px] font-medium leading-relaxed">
+        <p class="text-[#9EB1C0] text-[20px] desc-font font-medium leading-relaxed">
           Looking for premium leather solutions? Let's create something exceptional together.
         </p>
 
         <a href="#contact"
-          class="mt-6 inline-flex items-center bg-[#1A70B4] hover:bg-[#155f9c] text-white text-sm md:text-base font-bold rounded-full px-6 py-3 transition">
+          class="mt-6 inline-flex items-center bg-primary hover:bg-[#155f9c] text-white text-sm md:text-base font-bold rounded-full px-6 py-3 transition">
           Get in Touch
           <img src="./assests/img/icon/arrow-rigth.svg" class="ms-2 w-4 md:w-5" alt="">
         </a>
       </div>
     </div>
-
-    <!-- Subtle background wave -->
     <div
       class="absolute bottom-0 left-0 w-full h-[66%] bg-[url('assests/img/Home/footer-top-wave.png')] bg-cover bg-center opacity-40">
     </div>
   </section>
+  <!--End mobile CTA SECTION -->
 
-  <!-- FOOTER SECTION -->
-  <footer class="pt-16 md:pt-28 relative text-white pb-6 overflow-hidden bg-[#e8e8e8]">
-    <!-- Dark Overlay -->
-    <div class="absolute inset-0 bg-[#f4f4f4] to-transparent"></div>
 
-    <div class="relative z-10 max-w-6xl mx-auto px-6 grid md:grid-cols-4 gap-10">
+  <!-- Start FOOTER SECTION -->
+  <footer class="pt-16 md:pt-20 relative text-white pb-6 overflow-hidden bg-[#e8e8e8]">
+    <div class="absolute inset-0 bg-[#f5f5f5] to-transparent"></div>
+    <div class="relative z-10 max-w-7xl mx-auto  grid md:grid-cols-4 gap-10 p-10 md:p-0">
       <div>
         <img src="./assests/img/logo/kodel-logo.svg" alt="Logo" class="mb-4">
         <p class="text-[#222222] text-base font-medium desc-font leading-relaxed">
           Premium leather manufacturing with 30+ years of excellence, serving global brands with quality and trust.
         </p>
-        <div class="flex space-x-4 mt-4">
-          <a href="#" class="text-[#222222] hover:text-[#1a70b4] desc-font transition"><img
-              src="./assests/img/icon/facebook.svg" alt=""></a>
-          <a href="#" class="text-[#222222] hover:text-[#1a70b4] desc-font transition"><img
-              src="./assests/img/icon/instaram.svg" alt=""></a>
-          <a href="#" class="text-[#222222] hover:text-[#1a70b4] desc-font transition"><img
-              src="./assests/img/icon/linkedin.svg" alt=""></a>
-          <a href="#" class="text-[#222222] hover:text-[#1a70b4] desc-font transition"><img
-              src="./assests/img/icon/x.svg" alt=""></a>
+        <div class="flex space-x-4 mt-5">
+          <a href="#" class="text-[#222222] hover:text-primary desc-font transition">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.75 0C7.82164 0 5.93657 0.571828 4.33319 1.64317C2.72982 2.71451 1.48013 4.23726 0.742179 6.01884C0.00422452 7.80042 -0.188858 9.76082 0.187348 11.6521C0.563554 13.5434 1.49215 15.2807 2.85571 16.6443C4.21928 18.0079 5.95656 18.9365 7.84787 19.3127C9.73919 19.6889 11.6996 19.4958 13.4812 18.7578C15.2627 18.0199 16.7855 16.7702 17.8568 15.1668C18.9282 13.5634 19.5 11.6784 19.5 9.75C19.4973 7.16498 18.4692 4.68661 16.6413 2.85872C14.8134 1.03084 12.335 0.00272983 9.75 0ZM10.5 17.9653V12H12.75C12.9489 12 13.1397 11.921 13.2803 11.7803C13.421 11.6397 13.5 11.4489 13.5 11.25C13.5 11.0511 13.421 10.8603 13.2803 10.7197C13.1397 10.579 12.9489 10.5 12.75 10.5H10.5V8.25C10.5 7.85218 10.658 7.47064 10.9393 7.18934C11.2206 6.90804 11.6022 6.75 12 6.75H13.5C13.6989 6.75 13.8897 6.67098 14.0303 6.53033C14.171 6.38968 14.25 6.19891 14.25 6C14.25 5.80109 14.171 5.61032 14.0303 5.46967C13.8897 5.32902 13.6989 5.25 13.5 5.25H12C11.2044 5.25 10.4413 5.56607 9.87868 6.12868C9.31608 6.69129 9 7.45435 9 8.25V10.5H6.75C6.55109 10.5 6.36033 10.579 6.21967 10.7197C6.07902 10.8603 6 11.0511 6 11.25C6 11.4489 6.07902 11.6397 6.21967 11.7803C6.36033 11.921 6.55109 12 6.75 12H9V17.9653C6.88575 17.7723 4.92728 16.7717 3.53198 15.1715C2.13667 13.5714 1.41195 11.4949 1.50855 9.37409C1.60515 7.25324 2.51564 5.25127 4.05064 3.7846C5.58563 2.31793 7.62696 1.49947 9.75 1.49947C11.8731 1.49947 13.9144 2.31793 15.4494 3.7846C16.9844 5.25127 17.8949 7.25324 17.9915 9.37409C18.0881 11.4949 17.3633 13.5714 15.968 15.1715C14.5727 16.7717 12.6143 17.7723 10.5 17.9653Z" fill="#565656"/>
+            </svg>
+          </a>
+          <a href="#" class="text-[#222222] hover:text-primary desc-font transition">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.75 5.25C8.85998 5.25 7.98995 5.51392 7.24993 6.00839C6.50991 6.50285 5.93314 7.20566 5.59254 8.02792C5.25195 8.85019 5.16283 9.75499 5.33647 10.6279C5.5101 11.5008 5.93868 12.3026 6.56802 12.932C7.19736 13.5613 7.99918 13.9899 8.87209 14.1635C9.74501 14.3372 10.6498 14.2481 11.4721 13.9075C12.2943 13.5669 12.9971 12.9901 13.4916 12.2501C13.9861 11.51 14.25 10.64 14.25 9.75C14.2488 8.55691 13.7743 7.41303 12.9306 6.56939C12.087 5.72575 10.9431 5.25124 9.75 5.25ZM9.75 12.75C9.15666 12.75 8.57664 12.5741 8.08329 12.2444C7.58994 11.9148 7.20542 11.4462 6.97836 10.8981C6.7513 10.3499 6.69189 9.74667 6.80764 9.16473C6.9234 8.58279 7.20912 8.04824 7.62868 7.62868C8.04824 7.20912 8.58279 6.9234 9.16473 6.80764C9.74667 6.69189 10.3499 6.7513 10.8981 6.97836C11.4462 7.20542 11.9148 7.58994 12.2444 8.08329C12.5741 8.57664 12.75 9.15666 12.75 9.75C12.75 10.5456 12.4339 11.3087 11.8713 11.8713C11.3087 12.4339 10.5456 12.75 9.75 12.75ZM14.25 0H5.25C3.85807 0.00148896 2.52358 0.555091 1.53933 1.53933C0.555091 2.52358 0.00148896 3.85807 0 5.25V14.25C0.00148896 15.6419 0.555091 16.9764 1.53933 17.9607C2.52358 18.9449 3.85807 19.4985 5.25 19.5H14.25C15.6419 19.4985 16.9764 18.9449 17.9607 17.9607C18.9449 16.9764 19.4985 15.6419 19.5 14.25V5.25C19.4985 3.85807 18.9449 2.52358 17.9607 1.53933C16.9764 0.555091 15.6419 0.00148896 14.25 0ZM18 14.25C18 15.2446 17.6049 16.1984 16.9016 16.9016C16.1984 17.6049 15.2446 18 14.25 18H5.25C4.25544 18 3.30161 17.6049 2.59835 16.9016C1.89509 16.1984 1.5 15.2446 1.5 14.25V5.25C1.5 4.25544 1.89509 3.30161 2.59835 2.59835C3.30161 1.89509 4.25544 1.5 5.25 1.5H14.25C15.2446 1.5 16.1984 1.89509 16.9016 2.59835C17.6049 3.30161 18 4.25544 18 5.25V14.25ZM15.75 4.875C15.75 5.0975 15.684 5.31501 15.5604 5.50002C15.4368 5.68502 15.2611 5.82922 15.0555 5.91436C14.85 5.99951 14.6238 6.02179 14.4055 5.97838C14.1873 5.93498 13.9868 5.82783 13.8295 5.6705C13.6722 5.51316 13.565 5.31271 13.5216 5.09448C13.4782 4.87625 13.5005 4.65005 13.5856 4.44448C13.6708 4.23891 13.815 4.06321 14 3.9396C14.185 3.81598 14.4025 3.75 14.625 3.75C14.9234 3.75 15.2095 3.86853 15.4205 4.0795C15.6315 4.29048 15.75 4.57663 15.75 4.875Z" fill="#565656"/>
+            </svg>
+          </a>
+          <a href="#" class="text-[#222222] hover:text-primary desc-font transition">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 0H1.5C1.10218 0 0.720644 0.158035 0.43934 0.43934C0.158035 0.720644 0 1.10218 0 1.5V18C0 18.3978 0.158035 18.7794 0.43934 19.0607C0.720644 19.342 1.10218 19.5 1.5 19.5H18C18.3978 19.5 18.7794 19.342 19.0607 19.0607C19.342 18.7794 19.5 18.3978 19.5 18V1.5C19.5 1.10218 19.342 0.720644 19.0607 0.43934C18.7794 0.158035 18.3978 0 18 0ZM18 18H1.5V1.5H18V18ZM6.75 8.25V14.25C6.75 14.4489 6.67098 14.6397 6.53033 14.7803C6.38968 14.921 6.19891 15 6 15C5.80109 15 5.61032 14.921 5.46967 14.7803C5.32902 14.6397 5.25 14.4489 5.25 14.25V8.25C5.25 8.05109 5.32902 7.86032 5.46967 7.71967C5.61032 7.57902 5.80109 7.5 6 7.5C6.19891 7.5 6.38968 7.57902 6.53033 7.71967C6.67098 7.86032 6.75 8.05109 6.75 8.25ZM15 10.875V14.25C15 14.4489 14.921 14.6397 14.7803 14.7803C14.6397 14.921 14.4489 15 14.25 15C14.0511 15 13.8603 14.921 13.7197 14.7803C13.579 14.6397 13.5 14.4489 13.5 14.25V10.875C13.5 10.3777 13.3025 9.90081 12.9508 9.54918C12.5992 9.19754 12.1223 9 11.625 9C11.1277 9 10.6508 9.19754 10.2992 9.54918C9.94754 9.90081 9.75 10.3777 9.75 10.875V14.25C9.75 14.4489 9.67098 14.6397 9.53033 14.7803C9.38968 14.921 9.19891 15 9 15C8.80109 15 8.61032 14.921 8.46967 14.7803C8.32902 14.6397 8.25 14.4489 8.25 14.25V8.25C8.25093 8.06629 8.31925 7.88931 8.44201 7.75264C8.56477 7.61596 8.73342 7.5291 8.91598 7.50852C9.09853 7.48794 9.28229 7.53508 9.43239 7.641C9.5825 7.74691 9.68851 7.90423 9.73031 8.08313C10.2377 7.73894 10.8292 7.53947 11.4414 7.50611C12.0536 7.47276 12.6633 7.60679 13.205 7.89381C13.7468 8.18083 14.2001 8.61 14.5164 9.13523C14.8326 9.66046 14.9998 10.2619 15 10.875ZM7.125 5.625C7.125 5.8475 7.05902 6.06501 6.9354 6.25002C6.81179 6.43502 6.63609 6.57922 6.43052 6.66436C6.22495 6.74951 5.99875 6.77179 5.78052 6.72838C5.56229 6.68498 5.36184 6.57783 5.2045 6.4205C5.04717 6.26316 4.94002 6.06271 4.89662 5.84448C4.85321 5.62625 4.87549 5.40005 4.96064 5.19448C5.04578 4.98891 5.18998 4.81321 5.37498 4.6896C5.55999 4.56598 5.7775 4.5 6 4.5C6.29837 4.5 6.58452 4.61853 6.7955 4.8295C7.00647 5.04048 7.125 5.32663 7.125 5.625Z" fill="#565656"/>
+            </svg>
+          </a>
+          <a href="#" class="text-[#222222] hover:text-primary desc-font transition">
+            <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.3889 16.8478L10.5201 7.62469L16.311 1.25438C16.442 1.10674 16.5095 0.913434 16.4989 0.716365C16.4883 0.519295 16.4005 0.334346 16.2544 0.201615C16.1084 0.0688843 15.9159 -0.00092985 15.7187 0.00730857C15.5215 0.015547 15.3355 0.101174 15.201 0.245625L9.6848 6.31312L5.88886 0.347813C5.82117 0.24127 5.72769 0.153535 5.61707 0.0927355C5.50645 0.0319361 5.38227 3.91221e-05 5.25605 8.87202e-08H0.756048C0.621574 -6.53095e-05 0.489556 0.0360256 0.373817 0.104494C0.258079 0.172962 0.162878 0.271288 0.0981828 0.389177C0.0334877 0.507066 0.00167865 0.64018 0.00608614 0.774582C0.0104936 0.908984 0.0509556 1.03973 0.123235 1.15313L5.99199 10.3753L0.201048 16.7503C0.133423 16.823 0.0808886 16.9083 0.0464895 17.0014C0.0120905 17.0945 -0.00348926 17.1935 0.000653776 17.2927C0.00479681 17.3918 0.0285803 17.4892 0.0706251 17.5791C0.11267 17.669 0.17214 17.7496 0.245589 17.8164C0.319038 17.8831 0.405005 17.9346 0.498507 17.9679C0.592008 18.0012 0.691186 18.0156 0.79029 18.0103C0.889395 18.0049 0.986456 17.98 1.07585 17.9369C1.16524 17.8937 1.24518 17.8333 1.31105 17.7591L6.8273 11.6916L10.6232 17.6569C10.6915 17.7625 10.7852 17.8494 10.8958 17.9093C11.0064 17.9693 11.1303 18.0005 11.256 18H15.756C15.8904 18 16.0222 17.9638 16.1378 17.8954C16.2534 17.827 16.3485 17.7288 16.4132 17.611C16.4779 17.4933 16.5097 17.3604 16.5054 17.2261C16.5012 17.0918 16.4609 16.9612 16.3889 16.8478ZM11.6676 16.5L2.12199 1.5H4.84074L14.3901 16.5H11.6676Z" fill="#565656"/>
+            </svg>
+          </a>
         </div>
       </div>
-
-      <div>
+      <div class="ml-0 md:ml:10">
         <h3 class="text-[20px] font-bold mb-4 title-font text-[#222222]">Quick Links</h3>
         <ul class="space-y-2 text-[#222222] text-sm">
-          <li class="mt-4 font-medium text-base"><a href="#" class="hover:text-[#1a70b4] desc-font transition">About
+          <li class="mt-4 font-medium text-base"><a href="#" class="hover:text-primary desc-font transition text-base font-medium desc-font">About
               Us</a></li>
           <li class="mt-4 font-medium text-base"><a href="#"
-              class="hover:text-[#1a70b4] desc-font transition">Products</a></li>
+              class="hover:text-primary desc-font transition text-base font-medium desc-font">Products</a></li>
           <li class="mt-4 font-medium text-base"><a href="#"
-              class="hover:text-[#1a70b4] desc-font transition">Manufacturing</a></li>
-          <li class="mt-4 font-medium text-base"><a href="#" class="hover:text-[#1a70b4] desc-font transition">Blog</a>
+              class="hover:text-primary desc-font transition text-base font-medium desc-font">Manufacturing</a></li>
+          <li class="mt-4 font-medium text-base"><a href="#" class="hover:text-primary desc-font transition text-base font-medium desc-font">Blog</a>
           </li>
         </ul>
       </div>
@@ -1175,16 +1242,16 @@
       <div>
         <h3 class="text-[20px] font-bold mb-4 title-font text-[#222222]">Our Products</h3>
         <ul class="space-y-2 text-[#222222] text-sm">
-          <li class="mt-4 font-medium text-base"><a href="#" class="hover:text-[#1a70b4] desc-font transition">Footwear
+          <li class="mt-4 font-medium text-base"><a href="#" class="hover:text-primary desc-font transition text-base font-medium desc-font">Footwear
               Leather</a></li>
-          <li class="mt-4 font-medium text-base"><a href="#" class="hover:text-[#1a70b4] desc-font transition">Bag
+          <li class="mt-4 font-medium text-base"><a href="#" class="hover:text-primary desc-font transition text-base font-medium desc-font">Bag
               Leather</a></li>
-          <li class="mt-4 font-medium text-base"><a href="#" class="hover:text-[#1a70b4] desc-font transition">Wallets &
+          <li class="mt-4 font-medium text-base"><a href="#" class="hover:text-primary desc-font transition text-base font-medium desc-font">Wallets &
               Belts</a></li>
-          <li class="mt-4 font-medium text-base"><a href="#" class="hover:text-[#1a70b4] desc-font transition">Sheet
+          <li class="mt-4 font-medium text-base"><a href="#" class="hover:text-primary desc-font transition text-base font-medium desc-font">Sheet
               Covers</a></li>
           <li class="mt-4 font-medium text-base"><a href="#"
-              class="hover:text-[#1a70b4] desc-font transition">Upholstery</a></li>
+              class="hover:text-primary desc-font transition text-base font-medium desc-font">Upholstery</a></li>
         </ul>
       </div>
 
@@ -1207,43 +1274,14 @@
       </div>
     </div>
 
-    <div class="border-t border-[#dddddd] relative z-10 text-center mt-10 text-[#222222] text-base font-medium pt-6">
+    <div class="border-t border-[#dddddd] relative z-10 text-center mt-0 md:mt-10 text-[#222222] text-base font-medium p-5 md:pt-6">
       © 2025 Kodel Leather. All rights reserved. Crafted with excellence.
     </div>
   </footer>
+  <!-- Start FOOTER SECTION -->
 
   <script src="./assests/js/dev-script.js"></script>
-  <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <script>
-    // satrt Our Clients slider
-    var swiper = new Swiper(".clientSlider", {
-      slidesPerView: 4,
-      spaceBetween: 40,
-      loop: true,
-      autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
-      },
-      breakpoints: {
-        0: { // Mobile view
-          slidesPerView: 3.5,
-          spaceBetween: 40,
-        },
-        640: {
-          slidesPerView: 3,
-          spaceBetween: 50,
-        },
-        1024: {
-          slidesPerView: 5,
-          spaceBetween: 80,
-        },
-      },
-    });
-
-    // End Our Clients slider
-  </script>
   <script>
     tailwind.config = {
       theme: {

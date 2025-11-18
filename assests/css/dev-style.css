@@ -47,23 +47,32 @@ body {
 .animate-scrollDown:hover {
   animation-play-state: paused;
 }
+
 @media (max-width: 767px) {
+
   .animate-scrollUp,
   .animate-scrollDown {
     animation: none !important;
   }
+
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
+
   .no-scrollbar {
     -ms-overflow-style: none;
-    scrollbar-width: none;
+    scrollbar-width   : none;
   }
 }
 
 @keyframes scrollLeft {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 @media (max-width: 767px) {
@@ -83,34 +92,35 @@ body {
 }
 
 
-/* Line under link */
-.nav-link::after {
-  content                : '';
-  position               : absolute;
-  left                   : 50%;
-  bottom                 : -32%;
-  transform              : translateX(-50%);
-  height                 : 3px;
-  width                  : 0;
-  border-top-left-radius : 5px;
-  border-top-right-radius: 5px;
-  background-color       : #1A70B4;
-  transition             : all 0.3s ease;
-}
-
-.nav-link:hover {
-  color: #1A70B4;
-}
-
-.nav-link:hover::after {
-  width: 24px;
-}
-
-.nav-link.active {
-  color: #1A70B4;
-}
-
-.nav-link.active::after {
-  width           : 24px;
+.nav-item::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 34px;
+  height: 3px;
   background-color: #1A70B4;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease, left 0.3s ease;
 }
+
+.nav-item:hover::after {
+  transform: scaleX(1);
+  left: 0;
+}
+
+.nav-item.active::after {
+  transform: scaleX(1);
+  left: 50%;
+  transform-origin: center;
+  translate: -50% 0; 
+}
+
+.nav-item:hover > a,
+.nav-item.active > a {
+  color: #1A70B4;
+}
+
