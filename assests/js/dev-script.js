@@ -63,7 +63,6 @@
 
    const mobileCards = document.querySelectorAll('.mobile-product-card');
 
-  // Make first card active on load
   const firstCard = mobileCards[0];
   firstCard.classList.add('bg-primary', 'text-white');
   firstCard.classList.remove('bg-gray-100', 'text-gray-800');
@@ -71,12 +70,10 @@
   firstCard.querySelector('.mobile-card-image').classList.remove('hidden');
   firstCard.querySelector('img').src = 'assests/img/icon/arrow-up-right-round.svg';
 
-  // Click handler for all cards
   mobileCards.forEach(card => {
     card.addEventListener('click', () => {
       mobileCards.forEach(c => {
         if (c !== card) {
-          // Reset other cards
           c.classList.remove('bg-primary', 'text-white');
           c.classList.add('bg-gray-100', 'text-gray-800');
 
@@ -86,7 +83,6 @@
         }
       });
 
-      // Activate clicked card
       card.classList.add('bg-primary', 'text-white');
       card.classList.remove('bg-gray-100', 'text-gray-800');
 
