@@ -32,9 +32,9 @@
       document.body.classList.remove('overflow-hidden');
     }
   });
-    // <!-- End top nav bar -->
+  // <!-- End top nav bar -->
 
-    // <!-- Start Our Products -->
+  // <!-- Start Our Products -->
   const productCards = document.querySelectorAll('.product-card');
   const productImage = document.getElementById('productImage');
 
@@ -59,7 +59,6 @@
       productImage.src = imgSrc;
     });
   });
-
 
    const mobileCards = document.querySelectorAll('.mobile-product-card');
 
@@ -91,9 +90,9 @@
       card.querySelector('img').src = 'assests/img/icon/arrow-up-right-round.svg';
     });
   });
-    // <!-- End Our Products -->
+// <!-- End Our Products -->
 
-    // Start faq section
+// Start faq section
 const accordions = document.querySelectorAll('.accordion-item');
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -121,7 +120,6 @@ accordions.forEach((item) => {
       return;
     }
 
-    // Otherwise → close all others first
     accordions.forEach((acc) => {
       acc.classList.remove('active', 'bg-[#1A70B4]', 'text-white');
       acc.classList.add('bg-[#F9FAFB]', 'text-[#0B2239]');
@@ -129,7 +127,6 @@ accordions.forEach((item) => {
       acc.querySelector('.accordion-icon').style.transform = 'rotate(0deg)';
     });
 
-    // Open the clicked one
     item.classList.add('active', 'bg-[#1A70B4]', 'text-white');
     item.classList.remove('bg-[#F9FAFB]', 'text-[#0B2239]');
     content.style.maxHeight = content.scrollHeight + 'px';
