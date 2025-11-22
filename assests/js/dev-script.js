@@ -34,40 +34,99 @@
   });
   // <!-- End top nav bar -->
 
-  // <!-- Start Our Products -->
-  const productCards = document.querySelectorAll('.product-card');
-  const productImage = document.getElementById('productImage');
+  // start counter script
+function runCounter(id) {
+    const el = document.getElementById(id);
+    if (!el) return; // exit if element not found
 
+    let original = el.innerText.trim();
+    let numOnly = original.replace(/[^0-9]/g, "");
+    let target = parseInt(numOnly);
+
+    if (isNaN(target)) return;
+
+    let current = 0;
+
+    let duration = 8000; 
+    let frameRate = 200;  
+    let totalFrames = duration / frameRate;
+    let increment = target / totalFrames;
+
+    let timer = setInterval(() => {
+      current += increment;
+
+      if (current >= target) {
+        el.innerText = original;
+        clearInterval(timer);
+      } else {
+        el.innerText =
+          Math.floor(current).toLocaleString() +
+          original.replace(/[0-9,]/g, "");
+      }
+    }, frameRate);
+}
+
+window.onload = () => {
+    runCounter("counter1");
+    runCounter("counter2");
+    runCounter("counter3");
+};
+
+  // end counter script
+
+  // <!-- Start Our Products -->
+ const productCards = document.querySelectorAll('.product-card');
+const productImage = document.getElementById('productImage');
+
+if (productCards.length && productImage) {
   productCards.forEach(card => {
     card.addEventListener('click', () => {
-
       productCards.forEach(c => {
         c.classList.remove('bg-primary', 'text-white', 'active');
         c.classList.add('bg-gray-100', 'text-gray-800');
-        c.querySelector('.white-icon').classList.add('hidden');
-        c.querySelector('.gray-icon').classList.remove('hidden');
-        c.querySelector('.desc-text').classList.add('hidden');
+
+        const whiteIcon = c.querySelector('.white-icon');
+        const grayIcon = c.querySelector('.gray-icon');
+        const descText = c.querySelector('.desc-text');
+
+        if (whiteIcon) whiteIcon.classList.add('hidden');
+        if (grayIcon) grayIcon.classList.remove('hidden');
+        if (descText) descText.classList.add('hidden');
       });
 
       card.classList.add('bg-primary', 'text-white', 'active');
       card.classList.remove('bg-gray-100', 'text-gray-800');
-      card.querySelector('.white-icon').classList.remove('hidden');
-      card.querySelector('.gray-icon').classList.add('hidden');
-      card.querySelector('.desc-text').classList.remove('hidden');
+
+      const whiteIcon = card.querySelector('.white-icon');
+      const grayIcon = card.querySelector('.gray-icon');
+      const descText = card.querySelector('.desc-text');
+
+      if (whiteIcon) whiteIcon.classList.remove('hidden');
+      if (grayIcon) grayIcon.classList.add('hidden');
+      if (descText) descText.classList.remove('hidden');
 
       const imgSrc = card.getAttribute('data-img');
-      productImage.src = imgSrc;
+      if (productImage && imgSrc) productImage.src = imgSrc;
     });
   });
+}
+const mobileCards = document.querySelectorAll('.mobile-product-card');
 
-   const mobileCards = document.querySelectorAll('.mobile-product-card');
-
+if (mobileCards.length) {
   const firstCard = mobileCards[0];
-  firstCard.classList.add('bg-primary', 'text-white');
-  firstCard.classList.remove('bg-gray-100', 'text-gray-800');
-  firstCard.querySelector('.mobile-card-desc').classList.remove('hidden');
-  firstCard.querySelector('.mobile-card-image').classList.remove('hidden');
-  firstCard.querySelector('img').src = 'assests/img/icon/arrow-up-right-round.svg';
+
+  if (firstCard) {
+    firstCard.classList.add('bg-primary', 'text-white');
+    firstCard.classList.remove('bg-gray-100', 'text-gray-800');
+
+    const desc = firstCard.querySelector('.mobile-card-desc');
+    const image = firstCard.querySelector('.mobile-card-image');
+    const imgTag = firstCard.querySelector('img');
+
+    if (desc) desc.classList.remove('hidden');
+    if (image) image.classList.remove('hidden');
+    if (imgTag) imgTag.src = 'assests/img/icon/arrow-up-right-round.svg';
+  }
 
   mobileCards.forEach(card => {
     card.addEventListener('click', () => {
@@ -76,20 +135,30 @@
           c.classList.remove('bg-primary', 'text-white');
           c.classList.add('bg-gray-100', 'text-gray-800');
 
-          c.querySelector('.mobile-card-desc').classList.add('hidden');
-          c.querySelector('.mobile-card-image').classList.add('hidden');
-          c.querySelector('img').src = 'assests/img/icon/arrow-up-right-round-gray.svg';
+          const desc = c.querySelector('.mobile-card-desc');
+          const image = c.querySelector('.mobile-card-image');
+          const imgTag = c.querySelector('img');
+
+          if (desc) desc.classList.add('hidden');
+          if (image) image.classList.add('hidden');
+          if (imgTag) imgTag.src = 'assests/img/icon/arrow-up-right-round-gray.svg';
         }
       });
 
       card.classList.add('bg-primary', 'text-white');
       card.classList.remove('bg-gray-100', 'text-gray-800');
 
-      card.querySelector('.mobile-card-desc').classList.remove('hidden');
-      card.querySelector('.mobile-card-image').classList.remove('hidden');
-      card.querySelector('img').src = 'assests/img/icon/arrow-up-right-round.svg';
+      const desc = card.querySelector('.mobile-card-desc');
+      const image = card.querySelector('.mobile-card-image');
+      const imgTag = card.querySelector('img');
+
+      if (desc) desc.classList.remove('hidden');
+      if (image) image.classList.remove('hidden');
+      if (imgTag) imgTag.src = 'assests/img/icon/arrow-up-right-round.svg';
     });
   });
+}
+
 // <!-- End Our Products -->
 
 // Start faq section
@@ -136,51 +205,29 @@ accordions.forEach((item) => {
     // End faq section
 
     
-  var swiper = new Swiper(".clientSlider", {
-    slidesPerView: 4,
-    spaceBetween: 40,
-    loop: true,
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false,
-    },
-    breakpoints: {
-      0: { // Mobile view
-        slidesPerView: 3.5,
-        spaceBetween: 40,
-      },
-      640: {
-        slidesPerView: 3,
-        spaceBetween: 50,
-      },
-      1024: {
-        slidesPerView: 5,
-        spaceBetween: 80,
-      },
-    },
-  });
 
     // End Our Clients slider
-  var swiper = new Swiper(".clientSlider", {
-      slidesPerView: 4,
+var swiper = new Swiper(".clientSlider", {
+  slidesPerView: 4,
+  spaceBetween: 40,
+  loop: true,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    0: { 
+      slidesPerView: 3.5,
       spaceBetween: 40,
-      loop: true,
-      autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
-      },
-      breakpoints: {
-        0: { 
-          slidesPerView: 3.5,
-          spaceBetween: 40,
-        },
-        640: {
-          slidesPerView: 3,
-          spaceBetween: 50,
-        },
-        1024: {
-          slidesPerView: 5,
-          spaceBetween: 80,
-        },
-      },
-    });
+    },
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+    },
+    1024: {
+      slidesPerView: 5,
+      spaceBetween: 80,
+    },
+  },
+});
+

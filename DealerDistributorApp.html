@@ -11,7 +11,9 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
+  <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -167,14 +169,14 @@
   </nav>
   <!-- End top nav bar -->
   <section
-    class="relative h-[800px] md:h-[800px] flex flex-col md:flex-row items-start md:items-center text-white bg-cover bg-center"
+    class="relative h-[850px] md:h-[800px] flex flex-col md:flex-row items-start md:items-center text-white bg-cover bg-center"
     style="background-image: url('./assests/img/Home/hero-banner.png');">
 
     <!-- Gradient overlay -->
-    <div class="absolute inset-0 bg-gradient-to-r from-[#001A2B] to-[#0B4A77]"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-[#000000] to-[#0B4A77]"></div>
 
     <!-- Left Text -->
-    <div class="relative z-10 max-w-5xl w-full text-start px-8 md:px-20 pr-0">
+    <div class="relative z-10 md:max-w-5xl max-w-sm w-full text-start px-8 md:px-20 pr-0 md:mt-0 mt-[4rem]">
       <h2 class="title-font text-[40px] md:text-[64px] font-bold mb-6 leading-tight">
         Dealer &amp; Distributor App
       </h2>
@@ -188,7 +190,7 @@
             class="inline-flex items-center justify-center gap-[8px] px-[20px] py-[10px] rounded-[24px] bg-[#1a70b4] h-[48px]">
             <img src="https://c.animaapp.com/mhpuo04jNaJtNH/img/downloadsimple.svg" alt="" role="presentation"
               class="w-[24px] h-[24px]" />
-            <span class="text-white font-[Plus_Jakarta_Sans] font-semibold text-[16px] leading-normal">
+            <span class="text-white desc-font font-semibold text-[16px] leading-normal">
               Download for IOS &amp; Android
             </span>
           </a>
@@ -210,12 +212,12 @@
 
   <!-- Start App Features -->
   <section class="bg-white text-center">
-    <div class="max-w-7xl mx-auto  px-8">
+    <div class="max-w-7xl mx-auto px-8 py-9">
       <!-- Heading -->
-      <h2 class="text-[32px] md:text-[56px] title-font font-bold text-[#0B2239] mb-3 title-font">
+      <h2 class="text-[40px] md:text-[56px] title-font font-bold text-[#0B2239] mb-3 title-font">
         App Features
       </h2>
-      <p class="text-[#9EB1C0] desc-font text-[20px] md:text-2xl font-medium mb-10">
+      <p class="text-[#7a7a7a] desc-font text-[20px] md:text-2xl font-medium mb-10">
         Everything you need to manage your leather business efficiently
       </p>
 
@@ -314,10 +316,10 @@
 
   <section class="bg-white text-center py-16 px-6 md:block hidden">
     <div class="max-w-7xl mx-auto">
-      <h2 class="text-[32px] md:text-[56px] title-font font-bold text-[#0B2239] mb-3 title-font">
+      <h2 class="text-[40px] md:text-[56px] title-font font-bold text-[#0B2239] mb-3 title-font">
         Getting Started is Simple
       </h2>
-      <p class="text-[#9EB1C0] desc-font text-[20px] md:text-2xl font-medium mb-10">
+      <p class="text-[#7a7a7a] desc-font text-[20px] md:text-2xl font-medium mb-10">
         Four easy steps to start ordering
       </p>
 
@@ -331,7 +333,7 @@
             <div class="z-10 space-y-4 w-[284px] text-left">
               <span
                 class="block text-[80px] font-semibold leading-[normal] tracking-[-3.2px] bg-gradient-to-b from-white to-transparent bg-clip-text text-transparent">01</span>
-              <h3 class="text-4xl font-bold title-font">Download</h3>
+              <h3 class="text-4xl text-[32px] font-bold title-font">Download</h3>
               <p class="text-lg font-semibold opacity-80 desc-font">Get the app from App Store or Play Store</p>
               <div class="w-[299px]">
                 <a href="#download"
@@ -353,7 +355,7 @@
               aria-hidden="true"></div>
             <span
               class="absolute top-[48px] left-[40px] text-[80px] font-semibold tracking-[-3.2px] bg-gradient-to-b from-[#1a70b4] to-transparent bg-clip-text text-transparent desc-font">03</span>
-            <h3 class="absolute top-[149px] left-[46px] font-bold text-[#222222] text-[48px] title-font text-left">
+            <h3 class="absolute top-[149px] left-[46px] font-bold text-[#222222] text-[32px] md:text-[48px] title-font text-left">
               Explore</h3>
             <p
               class="absolute top-[219px] left-[46px] w-[224px] opacity-60 font-semibold text-[#222222] text-[20px] tracking-[-0.4px] leading-[30px] desc-font text-left">
@@ -414,10 +416,10 @@
   </section>
   <section class="bg-white text-center py-16 px-6 block md:hidden">
     <div class="max-w-7xl mx-auto">
-      <h2 class="text-[32px] md:text-[56px] title-font font-bold text-[#0B2239] mb-3 title-font">
+      <h2 class="text-[40px] md:text-[56px] title-font font-bold text-[#0B2239] mb-3 title-font">
         Getting Started is Simple
       </h2>
-      <p class="text-[#9EB1C0] desc-font text-[20px] md:text-2xl font-medium mb-10">
+      <p class="text-[#7a7a7a] desc-font text-[20px] md:text-2xl font-medium mb-10">
         Four easy steps to start ordering
       </p>
 
@@ -431,7 +433,7 @@
             <div class="z-10 space-y-4 w-[284px] text-left">
               <span
                 class="block text-[80px] font-semibold leading-[normal] tracking-[-3.2px] bg-gradient-to-b from-white to-transparent bg-clip-text text-transparent">01</span>
-              <h3 class="text-4xl font-bold title-font">Download</h3>
+              <h3 class="text-4xl text-[32px] font-bold title-font">Download</h3>
               <p class="text-lg font-semibold opacity-80 desc-font">Get the app from App Store or Play Store</p>
               <div class="w-[299px]">
                 <a href="#download"
@@ -457,7 +459,7 @@
               02
             </span>
 
-            <h3 class="absolute top-[149px] left-[46px] font-bold text-[#222222] text-[48px] title-font">
+            <h3 class="absolute top-[149px] left-[46px] font-bold text-[#222222] text-[32px] md:text-[48px] title-font">
               Sign In
             </h3>
 
@@ -485,7 +487,7 @@
               03
             </span>
 
-            <h3 class="absolute top-[149px] left-[46px] font-bold text-[#222222] text-[48px] title-font">
+            <h3 class="absolute top-[149px] left-[46px] font-bold text-[#222222] text-[32px] md:text-[48px] title-font">
               Explore
             </h3>
 
@@ -506,7 +508,7 @@
               04
             </span>
 
-            <h3 class="absolute top-[149px] left-[46px] font-bold text-[#222222] text-[48px] title-font">
+            <h3 class="absolute top-[149px] left-[46px] font-bold text-[#222222] text-[32px] md:text-[48px] title-font">
               Order
             </h3>
 
@@ -531,7 +533,7 @@
       <h2 class="text-[32px] md:text-[56px] title-font font-bold text-[#0B2239] mb-3 title-font">
         See It In Action
       </h2>
-      <p class="text-[#9EB1C0] desc-font text-[20px] md:text-2xl font-medium mb-10">
+      <p class="text-[#7a7a7a] desc-font text-[20px] md:text-2xl font-medium mb-10">
         Watch how our app transforms dealer ordering
       </p>
 
@@ -576,7 +578,7 @@
           class="title-font font-bold text-[#222222] text-[40px] md:text-[56px] leading-[normal]">
           Download Now
         </h2>
-        <p class="text-[#555555] text-[18px] md:text-[20px] leading-[30px] opacity-80 desc-font text-left">
+        <p class="text-[#7a7a7a] font-medium text-[18px] md:text-[20px] leading-[30px] opacity-80 desc-font text-left">
           Available now on Android & iOS. Download and start ordering today.
         </p>
       </div>
@@ -601,12 +603,12 @@
 
   <!-- Start Faq -->
   <section class="pb-16 md:pb-28 md:pt-0 pt-16 bg-white">
-    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-start">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-start md:p-0 p-5">
       <div>
         <h2
           class="text-center md:text-start text-[32px] md:text-[56px] title-font font-bold text-[#0B2239] mb-3 title-font">
           FAQ</h2>
-        <p class="text-center md:text-start text-[#9EB1C0] desc-font text-[20px] md:text-2xl font-medium ">
+        <p class="text-center md:text-start text-[#7a7a7a] desc-font text-[20px] md:text-2xl font-medium ">
           Find quick answers to common questions about our services.
         </p>
       </div>
@@ -619,7 +621,7 @@
             <h3 class="font-semibold text-[20px] md:text-2xl desc-font">What types of leather products do you
               manufacture?</h3>
             <span
-              class="accordion-icon bg-[#F5F5F5] rounded-full p-4 flex justify-center items-center text-[#9EB1C0] text-[20px] md:text-2xl transform transition-transform duration-300 leading-none">
+              class="accordion-icon bg-[#F5F5F5] rounded-full p-4 flex justify-center items-center text-[#7a7a7a] text-[20px] md:text-2xl transform transition-transform duration-300 leading-none">
               <img src="./assests/img/icon/cross.svg" alt="">
             </span>
           </button>
@@ -637,7 +639,7 @@
             <h3 class="font-semibold text-[20px] md:text-2xl desc-font">Where are your manufacturing facilities located?
             </h3>
             <span
-              class="accordion-icon bg-[#F5F5F5] rounded-full p-4 flex justify-center items-center text-[#9EB1C0] text-[20px] md:text-2xl transform transition-transform duration-300 leading-none">
+              class="accordion-icon bg-[#F5F5F5] rounded-full p-4 flex justify-center items-center text-[#7a7a7a] text-[20px] md:text-2xl transform transition-transform duration-300 leading-none">
               <img src="./assests/img/icon/cross.svg" alt="">
             </span>
           </button>
@@ -655,7 +657,7 @@
             <h3 class="font-semibold text-[20px] md:text-2xl desc-font">How long has Kodel been in the leather industry?
             </h3>
             <span
-              class="accordion-icon bg-[#F5F5F5] rounded-full p-4 flex justify-center items-center text-[#9EB1C0] text-[20px] md:text-2xl transform transition-transform duration-300 leading-none">
+              class="accordion-icon bg-[#F5F5F5] rounded-full p-4 flex justify-center items-center text-[#7a7a7a] text-[20px] md:text-2xl transform transition-transform duration-300 leading-none">
               <img src="./assests/img/icon/cross.svg" alt="">
             </span>
           </button>
@@ -674,7 +676,7 @@
             </h3>
 
             <span
-              class="accordion-icon bg-[#F5F5F5] rounded-full p-4 flex justify-center items-center text-[#9EB1C0] text-[20px] md:text-2xl transform transition-transform duration-300 leading-none">
+              class="accordion-icon bg-[#F5F5F5] rounded-full p-4 flex justify-center items-center text-[#7a7a7a] text-[20px] md:text-2xl transform transition-transform duration-300 leading-none">
               <img src="./assests/img/icon/cross.svg" alt="">
             </span>
           </button>
@@ -700,12 +702,11 @@
         <div class="py-[59px] px-[30px] md:p-[59px] flex flex-col justify-center text-white ">
           <h2 class="text-[32px] md:text-[56px] font-bold text-[#ffffff] leading-[1.36] title-font mb-4">Ready to Work
             Together?</h2>
-          <p class="text-[#9EB1C0] max-w-sm text-[20px] md:text-2xl font-medium desc-font">
+          <p class="text-[#7a7a7a] max-w-sm text-[20px] md:text-2xl font-medium desc-font">
             Looking for premium leather solutions? Let's create something exceptional together.
           </p>
           <div>
-            <a href="#contact"
-              class="mt-[40px] inline-flex items-center bg-primary hover:bg-[#E2F0FB] hover:text-primary group text-white text-base font-bold rounded-full px-5 py-3 transition">
+            <a href="contact.html" class="mt-[40px] inline-flex items-center bg-primary hover:bg-[#E2F0FB] hover:text-primary group text-white text-base font-bold rounded-full px-5 py-3 transition">
               Get in Touch
               <svg class="ms-2 fill-white group-hover:fill-primary" width="18" height="15" viewBox="0 0 18 15"
                 fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -746,7 +747,7 @@
         <h2 class="text-[32px] font-bold leading-snug mb-3 title-font">
           Ready to Work Together?
         </h2>
-        <p class="text-[#9EB1C0] text-[20px] desc-font font-medium leading-relaxed">
+        <p class="text-[#7a7a7a] text-[20px] desc-font font-medium leading-relaxed">
           Looking for premium leather solutions? Let's create something exceptional together.
         </p>
 
@@ -809,10 +810,8 @@
           <li class="mt-4 font-medium text-base"><a href="#"
               class="hover:text-primary desc-font transition text-base font-medium desc-font">About
               Us</a></li>
-          <li class="mt-4 font-medium text-base"><a href="#"
-              class="hover:text-primary desc-font transition text-base font-medium desc-font">Products</a></li>
-          <li class="mt-4 font-medium text-base"><a href="#"
-              class="hover:text-primary desc-font transition text-base font-medium desc-font">Manufacturing</a></li>
+          <li class="mt-4 font-medium text-base"><a href="product.html" class="hover:text-primary desc-font transition text-base font-medium desc-font">Products</a></li>
+          <li class="mt-4 font-medium text-base"><a href="Manufacturing.html"  class="hover:text-primary desc-font transition text-base font-medium desc-font">Manufacturing</a></li>
           <li class="mt-4 font-medium text-base"><a href="#"
               class="hover:text-primary desc-font transition text-base font-medium desc-font">Blog</a>
           </li>
@@ -864,54 +863,7 @@
     </div>
   </footer>
   <!-- Start FOOTER SECTION -->
-  <script>
-    const accordions = document.querySelectorAll('.accordion-item');
-
-    window.addEventListener('DOMContentLoaded', () => {
-      const first = document.querySelector('.accordion-item');
-      if (first) {
-        const content = first.querySelector('.accordion-content');
-        const icon = first.querySelector('.accordion-icon');
-        first.classList.add('active', 'bg-[#1A70B4]', 'text-white');
-        content.style.maxHeight = content.scrollHeight + 'px';
-        icon.style.transform = 'rotate(90deg)';
-      }
-    });
-
-    accordions.forEach((item) => {
-      const header = item.querySelector('.accordion-header');
-      const content = item.querySelector('.accordion-content');
-      const icon = item.querySelector('.accordion-icon');
-
-      header.addEventListener('click', () => {
-        if (item.classList.contains('active')) {
-          item.classList.remove('active', 'bg-[#1A70B4]', 'text-white');
-          item.classList.add('bg-[#F9FAFB]', 'text-[#0B2239]');
-          content.style.maxHeight = null;
-          icon.style.transform = 'rotate(0deg)';
-          return;
-        }
-
-        // Otherwise → close all others first
-        accordions.forEach((acc) => {
-          acc.classList.remove('active', 'bg-[#1A70B4]', 'text-white');
-          acc.classList.add('bg-[#F9FAFB]', 'text-[#0B2239]');
-          acc.querySelector('.accordion-content').style.maxHeight = null;
-          acc.querySelector('.accordion-icon').style.transform = 'rotate(0deg)';
-        });
-
-        // Open the clicked one
-        item.classList.add('active', 'bg-[#1A70B4]', 'text-white');
-        item.classList.remove('bg-[#F9FAFB]', 'text-[#0B2239]');
-        content.style.maxHeight = content.scrollHeight + 'px';
-        icon.style.transform = 'rotate(45deg)';
-      });
-    });
-  </script>
-
-  <script src="./assests/js/dev-script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
+     <script>
     tailwind.config = {
       theme: {
         extend: {
@@ -922,6 +874,9 @@
       }
     }
   </script>
+  <script src="./assests/js/dev-script.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 
 </html>
