@@ -10,12 +10,22 @@
     rel="stylesheet">
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="icon" type="image/png" href="./assests/img/logo/favicon-dark-bg.svg"/>
   <link rel="stylesheet" href="./assests/css/dev-style.css">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-    <!-- Start top nav bar -->
+    <!-- Start loader -->
+<div id="kodelLoader">
+  <div class="loader-inner">
+    <img src="./assests/img/logo/with-out-bg-favicon.png" alt="Kodel Logo" />
+    <div class="ring"></div>
+  </div>
+</div>
+  <!-- End loader -->
+
+  <!-- Start top nav bar -->
  <nav class="w-full bg-white shadow-sm sticky top-0 z-50">
   <div class="container mx-auto px-6 flex justify-between items-center">
 
@@ -718,39 +728,9 @@
   </footer>
   <!-- Start FOOTER SECTION -->
 
-  
-     <script src="./assests/js/dev-script.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./assests/js/dev-script.js"></script>
 
-  <script>
-    
-    var swiper = new Swiper(".clientSlider", {
-      slidesPerView: 4,
-      spaceBetween: 40,
-      loop: true,
-      autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
-      },
-      breakpoints: {
-        0: { // Mobile view
-          slidesPerView: 3.5,
-          spaceBetween: 40,
-        },
-        640: {
-          slidesPerView: 3,
-          spaceBetween: 50,
-        },
-        1024: {
-          slidesPerView: 5,
-          spaceBetween: 80,
-        },
-      },
-    });
-
-    // End Our Clients slider
-  </script>
   <script>
     tailwind.config = {
       theme: {

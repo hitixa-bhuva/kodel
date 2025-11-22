@@ -7,6 +7,7 @@
   <meta name="description"
     content="Dealer & Distributor App for leather business management. Streamline operations with real-time updates and exclusive features." />
   <title>Dealer &amp; Distributor App - Kodel Leather</title>
+<link rel="icon" type="image/png" href="./assests/img/logo/favicon-dark-bg.svg"/>
   <link rel="stylesheet" href="./assests/css/dev-style.css">
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
@@ -18,6 +19,14 @@
 </head>
 
 <body>
+  <!-- Start loader -->
+<div id="kodelLoader">
+  <div class="loader-inner">
+    <img src="./assests/img/logo/with-out-bg-favicon.png" alt="Kodel Logo" />
+    <div class="ring"></div>
+  </div>
+</div>
+  <!-- End loader -->
   <!-- Start top nav bar -->
   <nav class="w-full bg-white shadow-sm sticky top-0 z-50">
     <div class="container mx-auto px-6 flex justify-between items-center">
@@ -863,6 +872,9 @@
     </div>
   </footer>
   <!-- Start FOOTER SECTION -->
+
+<script src="./assests/js/dev-script.js"></script>
+
      <script>
     tailwind.config = {
       theme: {
@@ -874,9 +886,6 @@
       }
     }
   </script>
-  <script src="./assests/js/dev-script.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 
 </html>

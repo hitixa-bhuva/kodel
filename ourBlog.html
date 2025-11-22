@@ -6,7 +6,8 @@
   <meta charset="utf-8" />
   <meta name="description" content="Insights on leather, craftsmanship, and industry trends from Kodel Leather" />
   <title>Our Blogs - Kodel Leather</title>
-        <link rel="stylesheet" href="./assests/css/dev-style.css">
+      <link rel="icon" type="image/png" href="./assests/img/logo/favicon-dark-bg.svg"/>
+  <link rel="stylesheet" href="./assests/css/dev-style.css">
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
@@ -17,6 +18,16 @@
 </head>
 
 <body>
+
+  <!-- Start loader -->
+<div id="kodelLoader">
+  <div class="loader-inner">
+    <img src="./assests/img/logo/with-out-bg-favicon.png" alt="Kodel Logo" />
+    <div class="ring"></div>
+  </div>
+</div>
+
+  <!-- End loader -->
   <!-- Start top nav bar -->
  <nav class="w-full bg-white shadow-sm sticky top-0 z-50">
   <div class="container mx-auto px-6 flex justify-between items-center">
@@ -172,61 +183,38 @@
    
 <!-- start blog section -->
  <section class="w-full max-w-[1240px] mx-auto py-16 md:py-24 pl-[32px]">
-   <div class="flex flex-nowrap overflow-x-auto md:flex-wrap justify-start gap-2 md:gap-3 mb-9 whitespace-nowrap scrollbar-hide" role="navigation"
-      aria-label="Blog categories">
-      <button class="cursor-pointer transition-all duration-200 ease-in-out font-semibold text-base desc-font text-white bg-[#1a70b4] 
-           hover:-translate-y-[2px] hover:shadow-[0_2px_8px_rgba(0,0,0,0.1)] 
-           focus:-translate-y-[2px] focus:shadow-[0_2px_8px_rgba(0,0,0,0.1)] 
-           active:translate-y-0 inline-flex h-10 items-center justify-center gap-2 px-5 rounded-full"
+   <div class="flex flex-nowrap overflow-x-auto md:flex-wrap justify-start gap-2 md:gap-3 mb-9 whitespace-nowrap scrollbar-hide" role="navigation"aria-label="Blog categories">
+      <button data-category="All" class="mt-3 category-btn font-semibold text-base desc-fontinline-flex h-10 items-center justify-center gap-2 px-5 rounded-full"
         aria-pressed="true">
         All
       </button>
 
-      <button class="cursor-pointer transition-all duration-200 ease-in-out font-semibold text-base desc-font text-[#333] bg-[#e2e2e2] 
-           hover:-translate-y-[2px] hover:shadow-[0_2px_8px_rgba(0,0,0,0.1)] 
-           focus:-translate-y-[2px] focus:shadow-[0_2px_8px_rgba(0,0,0,0.1)] 
-           active:translate-y-0 inline-flex h-10 items-center justify-center gap-2 px-5 rounded-full">
+      <button data-category="Craftsmanship"  class="mt-3 category-btn font-semibold text-base desc-font inline-flex h-10 items-center justify-center gap-2 px-5 rounded-full">
         Craftsmanship
       </button>
 
-      <button class="cursor-pointer transition-all duration-200 ease-in-out font-semibold text-base desc-font text-[#333] bg-[#e2e2e2] 
-           hover:-translate-y-[2px] hover:shadow-[0_2px_8px_rgba(0,0,0,0.1)] 
-           focus:-translate-y-[2px] focus:shadow-[0_2px_8px_rgba(0,0,0,0.1)] 
-           active:translate-y-0 inline-flex h-10 items-center justify-center gap-2 px-5 rounded-full">
+      <button data-category="Sustainability" class="mt-3 category-btn font-semibold text-base desc-font inline-flex h-10 items-center justify-center gap-2 px-5 rounded-full">
         Sustainability
       </button>
 
-      <button class="cursor-pointer transition-all duration-200 ease-in-out font-semibold text-base desc-font text-[#333] bg-[#e2e2e2] 
-           hover:-translate-y-[2px] hover:shadow-[0_2px_8px_rgba(0,0,0,0.1)] 
-           focus:-translate-y-[2px] focus:shadow-[0_2px_8px_rgba(0,0,0,0.1)] 
-           active:translate-y-0 inline-flex h-10 items-center justify-center gap-2 px-5 rounded-full">
+      <button data-category="ProductGuide" class="mt-3 category-btn font-semibold text-base desc-font inline-flex h-10 items-center justify-center gap-2 px-5 rounded-full">
         Product Guide
       </button>
 
-      <button class="cursor-pointer transition-all duration-200 ease-in-out font-semibold text-base desc-font text-[#333] bg-[#e2e2e2] 
-           hover:-translate-y-[2px] hover:shadow-[0_2px_8px_rgba(0,0,0,0.1)] 
-           focus:-translate-y-[2px] focus:shadow-[0_2px_8px_rgba(0,0,0,0.1)] 
-           active:translate-y-0 inline-flex h-10 items-center justify-center gap-2 px-5 rounded-full">
+      <button data-category="CareMaintenance"  class="mt-3 category-btn font-semibold text-base desc-font inline-flex h-10 items-center justify-center gap-2 px-5 rounded-full">
         Care & Maintenance
       </button>
 
-      <button class="cursor-pointer transition-all duration-200 ease-in-out font-semibold text-base desc-font text-[#333] bg-[#e2e2e2] 
-           hover:-translate-y-[2px] hover:shadow-[0_2px_8px_rgba(0,0,0,0.1)] 
-           focus:-translate-y-[2px] focus:shadow-[0_2px_8px_rgba(0,0,0,0.1)] 
-           active:translate-y-0 inline-flex h-10 items-center justify-center gap-2 px-5 rounded-full">
+      <button data-category="Innovation" class="mt-3 category-btn font-semibold text-base desc-font inline-flex h-10 items-center justify-center gap-2 px-5 rounded-full">
         Innovation
       </button>
 
-      <button class="cursor-pointer transition-all duration-200 ease-in-out font-semibold text-base desc-font text-[#333] bg-[#e2e2e2] 
-           hover:-translate-y-[2px] hover:shadow-[0_2px_8px_rgba(0,0,0,0.1)] 
-           focus:-translate-y-[2px] focus:shadow-[0_2px_8px_rgba(0,0,0,0.1)] 
-           active:translate-y-0 inline-flex h-10 items-center justify-center gap-2 px-5 rounded-full">
+      <button data-category="Process" class="mt-3 category-btn font-semibold text-base desc-font inline-flex h-10 items-center justify-center gap-2 px-5 rounded-full">
         Process
       </button>
     </div>
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pr-[32px]">
-    
-    <div class="flex flex-col gap-5">
+    <div class="flex flex-col gap-5 blog-item" data-category="All Craftsmanship Process">
       <div class="w-full aspect-[5/2] bg-[#d9d9d9] rounded-[12px]" role="img" aria-label="Blog post featured image"></div>
       <div class="flex flex-col gap-3">
         <div class="inline-flex items-center gap-2 text-sm font-semibold desc-font">
@@ -251,7 +239,7 @@
         </div>
       </div>
     </div>
-    <div class="flex flex-col gap-5">
+    <div class="flex flex-col gap-5 blog-item" data-category="All Process">
       <div class="w-full aspect-[5/2] bg-[#d9d9d9] rounded-[12px]" role="img" aria-label="Blog post featured image"></div>
       <div class="flex flex-col gap-3">
         <div class="inline-flex items-center gap-2 text-sm font-semibold desc-font">
@@ -276,7 +264,7 @@
         </div>
       </div>
     </div>
-    <div class="flex flex-col gap-5">
+    <div class="flex flex-col gap-5 blog-item" data-category="All Process">
       <div class="w-full aspect-[5/2] bg-[#d9d9d9] rounded-[12px]" role="img" aria-label="Blog post featured image"></div>
       <div class="flex flex-col gap-3">
         <div class="inline-flex items-center gap-2 text-sm font-semibold desc-font">
@@ -301,7 +289,7 @@
         </div>
       </div>
     </div>
-    <div class="flex flex-col gap-5">
+    <div class="flex flex-col gap-5 blog-item" data-category="All Process">
       <div class="w-full aspect-[5/2] bg-[#d9d9d9] rounded-[12px]" role="img" aria-label="Blog post featured image"></div>
       <div class="flex flex-col gap-3">
         <div class="inline-flex items-center gap-2 text-sm font-semibold desc-font">
@@ -326,7 +314,7 @@
         </div>
       </div>
     </div>
-    <div class="flex flex-col gap-5">
+    <div class="flex flex-col gap-5 blog-item" data-category="All Sustainability">
       <div class="w-full aspect-[5/2] bg-[#d9d9d9] rounded-[12px]" role="img" aria-label="Blog post featured image"></div>
       <div class="flex flex-col gap-3">
         <div class="inline-flex items-center gap-2 text-sm font-semibold desc-font">
@@ -351,7 +339,7 @@
         </div>
       </div>
     </div>
-    <div class="flex flex-col gap-5">
+    <div class="flex flex-col gap-5 blog-item" data-category="All ProductGuide">
       <div class="w-full aspect-[5/2] bg-[#d9d9d9] rounded-[12px]" role="img" aria-label="Blog post featured image"></div>
       <div class="flex flex-col gap-3">
         <div class="inline-flex items-center gap-2 text-sm font-semibold desc-font">
@@ -376,7 +364,7 @@
         </div>
       </div>
     </div>
-    <div class="flex flex-col gap-5">
+    <div class="flex flex-col gap-5 blog-item" data-category="All Innovation">
       <div class="w-full aspect-[5/2] bg-[#d9d9d9] rounded-[12px]" role="img" aria-label="Blog post featured image"></div>
       <div class="flex flex-col gap-3">
         <div class="inline-flex items-center gap-2 text-sm font-semibold desc-font">
@@ -401,7 +389,7 @@
         </div>
       </div>
     </div>
-    <div class="flex flex-col gap-5">
+    <div class="flex flex-col gap-5 blog-item" data-category="All CareMaintenance">
       <div class="w-full aspect-[5/2] bg-[#d9d9d9] rounded-[12px]" role="img" aria-label="Blog post featured image"></div>
       <div class="flex flex-col gap-3">
         <div class="inline-flex items-center gap-2 text-sm font-semibold desc-font">
@@ -426,7 +414,7 @@
         </div>
       </div>
     </div>
-    <div class="flex flex-col gap-5">
+    <div class="flex flex-col gap-5 blog-item" data-category="All Craftsmanship">
       <div class="w-full aspect-[5/2] bg-[#d9d9d9] rounded-[12px]" role="img" aria-label="Blog post featured image"></div>
       <div class="flex flex-col gap-3">
         <div class="inline-flex items-center gap-2 text-sm font-semibold desc-font">
@@ -696,40 +684,8 @@
     </div>
   </footer>
   <!-- Start FOOTER SECTION -->
-
-
-     <script src="./assests/js/dev-script.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <script>
-    
-    var swiper = new Swiper(".clientSlider", {
-      slidesPerView: 4,
-      spaceBetween: 40,
-      loop: true,
-      autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
-      },
-      breakpoints: {
-        0: { // Mobile view
-          slidesPerView: 3.5,
-          spaceBetween: 40,
-        },
-        640: {
-          slidesPerView: 3,
-          spaceBetween: 50,
-        },
-        1024: {
-          slidesPerView: 5,
-          spaceBetween: 80,
-        },
-      },
-    });
-
-    // End Our Clients slider
-  </script>
+  
+  <script src="./assests/js/dev-script.js"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -741,5 +697,6 @@
       }
     }
   </script>
+
   </body>
 </html>

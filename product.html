@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kodel Home</title>
+<link rel="icon" type="image/png" href="./assests/img/logo/favicon-dark-bg.svg"/>
   <link rel="stylesheet" href="./assests/css/dev-style.css">
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
@@ -16,6 +17,14 @@
 </head>
 
 <body>
+  <!-- Start loader -->
+<div id="kodelLoader">
+  <div class="loader-inner">
+    <img src="./assests/img/logo/with-out-bg-favicon.png" alt="Kodel Logo" />
+    <div class="ring"></div>
+  </div>
+</div>
+  <!-- End loader -->
   <!-- Start top nav bar -->
   <nav class="w-full bg-white shadow-sm sticky top-0 z-50">
     <div class="container mx-auto px-6 flex justify-between items-center">
@@ -1199,102 +1208,8 @@
   </div>
   </div>
   <!-- End product model SECTION -->
-
-
+  
   <script src="./assests/js/dev-script.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <!-- product model js -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const openBtn = document.getElementById("openBtn");
-      const modalOverlay = document.getElementById("modalOverlay");
-      const closeBtnTop = document.getElementById("closeBtnTop");
-      const modalPanel = document.getElementById("modalPanel");
-      const scrollLeft = document.getElementById("scrollLeft");
-      const scrollRight = document.getElementById("scrollRight");
-      const mobileColors = document.getElementById("mobileColors");
-
-      // Open modal
-      openBtn.addEventListener("click", () => {
-        modalOverlay.classList.remove("hidden");
-        setTimeout(() => {
-          modalPanel.classList.remove("scale-95", "opacity-0");
-          modalPanel.classList.add("scale-100", "opacity-100");
-        }, 50);
-      });
-
-      // Close modal
-      function closeModal() {
-        modalPanel.classList.remove("scale-100", "opacity-100");
-        modalPanel.classList.add("scale-95", "opacity-0");
-        setTimeout(() => {
-          modalOverlay.classList.add("hidden");
-        }, 200);
-      }
-
-      closeBtnTop.addEventListener("click", closeModal);
-      modalOverlay.addEventListener("click", function (e) {
-        if (e.target === modalOverlay) {
-          closeModal();
-        }
-      });
-
-      scrollLeft.addEventListener("click", () => {
-        mobileColors.scrollBy({ left: -100, behavior: "smooth" });
-      });
-      scrollRight.addEventListener("click", () => {
-        mobileColors.scrollBy({ left: 100, behavior: "smooth" });
-      });
-    });
-  </script>
-  <!-- Second Swiper for Certifications -->
-  <script>
-    (function () {
-      const input = document.getElementById('searchInput');
-      const texts = [
-        "Search products",
-        "Full-Grain Leather",
-        "Garment Leather",
-        "Footwear Leather",
-        "Bag & Accessory Leather",
-        "Upholstery Leather",
-        "Search all type Leather products"
-      ];
-
-      const typingSpeed = 100;
-      const pauseTime = 2000;
-      let textIndex = 0;
-      let charIndex = 0;
-      let isDeleting = false;
-
-      function typeLoop() {
-        const currentText = texts[textIndex];
-        if (!isDeleting && charIndex <= currentText.length) {
-          input.placeholder = currentText.slice(0, charIndex++);
-          setTimeout(typeLoop, typingSpeed);
-        }
-        else if (isDeleting && charIndex >= 0) {
-          input.placeholder = currentText.slice(0, charIndex--);
-          setTimeout(typeLoop, typingSpeed / 2);
-        }
-        else {
-          if (!isDeleting) {
-            isDeleting = true;
-            setTimeout(typeLoop, pauseTime);
-          } else {
-            isDeleting = false;
-            textIndex = (textIndex + 1) % texts.length;
-            setTimeout(typeLoop, typingSpeed);
-          }
-        }
-      }
-
-      typeLoop();
-    })();
-  </script>
-
 
   <script>
     tailwind.config = {

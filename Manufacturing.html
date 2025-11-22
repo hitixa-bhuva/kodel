@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta charset="utf-8" />
   <title>Manufacturing & Warehousing - Kodel Leather</title>
+<link rel="icon" type="image/png" href="./assests/img/logo/favicon-dark-bg.svg"/>
   <link rel="stylesheet" href="./assests/css/dev-style.css">
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
@@ -16,6 +17,15 @@
 </head>
 
 <body>
+  <!-- Start loader -->
+<!-- Full Screen Loader -->
+<div id="kodelLoader">
+  <div class="loader-inner">
+    <img src="./assests/img/logo/with-out-bg-favicon.png" alt="Kodel Logo" />
+    <div class="ring"></div>
+  </div>
+</div>
+  <!-- End loader -->
   <!-- Start top nav bar -->
   <nav class="w-full bg-white shadow-sm sticky top-0 z-50">
     <div class="container mx-auto px-6 flex justify-between items-center">
@@ -930,80 +940,9 @@
     </div>
   </footer>
   <!-- Start FOOTER SECTION -->
-  <script src="./assests/js/dev-script.js"></script>
 
-  <script>
-    const accordions = document.querySelectorAll('.accordion-item');
+    <script src="./assests/js/dev-script.js"></script>
 
-    window.addEventListener('DOMContentLoaded', () => {
-      const first = document.querySelector('.accordion-item');
-      if (first) {
-        const content = first.querySelector('.accordion-content');
-        const icon = first.querySelector('.accordion-icon');
-        first.classList.add('active', 'bg-[#1A70B4]', 'text-white');
-        content.style.maxHeight = content.scrollHeight + 'px';
-        icon.style.transform = 'rotate(90deg)';
-      }
-    });
-
-    accordions.forEach((item) => {
-      const header = item.querySelector('.accordion-header');
-      const content = item.querySelector('.accordion-content');
-      const icon = item.querySelector('.accordion-icon');
-
-      header.addEventListener('click', () => {
-        if (item.classList.contains('active')) {
-          item.classList.remove('active', 'bg-[#1A70B4]', 'text-white');
-          item.classList.add('bg-[#F9FAFB]', 'text-[#0B2239]');
-          content.style.maxHeight = null;
-          icon.style.transform = 'rotate(0deg)';
-          return;
-        }
-
-        accordions.forEach((acc) => {
-          acc.classList.remove('active', 'bg-[#1A70B4]', 'text-white');
-          acc.classList.add('bg-[#F9FAFB]', 'text-[#0B2239]');
-          acc.querySelector('.accordion-content').style.maxHeight = null;
-          acc.querySelector('.accordion-icon').style.transform = 'rotate(0deg)';
-        });
-
-        item.classList.add('active', 'bg-[#1A70B4]', 'text-white');
-        item.classList.remove('bg-[#F9FAFB]', 'text-[#0B2239]');
-        content.style.maxHeight = content.scrollHeight + 'px';
-        icon.style.transform = 'rotate(45deg)';
-      });
-    });
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <script>
-
-    var swiper = new Swiper(".clientSlider", {
-      slidesPerView: 4,
-      spaceBetween: 40,
-      loop: true,
-      autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
-      },
-      breakpoints: {
-        0: {
-          slidesPerView: 3.5,
-          spaceBetween: 40,
-        },
-        640: {
-          slidesPerView: 3,
-          spaceBetween: 50,
-        },
-        1024: {
-          slidesPerView: 5,
-          spaceBetween: 80,
-        },
-      },
-    });
-
-  </script>
   <script>
     tailwind.config = {
       theme: {
