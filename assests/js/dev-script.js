@@ -72,41 +72,50 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener('DOMContentLoaded', () => {
   const accordions = document.querySelectorAll('.accordion-item');
 
-  // Open first by default
+  accordions.forEach(acc => {
+    const icon = acc.querySelector('.accordion-icon');
+    icon.style.transform = 'rotate(45deg)';
+  });
+
   const first = accordions[0];
   if (first) {
     const content = first.querySelector('.accordion-content');
     const icon = first.querySelector('.accordion-icon');
+
     first.classList.add('active', 'bg-[#1A70B4]', 'text-white');
+    first.classList.remove('bg-[#F9FAFB]', 'text-[#0B2239]');
+
     content.style.maxHeight = content.scrollHeight + 'px';
-    icon.style.transform = 'rotate(90deg)';
+    icon.style.transform = 'rotate(0deg)'; 
   }
 
-  accordions.forEach((item) => {
+  accordions.forEach(item => {
     const header = item.querySelector('.accordion-header');
     const content = item.querySelector('.accordion-content');
     const icon = item.querySelector('.accordion-icon');
 
     header.addEventListener('click', () => {
-      if (item.classList.contains('active')) {
-        item.classList.remove('active', 'bg-[#1A70B4]', 'text-white');
-        item.classList.add('bg-[#F9FAFB]', 'text-[#0B2239]');
-        content.style.maxHeight = null;
-        icon.style.transform = 'rotate(0deg)';
-        return;
-      }
 
-      accordions.forEach((acc) => {
+      const isActive = item.classList.contains('active');
+
+      accordions.forEach(acc => {
+        const c = acc.querySelector('.accordion-content');
+        const i = acc.querySelector('.accordion-icon');
+
         acc.classList.remove('active', 'bg-[#1A70B4]', 'text-white');
         acc.classList.add('bg-[#F9FAFB]', 'text-[#0B2239]');
-        acc.querySelector('.accordion-content').style.maxHeight = null;
-        acc.querySelector('.accordion-icon').style.transform = 'rotate(0deg)';
+
+        c.style.maxHeight = null;
+        i.style.transform = 'rotate(45deg)'; 
       });
 
-      item.classList.add('active', 'bg-[#1A70B4]', 'text-white');
-      item.classList.remove('bg-[#F9FAFB]', 'text-[#0B2239]');
-      content.style.maxHeight = content.scrollHeight + 'px';
-      icon.style.transform = 'rotate(45deg)';
+      if (!isActive) {
+        item.classList.add('active', 'bg-[#1A70B4]', 'text-white');
+        item.classList.remove('bg-[#F9FAFB]', 'text-[#0B2239]');
+
+        content.style.maxHeight = content.scrollHeight + 'px';
+        icon.style.transform = 'rotate(0deg)'; 
+      }
     });
   });
 });
@@ -196,30 +205,44 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (!openBtn || !modalOverlay || !modalPanel) return;
 
+  // OPEN MODAL
   openBtn.addEventListener("click", () => {
     modalOverlay.classList.remove("hidden");
+    document.body.classList.add("overflow-hidden"); // ⛔ stop background scroll
+
     setTimeout(() => {
       modalPanel.classList.remove("scale-95", "opacity-0");
       modalPanel.classList.add("scale-100", "opacity-100");
     }, 50);
   });
 
+  // CLOSE MODAL
   function closeModal() {
     modalPanel.classList.remove("scale-100", "opacity-100");
     modalPanel.classList.add("scale-95", "opacity-0");
+
     setTimeout(() => {
       modalOverlay.classList.add("hidden");
+      document.body.classList.remove("overflow-hidden"); // ✅ allow scroll again
     }, 200);
   }
 
   closeBtnTop.addEventListener("click", closeModal);
+
   modalOverlay.addEventListener("click", (e) => {
     if (e.target === modalOverlay) closeModal();
   });
 
-  scrollLeft?.addEventListener("click", () => mobileColors.scrollBy({ left: -100, behavior: "smooth" }));
-  scrollRight?.addEventListener("click", () => mobileColors.scrollBy({ left: 100, behavior: "smooth" }));
+  // MOBILE COLORS HORIZONTAL SCROLL
+  scrollLeft?.addEventListener("click", () =>
+    mobileColors.scrollBy({ left: -100, behavior: "smooth" })
+  );
+
+  scrollRight?.addEventListener("click", () =>
+    mobileColors.scrollBy({ left: 100, behavior: "smooth" })
+  );
 });
+
 
 
 /* -------------------------------------------------
