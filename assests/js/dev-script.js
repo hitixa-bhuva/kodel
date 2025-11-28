@@ -208,7 +208,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // OPEN MODAL
   openBtn.addEventListener("click", () => {
     modalOverlay.classList.remove("hidden");
-    document.body.classList.add("overflow-hidden"); // ⛔ stop background scroll
+    document.body.classList.add("overflow-hidden");
 
     setTimeout(() => {
       modalPanel.classList.remove("scale-95", "opacity-0");
@@ -223,7 +223,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setTimeout(() => {
       modalOverlay.classList.add("hidden");
-      document.body.classList.remove("overflow-hidden"); // ✅ allow scroll again
+      document.body.classList.remove("overflow-hidden");
     }, 200);
   }
 
@@ -233,17 +233,47 @@ document.addEventListener("DOMContentLoaded", function () {
     if (e.target === modalOverlay) closeModal();
   });
 
-  // MOBILE COLORS HORIZONTAL SCROLL
-  scrollLeft?.addEventListener("click", () =>
-    mobileColors.scrollBy({ left: -100, behavior: "smooth" })
-  );
+  // ================================
+  //   SCROLL ARROW SHOW/HIDE LOGIC
+  // ================================
+  function updateScrollButtons() {
+    if (!mobileColors || !scrollLeft || !scrollRight) return;
 
-  scrollRight?.addEventListener("click", () =>
-    mobileColors.scrollBy({ left: 100, behavior: "smooth" })
-  );
+    const maxScrollLeft = mobileColors.scrollWidth - mobileColors.clientWidth;
+
+    // Hide PREV button at start
+    if (mobileColors.scrollLeft <= 0) {
+      scrollLeft.classList.add("opacity-0", "pointer-events-none");
+    } else {
+      scrollLeft.classList.remove("opacity-0", "pointer-events-none");
+    }
+
+    // Hide NEXT button at end
+    if (mobileColors.scrollLeft >= maxScrollLeft - 5) {
+      scrollRight.classList.add("opacity-0", "pointer-events-none");
+    } else {
+      scrollRight.classList.remove("opacity-0", "pointer-events-none");
+    }
+  }
+
+  // Run once when loaded
+  updateScrollButtons();
+
+  // Update on scroll
+  mobileColors?.addEventListener("scroll", updateScrollButtons);
+
+  // LEFT SCROLL
+  scrollLeft?.addEventListener("click", () => {
+    mobileColors.scrollBy({ left: -120, behavior: "smooth" });
+    setTimeout(updateScrollButtons, 300);
+  });
+
+  // RIGHT SCROLL
+  scrollRight?.addEventListener("click", () => {
+    mobileColors.scrollBy({ left: 120, behavior: "smooth" });
+    setTimeout(updateScrollButtons, 300);
+  });
 });
-
-
 
 /* -------------------------------------------------
    5) Search Input Typing Script
@@ -318,20 +348,6 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
-  new Swiper(".certificationSlider", {
-    loop: true,
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false,
-    },
-    spaceBetween: 20,
-    centeredSlides: true,
-    breakpoints: {
-      0: { slidesPerView: 1.3, spaceBetween: 16 },
-      640: { slidesPerView: 2.5, spaceBetween: 24 },
-      1024: { slidesPerView: 4, spaceBetween: 40, centeredSlides: false },
-    },
-  });
 });
 
 

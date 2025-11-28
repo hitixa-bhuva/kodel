@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kodel Home</title>
-<link rel="icon" type="image/png" href="./assests/img/logo/favicon-dark-bg.svg"/>
+  <link rel="icon" type="image/png" href="./assests/img/logo/favicon-dark-bg.svg" />
   <link rel="stylesheet" href="./assests/css/dev-style.css">
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
@@ -18,12 +18,12 @@
 
 <body>
   <!-- Start loader -->
-<div id="kodelLoader">
-  <div class="loader-inner">
-    <img src="./assests/img/logo/with-out-bg-favicon.png" alt="Kodel Logo" />
-    <div class="ring"></div>
+  <div id="kodelLoader">
+    <div class="loader-inner">
+      <img src="./assests/img/logo/with-out-bg-favicon.png" alt="Kodel Logo" />
+      <div class="ring"></div>
+    </div>
   </div>
-</div>
   <!-- End loader -->
   <!-- Start top nav bar -->
   <nav class="w-full bg-white shadow-sm sticky top-0 z-50">
@@ -40,9 +40,15 @@
       </div>
 
       <a href="#"
-        class="w-[44px] h-[44px] flex items-center justify-center md:hidden bg-primary text-white rounded-full transition-all duration-300 hover:bg-transparent hover:text-primary border-2 border-primary">
-        <img src="./assests/img/icon/phone-white.svg" class="h-5 w-5" alt="phone icon">
-      </a>
+          class="group w-[44px] h-[44px] flex items-center justify-center md:hidden 
+                 bg-primary text-white rounded-full border-2 border-primary 
+                 transition-all duration-300 hover:bg-[#6a6a6a] hover:text-primary">
+
+            <img src="./assests/img/icon/phone-white.svg"
+                 class="h-5 w-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert group-hover:sepia group-hover:hue-rotate-[200deg]"
+                 alt="phone icon">
+        </a>
+
 
       <ul class="hidden lg:flex items-center space-x-6 text-gray-700 font-medium gap-3">
 
@@ -185,7 +191,8 @@
         About Kodel
       </h2>
       <p class="text-[20px] md:text-2xl desc-font font-medium text-gray-200 mb-10">
-        Leading manufacturer & exporter of premium leather, serving global fashion and automotive industries with 30+ years of excellence
+        Leading manufacturer & exporter of premium leather, serving global fashion and automotive industries with 30+
+        years of excellence
       </p>
     </div>
     <img src="./assests/img/Home/hero-banner-wave.png" alt="Bottom Overlay"
@@ -195,76 +202,137 @@
   <!-- End top hero banner -->
 
   <!-- Start About Kodel -->
-<section class="pb-8 md:pb-28 mt-16 pt-17 bg-white">
-  <div class="max-w-7xl mx-auto px-8 sm:px-6 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center">
-    
-    <!-- Image First on Mobile -->
-    <div class="order-2 md:order-2 relative flex justify-center items-center">
-      <div class="relative w-[364px] sm:w-[480px] md:w-[668px] h-[340px] sm:h-[440px] md:h-[562px] rounded-2xl overflow-hidden shadow-lg z-10">
-        <img id="productImage" src="assests/img/Home/product.png" alt="Product"
-          class="w-full h-full object-cover transition-all duration-500 rounded-2xl relative z-10">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#000000cc] to-[#00000000]"></div>
+  <section class="pb-8 md:pb-28 mt-16 pt-17 bg-white">
+    <div class="max-w-7xl mx-auto px-8 sm:px-6 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center">
+
+      <!-- Image First on Mobile -->
+      <div class="order-2 md:order-2 relative flex justify-center items-center">
+        <div
+          class="relative w-[364px] sm:w-[480px] md:w-[668px] h-[340px] sm:h-[440px] md:h-[562px] rounded-2xl overflow-hidden shadow-lg z-10">
+          <img id="productImage" src="assests/img/Home/product.png" alt="Product"
+            class="w-full h-full object-cover transition-all duration-500 rounded-2xl relative z-10">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#000000cc] to-[#00000000]"></div>
+        </div>
+        <div
+          class="absolute w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-[110px] md:h-[110px] rounded-full bg-[#1A70B4] left-[-20px] sm:left-[-24px] md:left-[-42px] bottom-[8px] md:bottom-[12px] z-0">
+        </div>
+        <div
+          class="absolute w-[46px] h-[46px] sm:w-[54px] sm:h-[54px] md:w-[62px] md:h-[62px] rounded-full bg-[#FFC711] right-[-18px] sm:right-[-2px] md:right-[-24px] top-[8px] md:right-[-26px] md:top-[12px] z-0">
+        </div>
       </div>
-      <div class="absolute w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-[110px] md:h-[110px] rounded-full bg-[#1A70B4] left-[-20px] sm:left-[-24px] md:left-[-42px] bottom-[8px] md:bottom-[12px] z-0"></div>
-      <div class="absolute w-[46px] h-[46px] sm:w-[54px] sm:h-[54px] md:w-[62px] md:h-[62px] rounded-full bg-[#FFC711] right-[-18px] sm:right-[-2px] md:right-[-24px] top-[8px] md:right-[-26px] md:top-[12px] z-0"></div>
-    </div>
 
-    <!-- Text Below on Mobile -->
-    <div class="order-1 md:order-1 text-center md:text-left">
-      <h2 class="text-left md:text-center leading-[100%] text-[36px] sm:text-[44px] md:text-[32px] md:text-[56px] title-font font-bold text-[#0B2239] mb-5">
-        About Kodel
-      </h2>
-      <p class="text-[#7a7a7a] desc-font text-lg text-left md:text-center sm:text-xl md:text-2xl font-medium mb-8 md:mb-10">
-        Established in 2016, Kodel has emerged as a leading manufacturer of premium-quality leather products in India.
-        With years of dedication and a passion for craftsmanship, we specialize in creating durable, stylish, and
-        innovative leather solutions that cater to diverse industries including fashion, accessories, furniture, and
-        automotive sectors.
-      </p>
-    </div>
+      <!-- Text Below on Mobile -->
+      <div class="order-1 md:order-1 text-center md:text-left">
+        <h2
+          class="text-center md:text-start leading-[100%] text-[36px] sm:text-[44px] md:text-[32px] md:text-[56px] title-font font-bold text-[#222222] mb-5">
+          About Kodel
+        </h2>
+        <p
+          class="text-[#7a7a7a] desc-font text-lg text-center md:text-start sm:text-xl md:text-2xl font-medium mb-8 md:mb-10">
+          Established in 2016, Kodel has emerged as a leading manufacturer of premium-quality leather products in India.
+          With years of dedication and a passion for craftsmanship, we specialize in creating durable, stylish, and
+          innovative leather solutions that cater to diverse industries including fashion, accessories, furniture, and
+          automotive sectors.
+        </p>
+      </div>
 
-  </div>
-</section>
+    </div>
+  </section>
   <!-- End About Kodel -->
 
   <!-- Start Our Certifications section -->
   <section class="py-16 md:pb-28 md:pt-0 bg-white">
     <div class="max-w-6xl mx-auto px-6 text-center">
-      <h2 class="text-[32px] md:text-[56px] font-bold text-[#0B2239] mb-3 title-font">
+      <h2 class="text-[32px] md:text-[56px] font-bold text-[#222222] mb-3 title-font">
         Our Certifications
       </h2>
-      <p class="text-[#667085] text-[18px] md:text-[24px] font-medium mb-12 desc-font">
+      <p class="text-[#9eb1c0] text-[18px] md:text-[24px] font-medium mb-12 desc-font">
         Global standards that reflect our promise of excellence and integrity.
       </p>
 
       <!-- Certification Slider -->
-      <div class="swiper certificationSlider">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div
-              class="bg-[#F5F5F5] rounded-2xl aspect-[3/4] flex items-center justify-center text-[#9CA3AF] font-semibold text-lg shadow-sm hover:shadow-md transition">
-              <img src="./assests/img/pdf/kODEL-DECOR-LLP-GST.avif" alt="">
+        <div class="max-w-7xl mx-auto">
+        <div class="relative overflow-hidden">
+            <!-- Slider Container -->
+            <div id="slider" class="flex transition-transform duration-500 ease-in-out">
+                <!-- Certificate 1 -->
+                <div class="min-w-full md:min-w-[50%] lg:min-w-[25%] px-3">
+                    <div class="bg-gray-100 rounded-lg h-64 flex items-center justify-center shadow-md">
+                        <div class="text-center">
+                            <p class="text-gray-400 text-lg font-medium">CERTIFICATE</p>
+                            <p class="text-gray-400 text-lg font-medium">IMAGE</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certificate 2 -->
+                <div class="min-w-full md:min-w-[50%] lg:min-w-[25%] px-3">
+                    <div class="bg-gray-100 rounded-lg h-64 flex items-center justify-center shadow-md">
+                        <div class="text-center">
+                            <p class="text-gray-400 text-lg font-medium">CERTIFICATE</p>
+                            <p class="text-gray-400 text-lg font-medium">IMAGE</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certificate 3 -->
+                <div class="min-w-full md:min-w-[50%] lg:min-w-[25%] px-3">
+                    <div class="bg-gray-100 rounded-lg h-64 flex items-center justify-center shadow-md">
+                        <div class="text-center">
+                            <p class="text-gray-400 text-lg font-medium">CERTIFICATE</p>
+                            <p class="text-gray-400 text-lg font-medium">IMAGE</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certificate 4 -->
+                <div class="min-w-full md:min-w-[50%] lg:min-w-[25%] px-3">
+                    <div class="bg-gray-100 rounded-lg h-64 flex items-center justify-center shadow-md">
+                        <div class="text-center">
+                            <p class="text-gray-400 text-lg font-medium">CERTIFICATE</p>
+                            <p class="text-gray-400 text-lg font-medium">IMAGE</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificate 5 -->
+                <div class="min-w-full md:min-w-[50%] lg:min-w-[25%] px-3">
+                    <div class="bg-gray-100 rounded-lg h-64 flex items-center justify-center shadow-md">
+                        <div class="text-center">
+                            <p class="text-gray-400 text-lg font-medium">CERTIFICATE</p>
+                            <p class="text-gray-400 text-lg font-medium">IMAGE</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificate 6 -->
+                <div class="min-w-full md:min-w-[50%] lg:min-w-[25%] px-3">
+                    <div class="bg-gray-100 rounded-lg h-64 flex items-center justify-center shadow-md">
+                        <div class="text-center">
+                            <p class="text-gray-400 text-lg font-medium">CERTIFICATE</p>
+                            <p class="text-gray-400 text-lg font-medium">IMAGE</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="swiper-slide">
-            <div
-              class="bg-[#F5F5F5] rounded-2xl aspect-[3/4] flex items-center justify-center text-[#9CA3AF] font-semibold text-lg shadow-sm hover:shadow-md transition">
-              <img src="./assests/img/pdf/kODEL-DECOR-LLP-GST.avif" alt="">
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div
-              class="bg-[#F5F5F5] rounded-2xl aspect-[3/4] flex items-center justify-center text-[#9CA3AF] font-semibold text-lg shadow-sm hover:shadow-md transition">
-              <img src="./assests/img/pdf/kODEL-DECOR-LLP-GST.avif" alt="">
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div
-              class="bg-[#F5F5F5] rounded-2xl aspect-[3/4] flex items-center justify-center text-[#9CA3AF] font-semibold text-lg shadow-sm hover:shadow-md transition">
-              <img src="./assests/img/pdf/kODEL-DECOR-LLP-GST.avif" alt="">
-            </div>
-          </div>
+
+            <!-- Navigation Buttons -->
+            <button id="prev" class="absolute left-0 top-1/2 -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition z-10  md:hidden">
+                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            
+            <button id="next" class="absolute right-0 top-1/2 -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition z-10  md:hidden">
+                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+            </button>
         </div>
-      </div>
+
+        <!-- Dots Indicator -->
+        <div id="dots" class="flex justify-center gap-2 mt-6  md:hidden"></div>
+
     </div>
   </section>
   <!-- End Our Certifications section -->
@@ -273,14 +341,14 @@
   <section class="relative bg-[#0B2239] text-white overflow-hidden">
     <div class="absolute inset-0 z-[1] bg-left bg-fixed bg-no-repeat bg-[url('assests/img/Home/customers.png')]"></div>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-[1fr_792px] gap-10 py-20">
+    <div class="relative z-10 max-w-7xl md:mx-auto md:px-0 px-4 grid grid-cols-1 lg:grid-cols-[1fr_792px] gap-12 py-20">
       <div class="flex flex-col justify-start fade-up">
         <div class="max-w-md mt-[32%]">
           <h2 class="text-[32px] md:text-[56px] font-bold leading-tight mb-4 title-font text-center md:text-left">
             Our Mission & Vision
           </h2>
           <p
-            class="text-center md:text-left font-base font-medium  desc-font text-[#7a7a7a] md:text-[24px] text-[20px] leading-relaxed desc-font">
+            class="text-center md:text-left font-base font-medium  desc-font text-[#9eb1c0] md:text-[24px] text-[20px] leading-relaxed desc-font">
             Driven by vision, guided by mission, and defined by values — we craft leather with purpose.
           </p>
         </div>
@@ -298,7 +366,7 @@
                     d="M2.458 12C3.732 7.943 7.523 5 12 5s8.268 2.943 9.542 7c-1.274 4.057-5.065 7-9.542 7s-8.268-2.943-9.542-7z" />
                 </svg>
               </div>
-              <h3 class="text-[24px] font-bold text-[#0B2239] title-font mb-2 mt-4">Our Vision</h3>
+              <h3 class="text-[24px] font-bold text-[#222222] title-font mb-2 mt-4">Our Vision</h3>
               <p class="font-base font-medium  desc-font text-[#4B5563]">
                 To be recognized globally as a trusted and innovative leather manufacturer, delivering products that
                 combine quality, durability, and style.
@@ -315,7 +383,7 @@
                     fill="white" />
                 </svg>
               </div>
-              <h3 class="text-[24px] font-bold text-[#0B2239] title-font mb-3 mt-4 title-font">Our Mission</h3>
+              <h3 class="text-[24px] font-bold text-[#222222] title-font mb-3 mt-4 title-font">Our Mission</h3>
               <ul class="font-base font-medium  desc-font list-disc pl-[47px] text-[#4B5563]">
                 <li class="text-base desc-font">To provide superior leather products through sustainable and ethical
                   manufacturing practices.</li>
@@ -338,7 +406,7 @@
                   fill="white" />
               </svg>
             </div>
-            <h3 class="text-[24px] font-bold text-[#0B2239] title-font mb-2 mt-4">Core Values</h3>
+            <h3 class="text-[24px] font-bold text-[#222222] title-font mb-2 mt-4">Core Values</h3>
             <ul class="font-base font-medium text-[#4B5563]">
               <li class="text-[17px] font-medium desc-font"><strong class="font-bold">Expertise & Craftsmanship
                   –</strong> Leveraging years of experience and deep knowledge to deliver unmatched leather solutions.
@@ -364,7 +432,7 @@
   <section class="bg-white pt-16 pb-5 md:py-28 ">
     <div class="max-w-6xl mx-auto px-6 text-center">
       <h2 class="text-[32px] md:text-[56px] font-bold mb-3 title-font">Our Story</h2>
-      <p class="text-[#667085] text-[18px] md:text-[24px] font-medium mb-12 desc-font mb-o">
+      <p class="text-[#9eb1c0] text-[18px] md:text-[24px] font-medium mb-12 desc-font mb-o">
         A journey spanning three decades of innovation, growth, and unwavering commitment to excellence.
       </p>
 
@@ -388,8 +456,8 @@
             </div>
           </div>
 
-          <div class="ms-8 md:w-1/2 pl-8 mt-8 md:mt-0 max-w-[339px] ">
-            <div class="bg-white shadow-sm border rounded-lg p-[30px] text-left ">
+          <div class="ms-8 md:w-1/2 pl-8 mt-8 md:mt-0 max-w-[365px] ">
+            <div class="bg-white shadow-sm border rounded-lg p-[24px] text-left">
               <h3
                 class="mb-4 leading-[1] desc-font text-[64px] sm:text-[70px] md:text-[80px] font-semibold bg-gradient-to-b from-[#1A70B4] to-[#1A70B400] text-transparent bg-clip-text">
                 1995</h3>
@@ -402,7 +470,7 @@
         </div>
 
         <div class="flex flex-col md:flex-row items-start w-full relative justify-end mt-[-6%]">
-          <div class="mr-8 md:w-1/2 pr-8 mt-8 md:mt-0 order-2 md:order-1 max-w-[339px]">
+          <div class="mr-8 md:w-1/2 pr-8 mt-8 md:mt-0 order-2 md:order-1 max-w-[365px]">
             <div class="bg-white shadow-sm border rounded-lg p-[30px] text-left">
               <h3
                 class="mb-4 leading-[1] desc-font text-[64px] sm:text-[70px] md:text-[80px] font-semibold bg-gradient-to-b from-[#1A70B4] to-[#1A70B400] text-transparent bg-clip-text">
@@ -443,7 +511,7 @@
             </div>
           </div>
 
-          <div class="ms-8 md:w-1/2 pl-8 mt-8 md:mt-0 max-w-[339px]">
+          <div class="ms-8 md:w-1/2 pl-8 mt-8 md:mt-0 max-w-[365px]">
             <div class="bg-white shadow-sm border rounded-lg p-[30px] text-left">
               <h3
                 class="mb-4 leading-[1] desc-font text-[64px] sm:text-[70px] md:text-[80px] font-semibold bg-gradient-to-b from-[#1A70B4] to-[#1A70B400] text-transparent bg-clip-text">
@@ -457,7 +525,7 @@
         </div>
 
         <div class="flex flex-col md:flex-row items-start w-full relative justify-end">
-          <div class="mr-8 md:w-1/2 pr-8 mt-8 md:mt-0 order-2 md:order-1 max-w-[339px]">
+          <div class="mr-8 md:w-1/2 pr-8 mt-8 md:mt-0 order-2 md:order-1 max-w-[365px]">
             <div class="bg-[#1A70B4] text-white rounded-lg p-6 text-left">
               <h3
                 class="mb-4 leading-[1] desc-font text-[64px] sm:text-[70px] md:text-[80px] font-semibold bg-gradient-to-b from-[#FFFFFF] to-[#1A70B400] text-transparent bg-clip-text">
@@ -508,8 +576,10 @@
           </div>
         </div>
         <div class="ml-6 bg-white rounded-xl shadow-sm p-5 w-[276px] border p-[30px]">
-          <h3 class="mb-4 leading-[1] desc-font text-[64px] sm:text-[70px] md:text-[80px] font-semibold bg-gradient-to-b from-[#1A70B4] to-[#1A70B400] text-transparent bg-clip-text">1995</h3>
-          <h4 class="text-[#0B2239] font-semibold mb-1">Foundation</h4>
+          <h3
+            class="mb-4 leading-[1] desc-font text-[64px] sm:text-[70px] md:text-[80px] font-semibold bg-gradient-to-b from-[#1A70B4] to-[#1A70B400] text-transparent bg-clip-text">
+            1995</h3>
+          <h4 class="text-[#222222] font-semibold mb-1">Foundation</h4>
           <p class="text-gray-600 text-[15px] leading-relaxed">
             Kodel Leather was established with a vision to bring world-class leather manufacturing to India.
           </p>
@@ -532,8 +602,10 @@
           </div>
         </div>
         <div class="ml-6 bg-white rounded-xl shadow-sm p-5 w-[276px] border p-[30px]">
-          <h3 class="mb-4 leading-[1] desc-font text-[64px] sm:text-[70px] md:text-[80px] font-semibold bg-gradient-to-b from-[#1A70B4] to-[#1A70B400] text-transparent bg-clip-text">2005</h3>
-          <h4 class="text-[#0B2239] font-semibold mb-1">Global Expansion</h4>
+          <h3
+            class="mb-4 leading-[1] desc-font text-[64px] sm:text-[70px] md:text-[80px] font-semibold bg-gradient-to-b from-[#1A70B4] to-[#1A70B400] text-transparent bg-clip-text">
+            2005</h3>
+          <h4 class="text-[#222222] font-semibold mb-1">Global Expansion</h4>
           <p class="text-gray-600 text-[15px] leading-relaxed">
             Expanded operations to serve clients across 10+ countries, establishing our global presence.
           </p>
@@ -556,8 +628,10 @@
           </div>
         </div>
         <div class="ml-6 bg-white rounded-xl shadow-sm p-5 w-[276px] border p-[30px]">
-          <h3 class="mb-4 leading-[1] desc-font text-[64px] sm:text-[70px] md:text-[80px] font-semibold bg-gradient-to-b from-[#1A70B4] to-[#1A70B400] text-transparent bg-clip-text">2015</h3>
-          <h4 class="text-[#0B2239] font-semibold mb-1">Modernization</h4>
+          <h3
+            class="mb-4 leading-[1] desc-font text-[64px] sm:text-[70px] md:text-[80px] font-semibold bg-gradient-to-b from-[#1A70B4] to-[#1A70B400] text-transparent bg-clip-text">
+            2015</h3>
+          <h4 class="text-[#222222] font-semibold mb-1">Modernization</h4>
           <p class="text-gray-600 text-[15px] leading-relaxed">
             Invested in state-of-the-art machinery and sustainable manufacturing processes.
           </p>
@@ -580,7 +654,9 @@
           </div>
         </div>
         <div class="ml-6 bg-[#1A70B4] text-white rounded-xl shadow-sm p-5 w-[276px]">
-          <h3 class="mb-4 leading-[1] desc-font text-[64px] sm:text-[70px] md:text-[80px] font-semibold bg-gradient-to-b from-[#ffffff] to-[#1A70B400] text-transparent bg-clip-text">2025</h3>
+          <h3
+            class="mb-4 leading-[1] desc-font text-[64px] sm:text-[70px] md:text-[80px] font-semibold bg-gradient-to-b from-[#ffffff] to-[#1A70B400] text-transparent bg-clip-text">
+            2025</h3>
           <h4 class="font-semibold mb-1">Industry Leader</h4>
           <p class="text-white/90 text-[15px] leading-relaxed">
             Recognized as a trusted partner by leading automotive and fashion brands worldwide.
@@ -596,7 +672,7 @@
   <section class="py-16 md:py-0 bg-white text-center">
     <div class="max-w-7xl mx-auto  px-8">
       <!-- Heading -->
-      <h2 class="text-[32px] md:text-[56px] title-font font-bold text-[#0B2239] mb-3">
+      <h2 class="text-[32px] md:text-[56px] title-font font-bold text-[#222222] mb-3">
         Our Four Pillars
       </h2>
       <p class="text-[#7a7a7a] desc-font text-[20px] md:text-2xl font-medium mb-10">
@@ -611,8 +687,8 @@
           <div class="flex justify-start mb-4">
             <img src="./assests/img/icon/settings.svg" alt="settings">
           </div>
-          <h3 class="text-[20px] md:text-2xl font-bold text-[#0B2239] mb-[6px] title-font">Process</h3>
-          <p class="text-[#667085] text-base font-medium desc-font">
+          <h3 class="text-[20px] md:text-2xl font-bold text-[#222222] mb-[6px] title-font">Process</h3>
+          <p class="text-[#767676] text-base font-medium desc-font">
             Streamlined workflows and cutting-edge technology for consistent excellence
           </p>
         </div>
@@ -623,8 +699,8 @@
           <div class="flex justify-start mb-4">
             <img src="./assests/img/icon/Quality.svg" alt="Quality">
           </div>
-          <h3 class="text-[20px] md:text-2xl font-bold text-[#0B2239] mb-[6px] title-font">Quality</h3>
-          <p class="text-[#667085] text-base font-medium desc-font">
+          <h3 class="text-[20px] md:text-2xl font-bold text-[#222222] mb-[6px] title-font">Quality</h3>
+          <p class="text-[#767676] text-base font-medium desc-font">
             Uncompromising standards at every stage of production
           </p>
         </div>
@@ -635,8 +711,8 @@
           <div class="flex justify-start mb-4">
             <img src="./assests/img/icon/clock.svg" alt="Time">
           </div>
-          <h3 class="text-[20px] md:text-2xl font-bold text-[#0B2239] mb-[6px] title-font">Time</h3>
-          <p class="text-[#667085] text-base font-medium desc-font">
+          <h3 class="text-[20px] md:text-2xl font-bold text-[#222222] mb-[6px] title-font">Time</h3>
+          <p class="text-[#767676] text-base font-medium desc-font">
             Reliable delivery schedules and efficient project management
           </p>
         </div>
@@ -647,8 +723,8 @@
           <div class="flex justify-start mb-4">
             <img src="./assests/img/icon/hand-shak.svg" alt="Trust">
           </div>
-          <h3 class="text-[20px] md:text-2xl font-bold text-[#0B2239] mb-[6px] title-font">Trust</h3>
-          <p class="text-[#667085] text-base font-medium desc-font">
+          <h3 class="text-[20px] md:text-2xl font-bold text-[#222222] mb-[6px] title-font">Trust</h3>
+          <p class="text-[#767676] text-base font-medium desc-font">
             Built through 30+ years of transparency and customer satisfaction
           </p>
         </div>
@@ -662,7 +738,7 @@
     <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-start md:p-0 p-5">
       <div>
         <h2
-          class="text-center md:text-start text-[32px] md:text-[56px] title-font font-bold text-[#0B2239] mb-3 title-font">
+          class="text-center md:text-start text-[32px] md:text-[56px] title-font font-bold text-[#222222] mb-3 title-font">
           FAQ</h2>
         <p class="text-center md:text-start text-[#7a7a7a] desc-font text-[20px] md:text-2xl font-medium ">
           Find quick answers to common questions about our services.
@@ -671,7 +747,7 @@
 
 
       <div class="space-y-4" id="accordion">
-        <div class="accordion-item active bg-[#F9FAFB] text-[#0B2239] rounded-xl transition overflow-hidden">
+        <div class="accordion-item active bg-[#F9FAFB] text-[#222222] rounded-xl transition overflow-hidden">
           <button
             class="accordion-header flex justify-between items-center w-full pt-[1.5rem] pr-5 pb-[1.5rem] pl-5 text-left">
             <h3 class="font-semibold text-[20px] md:text-2xl desc-font">What types of leather products do you
@@ -682,14 +758,14 @@
             </span>
           </button>
           <div
-            class="accordion-content max-h-0 overflow-hidden px-5 text-sm text-[#0B2239]/80 transition-all duration-500 ease-in-out">
+            class="accordion-content max-h-0 overflow-hidden px-5 text-sm text-[#222222]/80 transition-all duration-500 ease-in-out">
             <p class="pb-4 text-[#d1e2f0] text-base desc-font font-medium">
               We manufacture a wide range of premium leather products including leather hides, finished leather,
               upholstery, fashion accessories, automotive leather, and custom-made leather solutions.
             </p>
           </div>
         </div>
-        <div class="accordion-item bg-[#F9FAFB] text-[#0B2239] rounded-xl transition overflow-hidden">
+        <div class="accordion-item bg-[#F9FAFB] text-[#222222] rounded-xl transition overflow-hidden">
           <button
             class="accordion-header flex justify-between items-center w-full pt-[1.5rem] pr-5 pb-[1.5rem] pl-5 text-left">
             <h3 class="font-semibold text-[20px] md:text-2xl desc-font">Where are your manufacturing facilities located?
@@ -700,14 +776,14 @@
             </span>
           </button>
           <div
-            class="accordion-content max-h-0 overflow-hidden px-5 text-sm text-[#0B2239]/80 transition-all duration-500 ease-in-out">
+            class="accordion-content max-h-0 overflow-hidden px-5 text-sm text-[#222222]/80 transition-all duration-500 ease-in-out">
             <p class="pb-4 text-[#d1e2f0] text-base desc-font font-medium">
               Our manufacturing facilities are strategically located to serve both domestic and international clients
               efficiently.
             </p>
           </div>
         </div>
-        <div class="accordion-item bg-[#F9FAFB] text-[#0B2239] rounded-xl transition overflow-hidden">
+        <div class="accordion-item bg-[#F9FAFB] text-[#222222] rounded-xl transition overflow-hidden">
           <button
             class="accordion-header flex justify-between items-center w-full pt-[1.5rem] pr-5 pb-[1.5rem] pl-5 text-left">
             <h3 class="font-semibold text-[20px] md:text-2xl desc-font">How long has Kodel been in the leather industry?
@@ -718,14 +794,14 @@
             </span>
           </button>
           <div
-            class="accordion-content max-h-0 overflow-hidden px-5 text-sm text-[#0B2239]/80 transition-all duration-500 ease-in-out">
+            class="accordion-content max-h-0 overflow-hidden px-5 text-sm text-[#222222]/80 transition-all duration-500 ease-in-out">
             <p class="pb-4 text-[#d1e2f0] text-base desc-font font-medium">
               Kodel has been a trusted name in the leather industry for several decades, offering consistent quality and
               innovation.
             </p>
           </div>
         </div>
-        <div class="accordion-item bg-[#F9FAFB] text-[#0B2239] rounded-xl transition overflow-hidden">
+        <div class="accordion-item bg-[#F9FAFB] text-[#222222] rounded-xl transition overflow-hidden">
           <button
             class="accordion-header flex justify-between items-center w-full pt-[1.5rem] pr-5 pb-[1.5rem] pl-5 text-left">
             <h3 class="font-semibold text-[20px] md:text-2xl desc-font">How do you ensure the quality of your leather?
@@ -737,7 +813,7 @@
             </span>
           </button>
           <div
-            class="accordion-content max-h-0 overflow-hidden px-5 text-sm text-[#0B2239]/80 transition-all duration-500 ease-in-out">
+            class="accordion-content max-h-0 overflow-hidden px-5 text-sm text-[#222222]/80 transition-all duration-500 ease-in-out">
             <p class="pb-4 text-[#d1e2f0] text-base desc-font font-medium">
               We follow strict quality control processes and use only the finest raw materials, ensuring each product
               meets international standards.
@@ -761,7 +837,8 @@
             Looking for premium leather solutions? Let's create something exceptional together.
           </p>
           <div>
-            <a href="contact.html" class="mt-[40px] inline-flex items-center bg-primary hover:bg-[#E2F0FB] hover:text-primary group text-white text-base font-bold rounded-full px-5 py-3 transition">
+            <a href="contact.html"
+              class="mt-[40px] inline-flex items-center bg-primary hover:bg-[#E2F0FB] hover:text-primary group text-white text-base font-bold rounded-full px-5 py-3 transition">
               Get in Touch
               <svg class="ms-2 fill-white group-hover:fill-primary" width="18" height="15" viewBox="0 0 18 15"
                 fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -806,11 +883,14 @@
           Looking for premium leather solutions? Let's create something exceptional together.
         </p>
 
-        <a href="#contact"
-          class="mt-6 inline-flex items-center bg-primary hover:bg-[#155f9c] text-white text-sm md:text-base font-bold rounded-full px-6 py-3 transition">
-          Get in Touch
-          <img src="./assests/img/icon/arrow-rigth.svg" class="ms-2 w-4 md:w-5" alt="">
-        </a>
+        <a href="contact.html" class="mt-[40px] inline-flex items-center bg-primary hover:bg-[#E2F0FB] hover:text-primary group text-white text-base font-bold rounded-full px-5 py-3 transition">
+              Get in Touch
+              <svg class="ms-2 fill-white group-hover:fill-primary" width="18" height="15" viewBox="0 0 18 15"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M17.7806 8.03104L11.0306 14.781C10.8899 14.9218 10.699 15.0008 10.5 15.0008C10.301 15.0008 10.1101 14.9218 9.96937 14.781C9.82864 14.6403 9.74958 14.4494 9.74958 14.2504C9.74958 14.0514 9.82864 13.8605 9.96937 13.7198L15.4397 8.25042H0.75C0.551088 8.25042 0.360322 8.1714 0.21967 8.03075C0.0790178 7.8901 0 7.69933 0 7.50042C0 7.3015 0.0790178 7.11074 0.21967 6.97009C0.360322 6.82943 0.551088 6.75042 0.75 6.75042H15.4397L9.96937 1.28104C9.82864 1.14031 9.74958 0.94944 9.74958 0.750417C9.74958 0.551394 9.82864 0.360523 9.96937 0.219792C10.1101 0.0790615 10.301 0 10.5 0C10.699 0 10.8899 0.0790615 11.0306 0.219792L17.7806 6.96979C17.8504 7.03945 17.9057 7.12216 17.9434 7.21321C17.9812 7.30426 18.0006 7.40186 18.0006 7.50042C18.0006 7.59898 17.9812 7.69657 17.9434 7.78762C17.9057 7.87867 17.8504 7.96139 17.7806 8.03104Z" />
+              </svg>
+            </a>
       </div>
     </div>
     <div
@@ -862,13 +942,20 @@
       <div class="ml-0 md:ml:10">
         <h3 class="text-[20px] font-bold mb-4 title-font text-[#222222]">Quick Links</h3>
         <ul class="space-y-2 text-[#222222] text-sm">
-          <li class="mt-4 font-medium text-base"><a href="index.html" class="hover:text-primary desc-font transition text-base font-medium desc-font">Home</a></li>
-          <li class="mt-4 font-medium text-base"><a href="about.html" class="hover:text-primary desc-font transition text-base font-medium desc-font">About Us</a></li>
-          <li class="mt-4 font-medium text-base"><a href="product.html" class="hover:text-primary desc-font transition text-base font-medium desc-font">Products</a></li>
-          <li class="mt-4 font-medium text-base"><a href="Manufacturing.html" class="hover:text-primary desc-font transition text-base font-medium desc-font">Manufacturing</a></li>
-          <li class="mt-4 font-medium text-base"><a href="DealerDistributorApp.html" class="hover:text-primary desc-font transition text-base font-medium desc-font">Dealer App</a></li>
-          <li class="mt-4 font-medium text-base"><a href="ourBlog.html" class="hover:text-primary desc-font transition text-base font-medium desc-font">Blog</a>
-          <li class="mt-4 font-medium text-base"><a href="contact.html" class="hover:text-primary desc-font transition text-base font-medium desc-font">Contact Us</a></li>
+          <li class="mt-4 font-medium text-base"><a href="index.html"
+              class="hover:text-primary desc-font transition text-base font-medium desc-font">Home</a></li>
+          <li class="mt-4 font-medium text-base"><a href="about.html"
+              class="hover:text-primary desc-font transition text-base font-medium desc-font">About Us</a></li>
+          <li class="mt-4 font-medium text-base"><a href="product.html"
+              class="hover:text-primary desc-font transition text-base font-medium desc-font">Products</a></li>
+          <li class="mt-4 font-medium text-base"><a href="Manufacturing.html"
+              class="hover:text-primary desc-font transition text-base font-medium desc-font">Manufacturing</a></li>
+          <li class="mt-4 font-medium text-base"><a href="DealerDistributorApp.html"
+              class="hover:text-primary desc-font transition text-base font-medium desc-font">Dealer App</a></li>
+          <li class="mt-4 font-medium text-base"><a href="ourBlog.html"
+              class="hover:text-primary desc-font transition text-base font-medium desc-font">Blog</a>
+          <li class="mt-4 font-medium text-base"><a href="contact.html"
+              class="hover:text-primary desc-font transition text-base font-medium desc-font">Contact Us</a></li>
         </ul>
       </div>
 
@@ -918,6 +1005,72 @@
   </footer>
   <!-- Start FOOTER SECTION -->
 
+      <script>
+        const slider = document.getElementById('slider');
+        const prevBtn = document.getElementById('prev');
+        const nextBtn = document.getElementById('next');
+        const dotsContainer = document.getElementById('dots');
+        
+        let currentIndex = 0;
+        let slidesPerView = getSlidesPerView();
+        let totalSlides = 6;
+        let maxIndex = totalSlides - slidesPerView;
+
+        function getSlidesPerView() {
+            if (window.innerWidth >= 1024) return 4;
+            if (window.innerWidth >= 768) return 2;
+            return 1;
+        }
+
+        function updateSlider() {
+            const slideWidth = 100 / slidesPerView;
+            slider.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+            updateDots();
+        }
+
+        function createDots() {
+            dotsContainer.innerHTML = '';
+            const numDots = maxIndex + 1;
+            for (let i = 0; i <= maxIndex; i++) {
+                const dot = document.createElement('button');
+                dot.className = 'w-2 h-2 rounded-full transition-all ' + 
+                    (i === currentIndex ? 'bg-gray-800 w-8' : 'bg-gray-300');
+                dot.addEventListener('click', () => {
+                    currentIndex = i;
+                    updateSlider();
+                });
+                dotsContainer.appendChild(dot);
+            }
+        }
+
+        function updateDots() {
+            const dots = dotsContainer.children;
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = 'w-2 h-2 rounded-full transition-all ' + 
+                    (i === currentIndex ? 'bg-gray-800 w-8' : 'bg-gray-300');
+            }
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = Math.max(0, currentIndex - 1);
+            updateSlider();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = Math.min(maxIndex, currentIndex + 1);
+            updateSlider();
+        });
+
+        window.addEventListener('resize', () => {
+            slidesPerView = getSlidesPerView();
+            maxIndex = totalSlides - slidesPerView;
+            currentIndex = Math.min(currentIndex, maxIndex);
+            createDots();
+            updateSlider();
+        });
+
+        createDots();
+    </script>
   <script src="./assests/js/dev-script.js"></script>
 
   <script>
@@ -932,4 +1085,5 @@
     }
   </script>
 </body>
+
 </html>
