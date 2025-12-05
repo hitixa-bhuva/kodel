@@ -196,3 +196,18 @@ body {
   color: #ffffff;
 }
 
+.custom-circular-icon:hover {
+  background-color: #1A70B4 !important;
+}
+
+.custom-circular-icon:hover + .custom-circular-icon-main {
+  border-color: #1A70B4 !important;
+}
+
+.custom-circular-icon-main:hover .custom-circular-icon {
+  background-color: #1A70B4 !important;
+}
+
+.custom-circular-icon-main:hover {
+  border-color: #1A70B4 !important;
+}

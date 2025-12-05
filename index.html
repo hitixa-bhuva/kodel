@@ -182,9 +182,9 @@
   <section class="relative h-[676px] md:h-[892px] flex items-center justify-start pb-1 md:pb-28 text-white bg-cover bg-center"
     style="background-image: url('./assests/img/Home/hero-banner.png');">
 
-    <div class="  absolute inset-0 bg-gradient-to-b from-transparent via-[#00000080] to-primary opacity-90 "></div>
+    <div class="absolute inset-0 bg-gradient-to-br from-black/80 via-black/40 to-primary/90"></div>
 
-    <div class="relative z-10 max-w-3xl w-full text-start px-8 md:ps-20 pr-0">
+    <div class="relative z-10 max-w-[350px] md:max-w-3xl w-full text-start px-5 md:ps-20 pr-0">
       <h2 class="text-[40px] md:text-[64px] title-font font-bold mb-6 leading-tight">
         Crafting Leather That Stands the Test of Time
       </h2>
@@ -1150,7 +1150,7 @@
   <!--Start mobile CTA SECTION -->
   <section class="relative bg-white  md:hidden">
     <div class="max-w-md md:max-w-lg mx-auto px-6 relative z-10">
-      <div class="bg-[#0B2239] rounded-2xl relative overflow-hidden text-white p-8 pt-[99px] pb-[50px] shadow-lg">
+      <div class="bg-[#0B2239] rounded-2xl relative overflow-hidden text-white p-6 pt-[120px] pb-[50px] shadow-lg">
 
         <img src="assests/img/Home/cta-1.jpg" alt="Leather Tools"
           class="absolute top-0 right-0 w-[160px] h-[160px] md:w-[180px] md:h-[180px] object-cover rounded-bl-[100%] opacity-90">
@@ -1266,6 +1266,46 @@
     </div>
   </footer>
   <!-- Start FOOTER SECTION -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <script>
+ document.addEventListener("DOMContentLoaded", () => {
+      // debug logs
+      console.log("DOM loaded");
+      console.log("Swiper exists:", typeof Swiper !== "undefined");
+      const sliderEl = document.querySelector(".clientSlider");
+      console.log("clientSlider element:", sliderEl);
+      const wrapper = document.querySelector(".clientSlider .swiper-wrapper");
+      console.log("swiper-wrapper:", wrapper);
+
+      if (typeof Swiper === "undefined") {
+        console.error("Swiper JS not loaded!");
+        return;
+      }
+
+      if (!sliderEl || !wrapper) {
+        console.error("Swiper markup not found or structure incorrect.");
+        return;
+      }
+
+      // Safe initialization
+      new Swiper(sliderEl, {
+        slidesPerView: 4,
+        spaceBetween: 40,
+        loop: true,
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          0:   { slidesPerView: 3.5, spaceBetween: 30 },
+          640: { slidesPerView: 3,   spaceBetween: 40 },
+          1024:{ slidesPerView: 5,   spaceBetween: 60 },
+        },
+      });
+    });
+</script>
   <script src="./assests/js/dev-script.js"></script>
   <script>
     tailwind.config = {

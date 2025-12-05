@@ -327,28 +327,7 @@ document.addEventListener("DOMContentLoaded", function () {
 /* -------------------------------------------------
    6) Swiper Sliders (Load After Swiper Script)
 ---------------------------------------------------*/
-document.addEventListener("DOMContentLoaded", () => {
-  if (typeof Swiper === "undefined") {
-    console.error("Swiper JS not loaded!");
-    return;
-  }
 
-  new Swiper(".clientSlider", {
-    slidesPerView: 4,
-    spaceBetween: 40,
-    loop: true,
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false,
-    },
-    breakpoints: {
-      0: { slidesPerView: 3.5, spaceBetween: 40 },
-      640: { slidesPerView: 3, spaceBetween: 50 },
-      1024: { slidesPerView: 5, spaceBetween: 80 },
-    },
-  });
-
-});
 
 
 /* -------------------------------------------------
