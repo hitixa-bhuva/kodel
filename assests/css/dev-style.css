@@ -2,17 +2,14 @@ body {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
-/* Title font */
 .title-font {
   font-family: "Playfair Display", serif !important;
 }
 
-/* Description font */
 .desc-font {
   font-family: "Plus Jakarta Sans", sans-serif !important;
 }
 
-/* <!-- Start What Our Customers Say Section --> */
 @keyframes scrollUp {
   0% {
     transform: translateY(0);
@@ -33,7 +30,6 @@ body {
   }
 }
 
-/* ✨ Continuous animation */
 .animate-scrollUp {
   animation: scrollUp 25s linear infinite;
 }
@@ -42,7 +38,6 @@ body {
   animation: scrollDown 25s linear infinite;
 }
 
-/* Optional: Pause on hover */
 .animate-scrollUp:hover,
 .animate-scrollDown:hover {
   animation-play-state: paused;
@@ -80,8 +75,6 @@ body {
     animation: scrollLeft 25s linear infinite;
   }
 }
-
-/* <!-- End What Our Customers Say Section --> */
 
 #accordion .active {
   background-color: #1a70b4;
@@ -123,7 +116,6 @@ body {
 .nav-item.active > a {
   color: #1A70B4;
 }
-/* Full Screen Loader */
 #kodelLoader {
   position: fixed;
   top: 0;
@@ -139,7 +131,6 @@ body {
   transition: opacity 0.6s ease;
 }
 
-/* Loader Inner */
 .loader-inner {
   position: relative;
   width: 150px;
@@ -149,13 +140,11 @@ body {
   align-items: center;
 }
 
-/* Logo Animation */
 .loader-inner img {
   width: 85px;
   animation: pulse 1.6s infinite ease-in-out;
 }
 
-/* Rotating Ring */
 .ring {
   position: absolute;
   width: 150px;
@@ -167,7 +156,6 @@ body {
   animation: spin 1.2s linear infinite;
 }
 
-/* Animations */
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
@@ -210,4 +198,58 @@ body {
 
 .custom-circular-icon-main:hover {
   border-color: #1A70B4 !important;
+}
+.custom-circular-card {
+  background-color: white;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  transition: background-color .25s, border-color .25s, color .25s, box-shadow .25s;
+}
+
+.custom-circular-card.active {
+  background-color: #1A70B4;
+  border-color: #1A70B4;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  color: white;
+}
+
+.custom-circular-card .custom-circular-card-title {
+  background-image: linear-gradient(to bottom, #FFFFFF, rgba(26,112,180,0));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  transition: all .25s;
+}
+
+.custom-circular-card:not(.active) .custom-circular-card-title {
+  background-image: linear-gradient(to bottom, #1A70B4, rgba(26,112,180,0));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+ .custom-circular-card .custom-circular-card-sub-title.active
+.custom-circular-card .custom-circular-card-dec {
+  color: #ffffff; 
+} 
+
+.custom-circular-card.active .custom-circular-card-sub-title,
+.custom-circular-card.active .custom-circular-card-dec {
+  color: white;
+}
+
+.custom-circular-icon-main.active {
+  border-color: #1A70B4;
+  transition: border-color .25s;
+}
+
+.custom-circular-icon-main {
+  cursor: pointer;
+}
+
+.custom-circular-icon-main.active .custom-circular-icon {
+    background-color: #1A70B4 !important;
+  color: #fff;
+  border-radius: 50%;
 }
