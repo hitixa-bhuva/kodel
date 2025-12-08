@@ -560,10 +560,10 @@
   </section>
 
  <section class="py-10 bg-white block md:hidden max-[425px]:block min-[426px]:hidden">
-  <div class="max-w-md mx-auto relative flex flex-col items-center">
+  <div class="max-w-dm mx-auto relative flex flex-col items-center">
 
     <!-- Vertical dashed line -->
-    <div class="absolute left-6 top-0 bottom-0 border-l-2 border-dashed border-[#1A70B4]"></div>
+    <div class="absolute left-9  top-0 bottom-0 border-l-2 border-dashed border-[#1A70B4]"></div>
 
     <!-- Timeline Cards -->
     <div class="flex flex-col space-y-10">
@@ -996,39 +996,48 @@
   <!-- Start FOOTER SECTION -->
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-  const iconWrappers = Array.from(document.querySelectorAll('.custom-circular-icon-main'));
-  const cardsAll = Array.from(document.querySelectorAll('.custom-circular-card'));
-  const icons = Array.from(document.querySelectorAll('.custom-circular-icon'));
+  // Loop through each timeline section separately
+  const sections = document.querySelectorAll('section'); // or use a more specific class if possible
 
-  function clearActive() {
-    cardsAll.forEach(c => c.classList.remove('active'));
-    iconWrappers.forEach(i => i.classList.remove('active'));
-    icons.forEach(i => i.classList.remove('active'));
-  }
+  sections.forEach(section => {
+    const iconWrappers = Array.from(section.querySelectorAll('.custom-circular-icon-main'));
+    const cardsAll = Array.from(section.querySelectorAll('.custom-circular-card'));
+    const icons = Array.from(section.querySelectorAll('.custom-circular-icon'));
 
-  // Default active = last (index 3)
-  clearActive();
-  cardsAll[3].classList.add('active');
-  iconWrappers[3].classList.add('active');
-  icons[3].classList.add('active');
+    function clearActive() {
+      cardsAll.forEach(c => c.classList.remove('active'));
+      iconWrappers.forEach(i => i.classList.remove('active'));
+      icons.forEach(i => i.classList.remove('active'));
+    }
 
-  iconWrappers.forEach((wrapper, idx) => {
-    wrapper.addEventListener('pointerenter', () => {
-      clearActive();
-      cardsAll[idx].classList.add('active');
-      wrapper.classList.add('active');
-      icons[idx].classList.add('active');
-    });
+    // Default active = last card in this section
+    clearActive();
+    if(cardsAll.length) {
+      const lastIndex = cardsAll.length - 1;
+      cardsAll[lastIndex].classList.add('active');
+      iconWrappers[lastIndex].classList.add('active');
+      icons[lastIndex].classList.add('active');
+    }
 
-    wrapper.addEventListener('click', () => {
-      clearActive();
-      cardsAll[idx].classList.add('active');
-      wrapper.classList.add('active');
-      icons[idx].classList.add('active');
+    iconWrappers.forEach((wrapper, idx) => {
+      wrapper.addEventListener('pointerenter', () => {
+        clearActive();
+        cardsAll[idx].classList.add('active');
+        wrapper.classList.add('active');
+        icons[idx].classList.add('active');
+      });
+
+      wrapper.addEventListener('click', () => {
+        clearActive();
+        cardsAll[idx].classList.add('active');
+        wrapper.classList.add('active');
+        icons[idx].classList.add('active');
+      });
     });
   });
 });
 </script>
+
 
 
   <script>
