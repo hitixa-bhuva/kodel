@@ -254,10 +254,10 @@ body {
   border-radius: 50%;
 }
 .custom-border {
-  border-left: 0px solid #E5E7EB; /* or your preferred color */
+  border-left: 1px solid #E5E7EB; /* or your preferred color */
 }
 
-@media (min-width: 640px) { /* sm breakpoint */
+@media (max-width: 811px) { /* sm breakpoint */
   .custom-border {
     border-left: 0 !important;
   }
