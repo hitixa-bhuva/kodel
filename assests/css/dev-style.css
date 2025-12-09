@@ -253,3 +253,12 @@ body {
   color: #fff;
   border-radius: 50%;
 }
+.custom-border {
+  border-left: 0px solid #E5E7EB; /* or your preferred color */
+}
+
+@media (min-width: 640px) { /* sm breakpoint */
+  .custom-border {
+    border-left: 0 !important;
+  }
+}
