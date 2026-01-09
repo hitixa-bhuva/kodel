@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sitemap | Kodel Leather – Premium Leather Manufacturer</title>
+<meta name="description"
+  content="Explore the complete sitemap of Kodel Leather. Easily navigate our products, manufacturing process, company information, blog, and contact pages." />
+<meta name="keywords"
+  content="Kodel Leather sitemap, leather manufacturer sitemap, leather products pages, footwear leather, upholstery leather, bag leather, leather company website map" />
+  <link rel="icon" type="image/png" href="./assests/img/logo/favicon-dark-bg.svg" />
+  <link rel="stylesheet" href="./assests/css/dev-style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .title-font {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .desc-font {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .sitemap-link {
+      transition: all 0.3s ease;
+    }
+
+    .sitemap-link:hover {
+      transform: translateX(8px);
+      color: #1A70B4;
+    }
+
+    .sitemap-section {
+      animation: fadeInUp 0.6s ease-out forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .sitemap-section:nth-child(1) { animation-delay: 0.1s; }
+    .sitemap-section:nth-child(2) { animation-delay: 0.2s; }
+    .sitemap-section:nth-child(3) { animation-delay: 0.3s; }
+    .sitemap-section:nth-child(4) { animation-delay: 0.4s; }
+  </style>
+</head>
+
+<body class="bg-[#F5F5F5]">
+
+  <!-- Start top nav bar -->
+  <nav class="w-full bg-white shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+
+      <button id="menu-btn" class="lg:hidden text-gray-700 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <div class="flex items-center space-x-2 py-3">
+        <a href="index.html"><img src="./assests/img/logo/kodel-logo.svg" alt="Logo" class="h-10"></a>
+      </div>
+
+      <a href="#" class="group w-[44px] h-[44px] flex items-center justify-center md:hidden 
+                 bg-primary text-white rounded-full border-2 border-primary 
+                 transition-all duration-300 hover:bg-[#6a6a6a] hover:text-primary">
+        <img src="./assests/img/icon/phone-white.svg" class="h-5 w-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert group-hover:sepia group-hover:hue-rotate-[200deg]" alt="phone icon">
+      </a>
+
+      <ul class="hidden lg:flex items-center space-x-6 text-gray-700 font-medium gap-3">
+        <li class="group relative nav-item">
+          <a href="index.html" class="transition duration-300 group-hover:text-primary font-semibold text-base">Home</a>
+        </li>
+        <li class="group relative nav-item">
+          <a href="about.html" class="transition duration-300 group-hover:text-primary font-semibold text-base">About Us</a>
+        </li>
+        <li class="group relative nav-item">
+          <a href="product.html" class="transition duration-300 group-hover:text-primary font-semibold text-base">Products</a>
+        </li>
+        <li class="group relative nav-item">
+          <a href="Manufacturing.html" class="transition duration-300 group-hover:text-primary font-semibold text-base">Manufacturing</a>
+        </li>
+        <li class="group relative nav-item">
+          <a href="DealerDistributorApp.html" class="transition duration-300 group-hover:text-primary font-semibold text-base">Dealer App</a>
+        </li>
+        <li class="group relative nav-item">
+          <a href="ourBlog.html" class="transition duration-300 group-hover:text-primary font-semibold text-base">Blog</a>
+        </li>
+        <li class="group relative nav-item">
+          <a href="contact.html" class="transition duration-300 group-hover:text-primary font-semibold text-base">Contact</a>
+        </li>
+      </ul>
+
+      <a href="contact.html" class="font-semibold text-base hidden md:flex items-center bg-primary text-white px-5 py-2 rounded-full border-2 border-primary transition-all duration-300 hover:bg-[#E2F0FB] hover:text-primary group">
+        <svg class="mr-2 fill-white group-hover:fill-primary" width="19" height="19" viewBox="0 0 19 19">
+          <path d="M17.8472 12.6054L13.4306 10.6264L13.4184 10.6207C13.1892 10.5227 12.939 10.4833 12.6907 10.5062C12.4424 10.5292 12.2037 10.6136 11.9963 10.752C11.9718 10.7681 11.9484 10.7857 11.9259 10.8045L9.64407 12.7498C8.19845 12.0476 6.70595 10.5664 6.00376 9.1395L7.95188 6.82294C7.97063 6.7995 7.98845 6.77606 8.00532 6.75075C8.14072 6.54384 8.22287 6.30667 8.24446 6.06035C8.26605 5.81402 8.22641 5.56618 8.12907 5.33887V5.32762L6.14438 0.90356C6.0157 0.606621 5.79444 0.359262 5.51362 0.198409C5.2328 0.0375558 4.9075 -0.0281638 4.58626 0.0110603C3.31592 0.178223 2.14986 0.802093 1.30588 1.76615C0.461903 2.73021 -0.00228837 3.96852 8.4831e-06 5.24981C8.4831e-06 12.6936 6.05626 18.7498 13.5 18.7498C14.7813 18.7521 16.0196 18.2879 16.9837 17.4439C17.9477 16.6 18.5716 15.4339 18.7388 14.1636C18.7781 13.8424 18.7125 13.5172 18.5518 13.2364C18.3911 12.9556 18.144 12.7343 17.8472 12.6054ZM13.5 17.2498C10.3185 17.2463 7.26825 15.9809 5.01856 13.7313C2.76888 11.4816 1.50348 8.43134 1.50001 5.24981C1.49648 4.33433 1.82631 3.44887 2.42789 2.75879C3.02947 2.0687 3.86167 1.62118 4.76907 1.49981C4.7687 1.50355 4.7687 1.50732 4.76907 1.51106L6.73782 5.91731L4.80001 8.23669C4.78034 8.25932 4.76247 8.28345 4.74657 8.30887C4.60549 8.52536 4.52273 8.77462 4.5063 9.03249C4.48988 9.29037 4.54035 9.54811 4.65282 9.78075C5.5022 11.5179 7.25251 13.2551 9.00845 14.1036C9.24279 14.215 9.50203 14.2637 9.76083 14.245C10.0196 14.2262 10.2692 14.1407 10.485 13.9967C10.5091 13.9805 10.5322 13.9629 10.5544 13.9442L12.8334 11.9998L17.2397 13.9732C17.2397 13.9732 17.2472 13.9732 17.25 13.9732C17.1301 14.8819 16.6833 15.7158 15.9931 16.3189C15.3028 16.922 14.4166 17.2529 13.5 17.2498Z" />
+        </svg>
+        Get in Touch
+      </a>
+    </div>
+
+    <div id="backdrop" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40 lg:hidden"></div>
+
+    <div id="mobile-menu" class="fixed top-0 left-0 h-screen w-[80%] bg-white shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out z-50 lg:hidden flex flex-col">
+      <div class="flex justify-between items-center p-4 border-b">
+        <img src="./assests/img/logo/kodel-logo.svg" alt="Logo" class="h-8">
+        <button id="close-btn" class="text-gray-700">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <ul class="flex flex-col items-start space-y-4 p-6 text-gray-700 font-medium">
+        <li><a href="index.html" class="hover:text-primary">Home</a></li>
+        <li><a href="about.html" class="hover:text-primary">About Us</a></li>
+        <li><a href="product.html" class="hover:text-primary">Products</a></li>
+        <li><a href="Manufacturing.html" class="hover:text-primary">Manufacturing</a></li>
+        <li><a href="DealerDistributorApp.html" class="hover:text-primary">Dealer App</a></li>
+        <li><a href="ourBlog.html" class="hover:text-primary">Blog</a></li>
+        <li><a href="contact.html" class="hover:text-primary">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- End top nav bar -->
+
+  <!-- Start Breadcrumb -->
+
+  <section class="relative h-[500px] lg:h-[600px] flex items-center justify-start text-white bg-cover bg-center"
+    style="background-image: url('./assests/img/Home/hero-banner.png');">
+    <div class="absolute inset-0 bg-gradient-to-l from-[#0B314E00] via-[#515e6b] to-[#0C3D62] "></div>
+    <div class="relative z-10 max-w-[350px] md:max-w-3xl w-full text-start px-5 md:ps-18 lg:ps-20 pr-0">
+      <h2 class="title-font text-[40px] md:text-[64px] font-bold mb-6 leading-tight">
+        SiteMap
+      </h2>
+      <p class="text-[20px] md:text-2xl desc-font font-medium text-gray-200 mb-10">
+       Combining tradition, innovation, and quality to deliver premium leather products you can rely on.
+      </p>
+    </div>
+    <img src="./assests/img/Home/hero-banner-wave.png" alt="Bottom Overlay"
+      class="absolute bottom-0 left-0 w-full pointer-events-none select-none">
+  </section>
+  <!-- End Breadcrumb -->
+
+  <!-- Start Sitemap Content -->
+  <section class="pt-12 md:pt-24 bg-[#F5F5F5]">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <!-- Page Header -->
+      <div class="text-center mb-16">
+        <h1 class="text-[40px] md:text-[56px] font-bold text-[#222222] title-font mb-4">
+          Sitemap
+        </h1>
+        <p class="text-[20px] md:text-2xl text-[#7a7a7a] font-medium desc-font max-w-2xl mx-auto">
+          Navigate through all pages of our website
+        </p>
+      </div>
+
+      <!-- Sitemap Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- Quick Links -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm sitemap-section">
+          <h2 class="text-[28px] md:text-[32px] font-bold text-[#222222] title-font mb-6">
+            Quick Links
+          </h2>
+          <ul class="space-y-4">
+            <li>
+              <a href="index.html" class="sitemap-link text-[#222222] text-lg font-medium desc-font flex items-center">
+                <svg class="mr-3 w-2 h-2 fill-primary" viewBox="0 0 8 8">
+                  <circle cx="4" cy="4" r="4"/>
+                </svg>
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="about.html" class="sitemap-link text-[#222222] text-lg font-medium desc-font flex items-center">
+                <svg class="mr-3 w-2 h-2 fill-primary" viewBox="0 0 8 8">
+                  <circle cx="4" cy="4" r="4"/>
+                </svg>
+                About Us
+              </a>
+            </li>
+            <li>
+              <a href="product.html" class="sitemap-link text-[#222222] text-lg font-medium desc-font flex items-center">
+                <svg class="mr-3 w-2 h-2 fill-primary" viewBox="0 0 8 8">
+                  <circle cx="4" cy="4" r="4"/>
+                </svg>
+                Products
+              </a>
+            </li>
+            <li>
+              <a href="Manufacturing.html" class="sitemap-link text-[#222222] text-lg font-medium desc-font flex items-center">
+                <svg class="mr-3 w-2 h-2 fill-primary" viewBox="0 0 8 8">
+                  <circle cx="4" cy="4" r="4"/>
+                </svg>
+                Manufacturing
+              </a>
+            </li>
+            <li>
+              <a href="DealerDistributorApp.html" class="sitemap-link text-[#222222] text-lg font-medium desc-font flex items-center">
+                <svg class="mr-3 w-2 h-2 fill-primary" viewBox="0 0 8 8">
+                  <circle cx="4" cy="4" r="4"/>
+                </svg>
+                Dealer App
+              </a>
+            </li>
+            <li>
+              <a href="ourBlog.html" class="sitemap-link text-[#222222] text-lg font-medium desc-font flex items-center">
+                <svg class="mr-3 w-2 h-2 fill-primary" viewBox="0 0 8 8">
+                  <circle cx="4" cy="4" r="4"/>
+                </svg>
+                Blog
+              </a>
+            </li>
+            <li>
+              <a href="contact.html" class="sitemap-link text-[#222222] text-lg font-medium desc-font flex items-center">
+                <svg class="mr-3 w-2 h-2 fill-primary" viewBox="0 0 8 8">
+                  <circle cx="4" cy="4" r="4"/>
+                </svg>
+                Contact Us
+              </a>
+            </li>
+            <li>
+              <a href="sitemap.html" class="sitemap-link text-primary text-lg font-semibold desc-font flex items-center">
+                <svg class="mr-3 w-2 h-2 fill-primary" viewBox="0 0 8 8">
+                  <circle cx="4" cy="4" r="4"/>
+                </svg>
+                SiteMap
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Our Products -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm sitemap-section">
+          <h2 class="text-[28px] md:text-[32px] font-bold text-[#222222] title-font mb-6">
+            Our Products
+          </h2>
+          <ul class="space-y-4">
+            <li>
+              <a href="product.html#footwear" class="sitemap-link text-[#222222] text-lg font-medium desc-font flex items-center">
+                <svg class="mr-3 w-2 h-2 fill-primary" viewBox="0 0 8 8">
+                  <circle cx="4" cy="4" r="4"/>
+                </svg>
+                Footwear Leather
+              </a>
+            </li>
+            <li>
+              <a href="product.html#bag" class="sitemap-link text-[#222222] text-lg font-medium desc-font flex items-center">
+                <svg class="mr-3 w-2 h-2 fill-primary" viewBox="0 0 8 8">
+                  <circle cx="4" cy="4" r="4"/>
+                </svg>
+                Bag Leather
+              </a>
+            </li>
+            <li>
+              <a href="product.html#wallets" class="sitemap-link text-[#222222] text-lg font-medium desc-font flex items-center">
+                <svg class="mr-3 w-2 h-2 fill-primary" viewBox="0 0 8 8">
+                  <circle cx="4" cy="4" r="4"/>
+                </svg>
+                Wallets & Belts
+              </a>
+            </li>
+            <li>
+              <a href="product.html#sheets" class="sitemap-link text-[#222222] text-lg font-medium desc-font flex items-center">
+                <svg class="mr-3 w-2 h-2 fill-primary" viewBox="0 0 8 8">
+                  <circle cx="4" cy="4" r="4"/>
+                </svg>
+                Sheet Covers
+              </a>
+            </li>
+            <li>
+              <a href="product.html#upholstery" class="sitemap-link text-[#222222] text-lg font-medium desc-font flex items-center">
+                <svg class="mr-3 w-2 h-2 fill-primary" viewBox="0 0 8 8">
+                  <circle cx="4" cy="4" r="4"/>
+                </svg>
+                Upholstery
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Company Info -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm sitemap-section">
+          <h2 class="text-[28px] md:text-[32px] font-bold text-[#222222] title-font mb-6">
+            Company
+          </h2>
+          <ul class="space-y-4">
+            <li>
+              <a href="about.html#our-story" class="sitemap-link text-[#222222] text-lg font-medium desc-font flex items-center">
+                <svg class="mr-3 w-2 h-2 fill-primary" viewBox="0 0 8 8">
+                  <circle cx="4" cy="4" r="4"/>
+                </svg>
+                Our Story
+              </a>
+            </li>
+            <li>
+              <a href="about.html#mission-vision" class="sitemap-link text-[#222222] text-lg font-medium desc-font flex items-center">
+                <svg class="mr-3 w-2 h-2 fill-primary" viewBox="0 0 8 8">
+                  <circle cx="4" cy="4" r="4"/>
+                </svg>
+                Mission & Vision
+              </a>
+            </li>
+            <li>
+              <a href="Manufacturing.html#process" class="sitemap-link text-[#222222] text-lg font-medium desc-font flex items-center">
+                <svg class="mr-3 w-2 h-2 fill-primary" viewBox="0 0 8 8">
+                  <circle cx="4" cy="4" r="4"/>
+                </svg>
+                Manufacturing Process
+              </a>
+            </li>
+            <li>
+              <a href="about.html#certifications" class="sitemap-link text-[#222222] text-lg font-medium desc-font flex items-center">
+                <svg class="mr-3 w-2 h-2 fill-primary" viewBox="0 0 8 8">
+                  <circle cx="4" cy="4" r="4"/>
+                </svg>
+                Certifications
+              </a>
+            </li>
+            <li>
+              <a href="about.html#team" class="sitemap-link text-[#222222] text-lg font-medium desc-font flex items-center">
+                <svg class="mr-3 w-2 h-2 fill-primary" viewBox="0 0 8 8">
+                  <circle cx="4" cy="4" r="4"/>
+                </svg>
+                Our Team
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm sitemap-section">
+          <h2 class="text-[28px] md:text-[32px] font-bold text-[#222222] title-font mb-6">
+            Resources
+          </h2>
+          <ul class="space-y-4">
+            <li>
+              <a href="ourBlog.html" class="sitemap-link text-[#222222] text-lg font-medium desc-font flex items-center">
+                <svg class="mr-3 w-2 h-2 fill-primary" viewBox="0 0 8 8">
+                  <circle cx="4" cy="4" r="4"/>
+                </svg>
+                Blog Articles
+              </a>
+            </li>
+            <li>
+              <a href="DealerDistributorApp.html" class="sitemap-link text-[#222222] text-lg font-medium desc-font flex items-center">
+                <svg class="mr-3 w-2 h-2 fill-primary" viewBox="0 0 8 8">
+                  <circle cx="4" cy="4" r="4"/>
+                </svg>
+                Dealer Portal
+              </a>
+            </li>
+            <li>
+              <a href="#catalogue" class="sitemap-link text-[#222222] text-lg font-medium desc-font flex items-center">
+                <svg class="mr-3 w-2 h-2 fill-primary" viewBox="0 0 8 8">
+                  <circle cx="4" cy="4" r="4"/>
+                </svg>
+                Product Catalogue
+              </a>
+            </li>
+            <li>
+              <a href="contact.html#faq" class="sitemap-link text-[#222222] text-lg font-medium desc-font flex items-center">
+                <svg class="mr-3 w-2 h-2 fill-primary" viewBox="0 0 8 8">
+                  <circle cx="4" cy="4" r="4"/>
+                </svg>
+                FAQ
+              </a>
+            </li>
+            <li>
+              <a href="contact.html#support" class="sitemap-link text-[#222222] text-lg font-medium desc-font flex items-center">
+                <svg class="mr-3 w-2 h-2 fill-primary" viewBox="0 0 8 8">
+                  <circle cx="4" cy="4" r="4"/>
+                </svg>
+                Customer Support
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Additional Info -->
+      <div class="mt-16 bg-white rounded-2xl p-8 md:p-12 shadow-sm text-center">
+        <h3 class="text-[24px] md:text-[32px] font-bold text-[#222222] title-font mb-4">
+          Can't Find What You're Looking For?
+        </h3>
+        <p class="text-[18px] md:text-xl text-[#7a7a7a] font-medium desc-font mb-8 max-w-2xl mx-auto">
+          Our team is here to help you navigate through our services and products
+        </p>
+        <a href="contact.html" class="inline-flex items-center bg-primary text-white px-6 py-3 rounded-full border-2 border-primary transition-all duration-300 hover:bg-[#E2F0FB] hover:text-primary group font-semibold text-base">
+          <svg class="mr-2 fill-white group-hover:fill-primary" width="19" height="19" viewBox="0 0 19 19">
+            <path d="M17.8472 12.6054L13.4306 10.6264L13.4184 10.6207C13.1892 10.5227 12.939 10.4833 12.6907 10.5062C12.4424 10.5292 12.2037 10.6136 11.9963 10.752C11.9718 10.7681 11.9484 10.7857 11.9259 10.8045L9.64407 12.7498C8.19845 12.0476 6.70595 10.5664 6.00376 9.1395L7.95188 6.82294C7.97063 6.7995 7.98845 6.77606 8.00532 6.75075C8.14072 6.54384 8.22287 6.30667 8.24446 6.06035C8.26605 5.81402 8.22641 5.56618 8.12907 5.33887V5.32762L6.14438 0.90356C6.0157 0.606621 5.79444 0.359262 5.51362 0.198409C5.2328 0.0375558 4.9075 -0.0281638 4.58626 0.0110603C3.31592 0.178223 2.14986 0.802093 1.30588 1.76615C0.461903 2.73021 -0.00228837 3.96852 8.4831e-06 5.24981C8.4831e-06 12.6936 6.05626 18.7498 13.5 18.7498C14.7813 18.7521 16.0196 18.2879 16.9837 17.4439C17.9477 16.6 18.5716 15.4339 18.7388 14.1636C18.7781 13.8424 18.7125 13.5172 18.5518 13.2364C18.3911 12.9556 18.144 12.7343 17.8472 12.6054ZM13.5 17.2498C10.3185 17.2463 7.26825 15.9809 5.01856 13.7313C2.76888 11.4816 1.50348 8.43134 1.50001 5.24981C1.49648 4.33433 1.82631 3.44887 2.42789 2.75879C3.02947 2.0687 3.86167 1.62118 4.76907 1.49981C4.7687 1.50355 4.7687 1.50732 4.76907 1.51106L6.73782 5.91731L4.80001 8.23669C4.78034 8.25932 4.76247 8.28345 4.74657 8.30887C4.60549 8.52536 4.52273 8.77462 4.5063 9.03249C4.48988 9.29037 4.54035 9.54811 4.65282 9.78075C5.5022 11.5179 7.25251 13.2551 9.00845 14.1036C9.24279 14.215 9.50203 14.2637 9.76083 14.245C10.0196 14.2262 10.2692 14.1407 10.485 13.9967C10.5091 13.9805 10.5322 13.9629 10.5544 13.9442L12.8334 11.9998L17.2397 13.9732C17.2397 13.9732 17.2472 13.9732 17.25 13.9732C17.1301 14.8819 16.6833 15.7158 15.9931 16.3189C15.3028 16.922 14.4166 17.2529 13.5 17.2498Z" />
+          </svg>
+          Contact Us
+        </a>
+      </div>
+
+    </div>
+  </section>
+  <!-- End Sitemap Content -->
+
+  <!-- Start FOOTER SECTION -->
+  <footer class="pt-16 md:pt-20 relative text-white pb-6 overflow-hidden bg-[#e8e8e8]">
+    <div class="absolute inset-0 bg-[#f5f5f5] to-transparent"></div>
+    <div class="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-4 sm:grid-cols-2 gap-10 p-10">
+      <div>
+        <img src="./assests/img/logo/kodel-logo.svg" alt="Logo" class="mb-4">
+        <p class="text-[#222222] text-base font-medium desc-font leading-relaxed">
+          Premium leather manufacturing with 30+ years of excellence, serving global brands with quality and trust.
+        </p>
+        <div class="flex space-x-4 mt-5">
+          <a href="#" class="text-[#222222] hover:text-primary desc-font transition">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.75 0C7.82164 0 5.93657 0.571828 4.33319 1.64317C2.72982 2.71451 1.48013 4.23726 0.742179 6.01884C0.00422452 7.80042 -0.188858 9.76082 0.187348 11.6521C0.563554 13.5434 1.49215 15.2807 2.85571 16.6443C4.21928 18.0079 5.95656 18.9365 7.84787 19.3127C9.73919 19.6889 11.6996 19.4958 13.4812 18.7578C15.2627 18.0199 16.7855 16.7702 17.8568 15.1668C18.9282 13.5634 19.5 11.6784 19.5 9.75C19.4973 7.16498 18.4692 4.68661 16.6413 2.85872C14.8134 1.03084 12.335 0.00272983 9.75 0ZM10.5 17.9653V12H12.75C12.9489 12 13.1397 11.921 13.2803 11.7803C13.421 11.6397 13.5 11.4489 13.5 11.25C13.5 11.0511 13.421 10.8603 13.2803 10.7197C13.1397 10.579 12.9489 10.5 12.75 10.5H10.5V8.25C10.5 7.85218 10.658 7.47064 10.9393 7.18934C11.2206 6.90804 11.6022 6.75 12 6.75H13.5C13.6989 6.75 13.8897 6.67098 14.0303 6.53033C14.171 6.38968 14.25 6.19891 14.25 6C14.25 5.80109 14.171 5.61032 14.0303 5.46967C13.8897 5.32902 13.6989 5.25 13.5 5.25H12C11.2044 5.25 10.4413 5.56607 9.87868 6.12868C9.31608 6.69129 9 7.45435 9 8.25V10.5H6.75C6.55109 10.5 6.36033 10.579 6.21967 10.7197C6.07902 10.8603 6 11.0511 6 11.25C6 11.4489 6.07902 11.6397 6.21967 11.7803C6.36033 11.921 6.55109 12 6.75 12H9V17.9653C6.88575 17.7723 4.92728 16.7717 3.53198 15.1715C2.13667 13.5714 1.41195 11.4949 1.50855 9.37409C1.60515 7.25324 2.51564 5.25127 4.05064 3.7846C5.58563 2.31793 7.62696 1.49947 9.75 1.49947C11.8731 1.49947 13.9144 2.31793 15.4494 3.7846C16.9844 5.25127 17.8949 7.25324 17.9915 9.37409C18.0881 11.4949 17.3633 13.5714 15.968 15.1715C14.5727 16.7717 12.6143 17.7723 10.5 17.9653Z" fill="#565656" />
+            </svg>
+          </a>
+          <a href="#" class="text-[#222222] hover:text-primary desc-font transition">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.75 5.25C8.85998 5.25 7.98995 5.51392 7.24993 6.00839C6.50991 6.50285 5.93314 7.20566 5.59254 8.02792C5.25195 8.85019 5.16283 9.75499 5.33647 10.6279C5.5101 11.5008 5.93868 12.3026 6.56802 12.932C7.19736 13.5613 7.99918 13.9899 8.87209 14.1635C9.74501 14.3372 10.6498 14.2481 11.4721 13.9075C12.2943 13.5669 12.9971 12.9901 13.4916 12.2501C13.9861 11.51 14.25 10.64 14.25 9.75C14.2488 8.55691 13.7743 7.41303 12.9306 6.56939C12.087 5.72575 10.9431 5.25124 9.75 5.25ZM9.75 12.75C9.15666 12.75 8.57664 12.5741 8.08329 12.2444C7.58994 11.9148 7.20542 11.4462 6.97836 10.8981C6.7513 10.3499 6.69189 9.74667 6.80764 9.16473C6.9234 8.58279 7.20912 8.04824 7.62868 7.62868C8.04824 7.20912 8.58279 6.9234 9.16473 6.80764C9.74667 6.69189 10.3499 6.7513 10.8981 6.97836C11.4462 7.20542 11.9148 7.58994 12.2444 8.08329C12.5741 8.57664 12.75 9.15666 12.75 9.75C12.75 10.5456 12.4339 11.3087 11.8713 11.8713C11.3087 12.4339 10.5456 12.75 9.75 12.75ZM14.25 0H5.25C3.85807 0.00148896 2.52358 0.555091 1.53933 1.53933C0.555091 2.52358 0.00148896 3.85807 0 5.25V14.25C0.00148896 15.6419 0.555091 16.9764 1.53933 17.9607C2.52358 18.9449 3.85807 19.4985 5.25 19.5H14.25C15.6419 19.4985 16.9764 18.9449 17.9607 17.9607C18.9449 16.9764 19.4985 15.6419 19.5 14.25V5.25C19.4985 3.85807 18.9449 2.52358 17.9607 1.53933C16.9764 0.555091 15.6419 0.00148896 14.25 0ZM18 14.25C18 15.2446 17.6049 16.1984 16.9016 16.9016C16.1984 17.6049 15.2446 18 14.25 18H5.25C4.25544 18 3.30161 17.6049 2.59835 16.9016C1.89509 16.1984 1.5 15.2446 1.5 14.25V5.25C1.5 4.25544 1.89509 3.30161 2.59835 2.59835C3.30161 1.89509 4.25544 1.5 5.25 1.5H14.25C15.2446 1.5 16.1984 1.89509 16.9016 2.59835C17.6049 3.30161 18 4.25544 18 5.25V14.25ZM15.75 4.875C15.75 5.0975 15.684 5.31501 15.5604 5.50002C15.4368 5.68502 15.2611 5.82922 15.0555 5.91436C14.85 5.99951 14.6238 6.02179 14.4055 5.97838C14.1873 5.93498 13.9868 5.82783 13.8295 5.6705C13.6722 5.51316 13.565 5.31271 13.5216 5.09448C13.4782 4.87625 13.5005 4.65005 13.5856 4.44448C13.6708 4.23891 13.815 4.06321 14 3.9396C14.185 3.81598 14.4025 3.75 14.625 3.75C14.9234 3.75 15.2095 3.86853 15.4205 4.0795C15.6315 4.29048 15.75 4.57663 15.75 4.875Z" fill="#565656" />
+            </svg>
+          </a>
+          <a href="#" class="text-[#222222] hover:text-primary desc-font transition">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 0H1.5C1.10218 0 0.720644 0.158035 0.43934 0.43934C0.158035 0.720644 0 1.10218 0 1.5V18C0 18.3978 0.158035 18.7794 0.43934 19.0607C0.720644 19.342 1.10218 19.5 1.5 19.5H18C18.3978 19.5 18.7794 19.342 19.0607 19.0607C19.342 18.7794 19.5 18.3978 19.5 18V1.5C19.5 1.10218 19.342 0.720644 19.0607 0.43934C18.7794 0.158035 18.3978 0 18 0ZM18 18H1.5V1.5H18V18ZM6.75 8.25V14.25C6.75 14.4489 6.67098 14.6397 6.53033 14.7803C6.38968 14.921 6.19891 15 6 15C5.80109 15 5.61032 14.921 5.46967 14.7803C5.32902 14.6397 5.25 14.4489 5.25 14.25V8.25C5.25 8.05109 5.32902 7.86032 5.46967 7.71967C5.61032 7.57902 5.80109 7.5 6 7.5C6.19891 7.5 6.38968 7.57902 6.53033 7.71967C6.67098 7.86032 6.75 8.05109 6.75 8.25ZM15 10.875V14.25C15 14.4489 14.921 14.6397 14.7803 14.7803C14.6397 14.921 14.4489 15 14.25 15C14.0511 15 13.8603 14.921 13.7197 14.7803C13.579 14.6397 13.5 14.4489 13.5 14.25V10.875C13.5 10.3777 13.3025 9.90081 12.9508 9.54918C12.5992 9.19754 12.1223 9 11.625 9C11.1277 9 10.6508 9.19754 10.2992 9.54918C9.94754 9.90081 9.75 10.3777 9.75 10.875V14.25C9.75 14.4489 9.67098 14.6397 9.53033 14.7803C9.38968 14.921 9.19891 15 9 15C8.80109 15 8.61032 14.921 8.46967 14.7803C8.32902 14.6397 8.25 14.4489 8.25 14.25V8.25C8.25093 8.06629 8.31925 7.88931 8.44201 7.75264C8.56477 7.61596 8.73342 7.5291 8.91598 7.50852C9.09853 7.48794 9.28229 7.53508 9.43239 7.641C9.5825 7.74691 9.68851 7.90423 9.73031 8.08313C10.2377 7.73894 10.8292 7.53947 11.4414 7.50611C12.0536 7.47276 12.6633 7.60679 13.205 7.89381C13.7468 8.18083 14.2001 8.61 14.5164 9.13523C14.8326 9.66046 14.9998 10.2619 15 10.875ZM7.125 5.625C7.125 5.8475 7.05902 6.06501 6.9354 6.25002C6.81179 6.43502 6.63609 6.57922 6.43052 6.66436C6.22495 6.74951 5.99875 6.77179 5.78052 6.72838C5.56229 6.68498 5.36184 6.57783 5.2045 6.4205C5.04717 6.26316 4.94002 6.06271 4.89662 5.84448C4.85321 5.62625 4.87549 5.40005 4.96064 5.19448C5.04578 4.98891 5.18998 4.81321 5.37498 4.6896C5.55999 4.56598 5.7775 4.5 6 4.5C6.29837 4.5 6.58452 4.61853 6.7955 4.8295C7.00647 5.04048 7.125 5.32663 7.125 5.625Z" fill="#565656" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="ml-0 md:ml-10">
+        <h3 class="text-[20px] font-bold mb-4 title-font text-[#222222]">Quick Links</h3>
+        <ul class="space-y-2 text-[#222222] text-sm">
+          <li class="mt-4 font-medium text-base"><a href="index.html" class="hover:text-primary desc-font transition text-base font-medium">Home</a></li>
+          <li class="mt-4 font-medium text-base"><a href="about.html" class="hover:text-primary desc-font transition text-base font-medium">About Us</a></li>
+          <li class="mt-4 font-medium text-base"><a href="product.html" class="hover:text-primary desc-font transition text-base font-medium">Products</a></li>
+          <li class="mt-4 font-medium text-base"><a href="Manufacturing.html" class="hover:text-primary desc-font transition text-base font-medium">Manufacturing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-[20px] font-bold mb-4 title-font text-[#222222]">Our Products</h3>
+        <ul class="space-y-2 text-[#222222] text-sm">
+          <li class="mt-4 font-medium text-base"><a href="#" class="hover:text-primary desc-font transition text-base font-medium">Footwear Leather</a></li>
+          <li class="mt-4 font-medium text-base"><a href="#" class="hover:text-primary desc-font transition text-base font-medium">Bag Leather</a></li>
+          <li class="mt-4 font-medium text-base"><a href="#" class="hover:text-primary desc-font transition text-base font-medium">Wallets & Belts</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-[20px] font-bold mb-4 title-font text-[#222222]">Contact Us</h3>
+        <ul class="text-[#222222] text-sm space-y-3">
+          <li class="flex items-center space-x-2">
+            <img src="./assests/img/icon/location.svg" alt="location">
+            <span class="desc-font font-medium text-base">Industrial Area, India</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <img src="./assests/img/icon/phone.svg" alt="phone">
+            <span class="desc-font font-medium text-base">+91 123 456 7890</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <img src="./assests/img/icon/mail.svg" alt="mail">
+            <span class="desc-font font-medium text-base">info@kodelleather.com</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-[#dddddd] relative z-10 text-center mt-0 md:mt-10 text-[#222222] text-base font-medium p-5 md:pt-6">
+      © 2025 Kodel Leather. All rights reserved.
+    </div>
+  </footer>
+  <!-- End FOOTER SECTION -->
+
+  <script src="./assests/js/dev-script.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1A70B4',
+          }
+        }
+      }
+    }
+  </script>
+
+</body>
+
+</html>

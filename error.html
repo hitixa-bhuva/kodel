@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | Kodel</title>
+  <link rel="icon" type="image/png" href="./assests/img/logo/favicon-dark-bg.svg" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .title-font {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .desc-font {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .floating-leather {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0px) rotate(0deg);
+      }
+
+      25% {
+        transform: translateY(-20px) rotate(2deg);
+      }
+
+      75% {
+        transform: translateY(-10px) rotate(-2deg);
+      }
+    }
+
+    .pulse-ring {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.5;
+        transform: scale(1.05);
+      }
+    }
+
+    .fade-in {
+      animation: fadeIn 0.8s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .leather-texture {
+      background-image:
+        radial-gradient(circle at 20% 50%, rgba(26, 112, 180, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(26, 112, 180, 0.05) 0%, transparent 50%);
+    }
+  </style>
+</head>
+
+<body class="bg-[#F5F5F5] leather-texture">
+
+  <!-- Navigation -->
+  <nav class="w-full bg-white shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto px-6 flex justify-between items-center py-3">
+      <div class="flex items-center space-x-2">
+        <a href="index.html"><img src="./assests/img/logo/kodel-logo.svg" alt="Logo" class="h-10"></a>
+      </div>
+      <a href="index.html" class="font-semibold text-base flex items-center bg-primary text-white px-5 py-2 rounded-full border-2 border-primary
+         transition-all duration-300 hover:bg-[#E2F0FB] hover:text-primary group">
+        <svg class="mr-2 fill-white group-hover:fill-primary" width="18" height="15" viewBox="0 0 18 15"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M0.21967 8.03104L6.96967 14.781C7.11042 14.9218 7.30129 15.0008 7.50031 15.0008C7.69934 15.0008 7.89021 14.9218 8.03095 14.781C8.17169 14.6403 8.25074 14.4494 8.25074 14.2504C8.25074 14.0514 8.17169 13.8605 8.03095 13.7198L2.56064 8.25042H17.25C17.4489 8.25042 17.6397 8.1714 17.7803 8.03075C17.921 7.8901 18 7.69933 18 7.50042C18 7.3015 17.921 7.11074 17.7803 6.97009C17.6397 6.82943 17.4489 6.75042 17.25 6.75042H2.56064L8.03095 1.28104C8.17169 1.14031 8.25074 0.94944 8.25074 0.750417C8.25074 0.551394 8.17169 0.360523 8.03095 0.219792C7.89021 0.0790615 7.69934 0 7.50031 0C7.30129 0 7.11042 0.0790615 6.96967 0.219792L0.21967 6.96979C0.149963 7.03945 0.094667 7.12216 0.0569474 7.21321C0.0192279 7.30426 -0.000152588 7.40186 -0.000152588 7.50042C-0.000152588 7.59898 0.0192279 7.69657 0.0569474 7.78762C0.094667 7.87867 0.149963 7.96139 0.21967 8.03104Z" />
+        </svg>
+        Back to Home
+      </a>
+    </div>
+  </nav>
+
+  <!-- 404 Content -->
+  <section class="relative min-h-screen flex items-center justify-center px-6 py-16 overflow-hidden">
+
+    <!-- Decorative Elements -->
+    <div class="absolute w-[200px] h-[200px] rounded-full bg-primary/10 blur-3xl top-20 left-10 pulse-ring"></div>
+    <div class="absolute w-[300px] h-[300px] rounded-full bg-[#FFC711]/10 blur-3xl bottom-20 right-10 pulse-ring"
+      style="animation-delay: 1s;"></div>
+
+    <!-- Floating Leather Pieces -->
+    <div class="absolute top-1/4 left-1/4 w-16 h-16 opacity-20 floating-leather" style="animation-delay: 0.5s;">
+      <img src="./assests/img/icon/Durable-color.svg" alt="decoration" class="w-full h-full">
+    </div>
+    <div class="absolute bottom-1/3 right-1/4 w-20 h-20 opacity-20 floating-leather" style="animation-delay: 1.5s;">
+      <img src="./assests/img/icon/Stylish-color.svg" alt="decoration" class="w-full h-full">
+    </div>
+
+    <div class="relative z-10 max-w-4xl mx-auto text-center fade-in">
+
+      <!-- 404 Number -->
+      <div class="mb-8">
+        <h1
+          class="text-[120px] sm:text-[180px] md:text-[240px] font-bold title-font leading-none bg-gradient-to-b from-primary to-[#1A70B4]/40 text-transparent bg-clip-text">
+          404
+        </h1>
+      </div>
+
+      <!-- Main Message -->
+      <div class="space-y-6 mb-10">
+        <h2 class="text-[32px] sm:text-[40px] md:text-[56px] font-bold text-[#222222] title-font leading-tight">
+          Oops! Page Not Found
+        </h2>
+        <p class="text-[18px] sm:text-[20px] md:text-2xl text-[#7a7a7a] font-medium desc-font max-w-2xl mx-auto">
+          The leather you're looking for seems to have been crafted into something else. Let's get you back on track.
+        </p>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap justify-center gap-4 mb-16">
+        <a href="index.html" class="font-semibold text-base flex items-center bg-primary text-white px-6 py-3 rounded-full border-2 border-primary
+           transition-all duration-300 hover:bg-[#E2F0FB] hover:text-primary group">
+          <svg class="mr-2 fill-white group-hover:fill-primary" width="18" height="18" viewBox="0 0 18 18"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M9 1.5L1.5 7.5V16.5C1.5 16.8978 1.65804 17.2794 1.93934 17.5607C2.22064 17.842 2.60218 18 3 18H6.75V11.25H11.25V18H15C15.3978 18 15.7794 17.842 16.0607 17.5607C16.342 17.2794 16.5 16.8978 16.5 16.5V7.5L9 1.5Z" />
+          </svg>
+          Go Home
+        </a>
+        <a href="product.html" class="font-semibold text-base flex items-center bg-transparent text-primary px-6 py-3 rounded-full border-2 border-primary
+           transition-all duration-300 hover:bg-primary hover:text-white group">
+          <svg class="mr-2 fill-primary group-hover:fill-white" width="18" height="18" viewBox="0 0 18 18"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M17.7806 8.03104L11.0306 14.781C10.8899 14.9218 10.699 15.0008 10.5 15.0008C10.301 15.0008 10.1101 14.9218 9.96937 14.781C9.82864 14.6403 9.74958 14.4494 9.74958 14.2504C9.74958 14.0514 9.82864 13.8605 9.96937 13.7198L15.4397 8.25042H0.75C0.551088 8.25042 0.360322 8.1714 0.21967 8.03075C0.0790178 7.8901 0 7.69933 0 7.50042C0 7.3015 0.0790178 7.11074 0.21967 6.97009C0.360322 6.82943 0.551088 6.75042 0.75 6.75042H15.4397L9.96937 1.28104C9.82864 1.14031 9.74958 0.94944 9.74958 0.750417C9.74958 0.551394 9.82864 0.360523 9.96937 0.219792C10.1101 0.0790615 10.301 0 10.5 0C10.699 0 10.8899 0.0790615 11.0306 0.219792L17.7806 6.96979C17.8504 7.03945 17.9057 7.12216 17.9434 7.21321C17.9812 7.30426 18.0006 7.40186 18.0006 7.50042C18.0006 7.59898 17.9812 7.69657 17.9434 7.78762C17.9057 7.87867 17.8504 7.96139 17.7806 8.03104Z" />
+          </svg>
+          View Products
+        </a>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="bg-white rounded-2xl shadow-lg p-8 max-w-3xl mx-auto">
+        <h3 class="text-[20px] md:text-2xl font-bold text-[#222222] title-font mb-6">
+          Popular Pages
+        </h3>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <a href="about.html"
+            class="group flex flex-col items-center p-4 rounded-xl hover:bg-[#E2F0FB] transition-all duration-300">
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-all">
+              <svg class="w-6 h-6" fill="none" stroke="#1A70B4" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <span class="text-sm font-semibold text-[#222222] desc-font">About Us</span>
+          </a>
+
+          <a href="product.html"
+            class="group flex flex-col items-center p-4 rounded-xl hover:bg-[#E2F0FB] transition-all duration-300">
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-all">
+              <svg class="w-6 h-6" fill="none" stroke="#1A70B4" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+              </svg>
+            </div>
+            <span class="text-sm font-semibold text-[#222222] desc-font">Products</span>
+          </a>
+
+          <a href="Manufacturing.html"
+            class="group flex flex-col items-center p-4 rounded-xl hover:bg-[#E2F0FB] transition-all duration-300">
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-all">
+              <svg class="w-6 h-6" fill="none" stroke="#1A70B4" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+              </svg>
+            </div>
+            <span class="text-sm font-semibold text-[#222222] desc-font">Manufacturing</span>
+          </a>
+
+          <a href="contact.html"
+            class="group flex flex-col items-center p-4 rounded-xl hover:bg-[#E2F0FB] transition-all duration-300">
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-all">
+              <svg class="w-6 h-6" fill="none" stroke="#1A70B4" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <span class="text-sm font-semibold text-[#222222] desc-font">Contact</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div class="border-t border-[#dddddd] relative z-10 text-center mt-0 md:mt-10 
+         text-[#222222] text-base font-medium p-5 md:pt-6">
+    © 2025
+    <a href="/" class="font-semibold text-[#0d68af] hover:underline">
+      Kodel Leather
+    </a>.
+    All rights reserved. Developed by
+    <a href="https://theuniqueitsolution.com/" target="_blank" class="font-semibold text-[#0d68af] hover:underline">
+      Unique IT Solution
+    </a>
+  </div>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1A70B4',
+          }
+        }
+      }
+    }
+  </script>
+
+</body>
+
+</html>
