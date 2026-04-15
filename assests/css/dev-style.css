@@ -262,3 +262,17 @@ body {
     border-left: 0 !important;
   }
 }
+/* ── COLOR EXPLORER ── */
+.section-padding { padding: 100px 80px; }
+@media(max-width:640px){ .section-padding { padding: 60px 24px; } }
+
+.color-explorer { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; background: #fff; border: 1px solid var(--border-light); border-radius: 24px; padding: 40px; }
+@media(max-width:850px){ .color-explorer { grid-template-columns: 1fr; } }
+
+.swatch-grid { display: flex; flex-wrap: wrap; gap: 12px; margin: 30px 0; }
+.swatch { width: 42px; height: 42px; border-radius: 50%; border: 2px solid #fff; outline: 1px solid var(--border-light); cursor: pointer; transition: 0.2s; }
+.swatch.active { outline: 2px solid var(--accent-blue); transform: scale(1.1); }
+
+.detail-card { background: var(--bg-soft); border-radius: 16px; padding: 30px; transition: 0.3s; }
+.detail-card:hover { background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.04); }
+.detail-icon { color: var(--accent-blue); margin-bottom: 20px; }

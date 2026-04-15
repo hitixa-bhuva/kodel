@@ -187,11 +187,8 @@
     <div class="absolute inset-0 bg-gradient-to-l from-[#0B314E00] via-[#515e6b] to-[#0C3D62] "></div>
     <div class="relative z-10 max-w-[350px] md:max-w-3xl w-full text-start px-5 md:ps-18 lg:ps-20 pr-0">
       <h2 class="title-font text-3xl md:text-5xl font-semibold mb-6 leading-tight">
-        Collection
+        Collection Details
       </h2>
-      <p class="text-lg md:text-xl desc-font font-medium text-gray-200 mb-5">
-        Explore our wide range of premium leather collections
-      </p>
       <nav class="flex items-center gap-2 mb-4 text-base md:text-base font-bold  tracking-[0.15em] text-gray-400/80"
         aria-label="Breadcrumb">
         <a asp-controller="Home" asp-action="Index" class="transition-colors hover:text-white">Home</a>
@@ -199,8 +196,13 @@
         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
         </svg>
+        <a asp-controller="Home" asp-action="Index" class="transition-colors hover:text-white">Collections</a>
 
-        <span class="text-white/60">All Collections</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+
+        <span class="text-white/60">/Collections Details</span>
       </nav>
     </div>
     <img src="./assests/img/Home/hero-banner-wave.png" alt="Bottom Overlay"
@@ -209,7 +211,8 @@
   <!-- End hero banner section -->
 
   <!-- Start our product -->
-  <section class="max-w-7xl mx-auto p-8 pt-16">
+  <section class="p-4 bg-slate-50">
+  <div class="max-w-7xl mx-auto">
     <div class="text-center mb-8">
       <h2 class="text-3xl md:text-5xl  font-semibold title-font  mb-3 ">Our
         Products</h2>
@@ -217,397 +220,26 @@
         leather solutions crafted
         for every need</p>
     </div>
-    <div class="max-w-2xl mx-auto mb-8">
-      <div class="relative">
-        <input id="searchInput" type="text" placeholder="Search products"
-          class="font-medium w-full pl-12 pr-4 py-3 rounded-full border border-gray-200 shadow-md focus:outline-none focus:ring-2 focus:ring-gray-300">
-        <svg class="absolute left-4 top-3.5 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" stroke-width="2"
-          viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M21 21l-4.35-4.35m1.6-5.65a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-        </svg>
-      </div>
-    </div>
-
-    <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-      <div class="group col-span-1 flex flex-col">
-        <div
-          class="relative aspect-square overflow-hidden rounded-[24px] border border-gray-100 bg-gray-50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
-
-          <div class="absolute inset-0 z-0">
-            <img src="https://m.media-amazon.com/images/I/610NHFMkECL.jpg" alt="Garment Leather"
-              class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
-          </div>
-
-          <div
-            class="absolute inset-0 z-10 bg-black/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-            <div
-              class="absolute bottom-5 right-5 translate-y-6 translate-x-6 opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:translate-x-0 group-hover:opacity-100">
-              <a href="product-details.html"
-                class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#004071] shadow-xl transition-transform hover:scale-110 active:scale-95">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-4 px-1">
-          <h3 class="text-center text-lg font-bold text-gray-800 transition-colors group-hover:text-[#004071]">
-            Garment Leather
-          </h3>
-        </div>
-      </div>
-      <div class="group col-span-1 flex flex-col">
-        <div
-          class="relative aspect-square overflow-hidden rounded-[24px] border border-gray-100 bg-gray-50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
-
-          <div class="absolute inset-0 z-0">
-            <img src="https://m.media-amazon.com/images/I/610NHFMkECL.jpg" alt="Garment Leather"
-              class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
-          </div>
-
-          <div
-            class="absolute inset-0 z-10 bg-black/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-            <div
-              class="absolute bottom-5 right-5 translate-y-6 translate-x-6 opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:translate-x-0 group-hover:opacity-100">
-              <a href="product-details.html"
-                class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#004071] shadow-xl transition-transform hover:scale-110 active:scale-95">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-4 px-1">
-          <h3 class="text-center text-lg font-bold text-gray-800 transition-colors group-hover:text-[#004071]">
-            Garment Leather
-          </h3>
-        </div>
-      </div>
-      <div class="group col-span-1 flex flex-col">
-        <div
-          class="relative aspect-square overflow-hidden rounded-[24px] border border-gray-100 bg-gray-50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
-
-          <div class="absolute inset-0 z-0">
-            <img src="https://m.media-amazon.com/images/I/610NHFMkECL.jpg" alt="Garment Leather"
-              class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
-          </div>
-
-          <div
-            class="absolute inset-0 z-10 bg-black/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-            <div
-              class="absolute bottom-5 right-5 translate-y-6 translate-x-6 opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:translate-x-0 group-hover:opacity-100">
-              <a href="product-details.html"
-                class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#004071] shadow-xl transition-transform hover:scale-110 active:scale-95">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-4 px-1">
-          <h3 class="text-center text-lg font-bold text-gray-800 transition-colors group-hover:text-[#004071]">
-            Garment Leather
-          </h3>
-        </div>
-      </div>
-      <div class="group col-span-1 flex flex-col">
-        <div
-          class="relative aspect-square overflow-hidden rounded-[24px] border border-gray-100 bg-gray-50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
-
-          <div class="absolute inset-0 z-0">
-            <img src="https://m.media-amazon.com/images/I/610NHFMkECL.jpg" alt="Garment Leather"
-              class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
-          </div>
-
-          <div
-            class="absolute inset-0 z-10 bg-black/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-            <div
-              class="absolute bottom-5 right-5 translate-y-6 translate-x-6 opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:translate-x-0 group-hover:opacity-100">
-              <a href="product-details.html"
-                class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#004071] shadow-xl transition-transform hover:scale-110 active:scale-95">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-4 px-1">
-          <h3 class="text-center text-lg font-bold text-gray-800 transition-colors group-hover:text-[#004071]">
-            Garment Leather
-          </h3>
-        </div>
-      </div>
-      <div class="group col-span-1 flex flex-col">
-        <div
-          class="relative aspect-square overflow-hidden rounded-[24px] border border-gray-100 bg-gray-50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
-
-          <div class="absolute inset-0 z-0">
-            <img src="https://m.media-amazon.com/images/I/610NHFMkECL.jpg" alt="Garment Leather"
-              class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
-          </div>
-
-          <div
-            class="absolute inset-0 z-10 bg-black/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-            <div
-              class="absolute bottom-5 right-5 translate-y-6 translate-x-6 opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:translate-x-0 group-hover:opacity-100">
-              <a href="product-details.html"
-                class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#004071] shadow-xl transition-transform hover:scale-110 active:scale-95">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-4 px-1">
-          <h3 class="text-center text-lg font-bold text-gray-800 transition-colors group-hover:text-[#004071]">
-            Garment Leather
-          </h3>
-        </div>
-      </div>
-      <div class="group col-span-1 flex flex-col">
-        <div
-          class="relative aspect-square overflow-hidden rounded-[24px] border border-gray-100 bg-gray-50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
-
-          <div class="absolute inset-0 z-0">
-            <img src="https://m.media-amazon.com/images/I/610NHFMkECL.jpg" alt="Garment Leather"
-              class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
-          </div>
-
-          <div
-            class="absolute inset-0 z-10 bg-black/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-            <div
-              class="absolute bottom-5 right-5 translate-y-6 translate-x-6 opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:translate-x-0 group-hover:opacity-100">
-              <a href="product-details.html"
-                class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#004071] shadow-xl transition-transform hover:scale-110 active:scale-95">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-4 px-1">
-          <h3 class="text-center text-lg font-bold text-gray-800 transition-colors group-hover:text-[#004071]">
-            Garment Leather
-          </h3>
-        </div>
-      </div>
-      <div class="group col-span-1 flex flex-col">
-        <div
-          class="relative aspect-square overflow-hidden rounded-[24px] border border-gray-100 bg-gray-50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
-
-          <div class="absolute inset-0 z-0">
-            <img src="https://m.media-amazon.com/images/I/610NHFMkECL.jpg" alt="Garment Leather"
-              class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
-          </div>
-
-          <div
-            class="absolute inset-0 z-10 bg-black/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-            <div
-              class="absolute bottom-5 right-5 translate-y-6 translate-x-6 opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:translate-x-0 group-hover:opacity-100">
-              <a href="product-details.html"
-                class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#004071] shadow-xl transition-transform hover:scale-110 active:scale-95">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-4 px-1">
-          <h3 class="text-center text-lg font-bold text-gray-800 transition-colors group-hover:text-[#004071]">
-            Garment Leather
-          </h3>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="flex items-center justify-center space-x-3">
-      <button
-        class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100">
-        <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M7.98292 13.8362C8.04627 13.8995 8.09652 13.9747 8.1308 14.0575C8.16509 14.1403 8.18273 14.229 8.18273 14.3186C8.18273 14.4081 8.16509 14.4969 8.1308 14.5796C8.09652 14.6624 8.04627 14.7376 7.98292 14.8009C7.91958 14.8643 7.84437 14.9145 7.7616 14.9488C7.67883 14.9831 7.59012 15.0008 7.50054 15.0008C7.41095 15.0008 7.32224 14.9831 7.23947 14.9488C7.1567 14.9145 7.0815 14.8643 7.01815 14.8009L0.199968 7.98277C0.136575 7.91944 0.0862851 7.84425 0.0519731 7.76147C0.0176611 7.6787 0 7.58998 0 7.50038C0 7.41078 0.0176611 7.32205 0.0519731 7.23928C0.0862851 7.15651 0.136575 7.08132 0.199968 7.01799L7.01815 0.199811C7.14609 0.0718741 7.31961 -3.56656e-09 7.50054 0C7.68147 3.56656e-09 7.85499 0.0718741 7.98292 0.199811C8.11086 0.327748 8.18273 0.501267 8.18273 0.682197C8.18273 0.863127 8.11086 1.03665 7.98292 1.16458L1.64627 7.50038L7.98292 13.8362Z"
-            fill="black" />
-        </svg>
-      </button>
-      <button
-        class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100">1</button>
-      <button
-        class="w-10 h-10 flex items-center justify-center rounded-full bg-[#1A70B4] text-white font-semibold">2</button>
-      <button
-        class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100">3</button>
-      <button
-        class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100">4</button>
-      <button
-        class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100">5</button>
-      <button
-        class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100">
-        <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M0.199816 13.8362C0.136468 13.8995 0.0862188 13.9747 0.0519352 14.0575C0.0176516 14.1403 4.76837e-06 14.229 4.76837e-06 14.3186C4.76837e-06 14.4081 0.0176516 14.4969 0.0519352 14.5796C0.0862188 14.6624 0.136468 14.7376 0.199816 14.8009C0.263164 14.8643 0.338369 14.9145 0.421137 14.9488C0.503905 14.9831 0.592615 15.0008 0.682203 15.0008C0.77179 15.0008 0.8605 14.9831 0.943268 14.9488C1.02604 14.9145 1.10124 14.8643 1.16459 14.8009L7.98277 7.98277C8.04616 7.91944 8.09645 7.84425 8.13077 7.76147C8.16508 7.6787 8.18274 7.58998 8.18274 7.50038C8.18274 7.41078 8.16508 7.32205 8.13077 7.23928C8.09645 7.15651 8.04616 7.08132 7.98277 7.01799L1.16459 0.199811C1.03665 0.0718741 0.863133 -3.56656e-09 0.682203 0C0.501273 3.56656e-09 0.327753 0.0718741 0.199816 0.199811C0.0718794 0.327748 4.76837e-06 0.501267 4.76837e-06 0.682197C4.76837e-06 0.863127 0.0718794 1.03665 0.199816 1.16458L6.53646 7.50038L0.199816 13.8362Z"
-            fill="black" />
-        </svg>
-      </button>
-    </div>
-  </section>
-  <!-- End our product -->
-
-
-  <!-- Start Faq -->
-  <!-- <section class="py-14 md:py-16 bg-white">
-    <div class="lg:max-w-7xl max-w-2xl mx-auto grid lg:grid-cols-2 gap-10 items-start p-5">
+    <div class="color-explorer">
       <div>
-        <h2
-          class="text-center lg:text-start text-3xl md:text-5xl  title-font font-semibold text-[#222222] mb-3 title-font">
-          FAQ</h2>
-        <p
-          class="lg:max-w-lg max-w-xl text-center lg:text-start text-[#7a7a7a] desc-font text-[20px] md:text-2xl font-medium ">
-          Find quick answers to common questions about our services.
-        </p>
-      </div>
+        <h3 class="text-xl font-semibold mb-4">Curated Textures</h3>
+        <p class="text-muted-foreground" style="color: var(--text-muted)">Select a shade to preview the grain and light reflection. Our dyes are UV-stabilized for color longevity.</p>
+        
+        <div class="swatch-grid" id="swatchGrid">
+          </div>
 
-
-      <div class="space-y-4" id="accordion">
-        <div class="accordion-item active bg-[#F9FAFB] text-[#222222] rounded-xl transition overflow-hidden">
-          <button
-            class="accordion-header flex justify-between items-center w-full pt-[1.5rem] pr-5 pb-[1.5rem] pl-5 text-left">
-            <h3 class="font-semibold text-[20px] md:text-2xl desc-font">What types of leather products do you
-              manufacture?</h3>
-            <span
-              class="accordion-icon bg-[#F5F5F5] rounded-full p-4 flex justify-center items-center text-[#7a7a7a] text-[20px] md:text-2xl transform transition-transform duration-300 leading-none">
-              <img src="./assests/img/icon/cross.svg" alt="">
-            </span>
-          </button>
-          <div
-            class="accordion-content max-h-0 overflow-hidden px-5 text-sm text-[#222222] transition-all duration-500 ease-in-out">
-            <p class="pb-4 text-[#d1e2f0] text-base desc-font font-medium">
-              We manufacture a wide range of premium leather products including leather hides, finished leather,
-              upholstery, fashion accessories, automotive leather, and custom-made leather solutions.
-            </p>
-          </div>
-        </div>
-        <div class="accordion-item bg-[#F9FAFB] text-[#222222] rounded-xl transition overflow-hidden">
-          <button
-            class="accordion-header flex justify-between items-center w-full pt-[1.5rem] pr-5 pb-[1.5rem] pl-5 text-left">
-            <h3 class="font-semibold text-[20px] md:text-2xl desc-font">Where are your manufacturing facilities located?
-            </h3>
-            <span
-              class="accordion-icon bg-[#F5F5F5] rounded-full p-4 flex justify-center items-center text-[#7a7a7a] text-[20px] md:text-2xl transform transition-transform duration-300 leading-none">
-              <img src="./assests/img/icon/cross.svg" alt="">
-            </span>
-          </button>
-          <div
-            class="accordion-content max-h-0 overflow-hidden px-5 text-sm text-[#222222] transition-all duration-500 ease-in-out">
-            <p class="pb-4 text-[#d1e2f0] text-base desc-font font-medium">
-              Our manufacturing facilities are strategically located to serve both domestic and international clients
-              efficiently.
-            </p>
-          </div>
-        </div>
-        <div class="accordion-item bg-[#F9FAFB] text-[#222222] rounded-xl transition overflow-hidden">
-          <button
-            class="accordion-header flex justify-between items-center w-full pt-[1.5rem] pr-5 pb-[1.5rem] pl-5 text-left">
-            <h3 class="font-semibold text-[20px] md:text-2xl desc-font">How long has Kodel been in the leather industry?
-            </h3>
-            <span
-              class="accordion-icon bg-[#F5F5F5] rounded-full p-4 flex justify-center items-center text-[#7a7a7a] text-[20px] md:text-2xl transform transition-transform duration-300 leading-none">
-              <img src="./assests/img/icon/cross.svg" alt="">
-            </span>
-          </button>
-          <div
-            class="accordion-content max-h-0 overflow-hidden px-5 text-sm text-[#222222] transition-all duration-500 ease-in-out">
-            <p class="pb-4 text-[#d1e2f0] text-base desc-font font-medium">
-              Kodel has been a trusted name in the leather industry for several decades, offering consistent quality and
-              innovation.
-            </p>
-          </div>
-        </div>
-        <div class="accordion-item bg-[#F9FAFB] text-[#222222] rounded-xl transition overflow-hidden">
-          <button
-            class="accordion-header flex justify-between items-center w-full pt-[1.5rem] pr-5 pb-[1.5rem] pl-5 text-left">
-            <h3 class="font-semibold text-[20px] md:text-2xl desc-font">How do you ensure the quality of your leather?
-            </h3>
-
-            <span
-              class="accordion-icon bg-[#F5F5F5] rounded-full p-4 flex justify-center items-center text-[#7a7a7a] text-[20px] md:text-2xl transform transition-transform duration-300 leading-none">
-              <img src="./assests/img/icon/cross.svg" alt="">
-            </span>
-          </button>
-          <div
-            class="accordion-content max-h-0 overflow-hidden px-5 text-sm text-[#222222] transition-all duration-500 ease-in-out">
-            <p class="pb-4 text-[#d1e2f0] text-base desc-font font-medium">
-              We follow strict quality control processes and use only the finest raw materials, ensuring each product
-              meets international standards.
-            </p>
-          </div>
+        <div class="mt-8 p-6 border-l-4" style="border-color: var(--accent-blue); background: var(--bg-soft);">
+          <p class="text-sm font-bold uppercase tracking-widest mb-1" style="color: var(--accent-blue)">Technical Note</p>
+          <p id="colorDesc" style="font-size: 14px; color: var(--text-muted);">A versatile, cool-toned finish ideal for corporate lounges and automotive seating.</p>
         </div>
       </div>
-    </div>
-  </section> -->
-  <!-- End Faq -->
-
-  <!--Start Desktop CTA SECTION -->
-  <!-- <section class="relative bg-white  hidden lg:block ">
-    <div class="max-w-7xl mx-auto relative z-10">
-      <div
-        class="rounded-2xl overflow-hidden grid md:grid-cols-[1fr_1.5fr] grid-cols-1 bg-[#0B2239] shadow-[0px_4px_20px_#1018280D]">
-
-        <div class="py-[59px] px-[30px] md:p-[59px] flex flex-col justify-center text-white ">
-          <h2 class="text-3xl md:text-5xl  font-semibold text-[#ffffff] leading-[1.36] title-font mb-4">Ready to Work
-            Together?</h2>
-          <p class="text-[#9eb1c0] max-w-sm text-[20px] md:text-2xl font-medium desc-font">
-            Looking for premium leather solutions? Let's create something exceptional together.
-          </p>
-          <div>
-            <a href="contact.html"
-              class="mt-[40px] inline-flex items-center bg-primary hover:bg-[#E2F0FB] hover:text-primary group text-white text-base font-semibold rounded-full px-5 py-3 transition">
-              Get in Touch
-              <svg class="ms-2 fill-white group-hover:fill-primary" width="18" height="15" viewBox="0 0 18 15"
-                fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M17.7806 8.03104L11.0306 14.781C10.8899 14.9218 10.699 15.0008 10.5 15.0008C10.301 15.0008 10.1101 14.9218 9.96937 14.781C9.82864 14.6403 9.74958 14.4494 9.74958 14.2504C9.74958 14.0514 9.82864 13.8605 9.96937 13.7198L15.4397 8.25042H0.75C0.551088 8.25042 0.360322 8.1714 0.21967 8.03075C0.0790178 7.8901 0 7.69933 0 7.50042C0 7.3015 0.0790178 7.11074 0.21967 6.97009C0.360322 6.82943 0.551088 6.75042 0.75 6.75042H15.4397L9.96937 1.28104C9.82864 1.14031 9.74958 0.94944 9.74958 0.750417C9.74958 0.551394 9.82864 0.360523 9.96937 0.219792C10.1101 0.0790615 10.301 0 10.5 0C10.699 0 10.8899 0.0790615 11.0306 0.219792L17.7806 6.96979C17.8504 7.03945 17.9057 7.12216 17.9434 7.21321C17.9812 7.30426 18.0006 7.40186 18.0006 7.50042C18.0006 7.59898 17.9812 7.69657 17.9434 7.78762C17.9057 7.87867 17.8504 7.96139 17.7806 8.03104Z" />
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <div class="relative">
-          <img src="assests/img/Home/cta-1.jpg" alt="Leather Tools"
-            class="w-full h-full object-cover rounded-bl-[67%] relative z-10">
-          <div class="absolute inset-0 rounded-bl-[67%] z-20 
-              bg-gradient-to-l from-[#00000080] via-[#1018284D] to-[#101828de]">
-          </div>
-        </div>
-
+      <div class="flex items-center justify-center">
+        <img id="previewImage" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800&q=80" class="rounded-xl shadow-lg w-full h-[400px] object-cover transition-all duration-500" alt="Preview">
       </div>
     </div>
-    <div
-      class="absolute bottom-0 left-0 w-full h-[66%] bg-[url('assests/img/Home/footer-top-wave.png')] bg-cover bg-center opacity-40">
-    </div>
-  </section> -->
-  <!--End Desktop CTA SECTION -->
+  </div>
+</section>
+  <!-- End our product -->
 
   <!--Start mobile CTA SECTION -->
   <!-- <k -->
@@ -752,6 +384,45 @@
       }
     }
   </script>
+  <script>
+const colors = [
+  { name: 'Sapphire Blue', hex: '#1a70b4', img: 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800&q=80', desc: 'The signature Bentley Blue. Deep, professional, and commanding.' },
+  { name: 'Graphite Grey', hex: '#7a7a7a', img: 'https://images.unsplash.com/photo-1554034483-04fda0d3507b?w=800&q=80', desc: 'A neutral industrial tone that highlights modern furniture silhouettes.' },
+  { name: 'Pure Onyx', hex: '#222222', img: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=800&q=80', desc: 'Deepest black with a subtle matte sheen for high-end luxury interiors.' },
+  { name: 'Slate Blue', hex: '#4a6fa5', img: 'https://images.unsplash.com/photo-1550584552-463ff780763c?w=800&q=80', desc: 'A softer, muted blue that brings a sense of calm to office spaces.' },
+  { name: 'Silver Cloud', hex: '#d1d5db', img: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80', desc: 'Bright and airy. Perfect for minimal "Apple-style" retail environments.' }
+];
+
+const swatchGrid = document.getElementById('swatchGrid');
+const mainImage = document.getElementById('mainImage');
+const previewImage = document.getElementById('previewImage');
+const colorLabel = document.getElementById('colorLabel');
+const colorDesc = document.getElementById('colorDesc');
+
+colors.forEach((color, index) => {
+  const btn = document.createElement('button');
+  btn.className = `swatch ${index === 0 ? 'active' : ''}`;
+  btn.style.backgroundColor = color.hex;
+  btn.onclick = () => {
+    document.querySelectorAll('.swatch').forEach(s => s.classList.remove('active'));
+    btn.classList.add('active');
+    
+    // Update Content
+    mainImage.style.opacity = '0';
+    previewImage.style.opacity = '0';
+    
+    setTimeout(() => {
+      mainImage.src = color.img;
+      previewImage.src = color.img;
+      colorLabel.textContent = color.name;
+      colorDesc.textContent = color.desc;
+      mainImage.style.opacity = '1';
+      previewImage.style.opacity = '1';
+    }, 300);
+  };
+  swatchGrid.appendChild(btn);
+});
+</script>
 
 </body>
 
