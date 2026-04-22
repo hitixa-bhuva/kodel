@@ -289,18 +289,26 @@ window.onload = () => {
    8) our blog page 
 ---------------------------------------------------*/
 document.addEventListener("DOMContentLoaded", () => {
-  const tabs = document.querySelectorAll('.category-btn'); 
+  const tabs = document.querySelectorAll('.category-btn');
   const blogs = document.querySelectorAll('.blog-item');
+
+  // Guard clause: If there are no tabs, don't run the script
+  if (tabs.length === 0) return;
 
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
       const category = tab.dataset.category;
-      tabs.forEach(t => t.classList.remove('active'));
 
+      // 1. Update Active State for Tabs
+      tabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
 
+      // 2. Filter Blog Items
       blogs.forEach(blog => {
-        const categories = blog.dataset.category.split(' ');
+        // Ensure data-category exists on the blog item to avoid errors
+        const blogCategoryAttr = blog.dataset.category || "";
+        const categories = blogCategoryAttr.split(' ');
+
         if (category === "All" || categories.includes(category)) {
           blog.style.display = "flex";
         } else {
@@ -310,5 +318,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  document.querySelector('.category-btn[data-category="All"]').classList.add('active');
+  // Safe way to set the initial state:
+  // We try to find the "All" button specifically. 
+  // If it's not found, we fall back to the first tab available.
+  const initialTab = document.querySelector('.category-btn[data-category="All"]') || tabs[0];
+  
+  if (initialTab) {
+    initialTab.click(); // This triggers the logic above automatically
+  }
 });

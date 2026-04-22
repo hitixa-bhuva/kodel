@@ -265,7 +265,7 @@
           <div class="mb-6">
             <span class="text-[#004071] font-bold uppercase tracking-widest text-sm mb-3 block">Born in India, Built for
               the World</span>
-            <h2 class="text-[#004071] text-3xl md:text-5xl font-semibold title-font mb-4 leading-tight">
+            <h2 class="leading-[100%] text-3xl md:text-5xl title-font font-semibold text-[#222222] mb-3">
               Our Thailand <br /> Flagship Showroom
             </h2>
             <h3 class="text-[#7a7a7a] text-lg md:text-xl font-semibold ">
@@ -347,9 +347,9 @@
     <div class="max-w-full mx-auto px-6 lg:px-28 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
 
       <!-- Right Image with Dots -->
-      <div class="order-1 lg:order-2 relative flex justify-center items-center">
+      <div class="order-1 lg:order-1 relative flex justify-center items-center">
         <div class="relative w-[480px] h-[354px] md:h-[440px] rounded-2xl overflow-hidden shadow-lg z-10">
-          <img id="productImage" src="assests/img/Home/product.png" alt="Product"
+          <img src="assests/img/Home/product.png" alt="Product"
             class="w-full h-full object-cover transition-all duration-500 rounded-2xl relative z-10">
           <div class="absolute inset-0 bg-gradient-to-t from-[#000000cc] to-[#00000000]"></div>
         </div>
@@ -433,17 +433,86 @@
     </div>
   </section>
   <!-- End Why Choose Our Leather -->
-
+ 
   <!-- Start our products section -->
-  <section class="py-14 md:py-16 hidden lg:block bg-white text-center relative overflow-hidden">
-    <div class="max-w-full mx-auto px-6 lg:px-28">
-      <h2 class="text-3xl md:text-5xl text-[#222222] font-semibold mb-3 title-font">Where Our Leather Used</h2>
-      <p class="text-[#7a7a7a] mb-6 desc-font font-medium  text-lg md:text-lg max-w-3xl mx-auto">
-        Versatile animal-free leather for every application. Discover specialized textures and strengths crafted for
-        vehicles, luxury interiors, and fashion-forward bags.
+  <section class="py-14 md:py-20 hidden lg:block bg-white text-center relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl md:text-5xl  text-[#222222] font-bold mb-3 title-font">Where Our Leather Use</h2>
+      <p class="text-[#7a7a7a] mb-10 desc-font font-medium  text-xl md:text-2xl">
+        Premium leather solutions crafted for every need
       </p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-[118px] items-center">
+
+        <div id="productList" class="space-y-4 text-left">
+
+          <div data-img="assests/img/Home/product.png"
+            data-desc="Finest quality leather for wallets, belts, and small goods"
+            class="product-card bg-primary text-white rounded-xl p-6 cursor-pointer transition-all duration-300 hover:shadow-lg active">
+            <div class="flex items-center justify-between">
+              <h3 class="text-2xl font-bold title-font">Accessories</h3>
+              <img src="assests/img/icon/arrow-up-right-round.svg" class="h-5 w-5 white-icon block" alt="arrow white">
+              <img src="assests/img/icon/arrow-up-right-round-gray.svg" class="h-5 w-5 gray-icon hidden"
+                alt="arrow gray">
+            </div>
+            <p class="text-xl md:text-lg font-medium desc-font opacity-90 desc-text block">
+              Finest quality leather for wallets, belts, and small goods
+            </p>
+          </div>
+
+          <div data-img="assests/img/Home/product-1.png" data-desc="Durable leather ideal for furniture and interiors"
+            class="product-card bg-gray-100 text-gray-800 rounded-xl p-6 cursor-pointer transition-all duration-300">
+            <div class="flex items-center justify-between">
+              <h3 class="text-2xl font-bold title-font">Upholstery</h3>
+              <img src="assests/img/icon/arrow-up-right-round.svg" class="h-5 w-5 white-icon hidden" alt="arrow white">
+              <img src="assests/img/icon/arrow-up-right-round-gray.svg" class="h-5 w-5 gray-icon block"
+                alt="arrow gray">
+            </div>
+            <p class="text-xl md:text-lg font-medium desc-font opacity-90 desc-text hidden">
+              Durable leather ideal for furniture and interiors
+            </p>
+          </div>
+
+          <div data-img="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTDpqmPQSnPrDjldrM4xfl8B88SthEUg8M3N-JxxbFtfCFZId8MnhVMM2oZFdudd_as_O4iBVD3XvpmvWX8RiNgDlDyvEam" data-desc="Durable leather ideal for furniture and interiors"
+            class="product-card bg-gray-100 text-gray-800 rounded-xl p-6 cursor-pointer transition-all duration-300">
+            <div class="flex items-center justify-between">
+              <h3 class="text-2xl font-bold title-font">Leather Seat Cover</h3>
+              <img src="assests/img/icon/arrow-up-right-round.svg" class="h-5 w-5 white-icon hidden" alt="arrow white">
+              <img src="assests/img/icon/arrow-up-right-round-gray.svg" class="h-5 w-5 gray-icon block"
+                alt="arrow gray">
+            </div>
+            <p class="text-xl md:text-lg font-medium desc-font opacity-90 desc-text hidden">
+              High-tensile leather that resists spills, dirt, and wear.
+            </p>
+          </div>
+
+          <div data-img="assests/img/Home/product-2.jpg" data-desc="Crafted for comfort, style, and lasting wear"
+            class="product-card bg-gray-100 text-gray-800 rounded-xl p-6 cursor-pointer transition-all duration-300">
+            <div class="flex items-center justify-between">
+              <h3 class="text-2xl font-bold title-font">Footwear</h3>
+              <img src="assests/img/icon/arrow-up-right-round.svg" class="h-5 w-5 white-icon hidden" alt="arrow white">
+              <img src="assests/img/icon/arrow-up-right-round-gray.svg" class="h-5 w-5 gray-icon block"
+                alt="arrow gray">
+            </div>
+            <p class="text-xl md:text-lg font-medium desc-font opacity-90 desc-text hidden">
+              Crafted for comfort, style, and lasting wear
+            </p>
+          </div>
+
+          <div data-img="assests/img/Home/product-3.webp" data-desc="Elegant leather crafted for durability and design"
+            class="product-card bg-gray-100 text-gray-800 rounded-xl p-6 cursor-pointer transition-all duration-300">
+            <div class="flex items-center justify-between">
+              <h3 class="text-2xl font-bold title-font">Bags & Luggage</h3>
+              <img src="assests/img/icon/arrow-up-right-round.svg" class="h-5 w-5 white-icon hidden" alt="arrow white">
+              <img src="assests/img/icon/arrow-up-right-round-gray.svg" class="h-5 w-5 gray-icon block"
+                alt="arrow gray">
+            </div>
+            <p class="text-xl md:text-lg font-medium desc-font opacity-90 desc-text hidden">
+              Elegant leather crafted for durability and design
+            </p>
+          </div>
+
+        </div>
 
         <div class="relative flex justify-center items-center">
           <div class="relative w-[564px] h-[513px] rounded-2xl overflow-hidden shadow-lg relative z-10">
@@ -459,76 +528,18 @@
           </div>
         </div>
 
-        <div id="productList" class="space-y-4 text-left">
-
-          <div data-img="assests/img/Home/product.png"
-            data-desc="Focus on UV resistance (Thailand's sun) and high-heat durability."
-            class="product-card bg-primary text-white rounded-xl p-6 cursor-pointer transition-all duration-300 hover:shadow-lg active">
-            <div class="flex items-center justify-between">
-              <h3 class="text-2xl font-semibold title-font">Automotive</h3>
-              <img src="assests/img/icon/arrow-up-right-round.svg" class="h-5 w-5 white-icon block" alt="arrow white">
-              <img src="assests/img/icon/arrow-up-right-round-gray.svg" class="h-5 w-5 gray-icon hidden"
-                alt="arrow gray">
-            </div>
-            <p class="text-lg  font-medium desc-font opacity-90 desc-text block">
-              Made for maximum durability and long-term wear
-            </p>
-          </div>
-
-          <div data-img="assests/img/Home/product-1.png"
-            data-desc="Focus on large rolls for seamless sofas and soft-touch comfort."
-            class="product-card bg-gray-100 text-gray-800 rounded-xl p-6 cursor-pointer transition-all duration-300">
-            <div class="flex items-center justify-between">
-              <h3 class="text-2xl font-semibold title-font">Furniture</h3>
-              <img src="assests/img/icon/arrow-up-right-round.svg" class="h-5 w-5 white-icon hidden" alt="arrow white">
-              <img src="assests/img/icon/arrow-up-right-round-gray.svg" class="h-5 w-5 gray-icon block"
-                alt="arrow gray">
-            </div>
-            <p class="text-lg  font-medium desc-font opacity-90 desc-text hidden">
-              Focus on large rolls for seamless sofas and soft-touch comfort.
-            </p>
-          </div>
-
-          <div data-img="assests/img/Home/product-2.jpg" data-desc="Focus on " Temper" (structure) and fashion-forward
-            textures."
-            class="product-card bg-gray-100 text-gray-800 rounded-xl p-6 cursor-pointer transition-all duration-300">
-            <div class="flex items-center justify-between">
-              <h3 class="text-2xl font-semibold title-font">Bags & Accessories</h3>
-              <img src="assests/img/icon/arrow-up-right-round.svg" class="h-5 w-5 white-icon hidden" alt="arrow white">
-              <img src="assests/img/icon/arrow-up-right-round-gray.svg" class="h-5 w-5 gray-icon block"
-                alt="arrow gray">
-            </div>
-            <p class="text-lg  font-medium desc-font opacity-90 desc-text hidden">
-              Focus on "Temper" (structure) and fashion-forward textures.
-            </p>
-          </div>
-
-          <div data-img="assests/img/Home/product-3.webp"
-            data-desc="When the user moves their mouse over a card, the image should"
-            class="product-card bg-gray-100 text-gray-800 rounded-xl p-6 cursor-pointer transition-all duration-300">
-            <div class="flex items-center justify-between">
-              <h3 class="text-2xl font-semibold title-font">Interactions</h3>
-              <img src="assests/img/icon/arrow-up-right-round.svg" class="h-5 w-5 white-icon hidden" alt="arrow white">
-              <img src="assests/img/icon/arrow-up-right-round-gray.svg" class="h-5 w-5 gray-icon block"
-                alt="arrow gray">
-            </div>
-            <p class="text-lg  font-medium desc-font opacity-90 desc-text hidden">
-              When the user moves their mouse over a card, the image should
-            </p>
-          </div>
-
-        </div>
-
       </div>
     </div>
   </section>
 
   <!-- Mobile View Product Cards -->
-  <section class="py-14 md:py-16 block lg:hidden px-4">
-    <h2 class="text-center text-3xl md:text-5xl  text-[#222222] font-semibold mb-3 title-font">Where Our Leather Used
+  <section class="py-14 md:py-20 block lg:hidden px-4">
+    <h2 class="text-center text-3xl md:text-5xl  text-[#222222] font-bold mb-3 title-font">Where Our Leather Use
     </h2>
-    <p class="text-center text-[#7a7a7a] mb-10 desc-font font-medium  text-[20px] md:text-2xl">Premium leather solutions
-      crafted for every need</p>
+    <p class="text-center text-[#7a7a7a] mb-10 desc-font font-medium  text-xl md:text-2xl">Premium leather solutions
+      crafted
+      for every
+      need</p>
     <div class="space-y-4 max-w-xl mx-auto">
 
       <!-- Active Card -->
@@ -536,9 +547,9 @@
         class="mobile-product-card bg-primary text-white rounded-xl overflow-hidden cursor-pointer transition-all duration-300">
         <div class="p-5 flex justify-between items-center">
           <div class="text-left">
-            <h3 class="text-lg font-semibold title-font">Automotive</h3>
-            <p class="mobile-card-desc text-[18px] opacity-90">Focus on UV resistance (Thailand's sun) and high-heat
-              durability.
+            <h3 class="text-lg font-bold title-font">Accessories</h3>
+            <p class="mobile-card-desc text-[18px] opacity-90">Finest quality leather for wallets, belts, and small
+              goods
             </p>
           </div>
           <!-- <img src="assests/img/icon/arrow-up-right-round.svg" class="whiteicon h-5 w-5" alt="arrow"> -->
@@ -553,12 +564,23 @@
         class="mobile-product-card bg-gray-100 text-gray-800 rounded-xl  overflow-hidden cursor-pointer transition-all duration-300">
         <div class="p-5 flex justify-between items-center">
           <div class="text-left">
-            <h3 class="text-lg font-semibold title-font">Furniture</h3>
-            <p class="mobile-card-desc hidden text-[18px] opacity-90">Focus on large rolls for seamless sofas and
-              soft-touch comfort.
+            <h3 class="text-lg font-bold title-font">Upholstery</h3>
+            <p class="mobile-card-desc hidden text-[18px] opacity-90">Durable leather ideal for furniture and interiors
             </p>
           </div>
           <img src="assests/img/icon/arrow-up-right-round-gray.svg" class="h-5 w-5" alt="arrow">
+        </div>
+        <img src="assests/img/Home/product-1.png" class="mobile-card-image hidden w-full h-[240px] object-cover mt-3">
+      </div>
+      <div
+        class="mobile-product-card bg-gray-100 text-gray-800 rounded-xl  overflow-hidden cursor-pointer transition-all duration-300">
+        <div class="p-5 flex justify-between items-center">
+          <div class="text-left">
+            <h3 class="text-lg font-bold title-font">Leather Seat Cover</h3>
+            <p class="mobile-card-desc hidden text-[18px] opacity-90">High-tensile leather that resists spills, dirt, and wear.
+            </p>
+          </div>
+          <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTDpqmPQSnPrDjldrM4xfl8B88SthEUg8M3N-JxxbFtfCFZId8MnhVMM2oZFdudd_as_O4iBVD3XvpmvWX8RiNgDlDyvEam" class="h-5 w-5" alt="arrow">
         </div>
         <img src="assests/img/Home/product-1.png" class="mobile-card-image hidden w-full h-[240px] object-cover mt-3">
       </div>
@@ -567,9 +589,8 @@
         class="mobile-product-card bg-gray-100 text-gray-800 rounded-xl overflow-hidden cursor-pointer transition-all duration-300">
         <div class="p-5 flex justify-between items-center">
           <div class="text-left">
-            <h3 class="text-lg font-semibold title-font">Bags & Accessories</h3>
-            <p class="mobile-card-desc hidden text-[18px] opacity-90">Focus on "Temper" (structure) and fashion-forward
-              textures.</p>
+            <h3 class="text-lg font-bold title-font">Footwear</h3>
+            <p class="mobile-card-desc hidden text-[18px] opacity-90">Crafted for comfort, style, and lasting wear</p>
           </div>
           <img src="assests/img/icon/arrow-up-right-round-gray.svg" class="h-5 w-5" alt="arrow">
         </div>
@@ -580,9 +601,8 @@
         class="mobile-product-card bg-gray-100 text-gray-800 rounded-xl overflow-hidden cursor-pointer transition-all duration-300">
         <div class="p-5 flex justify-between items-center">
           <div class="text-left">
-            <h3 class="text-lg font-semibold title-font">Interactions</h3>
-            <p class="mobile-card-desc hidden text-[18px] opacity-90">When the user moves their mouse over a card, the
-              image should
+            <h3 class="text-lg font-bold title-font">Bags & Luggage</h3>
+            <p class="mobile-card-desc hidden text-[18px] opacity-90">Elegant leather crafted for durability and design
             </p>
           </div>
           <img src="assests/img/icon/arrow-up-right-round-gray.svg" class="h-5 w-5" alt="arrow">
@@ -663,7 +683,6 @@
   <!-- End Quality Assurance Section -->
 
 
-
   <!-- Start What Our Customers Say Section -->
   <!-- Start desktopp -->
   <section class="relative bg-[#0B2239] h-screen  text-white  overflow-hidden relative  hidden lg:block">
@@ -694,14 +713,13 @@
             <div class="bg-white text-gray-800 rounded-2xl p-9 shadow-md">
               <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
               <p class="text-[#222222] font-medium desc-font text-[20px] mb-4">
-                Our customers are at the heart of everything we do. We listen to your needs and tailor
-                our services to meet them.
+                Beautiful products. Lots of varieties and colours. Reasonable price.
               </p>
               <div class="flex items-center gap-3">
                 <div class="w-16 h-16 rounded-full bg-gray-200"></div>
                 <div>
-                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Floyd Miles</h4>
-                  <p class="text-[#7a7a7a] text-lg font-medium">Accountant</p>
+                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Sontosh Gtm</h4>
+                  <!-- <p class="text-[#7a7a7a] text-lg font-medium">Accountant</p> -->
                 </div>
               </div>
             </div>
@@ -709,13 +727,13 @@
             <div class="bg-white text-gray-800 rounded-2xl p-9 shadow-md">
               <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
               <p class="text-[#222222] font-medium desc-font text-[20px] mb-4">
-                Exceptional quality and customer support. They truly go above and beyond.
+               I wanted to share my positive experience at this shop. Initially, I was worried about choosing the right shade and leather pattern, but the owner was very friendly and helped me find what I liked best. All the staff were also very helpful, showing me the stock and preparing the goods quickly.
               </p>
               <div class="flex items-center gap-3">
                 <div class="w-16 h-16 rounded-full bg-gray-200"></div>
                 <div>
-                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Dianne Russell</h4>
-                  <p class="text-[#7a7a7a] text-lg font-medium">Designer</p>
+                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">ด.ญ. พอร์ บิตรา</h4>
+                  <!-- <p class="text-[#7a7a7a] text-lg font-medium">Designer</p> -->
                 </div>
               </div>
             </div>
@@ -723,14 +741,14 @@
             <div class="bg-white text-gray-800 rounded-2xl p-9 shadow-md">
               <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
               <p class="text-[#222222] font-medium desc-font text-[20px] mb-4">
-                Loved their craftsmanship and professionalism. Highly recommend!
+                This has become my go-to shop. The service is incredibly impressive. The owner is easy to talk to and gives very clear technical advice on using PVC leather (better advice than just trying to sell something). The staff are well-trained, efficient, and helpful, meticulously inspecting products before delivery.
               </p>
               <div class="flex items-center gap-3">
                 <div class="w-16 h-16 rounded-full bg-gray-200"></div>
                 <div>
-                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Leslie Alexander
+                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Kee Kaa
                   </h4>
-                  <p class="text-[#7a7a7a] text-lg font-medium">Entrepreneur</p>
+                  <!-- <p class="text-[#7a7a7a] text-lg font-medium">Entrepreneur</p> -->
                 </div>
               </div>
             </div>
@@ -739,42 +757,26 @@
             <div class="bg-white text-gray-800 rounded-2xl p-9 shadow-md">
               <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
               <p class="text-[#222222] font-medium desc-font text-[20px] mb-4">
-                Our customers are at the heart of everything we do. We listen to your needs and tailor
-                our services to meet them.
+                I was impressed from the moment I stepped into the shop. The owner greeted me personally and was very friendly; I didn't feel pressured at all. They made an effort to ask about my needs and the type of use I would be putting the leather to, so they could recommend the most suitable specifications.
               </p>
               <div class="flex items-center gap-3">
                 <div class="w-16 h-16 rounded-full bg-gray-200"></div>
                 <div>
-                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Floyd Miles</h4>
-                  <p class="text-[#7a7a7a] text-lg font-medium">Accountant</p>
+                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Bnn Bigc</h4>
+                  <!-- <p class="text-[#7a7a7a] text-lg font-medium">Accountant</p> -->
                 </div>
               </div>
             </div>
             <div class="bg-white text-gray-800 rounded-2xl p-9 shadow-md">
               <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
               <p class="text-[#222222] font-medium desc-font text-[20px] mb-4">
-                Our customers are at the heart of everything we do. We listen to your needs and tailor
-                our services to meet them.
+                The product is good, the shipping service is fast, and any problems are resolved very quickly.
               </p>
               <div class="flex items-center gap-3">
                 <div class="w-16 h-16 rounded-full bg-gray-200"></div>
                 <div>
-                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Floyd Miles</h4>
-                  <p class="text-[#7a7a7a] text-lg font-medium">Accountant</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="bg-white text-gray-800 rounded-2xl p-9 shadow-md">
-              <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
-              <p class="text-[#222222] font-medium desc-font text-[20px] mb-4">
-                Exceptional quality and customer support. They truly go above and beyond.
-              </p>
-              <div class="flex items-center gap-3">
-                <div class="w-16 h-16 rounded-full bg-gray-200"></div>
-                <div>
-                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Dianne Russell</h4>
-                  <p class="text-[#7a7a7a] text-lg font-medium">Designer</p>
+                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Sasithon Khutsuwan</h4>
+                  <!-- <p class="text-[#7a7a7a] text-lg font-medium">Accountant</p> -->
                 </div>
               </div>
             </div>
@@ -782,14 +784,27 @@
             <div class="bg-white text-gray-800 rounded-2xl p-9 shadow-md">
               <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
               <p class="text-[#222222] font-medium desc-font text-[20px] mb-4">
-                Loved their craftsmanship and professionalism. Highly recommend!
+                This is a truly heartfelt review. The service at this shop is exceptional. The staff are very attentive to customers, and the owner is incredibly friendly and helpful, recommending suitable items without being pushy. I'm impressed with both the product quality and the service. I will definitely be back to support this shop again next time.
               </p>
               <div class="flex items-center gap-3">
                 <div class="w-16 h-16 rounded-full bg-gray-200"></div>
                 <div>
-                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Leslie Alexander
-                  </h4>
-                  <p class="text-[#7a7a7a] text-lg font-medium">Entrepreneur</p>
+                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">kamalar puri</h4>
+                  <!-- <p class="text-[#7a7a7a] text-lg font-medium">Designer</p> -->
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white text-gray-800 rounded-2xl p-9 shadow-md">
+              <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
+              <p class="text-[#222222] font-medium desc-font text-[20px] mb-4">
+                The staff provided excellent service and gave complete information. The owner was very welcoming and friendly, making shopping a comfortable experience. They have a wide selection of PVC leather at reasonable prices. If you're looking for PVC leather goods, I highly recommend this shop. Service is 10/10!
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-16 h-16 rounded-full bg-gray-200"></div>
+                <div>
+                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Ab Dul</h4>
+                  <!-- <p class="text-[#7a7a7a] text-lg font-medium">Entrepreneur</p> -->
                 </div>
               </div>
             </div>
@@ -802,13 +817,13 @@
             <div class="bg-white text-gray-800 rounded-2xl p-9 shadow-md">
               <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
               <p class="text-[#222222] font-medium desc-font text-[20px] mb-4">
-                Their products are stylish and durable. It’s exactly what I needed.
+                I was very impressed with this shop. The owner is incredibly kind and friendly, easy to talk to, and gives great recommendations. The staff are also very helpful, cheerful, and willing to help with anything you need. If you're looking for high-quality PVC leather and friendly service, I highly recommend this shop. You won't be disappointed!
               </p>
               <div class="flex items-center gap-3">
                 <div class="w-16 h-16 rounded-full bg-gray-200"></div>
                 <div>
-                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Arlene McCoy</h4>
-                  <p class="text-[#7a7a7a] text-lg font-medium">Manager</p>
+                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Fake balon</h4>
+                  <!-- <p class="text-[#7a7a7a] text-lg font-medium">Manager</p> -->
                 </div>
               </div>
             </div>
@@ -816,13 +831,13 @@
             <div class="bg-white text-gray-800 rounded-2xl p-9 shadow-md">
               <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
               <p class="text-[#222222] font-medium desc-font text-[20px] mb-4">
-                A wonderful experience from start to finish. True professionals!
+                This shop provides excellent customer service. The owner is super friendly, the staff are helpful, and the products are of high quality and have beautiful colors. They offer a wide variety of products, such as faux leather for bags, sofas, and car seats.
               </p>
               <div class="flex items-center gap-3">
                 <div class="w-16 h-16 rounded-full bg-gray-200"></div>
                 <div>
-                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Jacob Jones</h4>
-                  <p class="text-[#7a7a7a] text-lg font-medium">Consultant</p>
+                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Bjay Bjay</h4>
+                  <!-- <p class="text-[#7a7a7a] text-lg font-medium">Consultant</p> -->
                 </div>
               </div>
             </div>
@@ -830,13 +845,13 @@
             <div class="bg-white text-gray-800 rounded-2xl p-9 shadow-md">
               <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
               <p class="text-[#222222] font-medium desc-font text-[20px] mb-4">
-                Attention to detail and care in every product. Amazing team!
+               The staff here were also very attentive. They were enthusiastic in helping me find leather samples and compare colors with incredible patience. Even though I took a long time choosing, they remained cheerful and provided excellent service. The quality of the products is great, and the price is worth the service received
               </p>
               <div class="flex items-center gap-3">
                 <div class="w-16 h-16 rounded-full bg-gray-200"></div>
                 <div>
-                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Jenny Wilson</h4>
-                  <p class="text-[#7a7a7a] text-lg font-medium">Architect</p>
+                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Bnn Bigc</h4>
+                  <!-- <p class="text-[#7a7a7a] text-lg font-medium">Architect</p> -->
                 </div>
               </div>
             </div>
@@ -845,40 +860,26 @@
             <div class="bg-white text-gray-800 rounded-2xl p-9 shadow-md">
               <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
               <p class="text-[#222222] font-medium desc-font text-[20px] mb-4">
-                Their products are stylish and durable. It’s exactly what I needed.
+                 The staff are well-trained, efficient, and helpful, meticulously inspecting products before delivery.
               </p>
               <div class="flex items-center gap-3">
                 <div class="w-16 h-16 rounded-full bg-gray-200"></div>
                 <div>
-                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Arlene McCoy</h4>
-                  <p class="text-[#7a7a7a] text-lg font-medium">Manager</p>
+                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Kee Kaa</h4>
+                  <!-- <p class="text-[#7a7a7a] text-lg font-medium">Manager</p> -->
                 </div>
               </div>
             </div>
             <div class="bg-white text-gray-800 rounded-2xl p-9 shadow-md">
               <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
               <p class="text-[#222222] font-medium desc-font text-[20px] mb-4">
-                Their products are stylish and durable. It’s exactly what I needed.
+               What I felt was that they treat all customers equally, regardless of whether they are large or small businesses. This kind of service is rare these days. If you need high-quality PVC leather with premium service, you must come here. Highly recommended!
               </p>
               <div class="flex items-center gap-3">
                 <div class="w-16 h-16 rounded-full bg-gray-200"></div>
                 <div>
-                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Arlene McCoy</h4>
-                  <p class="text-[#7a7a7a] text-lg font-medium">Manager</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="bg-white text-gray-800 rounded-2xl p-9 shadow-md">
-              <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
-              <p class="text-[#222222] font-medium desc-font text-[20px] mb-4">
-                A wonderful experience from start to finish. True professionals!
-              </p>
-              <div class="flex items-center gap-3">
-                <div class="w-16 h-16 rounded-full bg-gray-200"></div>
-                <div>
-                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Jacob Jones</h4>
-                  <p class="text-[#7a7a7a] text-lg font-medium">Consultant</p>
+                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">ด.ญ. พอร์ บิตรา</h4>
+                  <!-- <p class="text-[#7a7a7a] text-lg font-medium">Manager</p> -->
                 </div>
               </div>
             </div>
@@ -886,13 +887,27 @@
             <div class="bg-white text-gray-800 rounded-2xl p-9 shadow-md">
               <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
               <p class="text-[#222222] font-medium desc-font text-[20px] mb-4">
-                Attention to detail and care in every product. Amazing team!
+                 Anyone looking for a source of high-quality PVC leather with excellent after-sales service shouldn't miss this shop. I'm truly impressed.
               </p>
               <div class="flex items-center gap-3">
                 <div class="w-16 h-16 rounded-full bg-gray-200"></div>
                 <div>
-                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Jenny Wilson</h4>
-                  <p class="text-[#7a7a7a] text-lg font-medium">Architect</p>
+                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">Kee Kaa</h4>
+                  <!-- <p class="text-[#7a7a7a] text-lg font-medium">Consultant</p> -->
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white text-gray-800 rounded-2xl p-9 shadow-md">
+              <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
+              <p class="text-[#222222] font-medium desc-font text-[20px] mb-4">
+               I will definitely be back to support this shop again next time.
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-16 h-16 rounded-full bg-gray-200"></div>
+                <div>
+                  <h4 class="font-semibold text-[#222222] text-[20px] title-font">kamalar puri</h4>
+                  <!-- <p class="text-[#7a7a7a] text-lg font-medium">Architect</p> -->
                 </div>
               </div>
             </div>
@@ -930,14 +945,13 @@
           <div class="bg-white text-gray-800 rounded-2xl p-5 md:p-9 shadow-md min-w-[280px] snap-center">
             <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
             <p class="text-[#374151] font-medium desc-font text-[18px] mb-4">
-              Our customers are at the heart of everything we do. We listen to your needs and tailor our services to
-              meet them.
+             Beautiful products. Lots of varieties and colours. Reasonable price
             </p>
             <div class="flex items-center gap-3">
               <div class="w-12 h-12 rounded-full bg-gray-200"></div>
               <div>
-                <h4 class="font-semibold text-[#222222] text-[18px] title-font">Floyd Miles</h4>
-                <p class="text-[#7a7a7a] text-base font-medium">Accountant</p>
+                <h4 class="font-semibold text-[#222222] text-[18px] title-font">Sontosh Gtm</h4>
+                <!-- <p class="text-[#7a7a7a] text-base font-medium">Accountant</p> -->
               </div>
             </div>
           </div>
@@ -945,13 +959,13 @@
           <div class="bg-white text-gray-800 rounded-2xl p-5 md:p-9 shadow-md min-w-[280px] snap-center">
             <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
             <p class="text-[#374151] font-medium desc-font text-[18px] mb-4">
-              Exceptional quality and customer support. They truly go above and beyond.
+              I wanted to share my positive experience at this shop. Initially, I was worried about choosing the right shade and leather pattern, but the owner was very friendly and helped me find what I liked best
             </p>
             <div class="flex items-center gap-3">
               <div class="w-12 h-12 rounded-full bg-gray-200"></div>
               <div>
-                <h4 class="font-semibold text-[#222222] text-[18px] title-font">Dianne Russell</h4>
-                <p class="text-[#7a7a7a] text-base font-medium">Designer</p>
+                <h4 class="font-semibold text-[#222222] text-[18px] title-font">ด.ญ. พอร์ บิตรา</h4>
+                <!-- <p class="text-[#7a7a7a] text-base font-medium">Designer</p> -->
               </div>
             </div>
           </div>
@@ -959,13 +973,13 @@
           <div class="bg-white text-gray-800 rounded-2xl p-5 md:p-9 shadow-md min-w-[280px] snap-center">
             <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
             <p class="text-[#374151] font-medium desc-font text-[18px] mb-4">
-              Loved their craftsmanship and professionalism. Highly recommend!
+              This has become my go-to shop. The service is incredibly impressive. The owner is easy to talk to and gives very clear technical advice on using PVC leather (better advice than just trying to sell something)
             </p>
             <div class="flex items-center gap-3">
               <div class="w-12 h-12 rounded-full bg-gray-200"></div>
               <div>
-                <h4 class="font-semibold text-[#222222] text-[18px] title-font">Leslie Alexander</h4>
-                <p class="text-[#7a7a7a] text-base font-medium">Entrepreneur</p>
+                <h4 class="font-semibold text-[#222222] text-[18px] title-font">Kee Kaa</h4>
+                <!-- <p class="text-[#7a7a7a] text-base font-medium">Entrepreneur</p> -->
               </div>
             </div>
           </div>
@@ -973,14 +987,13 @@
           <div class="bg-white text-gray-800 rounded-2xl p-5 md:p-9 shadow-md min-w-[280px] snap-center">
             <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
             <p class="text-[#374151] font-medium desc-font text-[18px] mb-4">
-              Our customers are at the heart of everything we do. We listen to your needs and tailor our services to
-              meet them.
+              I was impressed from the moment I stepped into the shop. The owner greeted me personally and was very friendly; I didn't feel pressured at all. They made an effort to ask about my needs and the type of use I would be putting the leather to, so they could recommend the most suitable specifications.
             </p>
             <div class="flex items-center gap-3">
               <div class="w-12 h-12 rounded-full bg-gray-200"></div>
               <div>
-                <h4 class="font-semibold text-[#222222] text-[18px] title-font">Floyd Miles</h4>
-                <p class="text-[#7a7a7a] text-base font-medium">Accountant</p>
+                <h4 class="font-semibold text-[#222222] text-[18px] title-font">Bnn Bigc</h4>
+                <!-- <p class="text-[#7a7a7a] text-base font-medium">Accountant</p> -->
               </div>
             </div>
           </div>
@@ -988,13 +1001,13 @@
           <div class="bg-white text-gray-800 rounded-2xl p-5 md:p-9 shadow-md min-w-[280px] snap-center">
             <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
             <p class="text-[#374151] font-medium desc-font text-[18px] mb-4">
-              Exceptional quality and customer support. They truly go above and beyond.
+             The product is good, the shipping service is fast, and any problems are resolved very quickly.
             </p>
             <div class="flex items-center gap-3">
               <div class="w-12 h-12 rounded-full bg-gray-200"></div>
               <div>
-                <h4 class="font-semibold text-[#222222] text-[18px] title-font">Dianne Russell</h4>
-                <p class="text-[#7a7a7a] text-base font-medium">Designer</p>
+                <h4 class="font-semibold text-[#222222] text-[18px] title-font">Sasithon Khutsuwan</h4>
+                <!-- <p class="text-[#7a7a7a] text-base font-medium">Designer</p> -->
               </div>
             </div>
           </div>
@@ -1002,13 +1015,13 @@
           <div class="bg-white text-gray-800 rounded-2xl p-5 md:p-9 shadow-md min-w-[280px] snap-center">
             <div class="flex mb-4 text-[#FFC107]">⭐ ⭐ ⭐ ⭐ ⭐</div>
             <p class="text-[#374151] font-medium desc-font text-[18px] mb-4">
-              Loved their craftsmanship and professionalism. Highly recommend!
+               All the staff were also very helpful, showing me the stock and preparing the goods quickly.
             </p>
             <div class="flex items-center gap-3">
               <div class="w-12 h-12 rounded-full bg-gray-200"></div>
               <div>
-                <h4 class="font-semibold text-[#222222] text-[18px] title-font">Leslie Alexander</h4>
-                <p class="text-[#7a7a7a] text-base font-medium">Entrepreneur</p>
+                <h4 class="font-semibold text-[#222222] text-[18px] title-font">ด.ญ. พอร์ บิตรา</h4>
+                <!-- <p class="text-[#7a7a7a] text-base font-medium">Entrepreneur</p> -->
               </div>
             </div>
           </div>
