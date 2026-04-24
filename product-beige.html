@@ -113,13 +113,11 @@
       </div>
 
       <ul class="flex flex-col items-start space-y-4 p-6 text-gray-700 font-medium">
-        <li><a href="index.html" class="text-primary">Home</a></li>
-        <li><a href="about.html" class="hover:text-primary">About Us</a></li>
-        <li><a href="product.html" class="hover:text-primary">Collection </a></li>
-        <!-- <li><a href="Manufacturing.html" class="hover:text-primary">Manufacturing</a></li>
-        <li><a href="DealerDistributorApp.html" class="hover:text-primary">Dealer App</a></li> -->
-        <li><a href="ourBlog.html" class="hover:text-primary">Blog</a></li>
-        <li><a href="contact.html" class="hover:text-primary">Contact</a></li>
+        <li><a href="index.html" class="text-primary hover:text-primary transition-colors">Home</a></li>
+        <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
+        <li><a href="product.html" class="hover:text-primary transition-colors">Collection</a></li>
+        <li><a href="ourBlog.html" class="hover:text-primary transition-colors">Blog</a></li>
+        <li><a href="contact.html" class="hover:text-primary transition-colors">Contact</a></li>
       </ul>
 
       <div class="mt-auto px-6 pb-6 border-t pt-4 space-y-3">
@@ -181,312 +179,261 @@
   </nav>
   <!-- End top nav bar -->
 
-  <!-- Start hero banner section -->
-  <section class="relative h-[500px] lg:h-[450px] flex items-center justify-start text-white bg-cover bg-center"
-    style="background-image: url('./assests/img/Home/hero-banner.png');">
-    <div class="absolute inset-0 bg-gradient-to-l from-[#0B314E00] via-[#515e6b] to-[#0C3D62] "></div>
-    <div class="relative z-10 max-w-[350px] md:max-w-3xl w-full text-start px-5 md:ps-18 lg:ps-20 pr-0">
-      <h2 class="title-font text-3xl md:text-5xl font-semibold mb-6 leading-tight">
-        Beeta Nappa
-      </h2>
-      <nav class="flex items-center gap-2 mb-4 text-base md:text-base font-bold  tracking-[0.15em] text-gray-400/80"
-        aria-label="Breadcrumb">
-        <a asp-controller="Home" asp-action="Index" class="transition-colors hover:text-white">Home</a>
-
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-        </svg>
-        <a asp-controller="Home" asp-action="Index" class="transition-colors hover:text-white">Collections</a>
-
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-        </svg>
-
-        <span class="text-white/60">Beeta Nappa</span>
-      </nav>
-    </div>
-    <img src="./assests/img/Home/hero-banner-wave.png" alt="Bottom Overlay"
-      class="absolute bottom-0 left-0 w-full pointer-events-none select-none">
-  </section>
-  <!-- End hero banner section -->
-
   <!-- Start our product -->
-  <section class="max-w-7xl mx-auto p-8 pt-5">
-    <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 border-b border-gray-100 pb-6">
-
-      <div class="text-left">
-        <h2 class="text-2xl md:text-3xl font-semibold title-font">Beeta Nappa</h2>
-      </div>
-
-      <div class="w-full md:max-w-md">
-        <div class="relative flex items-center gap-2">
-          <div class="relative flex-grow">
-            <input id="searchInput" type="text" placeholder="Search products"
-              class="font-medium w-full pl-12 pr-4 py-3 rounded-full border border-gray-200 shadow-md focus:outline-none focus:ring-2 focus:ring-gray-300">
-            <svg class="absolute left-4 top-3.5 w-5 h-5 text-gray-400" fill="none" stroke="currentColor"
-              stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M21 21l-4.35-4.35m1.6-5.65a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-            </svg>
-          </div>
-
-          <button class="font-semibold text-base hidden md:flex items-center bg-primary text-white px-5 py-2 rounded-full border-2 border-primary
-         transition-all duration-300 hover:bg-[#E2F0FB] hover:text-primary group">
-            Search
-          </button>
-        </div>
-      </div>
-
-    </div>
-
-    <div id="imageModal"
-      class="fixed inset-0 z-[100] hidden bg-black/95 flex items-center justify-center p-4 backdrop-blur-md">
-      <button onclick="closePreview()"
-        class="absolute top-8 right-8 text-white hover:text-gray-300 transition-all scale-150">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-      <img id="modalImg" src=""
-        class="max-w-full max-h-[90vh] rounded-lg shadow-2xl object-contain transition-transform duration-300">
-    </div>
-
-    <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-
-      <div class="group col-span-1 flex flex-col">
+  <section class="max-w-7xl mx-auto px-6 py-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-10">
+      <!-- Left side: Main Texture Image (1:1 Aspect Ratio) -->
+      <div class="relative overflow-hidden rounded-2xl shadow-xl border border-gray-100 bg-white aspect-square">
+        <img id="mainProductImg" src="./assests/img/callection/BeetaNappa/BEIGE.jpeg" alt="Beige Product"
+          class="w-full h-full object-cover transition-all duration-500">
         <div
-          class="relative aspect-square overflow-hidden rounded-[24px] border border-gray-100 bg-gray-50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
-          <img src="./assests/img/callection/BeetaNappa/BEIGE.jpeg" alt="Beige"
-            class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
-          <div
-            class="absolute inset-0 z-10 bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-center justify-center gap-4">
-            <button onclick="openPreview('./assests/img/callection/BeetaNappa/BEIGE.jpeg')"
-              class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#004071] shadow-xl transition-all duration-300 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 hover:scale-110 active:scale-95"><svg
-                xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-              </svg></button>
-            <a href="product-beige.html"
-              class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#004071] shadow-xl transition-all duration-300 translate-y-4 delay-75 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 hover:scale-110 active:scale-95"><svg
-                xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg></a>
-          </div>
-        </div>
-        <div class="mt-4 text-center">
-          <h3 class="text-lg font-bold text-gray-800 transition-colors group-hover:text-[#004071]">BEIGE</h3>
+          class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-primary px-4 py-1 rounded shadow-sm text-xs font-bold tracking-wider uppercase"
+          id="imgLabel">
+          Texture
         </div>
       </div>
 
-      <div class="group col-span-1 flex flex-col">
-        <div
-          class="relative aspect-square overflow-hidden rounded-[24px] border border-gray-100 bg-gray-50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
-          <img src="./assests/img/callection/BeetaNappa/BLACK.jpeg" alt="Black"
-            class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
-          <div
-            class="absolute inset-0 z-10 bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-center justify-center gap-4">
-            <button onclick="openPreview('./assests/img/callection/BeetaNappa/BLACK.jpeg')"
-              class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#004071] shadow-xl transition-all duration-300 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 hover:scale-110 active:scale-95"><svg
-                xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-              </svg></button>
-            <a href="product-black.html"
-              class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#004071] shadow-xl transition-all duration-300 translate-y-4 delay-75 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 hover:scale-110 active:scale-95"><svg
-                xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg></a>
+      <!-- Right side: Product Details Table -->
+      <div class="flex flex-col space-y-4">
+        <div>
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 title-font mb-4">Beige</h1>
+          <p class="text-primary font-semibold tracking-widest uppercase text-sm">Beeta Nappa Collection</p>
+        </div>
+
+        <div class="bg-[#F8FBFE] p-8 rounded-2xl border border-blue-50">
+          <div class="space-y-6">
+            <div class="flex justify-between items-center border-b border-gray-200 pb-2">
+              <span class="text-gray-500 font-medium uppercase tracking-wider text-xs">Collection</span>
+              <span class="text-gray-900 font-semibold text-lg">Beeta Nappa</span>
+            </div>
+            <div class="flex justify-between items-center border-b border-gray-200 pb-2">
+              <span class="text-gray-500 font-medium uppercase tracking-wider text-xs">Design Number</span>
+              <span class="text-gray-900 font-semibold text-lg">F-1</span>
+            </div>
+            <div class="flex justify-between items-center border-b border-gray-200 pb-2">
+              <span class="text-gray-500 font-medium uppercase tracking-wider text-xs">Temper Feel</span>
+              <span class="text-gray-900 font-semibold text-lg">as per available sample at our shop</span>
+            </div>
+            <div class="flex justify-between items-center border-b border-gray-200 pb-2">
+              <span class="text-gray-500 font-medium uppercase tracking-wider text-xs">Thickness</span>
+              <span class="text-gray-900 font-semibold text-lg">0.70 mm to 1.40mm</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="text-gray-500 font-medium uppercase tracking-wider text-xs">Finish</span>
+              <span class="text-gray-900 font-semibold text-lg">PVC Semi-PU & PU</span>
+            </div>
           </div>
         </div>
-        <div class="mt-4 text-center">
-          <h3 class="text-lg font-bold text-gray-800 transition-colors group-hover:text-[#004071]">BLACK</h3>
-        </div>
-      </div>
 
-      <div class="group col-span-1 flex flex-col">
-        <div
-          class="relative aspect-square overflow-hidden rounded-[24px] border border-gray-100 bg-gray-50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
-          <img src="./assests/img/callection/BeetaNappa/BROWN.jpeg" alt="Brown"
-            class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
-          <div
-            class="absolute inset-0 z-10 bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-center justify-center gap-4">
-            <button onclick="openPreview('./assests/img/callection/BeetaNappa/BROWN.jpeg')"
-              class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#004071] shadow-xl transition-all duration-300 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 hover:scale-110 active:scale-95"><svg
-                xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-              </svg></button>
-            <a href="product-brown.html"
-              class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#004071] shadow-xl transition-all duration-300 translate-y-4 delay-75 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 hover:scale-110 active:scale-95"><svg
-                xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg></a>
+        <!-- Thumbnails -->
+        <div class="space-y-4">
+          <p class="text-gray-500 font-bold text-[10px] uppercase tracking-[0.2em]">Select View</p>
+          <div class="flex gap-3">
+            <div onclick="changeImage(this, './assests/img/callection/BeetaNappa/BEIGE.jpeg', 'Texture')"
+              class="w-16 h-16 rounded-lg border-2 border-primary overflow-hidden cursor-pointer hover:opacity-80 transition-all thumbnail-btn active">
+              <img src="./assests/img/callection/BeetaNappa/BEIGE.jpeg" class="w-full h-full object-cover">
+            </div>
+            <div onclick="changeImage(this, './assests/img/callection/BeetaNappa/BEIGE2.jpeg', 'Visualization')"
+              class="w-16 h-16 rounded-lg border-2 border-transparent overflow-hidden cursor-pointer hover:opacity-80 transition-all thumbnail-btn">
+              <img src="./assests/img/callection/BeetaNappa/BEIGE2.jpeg" class="w-full h-full object-cover">
+            </div>
           </div>
         </div>
-        <div class="mt-4 text-center">
-          <h3 class="text-lg font-bold text-gray-800 transition-colors group-hover:text-[#004071]">BROWN</h3>
-        </div>
-      </div>
 
-      <div class="group col-span-1 flex flex-col">
-        <div
-          class="relative aspect-square overflow-hidden rounded-[24px] border border-gray-100 bg-gray-50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
-          <img src="./assests/img/callection/BeetaNappa/IVORY.jpeg" alt="Ivory"
-            class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
-          <div
-            class="absolute inset-0 z-10 bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-center justify-center gap-4">
-            <button onclick="openPreview('./assests/img/callection/BeetaNappa/IVORY.jpeg')"
-              class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#004071] shadow-xl transition-all duration-300 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 hover:scale-110 active:scale-95"><svg
-                xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-              </svg></button>
-            <a href="product-ivory.html"
-              class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#004071] shadow-xl transition-all duration-300 translate-y-4 delay-75 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 hover:scale-110 active:scale-95"><svg
-                xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg></a>
-          </div>
-        </div>
-        <div class="mt-4 text-center">
-          <h3 class="text-lg font-bold text-gray-800 transition-colors group-hover:text-[#004071]">IVORY</h3>
-        </div>
+        <button onclick="openEnquiryModal()"
+          class="bg-primary text-white px-8 py-3 rounded-full font-bold text-lg shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all w-fit flex items-center justify-center group">
+          Enquire Now
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2 transition-transform group-hover:translate-x-1"
+            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </button>
       </div>
-
-      <div class="group col-span-1 flex flex-col">
-        <div
-          class="relative aspect-square overflow-hidden rounded-[24px] border border-gray-100 bg-gray-50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
-          <img src="./assests/img/callection/BeetaNappa/R.BLUE.jpeg" alt="R.Blue"
-            class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
-          <div
-            class="absolute inset-0 z-10 bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-center justify-center gap-4">
-            <button onclick="openPreview('./assests/img/callection/BeetaNappa/R.BLUE.jpeg')"
-              class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#004071] shadow-xl transition-all duration-300 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 hover:scale-110 active:scale-95"><svg
-                xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-              </svg></button>
-            <a href="product-rblue.html"
-              class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#004071] shadow-xl transition-all duration-300 translate-y-4 delay-75 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 hover:scale-110 active:scale-95"><svg
-                xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg></a>
-          </div>
-        </div>
-        <div class="mt-4 text-center">
-          <h3 class="text-lg font-bold text-gray-800 transition-colors group-hover:text-[#004071]">R.BLUE</h3>
-        </div>
-      </div>
-
-      <div class="group col-span-1 flex flex-col">
-        <div
-          class="relative aspect-square overflow-hidden rounded-[24px] border border-gray-100 bg-gray-50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
-          <img src="./assests/img/callection/BeetaNappa/TAN.jpeg" alt="Tan"
-            class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
-          <div
-            class="absolute inset-0 z-10 bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-center justify-center gap-4">
-            <button onclick="openPreview('./assests/img/callection/BeetaNappa/TAN.jpeg')"
-              class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#004071] shadow-xl transition-all duration-300 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 hover:scale-110 active:scale-95"><svg
-                xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-              </svg></button>
-            <a href="product-tan.html"
-              class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#004071] shadow-xl transition-all duration-300 translate-y-4 delay-75 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 hover:scale-110 active:scale-95"><svg
-                xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg></a>
-          </div>
-        </div>
-        <div class="mt-4 text-center">
-          <h3 class="text-lg font-bold text-gray-800 transition-colors group-hover:text-[#004071]">TAN</h3>
-        </div>
-      </div>
-
-      <div class="group col-span-1 flex flex-col">
-        <div
-          class="relative aspect-square overflow-hidden rounded-[24px] border border-gray-100 bg-gray-50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
-          <img src="./assests/img/callection/BeetaNappa/WHITE.jpeg" alt="White"
-            class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
-          <div
-            class="absolute inset-0 z-10 bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-center justify-center gap-4">
-            <button onclick="openPreview('./assests/img/callection/BeetaNappa/WHITE.jpeg')"
-              class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#004071] shadow-xl transition-all duration-300 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 hover:scale-110 active:scale-95"><svg
-                xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-              </svg></button>
-            <a href="product-white.html"
-              class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#004071] shadow-xl transition-all duration-300 translate-y-4 delay-75 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 hover:scale-110 active:scale-95"><svg
-                xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg></a>
-          </div>
-        </div>
-        <div class="mt-4 text-center">
-          <h3 class="text-lg font-bold text-gray-800 transition-colors group-hover:text-[#004071]">WHITE</h3>
-        </div>
-      </div>
-    </div>
-
-    <div class="flex items-center justify-center space-x-3">
-      <button
-        class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100">
-        <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M7.98292 13.8362C8.04627 13.8995 8.09652 13.9747 8.1308 14.0575C8.16509 14.1403 8.18273 14.229 8.18273 14.3186C8.18273 14.4081 8.16509 14.4969 8.1308 14.5796C8.09652 14.6624 8.04627 14.7376 7.98292 14.8009C7.91958 14.8643 7.84437 14.9145 7.7616 14.9488C7.67883 14.9831 7.59012 15.0008 7.50054 15.0008C7.41095 15.0008 7.32224 14.9831 7.23947 14.9488C7.1567 14.9145 7.0815 14.8643 7.01815 14.8009L0.199968 7.98277C0.136575 7.91944 0.0862851 7.84425 0.0519731 7.76147C0.0176611 7.6787 0 7.58998 0 7.50038C0 7.41078 0.0176611 7.32205 0.0519731 7.23928C0.0862851 7.15651 0.136575 7.08132 0.199968 7.01799L7.01815 0.199811C7.14609 0.0718741 7.31961 -3.56656e-09 7.50054 0C7.68147 3.56656e-09 7.85499 0.0718741 7.98292 0.199811C8.11086 0.327748 8.18273 0.501267 8.18273 0.682197C8.18273 0.863127 8.11086 1.03665 7.98292 1.16458L1.64627 7.50038L7.98292 13.8362Z"
-            fill="black" />
-        </svg>
-      </button>
-      <button
-        class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100">1</button>
-      <button
-        class="w-10 h-10 flex items-center justify-center rounded-full bg-[#1A70B4] text-white font-semibold">2</button>
-      <button
-        class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100">3</button>
-      <button
-        class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100">4</button>
-      <button
-        class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100">5</button>
-      <button
-        class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100">
-        <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M0.199816 13.8362C0.136468 13.8995 0.0862188 13.9747 0.0519352 14.0575C0.0176516 14.1403 4.76837e-06 14.229 4.76837e-06 14.3186C4.76837e-06 14.4081 0.0176516 14.4969 0.0519352 14.5796C0.0862188 14.6624 0.136468 14.7376 0.199816 14.8009C0.263164 14.8643 0.338369 14.9145 0.421137 14.9488C0.503905 14.9831 0.592615 15.0008 0.682203 15.0008C0.77179 15.0008 0.8605 14.9831 0.943268 14.9488C1.02604 14.9145 1.10124 14.8643 1.16459 14.8009L7.98277 7.98277C8.04616 7.91944 8.09645 7.84425 8.13077 7.76147C8.16508 7.6787 8.18274 7.58998 8.18274 7.50038C8.18274 7.41078 8.16508 7.32205 8.13077 7.23928C8.09645 7.15651 8.04616 7.08132 7.98277 7.01799L1.16459 0.199811C1.03665 0.0718741 0.863133 -3.56656e-09 0.682203 0C0.501273 3.56656e-09 0.327753 0.0718741 0.199816 0.199811C0.0718794 0.327748 4.76837e-06 0.501267 4.76837e-06 0.682197C4.76837e-06 0.863127 0.0718794 1.03665 0.199816 1.16458L6.53646 7.50038L0.199816 13.8362Z"
-            fill="black" />
-        </svg>
-      </button>
     </div>
   </section>
-  <!-- End our product -->
+
+  <!-- Leather Care Instruction Section -->
+  <section class="pb-16 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div
+        class="relative bg-white rounded-[32px] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-gray-100 flex flex-col md:flex-row">
+
+        <div
+          class="md:w-1/3 relative overflow-hidden bg-gradient-to-br from-[#004071] to-[#002a4a] p-12 flex items-center justify-center text-center">
+          <div class="absolute inset-0 opacity-10"
+            style="background-image: url('https://www.transparenttextures.com/patterns/leather.png');"></div>
+          <div class="relative z-10 flex flex-col items-center">
+            <div
+              class="w-32 h-32 border-2 border-dashed border-white/30 rounded-full flex items-center justify-center mb-6 p-2">
+              <div class="w-full h-full bg-white rounded-full flex items-center justify-center shadow-2xl">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-[#004071]" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+            </div>
+            <h2 class="text-2xl font-bold text-white tracking-tight uppercase title-font">
+              Guaranteed <br /> <span class="font-light opacity-80">Durability</span>
+            </h2>
+            <div class="mt-4 h-1 w-12 bg-white/40 rounded-full"></div>
+          </div>
+        </div>
+
+        <div class="md:w-2/3 bg-white p-6 md:p-10">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="h-px bg-gray-200 flex-grow"></div>
+            <span class="text-[#004071] font-bold uppercase tracking-[0.2em] text-xs">Care Guide</span>
+            <div class="h-px bg-gray-200 flex-grow"></div>
+          </div>
+
+          <h3 class="text-3xl font-bold text-gray-900 mb-8 text-center md:text-left">Leather Care Instruction</h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+            <div class="group flex items-start gap-4 p-3 rounded-2xl transition-colors hover:bg-blue-50/50">
+              <div
+                class="flex-shrink-0 w-10 h-10 rounded-lg bg-blue-50 text-[#004071] flex items-center justify-center font-bold transition-transform group-hover:scale-110">
+                01</div>
+              <div>
+                <h4 class="font-bold text-gray-800">Clean</h4>
+                <p class="text-gray-600 text-sm leading-relaxed">Wipe with a soft cloth dampened with mild soap and
+                  lukewarm water.</p>
+              </div>
+            </div>
+
+            <div class="group flex items-start gap-4 p-3 rounded-2xl transition-colors hover:bg-blue-50/50">
+              <div
+                class="flex-shrink-0 w-10 h-10 rounded-lg bg-blue-50 text-[#004071] flex items-center justify-center font-bold transition-transform group-hover:scale-110">
+                02</div>
+              <div>
+                <h4 class="font-bold text-gray-800">Rinse</h4>
+                <p class="text-gray-600 text-sm leading-relaxed">Follow up with a clean, damp cloth to remove soap
+                  residue.</p>
+              </div>
+            </div>
+
+            <div class="group flex items-start gap-4 p-3 rounded-2xl transition-colors hover:bg-blue-50/50">
+              <div
+                class="flex-shrink-0 w-10 h-10 rounded-lg bg-blue-50 text-[#004071] flex items-center justify-center font-bold transition-transform group-hover:scale-110">
+                03</div>
+              <div>
+                <h4 class="font-bold text-gray-800">Dry</h4>
+                <p class="text-gray-600 text-sm leading-relaxed">Always air dry; avoid direct heat or sunlight.</p>
+              </div>
+            </div>
+
+            <div class="group flex items-start gap-4 p-3 rounded-2xl transition-colors hover:bg-blue-50/50">
+              <div
+                class="flex-shrink-0 w-10 h-10 rounded-lg bg-blue-50 text-[#004071] flex items-center justify-center font-bold transition-transform group-hover:scale-110">
+                04</div>
+              <div>
+                <h4 class="font-bold text-gray-800">Test</h4>
+                <p class="text-gray-600 text-sm leading-relaxed">Always spot-check a small, hidden area first.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 p-6 bg-red-50 rounded-[24px] border border-red-100/50 relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-2 opacity-10">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-red-600" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.268 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <h4 class="font-bold text-red-800 flex items-center gap-2">
+              <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+              Critical Maintenance
+            </h4>
+            <div class="mt-2 space-y-1">
+              <p class="text-red-700/80 text-sm"><strong>Avoid:</strong> Stay away from alcohol, harsh chemicals, or
+                abrasive cleaners.</p>
+              <p class="text-red-700/80 text-sm"><strong>Prohibition:</strong> Do not soak or saturate the material.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Enquiry Modal -->
+  <div id="enquiryModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+    <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeEnquiryModal()"></div>
+    <div class="relative bg-white w-full max-w-xl rounded-3xl shadow-2xl overflow-hidden transform transition-all">
+      <div class="bg-white p-6 md:p-8 rounded-3xl shadow-xl border border-gray-50">
+        <h3 class="text-3xl font-bold text-gray-900 mb-2 title-font">Product Enquiry</h3>
+        <p class="text-gray-500 mb-8">Have questions about this product? Send us a message and our team will get back to
+          you shortly.</p>
+
+        <form action="#" class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label class="text-sm font-semibold text-gray-700 ml-1">Full Name</label>
+              <input type="text" placeholder="John Doe"
+                class="w-full px-5 py-4 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+            </div>
+            <div class="space-y-2">
+              <label class="text-sm font-semibold text-gray-700 ml-1">Email Address</label>
+              <input type="email" placeholder="john@example.com"
+                class="w-full px-5 py-4 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <label class="text-sm font-semibold text-gray-700 ml-1">Subject</label>
+            <input type="text" value="Enquiry for Beige (F-1)" readonly
+              class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-gray-50 text-gray-600 cursor-not-allowed">
+          </div>
+
+          <div class="space-y-2">
+            <label class="text-sm font-semibold text-gray-700 ml-1">Message</label>
+            <textarea placeholder="Write your requirements here..." rows="4"
+              class="w-full px-5 py-4 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"></textarea>
+          </div>
+
+          <button type="submit"
+            class="w-full bg-primary text-white py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl hover:bg-opacity-90 transition-all">
+            Submit Enquiry
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function changeImage(el, src, label) {
+      const mainImg = document.getElementById('mainProductImg');
+      const imgLabel = document.getElementById('imgLabel');
+
+      mainImg.style.opacity = '0';
+      setTimeout(() => {
+        mainImg.src = src;
+        imgLabel.textContent = label;
+        mainImg.style.opacity = '1';
+      }, 200);
+
+      document.querySelectorAll('.thumbnail-btn').forEach(btn => {
+        btn.classList.remove('border-primary');
+        btn.classList.add('border-transparent');
+      });
+      el.classList.add('border-primary');
+      el.classList.remove('border-transparent');
+    }
+
+    function openEnquiryModal() {
+      const modal = document.getElementById('enquiryModal');
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeEnquiryModal() {
+      const modal = document.getElementById('enquiryModal');
+      modal.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+  </script>
+
 
   <!-- Start FOOTER SECTION -->
   <footer class="pt-16 md:pt-20 relative text-white pb-6 overflow-hidden bg-[#e8e8e8]">
@@ -534,24 +481,17 @@
           Links</h3>
         <ul class="space-y-2 text-[#222222] text-sm">
           <li class="mt-4 font-medium text-base"><a href="index.html"
-              class="hover:text-primary desc-font transition text-base font-medium desc-font">Home</a></li>
+              class="hover:text-primary transition text-base font-medium">Home</a></li>
           <li class="mt-4 font-medium text-base"><a href="about.html"
-              class="hover:text-primary desc-font transition text-base font-medium desc-font">About
-              Us</a></li>
+              class="hover:text-primary transition text-base font-medium">About Us</a></li>
           <li class="mt-4 font-medium text-base"><a href="product.html"
-              class="hover:text-primary desc-font transition text-base font-medium desc-font">Products</a></li>
-          <li class="mt-4 font-medium text-base"><a href="Manufacturing.html"
-              class="hover:text-primary desc-font transition text-base font-medium desc-font">Manufacturing</a></li>
-          <li class="mt-4 font-medium text-base"><a href="DealerDistributorApp.html"
-              class="hover:text-primary desc-font transition text-base font-medium desc-font">Dealer
-              App</a></li>
+              class="hover:text-primary transition text-base font-medium">Products</a></li>
           <li class="mt-4 font-medium text-base"><a href="ourBlog.html"
-              class="hover:text-primary desc-font transition text-base font-medium desc-font">Blog</a>
+              class="hover:text-primary transition text-base font-medium">Blog</a></li>
           <li class="mt-4 font-medium text-base"><a href="contact.html"
-              class="hover:text-primary desc-font transition text-base font-medium desc-font">Contact
-              Us</a></li>
+              class="hover:text-primary transition text-base font-medium">Contact Us</a></li>
           <li class="mt-4 font-medium text-base"><a href="sitemap.html"
-              class="hover:text-primary desc-font transition text-base font-medium desc-font">SiteMap</a></li>
+              class="hover:text-primary transition text-base font-medium">SiteMap</a></li>
         </ul>
       </div>
 
@@ -616,26 +556,6 @@
 
   <script src="./assests/js/dev-script.js"></script>
   <script>
-    function openPreview(imgSrc) {
-      const modal = document.getElementById('imageModal');
-      const modalImg = document.getElementById('modalImg');
-      modalImg.src = imgSrc;
-      modal.classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closePreview() {
-      const modal = document.getElementById('imageModal');
-      modal.classList.add('hidden');
-      document.body.style.overflow = 'auto';
-    }
-
-    // Close on background click
-    document.getElementById('imageModal').addEventListener('click', function (e) {
-      if (e.target === this) closePreview();
-    });
-  </script>
-  <script>
     tailwind.config = {
       theme: {
         extend: {
@@ -646,46 +566,7 @@
       }
     }
   </script>
-  <script>
-    const colors = [
-      { name: 'Sapphire Blue', hex: '#1a70b4', img: 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800&q=80', desc: 'The signature Bentley Blue. Deep, professional, and commanding.' },
-      { name: 'Graphite Grey', hex: '#7a7a7a', img: 'https://images.unsplash.com/photo-1554034483-04fda0d3507b?w=800&q=80', desc: 'A neutral industrial tone that highlights modern furniture silhouettes.' },
-      { name: 'Pure Onyx', hex: '#222222', img: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=800&q=80', desc: 'Deepest black with a subtle matte sheen for high-end luxury interiors.' },
-      { name: 'Slate Blue', hex: '#4a6fa5', img: 'https://images.unsplash.com/photo-1550584552-463ff780763c?w=800&q=80', desc: 'A softer, muted blue that brings a sense of calm to office spaces.' },
-      { name: 'Silver Cloud', hex: '#d1d5db', img: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80', desc: 'Bright and airy. Perfect for minimal "Apple-style" retail environments.' }
-    ];
-
-    const swatchGrid = document.getElementById('swatchGrid');
-    const mainImage = document.getElementById('mainImage');
-    const previewImage = document.getElementById('previewImage');
-    const colorLabel = document.getElementById('colorLabel');
-    const colorDesc = document.getElementById('colorDesc');
-
-    colors.forEach((color, index) => {
-      const btn = document.createElement('button');
-      btn.className = `swatch ${index === 0 ? 'active' : ''}`;
-      btn.style.backgroundColor = color.hex;
-      btn.onclick = () => {
-        document.querySelectorAll('.swatch').forEach(s => s.classList.remove('active'));
-        btn.classList.add('active');
-
-        // Update Content
-        mainImage.style.opacity = '0';
-        previewImage.style.opacity = '0';
-
-        setTimeout(() => {
-          mainImage.src = color.img;
-          previewImage.src = color.img;
-          colorLabel.textContent = color.name;
-          colorDesc.textContent = color.desc;
-          mainImage.style.opacity = '1';
-          previewImage.style.opacity = '1';
-        }, 300);
-      };
-      swatchGrid.appendChild(btn);
-    });
-  </script>
-
 </body>
+
 
 </html>
