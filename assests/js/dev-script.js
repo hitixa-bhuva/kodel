@@ -240,6 +240,60 @@ document.addEventListener("DOMContentLoaded", () => {
    6) Swiper Sliders (Load After Swiper Script)
 ---------------------------------------------------*/
 
+/* -------------------------------------------------
+   6) home page and aboput us page certificatio setion zoom 
+---------------------------------------------------*/
+const triggers = document.querySelectorAll('.js-zoom-trigger');
+const modal = document.getElementById('zoomModal');
+const modalImage = document.getElementById('modalImage');
+const closeBtn = document.getElementById('closeModal');
+
+// Function to open the modal
+function openModal(imageSrc, altText) {
+    modalImage.src = imageSrc;
+    modalImage.alt = altText;
+    modal.classList.remove('hidden'); // Show the structure
+    // Small delay before adding opacity for the transition effect
+    setTimeout(() => {
+        modal.classList.add('opacity-100');
+    }, 10);
+}
+
+// Function to close the modal
+function closeModal() {
+    modal.classList.remove('opacity-100'); // Trigger transition out
+    // Wait for transition (300ms) before hiding completely
+    setTimeout(() => {
+        modal.classList.add('hidden');
+        modalImage.src = ''; // Clear source to save bandwidth/reset
+    }, 300);
+}
+
+// Add click event listeners to all certificate images
+triggers.forEach(trigger => {
+    trigger.addEventListener('click', function () {
+        // Find the <img> inside the clicked container
+        const img = this.querySelector('img');
+        openModal(img.src, img.alt);
+    });
+});
+
+// Close modal when clicking the 'X' button
+closeBtn.addEventListener('click', closeModal);
+
+// Close modal when clicking outside the image (on the dark background)
+modal.addEventListener('click', function (e) {
+    if (e.target === modal) {
+        closeModal();
+    }
+});
+
+// Close modal when pressing the Escape key
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        closeModal();
+    }
+});
 
 
 /* -------------------------------------------------
