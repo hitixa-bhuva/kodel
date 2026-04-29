@@ -4,25 +4,22 @@
 document.addEventListener("DOMContentLoaded", () => {
   const loader = document.getElementById("kodelLoader");
 
-  // Show loader immediately when DOM starts loading
   if (loader) {
     loader.style.display = "flex";
     document.body.classList.add("overflow-hidden");
   }
 
-  // Hide loader only after everything is loaded
-  window.addEventListener("load", () => {
+  function hideLoader() {
     if (!loader) return;
-
-    // Smooth fade-out animation
     loader.style.opacity = "0";
-
-    // Remove loader completely after fade animation
     setTimeout(() => {
       loader.style.display = "none";
       document.body.classList.remove("overflow-hidden");
-    }, 600); // matches your CSS transition: 0.6s
-  });
+    }, 400);
+  }
+
+  // Hide as soon as page is fully loaded — no artificial delay
+  window.addEventListener("load", hideLoader);
 });
 
 
