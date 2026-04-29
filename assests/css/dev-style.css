@@ -276,3 +276,57 @@ body {
 .detail-card { background: var(--bg-soft); border-radius: 16px; padding: 30px; transition: 0.3s; }
 .detail-card:hover { background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.04); }
 .detail-icon { color: var(--accent-blue); margin-bottom: 20px; }
+
+/* ── Mobile Testimonial Swiper ── */
+.mobileTestimonialSwiper {
+  width: 100%;
+  padding-bottom: 40px !important;
+}
+.mobileTestimonialSwiper .swiper-wrapper {
+  align-items: stretch;
+}
+.mobileTestimonialSwiper .swiper-slide {
+  height: auto !important;
+  display: flex;
+}
+.mobileTestimonialSwiper .swiper-slide > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.mobileTestimonialSwiper .swiper-pagination-bullet {
+  background: rgba(255,255,255,0.4);
+  opacity: 1;
+}
+.mobileTestimonialSwiper .swiper-pagination-bullet-active {
+  background: #ffffff;
+}
+
+/* ── Journey Swiper (about.html mobile) ── */
+.journeySwiper {
+  width: 100%;
+  padding-bottom: 40px !important;
+}
+.journeySwiper .swiper-wrapper {
+  align-items: stretch;
+}
+.journeySwiper .swiper-slide {
+  height: auto !important;
+  display: flex;
+}
+.journeySwiper .swiper-slide > div {
+  width: 100%;
+}
+.journeySwiper .swiper-pagination-bullet {
+  background: #1A70B4;
+  opacity: 0.3;
+}
+.journeySwiper .swiper-pagination-bullet-active {
+  background: #1A70B4;
+  opacity: 1;
+}

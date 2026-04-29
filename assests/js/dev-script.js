@@ -69,9 +69,11 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener('DOMContentLoaded', () => {
   const accordions = document.querySelectorAll('.accordion-item');
 
+  if (!accordions.length) return;
+
   accordions.forEach(acc => {
     const icon = acc.querySelector('.accordion-icon');
-    icon.style.transform = 'rotate(45deg)';
+    if (icon) icon.style.transform = 'rotate(45deg)';
   });
 
   const first = accordions[0];
@@ -82,8 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
     first.classList.add('active', 'bg-[#1A70B4]', 'text-white');
     first.classList.remove('bg-[#F9FAFB]', 'text-[#0B2239]');
 
-    content.style.maxHeight = content.scrollHeight + 'px';
-    icon.style.transform = 'rotate(0deg)'; 
+    if (content) content.style.maxHeight = content.scrollHeight + 'px';
+    if (icon) icon.style.transform = 'rotate(0deg)';
   }
 
   accordions.forEach(item => {
@@ -91,8 +93,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const content = item.querySelector('.accordion-content');
     const icon = item.querySelector('.accordion-icon');
 
-    header.addEventListener('click', () => {
+    if (!header) return;
 
+    header.addEventListener('click', () => {
       const isActive = item.classList.contains('active');
 
       accordions.forEach(acc => {
@@ -102,16 +105,16 @@ document.addEventListener('DOMContentLoaded', () => {
         acc.classList.remove('active', 'bg-[#1A70B4]', 'text-white');
         acc.classList.add('bg-[#F9FAFB]', 'text-[#0B2239]');
 
-        c.style.maxHeight = null;
-        i.style.transform = 'rotate(45deg)'; 
+        if (c) c.style.maxHeight = null;
+        if (i) i.style.transform = 'rotate(45deg)';
       });
 
       if (!isActive) {
         item.classList.add('active', 'bg-[#1A70B4]', 'text-white');
         item.classList.remove('bg-[#F9FAFB]', 'text-[#0B2239]');
 
-        content.style.maxHeight = content.scrollHeight + 'px';
-        icon.style.transform = 'rotate(0deg)'; 
+        if (content) content.style.maxHeight = content.scrollHeight + 'px';
+        if (icon) icon.style.transform = 'rotate(0deg)';
       }
     });
   });
@@ -237,63 +240,54 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 /* -------------------------------------------------
-   6) Swiper Sliders (Load After Swiper Script)
+   6) home page and about us page certification section zoom 
 ---------------------------------------------------*/
+document.addEventListener("DOMContentLoaded", () => {
+  const triggers = document.querySelectorAll('.js-zoom-trigger');
+  const modal = document.getElementById('zoomModal');
+  const modalImage = document.getElementById('modalImage');
+  const closeBtn = document.getElementById('closeModal');
 
-/* -------------------------------------------------
-   6) home page and aboput us page certificatio setion zoom 
----------------------------------------------------*/
-const triggers = document.querySelectorAll('.js-zoom-trigger');
-const modal = document.getElementById('zoomModal');
-const modalImage = document.getElementById('modalImage');
-const closeBtn = document.getElementById('closeModal');
+  // Only run if modal elements exist on this page
+  if (!modal || !modalImage || !closeBtn) return;
 
-// Function to open the modal
-function openModal(imageSrc, altText) {
+  function openModal(imageSrc, altText) {
     modalImage.src = imageSrc;
     modalImage.alt = altText;
-    modal.classList.remove('hidden'); // Show the structure
-    // Small delay before adding opacity for the transition effect
-    setTimeout(() => {
-        modal.classList.add('opacity-100');
-    }, 10);
-}
+    modal.classList.remove('hidden');
+    setTimeout(() => modal.classList.add('opacity-100'), 10);
+  }
 
-// Function to close the modal
-function closeModal() {
-    modal.classList.remove('opacity-100'); // Trigger transition out
-    // Wait for transition (300ms) before hiding completely
+  function closeModal() {
+    modal.classList.remove('opacity-100');
     setTimeout(() => {
-        modal.classList.add('hidden');
-        modalImage.src = ''; // Clear source to save bandwidth/reset
+      modal.classList.add('hidden');
+      modalImage.src = '';
     }, 300);
-}
+  }
 
-// Add click event listeners to all certificate images
-triggers.forEach(trigger => {
+  triggers.forEach(trigger => {
     trigger.addEventListener('click', function () {
-        // Find the <img> inside the clicked container
-        const img = this.querySelector('img');
-        openModal(img.src, img.alt);
+      const img = this.querySelector('img');
+      if (img) openModal(img.src, img.alt);
     });
+  });
+
+  closeBtn.addEventListener('click', closeModal);
+
+  modal.addEventListener('click', function (e) {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+  });
 });
 
-// Close modal when clicking the 'X' button
-closeBtn.addEventListener('click', closeModal);
 
-// Close modal when clicking outside the image (on the dark background)
-modal.addEventListener('click', function (e) {
-    if (e.target === modal) {
-        closeModal();
-    }
-});
-
-// Close modal when pressing the Escape key
-document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-        closeModal();
-    }
-});
+/* -------------------------------------------------
+   6b) Mobile Testimonial Swiper — handled inline in index.html
+---------------------------------------------------*/
 
 
 /* -------------------------------------------------
